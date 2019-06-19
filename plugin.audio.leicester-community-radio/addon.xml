@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.audio.leicester-community-radio" name="Leicester Community Radio" version="0.0.8" provider-name="Phantom Raspberry Blower">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>audio</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Leicester Community Radio</summary>
+    <summary lang="fr_FR">La radio communautaire de Leicester</summary>
+    <summary lang="es_ES">Radio comunitaria de Leicester</summary>
+    <summary lang="de_DE">Leicester Community Radio</summary>
+    <summary lang="it_IT">Leicester Community Radio</summary>
+    <description lang="en_GB">
+      Leicester Community Radio started in 2015, run by well known faces from the Leicester music scene. Playing a mix of roots, reggae, dub, r&amp;b, hip-hop, ska, soca as well as house, drum &amp; bass etc. The station aims to provide all Leicester residents with a central source for the best music around.
+    </description>
+    <description lang="fr_FR">
+      Leicester Community Radio a commenc&#233; en 2015, g&#233;r&#233; par des visages bien connus de la sc&#232;ne musicale de Leicester. Jouer un m&#233;lange de racines, de reggae, de dub, de r&amp;b, de hip-hop, de ska, de soca ainsi que de house, drum &amp; Basse etc. La station vise &#224; fournir &#224; tous les r&#233;sidents de Leicester une source centrale pour la meilleure musique autour.
+    </description>
+    <description lang="es_ES">
+      La radio de la comunidad de Leicester comenz&#243; en 2015, funcionada por las caras conocidas de la escena de la m&#250;sica de Leicester. Jugando una mezcla de ra&#237;ces, reggae, dub, r&amp;b, hip-hop, ska, soca, as&#237; como house, drum &amp; Bajo etc. La estaci&#243;n tiene como objetivo proporcionar a todos los residentes de Leicester una fuente central para la mejor m&#250;sica alrededor.
+    </description>
+    <description lang="de_DE">
+      Leicester Community Radio begann im Jahr 2015, von bekannten Gesichtern aus der Leicester Musik Szene laufen. Eine Mischung aus Wurzeln, Reggae, Dub, R&amp;B, Hip-Hop, Ska, Soca sowie Haus, Trommel &amp; Bass etc. Die Station zielt darauf ab, allen Leicester-Bewohnern eine zentrale Quelle f&#252;r die beste Musik zu bieten.
+    </description>
+    <description lang="it_IT">
+      Leicester Community Radio ha iniziato nel 2015, gestito da volti noti della scena musicale Leicester. Riproduzione di un mix di radici, reggae, dub, R&amp;B, hip-hop, ska, soca e casa, drum &amp; bass, ecc La stazione si propone di fornire tutti i residenti Leicester con una fonte centrale per la migliore musica in giro.
+    </description>
+    <disclaimer lang="en_GB">
+      [COLOR red][B]Phantom Raspberry Blower[/B][/COLOR] does not host or distribute any of the content provided by this addon. Does not have any affiliation with the content provider and accepts no responsibility for the included addon.
+    </disclaimer>
+    <disclaimer lang="fr_FR">
+      [COLOR red][B]Phantom Raspberry Blower[/B][/COLOR] n'héberge ou ne distribue aucun contenu fourni par cet addon. N'a aucune affiliation avec le fournisseur de contenu et n'accepte aucune responsabilité pour l'addon inclus.
+    </disclaimer>
+    <disclaimer lang="es_ES">
+      [COLOR red][B]Phantom Raspberry Blower[/B][/COLOR] no aloja ni distribuye ninguno de los contenidos proporcionados por este complemento. No tiene ninguna afiliaci&#243;n con el proveedor de contenido y no acepta ninguna responsabilidad por el complemento incluido.
+    </disclaimer>
+    <disclaimer lang="de_DE">
+      [COLOR red][B]Phantom Raspberry Blower[/B][/COLOR] beherbergt oder verteilt keinen der von diesem Addon gelieferten Inhalte. Hat keine Zugeh&#246;rigkeit zum Content Provider und &#252;bernimmt keine Verantwortung f&#252;r das mitgelieferte Addon.
+    </disclaimer>
+    <disclaimer lang="it_IT">
+      [COLOR red][B]Phantom Raspberry Blower[/B][/COLOR] non ospita o distribuire il contenuto fornito da questo addon. Non ha alcuna affiliazione con il fornitore di contenuti e declina ogni responsabilit&#224; per l'addon incluso.
+    </disclaimer>
+    <platform>all</platform>
+    <language></language>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum></forum>
+    <website></website>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+      <screenshot>resources/media/screenshot000.jpg</screenshot>
+      <screenshot>resources/media/screenshot001.jpg</screenshot>
+      <screenshot>resources/media/screenshot002.jpg</screenshot>
+      <screenshot>resources/media/screenshot003.jpg</screenshot>
+      <screenshot>resources/media/screenshot004.jpg</screenshot>
+      <screenshot>resources/media/screenshot005.jpg</screenshot>
+    </assets>
+    <news>BETA Version. Added New Stream.</news>
+    <email></email>
+    <source>https://github.com/PhantomRaspberryBlower/repository.prb-entertainment-pack/tree/master/plugin.audio.leicester-community-radio</source>
+  </extension>
+</addon>

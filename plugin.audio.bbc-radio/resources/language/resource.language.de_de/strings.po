@@ -1,0 +1,118 @@
+# Kodi Media Center language file
+# Addon Name: BBC Radio
+# Addon id: plugin.audio.bbc-radio
+# Addon Provider: Phantom Raspberry Blower
+msgid ""
+msgstr ""
+"Project-Id-Version: Kodi Addons\n"
+"Report-Msgid-Bugs-To: alanwww1@kodi.org\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: English (http://www.transifex.com/projects/p/xbmc-addons/language/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# Language settings
+msgctxt "#30001"
+msgid "National Radio"
+msgstr "Nationales Radio"
+
+msgctxt "#30002"
+msgid "Nations and Regions"
+msgstr "Nationen und Regionen"
+
+msgctxt "#30003"
+msgid "Local Radio"
+msgstr "Lokalradio"
+
+msgctxt "#30004"
+msgid "Nationwide radio stations"
+msgstr "Bundesweite Radiosender"
+
+msgctxt "#30005"
+msgid "National and regional radio stations"
+msgstr "Nationale und regionale Radiostationen"
+
+msgctxt "#30006"
+msgid "Local radio stations"
+msgstr "Lokale Radiostationen"
+
+msgctxt "#30007"
+msgid "BBC Radio 1 is a youth oriented, mostly contemporary pop and rock music (including Top 40 singles), plus news, original in-house live music sessions, original live music concerts and music documentaries."
+msgstr "BBC Radio 1 ist eine jugendorientierte, meist zeitgenössische Pop- und Rockmusik (einschließlich der Top 40 Singles), plus Nachrichten, originelle Live-Musik-Sessions, originelle Live-Konzerte und Musikdokumentationen."
+
+msgctxt "#30008"
+msgid "BBC Radio 1Xtra is new urban music, plus news, original in-house live music sessions, original live music concerts and music documentaries."
+msgstr "BBC Radio 1Xtra ist neue urbane Musik, plus Nachrichten, originelle Live-Musik-Sessions, originelle Live-Konzerte und Musikdokumentationen."
+
+msgctxt "#30009"
+msgid "BBC Radio 2 is an adult oriented entertainment, wide range of music especially adult contemporary and middle of the road, also talk, comedy, plus news, original in-house live music sessions, original live music concerts and music documentaries."
+msgstr "BBC Radio 2 ist eine erwachsene orientierte Unterhaltung, eine große Auswahl an Musik, insbesondere für Erwachsene, zeitgenössische und mittlere Musik, auch Talk, Comedy, plus Nachrichten, originale Live-Musik-Sessions, originelle Live-Konzerte und Musikdokumentationen."
+
+msgctxt "#30010"
+msgid "BBC Radio 3 is an arts and high culture, special-interest music (classical, jazz, world music), plus news, original in-house live music sessions, original live music concerts and music documentaries."
+msgstr "BBC Radio 3 ist eine Kunst und Hochkultur, Special-Interest-Musik (Klassik, Jazz, Weltmusik), plus Nachrichten, originale Live-Musik-Sessions, originelle Live-Konzerte und Musikdokumentationen."
+
+msgctxt "#30011"
+msgid "BBC Radio 4 is a news, current affairs, arts, history, original in-house drama, original in-house first-run comedy, science, books and religion. The service closes down and simulcasts the BBC World Service from 01-00 to 05-20 daily."
+msgstr "BBC Radio 4 ist eine Neuigkeit, aktuelle Ereignisse, Kunst, Geschichte, originelles In-House-Drama, originale In-House-Erstlingskomödie, Wissenschaft, Bücher und Religion. Der Service wird geschlossen und simuliert den BBC World Service täglich von 01:00 bis 05:00 Uhr."
+
+msgctxt "#30012"
+msgid "BBC Radio 4 Extra is a classic comedy, drama, books, science fiction, fantasy and childrens programmes."
+msgstr "BBC Radio 4 Extra ist eine klassische Komödie, Drama, Bücher, Science Fiction, Fantasy und Kinderprogramme."
+
+msgctxt "#30013"
+msgid "BBC Radio 5 Live is a news, sports and talk programme."
+msgstr "BBC Radio 5 Live ist ein Nachrichten-, Sport- und Talkprogramm."
+
+msgctxt "#30014"
+msgid "BBC Radio 5 Live Sports Extra is a companion to Radio 5 Live for additional sports events coverage."
+msgstr "BBC Radio 5 Live Sport Extra ist ein Begleiter von Radio 5 Live für zusätzliche Sportveranstaltungen."
+
+msgctxt "#30015"
+msgid "BBC Radio 6 Music is an eclectic mix of alternative genres including rock, funk, punk and reggae (and most non-special interest genres), plus news, original in-house live music sessions, original live music concerts and music documentaries."
+msgstr "BBC Radio 6 Music ist eine eklektische Mischung aus alternativen Genres wie Rock, Funk, Punk und Reggae (und den meisten Nicht-Special-Interest-Genres), sowie Nachrichten, originellen Live-Musik-Sessions, originellen Live-Konzerten und Musikdokumentationen."
+
+msgctxt "#30016"
+msgid "BBC Asian Network is aimed at the large South Asian community in the UK."
+msgstr "BBC Asian Network richtet sich an die große südasiatische Community in Großbritannien."
+
+msgctxt "#30017"
+msgid "BBC Radio Cymru is a Welsh-language radio station, broadcasting throughout Wales from studios in Cardiff, Bangor, Aberystwyth and Carmarthen on FM since 1977. Radio Cymru was the first dedicated Welsh-language broadcasting outlet, allowing much more airtime for Welsh-language programmes than had previously been available on the old Radio 4 Wales (or the Welsh Home Service prior to 1967). Over the years, it has done much to promote the language."
+msgstr "BBC Radio Cymru ist ein walisischsprachiger Radiosender, der seit 1977 in Wales aus den Studios in Cardiff, Bangor, Aberystwyth und Carmarthen auf FM sendet. Radio Cymru war die erste Sendeanstalt in walisischer Sprache, die viel mehr Sendezeit für walisische Programme ermöglichte. als zuvor auf dem alten Radio 4 Wales (oder dem Welsh Home Service vor 1967) verfügbar war. Im Laufe der Jahre hat es viel getan, um die Sprache zu fördern."
+
+msgctxt "#30018"
+msgid "BBC Radio Foyle is a BBC Northern Ireland local radio station, serving County Londonderry in Northern Ireland. It is named after the River Foyle which flows through Derry, the city where the station is based."
+msgstr "BBC Radio Foyle ist ein BBC-Radiosender aus Nordirland, der County Londonderry in Nordirland bedient. Es ist nach dem Fluss Foyle benannt, der durch Derry fließt, die Stadt, in der der Bahnhof liegt."
+
+msgctxt "#30019"
+msgid "BBC Radio nan Gaidheal is a Scottish radio station, broadcasting in Scottish Gaelic. It is operated by the BBC as part of its portfolio of television and radio services in Scotland."
+msgstr "BBC Radio nan Gaidheal ist ein schottischer Radiosender, der auf Schottisch-Gälisch sendet. Es wird von der BBC als Teil seines Portfolios von Fernseh- und Radiodiensten in Schottland betrieben."
+
+msgctxt "#30020"
+msgid "BBC Radio Scotland is a national English-language radio network. It replaced the Scottish BBC Radio 4 opt-out service of the same name from 23 November 1978. The station broadcasts a wide range of programmes, including news, debate, music, drama, comedy and sports."
+msgstr "BBC Radio Scotland ist ein nationales englischsprachiges Radionetzwerk. Sie ersetzte am 23. November 1978 den gleichnamigen schottischen BBC Radio 4 Opt-Out-Dienst. Der Sender strahlt eine breite Palette von Sendungen aus, darunter Nachrichten, Debatten, Musik, Theater, Comedy und Sport."
+
+msgctxt "#30021"
+msgid "BBC Radio Ulster is one of two Northern Ireland BBC radio stations, the other being BBC Radio Foyle located in the city of Derry. BBC Radio Ulster is located at Broadcasting House in the Ormeau Avenue area of Belfast city centre. It is the most popular radio station in Northern Ireland and has a range of programmes including news, talk, features, music and sport. News bulletins are broadcast usually on the hour seven days a week from 6-30 am until midnight."
+msgstr "BBC Radio Ulster ist einer von zwei BBC-Radiostationen in Nordirland, der andere ist BBC Radio Foyle in der Stadt Derry. BBC Radio Ulster befindet sich im Broadcasting House in der Ormeau Avenue im Belfaster Stadtzentrum. Es ist der beliebteste Radiosender in Nordirland und hat eine Reihe von Programmen, darunter Nachrichten, Talk, Features, Musik und Sport. Nachrichten werden normalerweise an sieben Tagen in der Woche von 6-30 Uhr bis Mitternacht gesendet."
+
+msgctxt "#30022"
+msgid "BBC Radio Wales is a national English language radio station. The station began broadcasting on 13 November 1978, following the demise of the Radio 4 Wales service (previously the Welsh Home Service) and BBC Radio 4s transformation into a national network."
+msgstr "BBC Radio Wales ist eine nationale englischsprachige Radiostation. Der Sender begann am 13. November 1978 nach dem Untergang des Radio 4 Wales Dienstes (zuvor der Welsh Home Service) und BBC Radio 4s Transformation in ein nationales Netzwerk zu senden."
+
+msgctxt "#30023"
+msgid "Internetradio"
+msgstr ""
+
+msgctxt "#30024"
+msgid "Etwas Böses passiert :("
+msgstr ""
+
+msgctxt "#30025"
+msgid "Error!"
+msgstr "Error!"

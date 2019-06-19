@@ -1,0 +1,82 @@
+# Kodi Media Center language file
+# Addon Name: Leicester Community Radio
+# Addon id: plugin.audio.leicester-community-radio
+# Addon Provider: Phantom Raspberry Blower
+msgid ""
+msgstr ""
+"Project-Id-Version: Kodi Addons\n"
+"Report-Msgid-Bugs-To: alanwww1@kodi.org\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: English (http://www.transifex.com/projects/p/xbmc-addons/language/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# Language strings
+msgctxt "#30001"
+msgid "Leicester Community Radio"
+msgstr "Radio comunitaria Leicester"
+
+msgctxt "#30002"
+msgid "Statistics"
+msgstr "Estadística"
+
+msgctxt "#30003"
+msgid "Ustream Statistics"
+msgstr "Estadísticas de Ustream"
+
+msgctxt "#30004"
+msgid "Status"
+msgstr "Estado"
+
+msgctxt "#30005"
+msgid "Last Broadcast"
+msgstr "Ultima Transmision"
+
+msgctxt "#30006"
+msgid "Followers"
+msgstr "Seguidores"
+
+msgctxt "#30007"
+msgid "Total Views"
+msgstr "Vistas totales"
+
+msgctxt "#30008"
+msgid "Viewers"
+msgstr "Espectadores"
+
+msgctxt "#30009"
+msgid "Unplayable stream"
+msgstr "Stream no reproducible"
+
+msgctxt "#30010"
+msgid "Something wicked happened :("
+msgstr "Algo malo sucedió :("
+
+msgctxt "#30011"
+msgid "Error!"
+msgstr "¡Error!"
+
+msgctxt "#30012"
+msgid "Please wait..."
+msgstr "Por favor espera..."
+
+msgctxt "#30013"
+msgid "Process Complete"
+msgstr "Proceso completo"
+
+msgctxt "#30014"
+msgid "Failed to download audio links"
+msgstr "Error al descargar enlaces de audio"
+
+msgctxt "#30015"
+msgid "Leicester Community Radio is currently not broadcasting!\n\nLast Broadcast: "
+msgstr "¡Leicester Community Radio no está transmitiendo actualmente!\n\nUltima Transmision: "
+
+msgctxt "#30016"
+msgid "Off Air!"
+msgstr "¡Fuera del aire!"

@@ -1,0 +1,72 @@
+<strings>
+    <!-- Settings -->
+    <string id="10000">Kundenspezifisches Musikverzeichnis</string>
+    <string id="10001">Musikverzeichnis</string>
+    <string id="10002">Warteschlangen-Songs bei Auswahl</string>
+    <string id="10003">Queue-Alben bei Auswahl</string>
+    <string id="10004">Hide fanart beim Spielen</string>
+    <string id="10005">Betrag zum Pre-Cache</string>
+    <string id="10006">Künstler / Album Ordnerstruktur</string>
+    <string id="10007">Fortschritt anzeigen</string>
+    <string id="10008">General</string>
+    <string id="10009">Downloads</string>
+    <string id="10010">Wählen Sie "Benutzerdefiniertes Musikverzeichnis" und definieren Sie Ihren Standort für den Musikdownload.</string>
+    <string id="10011">Warteschlangen-Downloads</string>
+    <string id="10012">Wählen Sie "Warteschlangen-Downloads", um alle ausgewählten Songs / Alben nacheinander herunterzuladen.</string>
+    <!-- Notifications -->
+    <string id="20000">Download fertig</string>
+    <string id="20001">Download gestartet</string>
+    <string id="20002">Album Download fertig</string>
+    <string id="20003">Downloads</string>
+    <string id="20004">Freigeschaltet</string>
+    <string id="20005">Musikbibliothek</string>
+    <string id="20006">ID3-Tags aktualisiert</string>
+    <string id="20007">Wiedergabeliste</string>
+    <string id="20008">Gelöscht</string>
+    <!-- Dialogs -->
+    <string id="20009">Album-Download läuft im Gange</string>
+    <string id="20010">Bitte warten Sie, bis der aktuelle Download abgeschlossen ist</string>
+    <string id="20011">MP3 Musik</string>
+    <string id="20012">Songs ansehen oder Album spielen?</string>
+    <string id="20013">Durchsuchen</string>
+    <string id="20014">jetzt spielen</string>
+    <string id="20015">Erstellen Sie Ihre Playlist</string>
+    <string id="20016">Gruppe auswählen</string>
+    <!-- Strings -->
+    <string id="20017">Zu Favoriten hinzugefügt</string>
+    <string id="20018">Aus Favoriten entfernt</string>
+    <!-- Menus -->
+    <string id="20019">Künstler</string>
+    <string id="20020">Top Alben</string>
+    <string id="20021">Neue Alben</string>
+    <string id="20022">Zusammenstellungen</string>
+    <string id="20023">Suche Künstler</string>
+    <string id="20024">Suche Alben</string>
+    <string id="20025">Lieder suchen</string>
+    <string id="20026">Lieblingskünstler</string>
+    <string id="20027">Lieblingsalben</string>
+    <string id="20028">Lieblings-Songs</string>
+    <string id="20029">Instant Mix Lieblings-Songs (Shuffle und Play)</string>
+    <string id="20030">Instant Mix Lieblingsalben (Shuffle und Play)</string>
+    <string id="20031">Löschen Playlist</string>
+    <string id="20032">Einstellungen</string>
+    <!-- Query Strings -->
+    <string id="20033">Sofortig</string>
+    <string id="20034">Klar</string>
+    <string id="20035">Oben </string>
+    <string id="20036"> Künstler</string>
+    <string id="20037">Neu </string>
+    <string id="20038"> Alben</string>
+    <!-- Compilations Menus -->
+    <string id="20039">Beste Kompilationen</string>
+    <string id="20040">Neue Zusammenstellungen</string>
+    <string id="20041">Major Hits</string>
+    <string id="20042">Nachtclub Hits</string>
+    <string id="20043">Chillout Hits</string>
+    <string id="20044">Tribute und Covers</string>
+    <string id="20045">Veranstaltungen</string>
+    <!-- Error Strings -->
+    <string id="20046">Fehler beim Herunterladen!</string>
+    <string id="20047">Fehler beim Aufrufen der Webseite!</string>
+    <string id="20048">Etwas Böses ist passiert :(</string>
+</strings>

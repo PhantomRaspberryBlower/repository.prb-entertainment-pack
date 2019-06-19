@@ -1,0 +1,106 @@
+<strings>
+    <!-- Settings -->
+    <string id="10000">Custom Music Directory</string>
+    <string id="10001">Music Directory</string>
+    <string id="10002">Queue songs on selection</string>
+    <string id="10003">Queue albums on selection</string>
+    <string id="10004">Hide fanart when playing</string>
+    <string id="10005">Amount to pre-cache</string>
+    <string id="10006">Artist/Album Folder Structure</string>
+    <string id="10007">Show Progress</string>
+    <string id="10008">General</string>
+    <string id="10009">Downloads</string>
+    <string id="10010">Select 'Custom Music Directory' and define your music download location.</string>
+    <string id="10011">Queue Downloads</string>
+    <string id="10012">Choose 'Queue Downloads' to download selected songs/albums in one go.</string>
+    <!-- Notifications -->
+    <string id="20000">Download finished</string>
+    <string id="20001">Download started</string>
+    <string id="20002">Album download finished</string>
+    <string id="20003">Downloads</string>
+    <string id="20004">Unlocked</string>
+    <string id="20005">Music Library</string>
+    <string id="20006">ID3 tags updated</string>
+    <string id="20007">Playlist</string>
+    <string id="20008">Cleared</string>
+    <!-- Dialogs -->
+    <string id="20009">Album download in progress</string>
+    <string id="20010">Please wait for the current download to finish</string>
+    <string id="20011">MP3 Music</string>
+    <string id="20012">Browse songs or play full album?</string>
+    <string id="20013">Browse</string>
+    <string id="20014">Play Now</string>
+    <string id="20015">Creating Your Playlist</string>
+    <string id="20016">Select Group</string>
+    <!-- Strings -->
+    <string id="20017">Added to Favourites</string>
+    <string id="20018">Removed from Favourites</string>
+    <!-- Menus -->
+    <string id="20019">Artists</string>
+    <string id="20020">Top Albums</string>
+    <string id="20021">New Albums</string>
+    <string id="20022">Compilations</string>
+    <string id="20023">Search Artists</string>
+    <string id="20024">Search Albums</string>
+    <string id="20025">Search Songs</string>
+    <string id="20026">Favourite Artists</string>
+    <string id="20027">Favourite Albums</string>
+    <string id="20028">Favourite Songs</string>
+    <string id="20029">Instant Mix Favourite Albums (Shuffle and Play)</string>
+    <string id="20030">Instant Mix Favourite Songs (Shuffle and Play)</string>
+    <string id="20031">Clear Playlist</string>
+    <string id="20032">Settings</string>
+    <string id="20033">Added to Download Queue</string>
+    <string id="20034">Clear Downloads</string>
+    <string id="20035">Start Downloads</string>
+    <string id="20036">Remove</string>
+    <string id="20037">Search</string>
+    <string id="20038">Favourites</string>
+    <string id="20039">Clear Download List</string>
+    <string id="20040">Are You Sure?</string>
+    <string id="20041">Adding to Your Playlist</string>
+    <string id="20042">MP3 Music downloads complete.</string>
+    <string id="20043">Downloading</string>
+    <string id="20044">%s of %s tracks downloaded</string>
+    <string id="20045">All Songs</string>
+    <string id="20046">All Albums</string>
+    <string id="20047">Add New Group</string>
+    <string id="20048">Create New Group</string>
+    <string id="20049">Artist Info</string>
+    <string id="20050">Unable to Download Artist Info</string>
+    <string id="20051">'[COLOR yellow]Artist Information[/COLOR]'</string>
+    <string id="20052">'Clear Download Lock'</string>
+    <string id="20053">'[COLOR lime]Add to Favourite Artists[/COLOR]'</string>
+    <string id="20054">'[COLOR orange]Remove from Favourite Artists[/COLOR]'</string>
+    <string id="20055">'[COLOR cyan]Download Album[/COLOR]'</string>
+    <string id="20056">'[COLOR cyan]Play/Browse Album[/COLOR]'</string>
+    <string id="20057">'[COLOR cyan]Queue Album[/COLOR]'</string>
+    <string id="20058">'[COLOR lime]Add to Favourite Albums[/COLOR]'</string>
+    <string id="20059">'[COLOR orange]Remove from Favourite Albums[/COLOR]'</string>
+    <string id="20060">'[COLOR orange]Remove[/COLOR]'</string>
+    <string id="20061">'[COLOR cyan]Download Song[/COLOR]'</string>
+    <string id="20062">'[COLOR cyan]Queue Song[/COLOR]'</string>
+    <!-- Query Strings -->
+    <string id="20063">Instant</string>
+    <string id="20064">Clear</string>
+    <string id="20065">Top </string>
+    <string id="20066"> Artists</string>
+    <string id="20067">New </string>
+    <string id="20068"> Albums</string>
+    <!-- Compilations Menus -->
+    <string id="20069">Best Compilations</string>
+    <string id="20070">New Compilations</string>
+    <string id="20071">Major Hits</string>
+    <string id="20072">Nightclub Hits</string>
+    <string id="20073">Chillout Hits</string>
+    <string id="20074">Tributes and Covers</string>
+    <string id="20075">Events</string>
+    <!-- Error Strings -->
+    <string id="20076">Error downloading!</string>
+    <string id="20077">Error getting webpage!</string>
+    <string id="20078">Something wicked happened :(</string>
+    <!-- Sub Menu Headings -->
+    <string id="20090">[COLOR cyan]Play Song[/COLOR]</string>
+    <string id="20091">[COLOR lime]Add to Favourite Songs[/COLOR]</string>
+    <string id="20094">[COLOR orange]Remove from Favourite Songs[/COLOR]</string>
+</strings>

@@ -1,0 +1,18 @@
+<settings>
+	<category label="10008">
+        <setting id="pre-cache" type="labelenum" label="10005" default="250K" values="250K|500K|750K|1000K" />
+        <setting id="default_queue" type="bool" label="10002" default="false" />
+        <setting id="default_queue_album" type="bool" label="10003" default="false" />
+        <setting id="hide_fanart" type="bool" label="10004" default="false" />
+	</category>
+      <category label="10009">
+        <setting id="custom_directory" type="bool" label="10000" default="false" />
+        <setting id="music_dir" type="folder" label="10001" default="set" enable="!eq(-1,false)" />
+        <setting id="folder_structure" type="enum" values="Artist/Album/Song|Artist - Album/Song" label="10006" default="0" enable="!eq(-2,false)" />
+        <setting id="show_progress" type="bool" label="10007" default="true" enable="!eq(-3,false)" />
+        <setting id="queue_downloads" type="bool" label="10011" default="false" enable="!eq(-4,false)" />
+        <setting type="lsep" />
+        <setting type="lsep" label="10010" />
+        <setting type="lsep" label="10012" />
+      </category>
+</settings>

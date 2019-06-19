@@ -1,0 +1,160 @@
+# Kodi Media Center language file
+# Addon Name: Absolute Radio
+# Addon id: plugin.audio.absolute-radio
+# Addon Provider: Phantom Raspberry Blower
+msgid ""
+msgstr ""
+"Project-Id-Version: Kodi Addons\n"
+"Report-Msgid-Bugs-To: alanwww1@kodi.org\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: English (http://www.transifex.com/projects/p/xbmc-addons/language/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# General settings
+msgctxt "#30001"
+msgid "General"
+msgstr ""
+
+msgctxt "#30002"
+msgid "Sound Quality"
+msgstr ""
+
+msgctxt "#30003"
+msgid "Hide Artist Fanart"
+msgstr ""
+
+msgctxt "#30004"
+msgid "Compression Format"
+msgstr ""
+
+msgctxt "#30005"
+msgid "Bitrate"
+msgstr ""
+
+msgctxt "#30006"
+msgid "Account Details"
+msgstr ""
+
+msgctxt "#30007"
+msgid "Username"
+msgstr ""
+
+msgctxt "#30008"
+msgid "Password"
+msgstr ""
+
+msgctxt "#30009"
+msgid "Hide Artist Information"
+msgstr ""
+
+# Language strings
+
+msgctxt "#30101"
+msgid "Absolute Radio"
+msgstr ""
+
+msgctxt "#30102"
+msgid "Status"
+msgstr ""
+
+msgctxt "#30103"
+msgid "Unplayable stream"
+msgstr ""
+
+msgctxt "#30104"
+msgid "Something wicked happened :("
+msgstr ""
+
+msgctxt "#30105"
+msgid "Error!"
+msgstr ""
+
+msgctxt "#30106"
+msgid "Please wait..."
+msgstr ""
+
+msgctxt "#30107"
+msgid "Process Complete"
+msgstr ""
+
+msgctxt "#30108"
+msgid "Failed to download audio links"
+msgstr ""
+
+msgctxt "#30109"
+msgid "Logged into Absolute Radio."
+msgstr ""
+
+msgctxt "#30110"
+msgid "Login Success :)"
+msgstr ""
+
+msgctxt "#30111"
+msgid "Failed to log into Absolute Radio."
+msgstr ""
+
+msgctxt "#30112"
+msgid "Login Failed :("
+msgstr ""
+
+msgctxt "#30113"
+msgid "Artist Information"
+msgstr ""
+
+msgctxt "#30114"
+msgid "Unable to download artists info!"
+msgstr ""
+
+msgctxt "#30115"
+msgid "No artist name showing!"
+msgstr ""
+
+msgctxt "#30116"
+msgid "No audio stream is playing!"
+msgstr ""
+
+msgctxt "#30117"
+msgid "Settings"
+msgstr ""
+
+msgctxt "#30118"
+msgid "It's all about the song, not the video; gigs, not photo shoots; built to last, not flavour of the month; something to say, not something to sell."
+msgstr ""
+
+msgctxt "#30119"
+msgid "Nothing but the biggest rock classics from the likes of Led Zeppelin, The Who, The Rolling Stones, Queen and more."
+msgstr ""
+
+msgctxt "#30120"
+msgid "We're going to take you on a nostalgia trip, playing undisputed 1980s classics from Madonna, Duran Duran, Prince, Pet Shop Boys, Michael Jackson, Depeche Mode, U2, The Human League, The Police and more."
+msgstr ""
+
+msgctxt "#30121"
+msgid "Timeless classics from the likes of The Beatles, Stones, Doors, Jimi Hendrix, The Who, Aretha Franklin, Elvis and the Kinks. The impact of this music is still being felt by the new artists of today."
+msgstr ""
+
+msgctxt "#30122"
+msgid "The decade of pop, soul, disco and rock from the likes of Rod Stewart, Stevie Wonder, Elton John, Marvin Gaye, Slade, T. Rex, The Jackson 5, Blondie, ABBA, David Bowie and more."
+msgstr ""
+
+msgctxt "#30123"
+msgid "Undisputed classics stretching from Oasis and Blur, to Primal Scream and the Chemical Brothers. Whether it's Radiohead or Portishead, the Stone Roses or Guns 'n Roses, we'll be playing all the best music you remember from the 90s and none of the duds."
+msgstr ""
+
+msgctxt "#30124"
+msgid "The best of the noughties, from Coldplay to Keane, Eminem to Elbow, Arctic Monkeys to Amy Winehouse, Scissor Sisters to The Streets and Kings of Leon to The Killers."
+msgstr ""
+
+msgctxt "#30125"
+msgid "Displays image and information about the artist or band currently streaming."
+msgstr ""
+
+msgctxt "#30126"
+msgid "Open settings."
+msgstr ""

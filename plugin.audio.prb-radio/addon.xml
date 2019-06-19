@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.audio.prb-radio" name="PRB Radio" version="0.0.9" provider-name="Phantom Raspberry Blower">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>audio</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>PRB Radio</summary>
+    <description>
+      PRB Radio is an online radio show produced by Phantom Raspberry Blower offering Blues, Gospel, Jazz, Soul, Reggae, Funk and Hip-Hop to music lovers who get sick of hearing the same old songs played over and over again by commercial radio stations.
+    </description>
+    <disclaimer>
+      [COLOR red][B]Phantom Raspberry Blower[/B][/COLOR] This addon is for testing purposes only and accepts no responsibility for the included addon.
+    </disclaimer>
+    <platform>all</platform>
+    <language></language>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum></forum>
+    <website></website>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+      <screenshot>resources/media/screenshot000.jpg</screenshot>
+      <screenshot>resources/media/screenshot001.jpg</screenshot>
+      <screenshot>resources/media/screenshot002.jpg</screenshot>
+      <screenshot>resources/media/screenshot003.jpg</screenshot>
+      <screenshot>resources/media/screenshot004.jpg</screenshot>
+      <screenshot>resources/media/screenshot005.jpg</screenshot>
+      <screenshot>resources/media/screenshot006.jpg</screenshot>
+    </assets>
+    <news>Added option to save a list of your favourite songs</news>
+    <email></email>
+    <source>https://github.com/PhantomRaspberryBlower/repository.prb-entertainment-pack/tree/master/plugin.video.prb-radio</source>
+  </extension>
+</addon>

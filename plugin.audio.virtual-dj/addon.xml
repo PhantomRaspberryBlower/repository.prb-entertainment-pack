@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.audio.virtual-dj" name="Virtual DJ" version="0.0.2" provider-name="Phantom Raspberry Blower">
+	<requires>
+		<import addon="xbmc.python" version="2.7.9"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="addon.py">
+		<provides>audio</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Virutal DJ</summary>
+		<summary lang="fr_FR">Virutal DJ</summary>
+		<summary lang="es_ES">Virutal DJ</summary>
+		<summary lang="de_DE">Virutal DJ</summary>
+		<summary lang="it_IT">Virutal DJ</summary>
+		<description lang="en_GB">
+			Virtual DJ music streams.
+		</description>
+		<description lang="fr_FR">
+			Virtual DJ music streams.
+		</description>
+		<description lang="es_ES">
+			Virtual DJ music streams.
+		</description>
+		<description lang="de_DE">
+			Virtual DJ music streams.
+		</description>
+		<description lang="it_IT">
+			Virtual DJ music streams.
+		</description>
+		<disclaimer lang="en_GB">
+			[COLOR red][B]Phantom Raspberry Blower[/B][/COLOR] does not host or distribute any of the content provided by this addon. Does not have any affiliation with the content provider and accepts no responsibility for the included addon.
+		</disclaimer>
+		<disclaimer lang="fr_FR">
+			[COLOR red][B]Phantom Raspberry Blower[/B][/COLOR] n'héberge ou ne distribue aucun contenu fourni par cet addon. N'a aucune affiliation avec le fournisseur de contenu et n'accepte aucune responsabilité pour l'addon inclus.
+		</disclaimer>
+		<disclaimer lang="es_ES">
+			[COLOR red][B]Phantom Raspberry Blower[/B][/COLOR] no aloja ni distribuye ninguno de los contenidos proporcionados por este complemento. No tiene ninguna afiliaci&#243;n con el proveedor de contenido y no acepta ninguna responsabilidad por el complemento incluido.
+		</disclaimer>
+		<disclaimer lang="de_DE">
+			[COLOR red][B]Phantom Raspberry Blower[/B][/COLOR] beherbergt oder verteilt keinen der von diesem Addon gelieferten Inhalte. Hat keine Zugeh&#246;rigkeit zum Content Provider und &#252;bernimmt keine Verantwortung f&#252;r das mitgelieferte Addon.
+		</disclaimer>
+		<disclaimer lang="it_IT">
+			[COLOR red][B]Phantom Raspberry Blower[/B][/COLOR] non ospita o distribuire il contenuto fornito da questo addon. Non ha alcuna affiliazione con il fornitore di contenuti e declina ogni responsabilit&#224; per l'addon incluso.
+		</disclaimer>
+		<platform>all</platform>
+		<language></language>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+		<forum></forum>
+		<website></website>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/media/screenshot000.jpg</screenshot>
+			<screenshot>resources/media/screenshot001.jpg</screenshot>
+			<screenshot>resources/media/screenshot002.jpg</screenshot>
+			<screenshot>resources/media/screenshot003.jpg</screenshot>
+			<screenshot>resources/media/screenshot004.jpg</screenshot>
+		</assets>
+		<news>BETA Version. Added Screenshots</news>
+		<email></email>
+		<source>https://github.com/PhantomRaspberryBlower/repository.prb-entertainment-pack/tree/master/plugin.audio.virtual-dj</source>
+	</extension>
+</addon>

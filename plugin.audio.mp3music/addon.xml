@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.audio.mp3music" name="MP3 Music" version="0.1.6" provider-name="Phantom Raspberry Blower">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="script.module.t0mm0.common" version="1.1.0"/>
+    <import addon="script.module.pil" version="1.1.7"/>
+    <import addon="script.module.mutagen"/>
+    <import addon="script.module.requests"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>audio</provides>
+  </extension>
+  <extension point="xbmc.service" library="resources/lib/playerMP3.py" start="startup"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Stream and Download Music</summary>
+    <description lang="en_GB">
+      Browse the latest album releases including compilations by genre. Search or download your favourite artist, album or song. Show artist information and download icons and fanart.
+    </description>
+    <disclaimer lang="en_GB">
+      [COLOR red][B]Phantom Raspberry Blower[/B][/COLOR] does not host or distribute any of the content provided by this addon. Does not have any affiliation with the content provider and accepts no responsibility for the included addon.
+    </disclaimer>
+    <platform>all</platform>
+    <language></language>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum></forum>
+    <website></website>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+      <screenshot>resources/media/screenshot000.jpg</screenshot>
+      <screenshot>resources/media/screenshot001.jpg</screenshot>
+      <screenshot>resources/media/screenshot002.jpg</screenshot>
+      <screenshot>resources/media/screenshot003.jpg</screenshot>
+      <screenshot>resources/media/screenshot004.jpg</screenshot>
+      <screenshot>resources/media/screenshot005.jpg</screenshot>
+      <screenshot>resources/media/screenshot006.jpg</screenshot>
+      <screenshot>resources/media/screenshot007.jpg</screenshot>
+      <screenshot>resources/media/screenshot008.jpg</screenshot>
+    </assets>
+    <news>Updated theaudiodb.com API</news>
+    <email></email>
+    <source>https://github.com/PhantomRaspberryBlower/repository.prb-entertainment-pack/tree/master/plugin.audio.mp3music</source>
+  </extension>
+</addon>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.audio.bbc-radio" name="BBC Radio" version="0.0.5" provider-name="Phantom Raspberry Blower">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>audio</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">BBC Radio</summary>
+    <description lang="en_GB">
+      BBC Radio is an operational business division and service of the British Broadcasting Corporation. The service provides national radio stations covering the majority of musical genres, as well as local radio stations covering local news, affairs and interests.
+    </description>
+    <disclaimer lang="en_GB">
+      [COLOR red][B]Phantom Raspberry Blower[/B][/COLOR] does not host or distribute any of the content provided by this addon. Does not have any affiliation with the content provider and accepts no responsibility for the included addon.
+    </disclaimer>
+    <platform>all</platform>
+    <language></language>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum></forum>
+    <website></website>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+      <screenshot>resources/media/screenshot000.jpg</screenshot>
+      <screenshot>resources/media/screenshot001.jpg</screenshot>
+      <screenshot>resources/media/screenshot002.jpg</screenshot>
+      <screenshot>resources/media/screenshot003.jpg</screenshot>
+      <screenshot>resources/media/screenshot004.jpg</screenshot>
+    </assets>
+    <news>Removed Unnecessary Modules.</news>
+    <email></email>
+    <source>https://github.com/PhantomRaspberryBlower/repository.prb-entertainment-pack/tree/master/plugin.audio.bbc-radio</source>
+  </extension>
+</addon>

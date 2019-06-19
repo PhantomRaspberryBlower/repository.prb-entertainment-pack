@@ -1,0 +1,124 @@
+# Kodi Media Center language file
+# Addon Name: Absolute Radio
+# Addon id: plugin.audio.absolute-radio
+# Addon Provider: Phantom Raspberry Blower
+msgid ""
+msgstr ""
+"Project-Id-Version: Kodi Addons\n"
+"Report-Msgid-Bugs-To: alanwww1@kodi.org\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: English (http://www.transifex.com/projects/p/xbmc-addons/language/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# General settings
+msgctxt "#30001"
+msgid "General"
+msgstr "Général"
+
+msgctxt "#30002"
+msgid "Sound Quality"
+msgstr "Qualité sonore"
+
+msgctxt "#30003"
+msgid "Hide Artist Fanart"
+msgstr "Masquer l'artiste Fanart"
+
+msgctxt "#30004"
+msgid "Compression Format"
+msgstr "Format de compression"
+
+msgctxt "#30005"
+msgid "Hide Artist Information"
+msgstr "Cacher l'information d'artiste"
+
+msgctxt "#30006"
+msgid "Bitrate"
+msgstr "Bitrate"
+
+msgctxt "#30007"
+msgid "Prevent Screensaver"
+msgstr "Empêcher l'économiseur d'écran"
+
+msgctxt "#30008"
+msgid "Hide Favourite Songs"
+msgstr "Masquer les chansons préférées"
+
+# Language strings
+
+msgctxt "#30101"
+msgid "PRB Radio"
+msgstr "PRB Radio"
+
+msgctxt "#30102"
+msgid "Artist Information"
+msgstr "Informations sur l'artiste"
+
+msgctxt "#30103"
+msgid "Unable to download artists info!"
+msgstr "Impossible de télécharger les informations sur les artistes!"
+
+msgctxt "#30104"
+msgid "No artist name showing!"
+msgstr "Aucun nom d'artiste affiché!"
+
+msgctxt "#30105"
+msgid "No audio stream is playing!"
+msgstr "Aucun flux audio ne joue!"
+
+msgctxt "#30106"
+msgid "Settings"
+msgstr "Réglages"
+
+msgctxt "#30107"
+msgid "PRB Radio streams Blues, Gospel, Jazz, Soul, Reggae, Funk and Hip-Hop."
+msgstr "PRB Radio diffuse du blues, du gospel, du jazz, de la soul, du reggae, du funk et du hip-hop."
+
+msgctxt "#30108"
+msgid "Displays image and information about the artist or band currently streaming."
+msgstr "Affiche des images et des informations sur l'artiste ou le groupe en cours de streaming."
+
+msgctxt "#30109"
+msgid "Open settings."
+msgstr "Ouvrez les paramètres."
+
+msgctxt "#30110"
+msgid "PRB Radio is not broadcasting."
+msgstr "PRB Radio ne diffuse pas."
+
+msgctxt "#30111"
+msgid "On Air"
+msgstr "À l'antenne"
+
+msgctxt "#30112"
+msgid "Off Air"
+msgstr "Hors air"
+
+msgctxt "#30113"
+msgid "Favourite Songs"
+msgstr "Chansons Préférées"
+
+msgctxt "#30114"
+msgid "Create and edit a list of your favourite songs."
+msgstr "Créez et éditez une liste de vos chansons préférées."
+
+msgctxt "#30115"
+msgid "Clear Favourites List"
+msgstr "Effacer la liste des favoris"
+
+msgctxt "#30116"
+msgid "Are you sure?"
+msgstr "Êtes-vous sûr?"
+
+msgctxt "#30117"
+msgid "[COLOR orange]Clear List[/COLOR]"
+msgstr "[COLOR orange]Effacer la liste[/COLOR]"
+
+msgctxt "#30118"
+msgid "[COLOR lime]Add Current Song To List[/COLOR]"
+msgstr "[COLOR lime]Ajouter la chanson actuelle à la liste[/COLOR]"

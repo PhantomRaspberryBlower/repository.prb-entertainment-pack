@@ -1,0 +1,160 @@
+# Kodi Media Center language file
+# Addon Name: Absolute Radio
+# Addon id: plugin.audio.absolute-radio
+# Addon Provider: Phantom Raspberry Blower
+msgid ""
+msgstr ""
+"Project-Id-Version: Kodi Addons\n"
+"Report-Msgid-Bugs-To: alanwww1@kodi.org\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: English (http://www.transifex.com/projects/p/xbmc-addons/language/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# General settings
+msgctxt "#30001"
+msgid "General"
+msgstr "General"
+
+msgctxt "#30002"
+msgid "Sound Quality"
+msgstr "Tonqualität"
+
+msgctxt "#30003"
+msgid "Hide Artist Fanart"
+msgstr "Ausblenden Künstler Fanart"
+
+msgctxt "#30004"
+msgid "Compression Format"
+msgstr "Komprimierungsformat"
+
+msgctxt "#30005"
+msgid "Bitrate"
+msgstr "Bitrate"
+
+msgctxt "#30006"
+msgid "Account Details"
+msgstr "Kontodetails"
+
+msgctxt "#30007"
+msgid "Username"
+msgstr "Benutzername"
+
+msgctxt "#30008"
+msgid "Password"
+msgstr "Passwort"
+
+msgctxt "#30009"
+msgid "Hide Artist Information"
+msgstr "Künstlerinformationen ausblenden"
+
+# Language strings
+
+msgctxt "#30101"
+msgid "Absolute Radio"
+msgstr "Absolute Radio"
+
+msgctxt "#30102"
+msgid "Status"
+msgstr "Status"
+
+msgctxt "#30103"
+msgid "Unplayable stream"
+msgstr "Nichtspielbarer Stream"
+
+msgctxt "#30104"
+msgid "Something wicked happened :("
+msgstr "Etwas Böses geschah :("
+
+msgctxt "#30105"
+msgid "Error!"
+msgstr "Fehler!"
+
+msgctxt "#30106"
+msgid "Please wait..."
+msgstr "Warten Sie mal..."
+
+msgctxt "#30107"
+msgid "Process Complete"
+msgstr "Prozess komplett"
+
+msgctxt "#30108"
+msgid "Failed to download audio links"
+msgstr "Fehler beim Herunterladen von Audio-Links"
+
+msgctxt "#30109"
+msgid "Logged into Absolute Radio."
+msgstr "Eingeloggt für Absolute Radio."
+
+msgctxt "#30110"
+msgid "Login Success :)"
+msgstr "Einloggen erfolgreich :)"
+
+msgctxt "#30111"
+msgid "Failed to log into Absolute Radio."
+msgstr "Fehler beim Anmelden bei Absolute Radio."
+
+msgctxt "#30112"
+msgid "Login Failed :("
+msgstr "Anmeldung fehlgeschlagen :("
+
+msgctxt "#30113"
+msgid "Artist Information"
+msgstr "Künstlerinformationen"
+
+msgctxt "#30114"
+msgid "Unable to download artists info!"
+msgstr "Kann keine Künstler herunterladen!"
+
+msgctxt "#30115"
+msgid "No artist name showing!"
+msgstr "Kein Künstlername zeigt!"
+
+msgctxt "#30116"
+msgid "No audio stream is playing!"
+msgstr "Kein Audiostream spielt!"
+
+msgctxt "#30117"
+msgid "Settings"
+msgstr "Einstellungen"
+
+msgctxt "#30118"
+msgid "It's all about the song, not the video; gigs, not photo shoots; built to last, not flavour of the month; something to say, not something to sell."
+msgstr "Es ist alles über das Lied, nicht das Video; Gigs, keine Fotoshootings; Gebaut bis zuletzt, nicht Geschmack des Monats; Etwas zu sagen, nicht etwas zu verkaufen."
+
+msgctxt "#30119"
+msgid "Nothing but the biggest rock classics from the likes of Led Zeppelin, The Who, The Rolling Stones, Queen and more."
+msgstr "Nichts als die größten Rock-Klassiker aus Led Zeppelin, The Who, The Rolling Stones, Queen und mehr."
+
+msgctxt "#30120"
+msgid "We're going to take you on a nostalgia trip, playing undisputed 1980s classics from Madonna, Duran Duran, Prince, Pet Shop Boys, Michael Jackson, Depeche Mode, U2, The Human League, The Police and more."
+msgstr "Wir werden dich auf eine Nostalgie-Reise bringen und unbestrittene Klassiker aus der Madonna, Duran Duran, Prince, Pet Shop Boys, Michael Jackson, Depeche Mode, U2, The Human League, The Police und mehr spielen."
+
+msgctxt "#30121"
+msgid "Timeless classics from the likes of The Beatles, Stones, Doors, Jimi Hendrix, The Who, Aretha Franklin, Elvis and the Kinks. The impact of this music is still being felt by the new artists of today."
+msgstr "Zeitlose Klassiker aus den Beatles, Steine, Türen, Jimi Hendrix, Die Wer, Aretha Franklin, Elvis und die Kinks. Die Wirkung dieser Musik wird immer noch von den neuen Künstlern von heute gefühlt."
+
+msgctxt "#30122"
+msgid "The decade of pop, soul, disco and rock from the likes of Rod Stewart, Stevie Wonder, Elton John, Marvin Gaye, Slade, T. Rex, The Jackson 5, Blondie, ABBA, David Bowie and more."
+msgstr "Das Jahrzehnt von Pop, Soul, Disco und Rock von den Stars von Rod Stewart, Stevie Wonder, Elton John, Marvin Gaye, Slade, T. Rex, Jackson 5, Blondie, ABBA, David Bowie und mehr."
+
+msgctxt "#30123"
+msgid "Undisputed classics stretching from Oasis and Blur, to Primal Scream and the Chemical Brothers. Whether it's Radiohead or Portishead, the Stone Roses or Guns 'n Roses, we'll be playing all the best music you remember from the 90s and none of the duds."
+msgstr "Unbestrittene Klassiker, die sich von Oasis und Blur bis zu Primal Scream und den Chemical Brothers erstrecken. Ob es sich um Radiohead oder Portishead, die Stone Roses oder Guns 'n Roses handelt, wir werden die beste Musik spielen, die du aus den 90er Jahren erinnerst und keiner der Duds."
+
+msgctxt "#30124"
+msgid "The best of the noughties, from Coldplay to Keane, Eminem to Elbow, Arctic Monkeys to Amy Winehouse, Scissor Sisters to The Streets and Kings of Leon to The Killers."
+msgstr "Die besten der Noughties, von Coldplay bis Keane, Eminem bis Elbow, Arctic Monkeys zu Amy Winehouse, Scissor Sisters zu den Straßen und Könige von Leon zu den Killern."
+
+msgctxt "#30125"
+msgid "Displays image and information about the artist or band currently streaming."
+msgstr "Zeigt Bild und Informationen über den Künstler oder die Band an, die gerade streaming ist."
+
+msgctxt "#30126"
+msgid "Open settings."
+msgstr "Einstellungen öffnen."

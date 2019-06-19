@@ -1,0 +1,72 @@
+<strings>
+    <!-- Settings -->
+    <string id="10000">Directory di musica personalizzata</string>
+    <string id="10001">Directory di musica</string>
+    <string id="10002">Cancellare le canzoni selezionate</string>
+    <string id="10003">Album di coda nella selezione</string>
+    <string id="10004">Nascondi fanart durante la riproduzione</string>
+    <string id="10005">Importo al pre-cache</string>
+    <string id="10006">Struttura della cartella dell'artista / album</string>
+    <string id="10007">Mostra progresso</string>
+    <string id="10008">Generale</string>
+    <string id="10009">download</string>
+    <string id="10010">Seleziona 'Custom Music Directory' e definisci la tua posizione di download per la musica.</string>
+    <string id="10011">Download di coda</string>
+    <string id="10012">Scegli "Download coda" per scaricare tutti i brani / album selezionati uno dopo l'altro.</string>
+    <!-- Notifications -->
+    <string id="20000">Il download è finito</string>
+    <string id="20001">Il download è iniziato</string>
+    <string id="20002">Il download di album è terminato</string>
+    <string id="20003">download</string>
+    <string id="20004">sbloccato</string>
+    <string id="20005">Biblioteca musicale</string>
+    <string id="20006">I tag ID3 sono aggiornati</string>
+    <string id="20007">elenco di riproduzione</string>
+    <string id="20008">Azzerato</string>
+    <!-- Dialogs -->
+    <string id="20009">Il download dell'album è in corso</string>
+    <string id="20010">Attendere che il download corrente finisca</string>
+    <string id="20011">Musica MP3</string>
+    <string id="20012">Consulta le canzoni o riproduce l'album completo?</string>
+    <string id="20013">Navigare</string>
+    <string id="20014">Riproduci ora</string>
+    <string id="20015">Creazione della tua playlist</string>
+    <string id="20016">Seleziona gruppo</string>
+    <!-- Strings -->
+    <string id="20017">Aggiunto ai Preferiti</string>
+    <string id="20018">Rimosso da Preferiti</string>
+    <!-- Menus -->
+    <string id="20019">artisti</string>
+    <string id="20020">Top Album</string>
+    <string id="20021">Nuovi album</string>
+    <string id="20022">Compilation</string>
+    <string id="20023">Cerca artisti</string>
+    <string id="20024">Cerca album</string>
+    <string id="20025">Cerca canzoni</string>
+    <string id="20026">Artisti preferiti</string>
+    <string id="20027">Album preferiti</string>
+    <string id="20028">Canzoni preferite</string>
+    <string id="20029">Canzoni preferite Instant Mix (Shuffle and Play)</string>
+    <string id="20030">Album istantanei di Mix Mix (Shuffle and Play)</string>
+    <string id="20031">Clear Playlist</string>
+    <string id="20032">impostazioni</string>
+    <!-- Query Strings -->
+    <string id="20033">Immediato</string>
+    <string id="20034">Chiaro</string>
+    <string id="20035">Superiore </string>
+    <string id="20036"> artisti</string>
+    <string id="20037">Nuovo </string>
+    <string id="20038"> Album</string>
+    <!-- Compilations Menus -->
+    <string id="20039">Migliori Raccolte</string>
+    <string id="20040">Nuove Compilazioni</string>
+    <string id="20041">Colpi importanti</string>
+    <string id="20042">Nightclub Hits</string>
+    <string id="20043">Chillout Hits</string>
+    <string id="20044">Tributi e copertine</string>
+    <string id="20045">eventi</string>
+    <!-- Error Strings -->
+    <string id="20046">Errore durante il download!</string>
+    <string id="20047">Errore nell'avere la pagina web!</string>
+    <string id="20048">È successo qualcosa di malvagio :(</string>
+</strings>

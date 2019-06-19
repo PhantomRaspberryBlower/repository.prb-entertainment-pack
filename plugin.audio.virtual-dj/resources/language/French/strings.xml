@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="true"?>
+<strings>
+	<!-- Language Strings -->
+      <string id="30701">Leicester Community Radio</string>
+      <string id="30702">Statistiques</string>
+	<string id="30703">Statistiques d'Ustream</string>
+      <string id="30710">Statut</string>
+      <string id="30711">Dernière diffusion</string>
+      <string id="30712">Suiveurs</string>
+      <string id="30713">Vues totales</string>
+      <string id="30714">Les spectateurs</string>
+      <string id="30720">Flux illisible</string>
+      <string id="30721">Quelque chose de méchant arrivé :(</string>
+      <string id="30722">Erreur!</string>
+      <string id="30723">S'il vous plaît, attendez...</string>
+      <string id="30724">Processus complet</string>
+      <string id="30725">Impossible de télécharger les liens vidéo</string>
+</strings>

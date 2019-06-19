@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<addon id="plugin.audio.demon-fm" name="Demon FM" version="0.0.3" provider-name="Phantom Raspberry Blower">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>audio</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Demon FM</summary>
+    <summary lang="de_DE">Demon FM</summary>
+    <summary lang="es_ES">Demon FM</summary>
+    <summary lang="fr_FR">Demon FM</summary>
+    <summary lang="it_IT">Demon FM</summary>
+    <description lang="en_GB">
+      Demon FM is a student radio station based at De Montfort University in Leicester, England. The station is simulcast on FM and online on a 24/7 basis and was set up in 1995 by the Communications Officer of the time, Rob Martin.
+    </description>
+    <description lang="de_DE">
+      Demon FM ist ein studentischer Radiosender an der De Montfort University in Leicester, England. Die Station ist simultan auf FM und online rund um die Uhr verfügbar und wurde 1995 von dem damaligen Kommunikationsbeauftragten Rob Martin gegründet.
+    </description>
+    <description lang="es_ES">
+      Demon FM es una estación de radio estudiantil con sede en De Montfort University en Leicester, Inglaterra. La estación se transmite simultáneamente en FM y en línea las 24 horas del día, los 7 días de la semana, y fue creada en 1995 por el Oficial de Comunicaciones de la época, Rob Martin.
+    </description>
+    <description lang="fr_FR">
+      Demon FM est une station de radio étudiante basée à l'Université De Montfort à Leicester, en Angleterre. La station est diffusée simultanément en FM et en ligne 24 heures sur 24 et 7 jours sur 7 et a été créée en 1995 par le responsable des communications de l'époque, Rob Martin.
+    </description>
+    <description lang="it_IT">
+      Demon FM è una stazione radio studentesca con sede presso la De Montfort University a Leicester, in Inghilterra. La stazione è trasmessa in simulcast su FM e online 24 ore su 24, 7 giorni su 7, ed è stata creata nel 1995 dall'ufficiale addetto alle comunicazioni dell'epoca, Rob Martin.
+    </description>
+    <disclaimer lang="en_GB">
+      [COLOR red][B]Phantom Raspberry Blower[/B][/COLOR] does not host or distribute any of the content provided by this addon. Does not have any affiliation with the content provider and accepts no responsibility for the included addon.
+    </disclaimer>
+    <disclaimer lang="de_DE">
+      [COLOR red][B]Phantom Raspberry Blower[/B][/COLOR] hostet oder verteilt keinen der von diesem Addon bereitgestellten Inhalte. Hat keine Verbindung mit dem Inhaltsanbieter und übernimmt keine Verantwortung für das enthaltene Addon.
+    </disclaimer>
+    <disclaimer lang="es_ES">
+      [COLOR red][B]Phantom Raspberry Blower[/B][/COLOR] no aloja ni distribuye ninguno de los contenidos proporcionados por este complemento. No tiene ninguna afiliación con el proveedor de contenido y no acepta ninguna responsabilidad por el complemento incluido.
+    </disclaimer>
+    <disclaimer lang="fr_FR">
+      [COLOR red][B]Phantom Raspberry Blower[/B][/COLOR] n'héberge ni ne distribue aucun contenu fourni par cet addon. N'a aucune affiliation avec le fournisseur de contenu et n'accepte aucune responsabilité pour l'addon inclus.
+    </disclaimer>
+    <disclaimer lang="it_IT">
+      [COLOR red][B]Phantom Raspberry Blower[/B][/COLOR] non ospita o distribuisce alcun contenuto fornito da questo addon. Non ha alcuna affiliazione con il fornitore di contenuti e non si assume alcuna responsabilità per l'addon incluso.
+    </disclaimer>
+    <platform>all</platform>
+    <language></language>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum></forum>
+    <website></website>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+      <screenshot>resources/media/screenshot000.jpg</screenshot>
+      <screenshot>resources/media/screenshot001.jpg</screenshot>
+      <screenshot>resources/media/screenshot002.jpg</screenshot>
+      <screenshot>resources/media/screenshot003.jpg</screenshot>
+      <screenshot>resources/media/screenshot004.jpg</screenshot>
+      <screenshot>resources/media/screenshot005.jpg</screenshot>
+      <screenshot>resources/media/screenshot006.jpg</screenshot>
+    </assets>
+    <news>BETA Version. Added Screenshots.</news>
+    <email></email>
+    <source>https://github.com/PhantomRaspberryBlower/repository.prb-entertainment-pack/tree/master/plugin.audio.demon-fm</source>
+  </extension>
+</addon>
