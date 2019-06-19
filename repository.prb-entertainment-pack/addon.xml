@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.prb-entertainment-pack" name="PRB Entertainment Repository" version="0.1.0" provider-name="Phantom Raspberry Blower">
+	<extension point="xbmc.addon.repository" name="PRB Entertainment Repository">
+		<info compressed="false">http://raw.github.com/PhantomRaspberryBlower/repository.prb-entertainment-pack/master/addons.xml</info>
+		<checksum>http://raw.github.com/PhantomRaspberryBlower/repository.prb-entertainment-pack/master/addons.xml.md5</checksum>
+		<datadir zip="true">http://raw.github.com/PhantomRaspberryBlower/repository.prb-entertainment-pack/master</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Phantom Raspberry Blower Repository</summary>
+		<description>Phantom Raspberry Blower Entertainment Pack video plug-ins for Kodi</description>
+		<platform>all</platform>
+	</extension>
+</addon>
