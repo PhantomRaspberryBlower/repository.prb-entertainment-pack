@@ -1,0 +1,75 @@
+# Kodi Media Center language file
+# Addon Name: Blaze TV
+# Addon id: plugin.video.blaze-tv
+# Addon Provider: Phantom Raspberry Blower
+msgid ""
+msgstr ""
+"Project-Id-Version: Kodi Addons\n"
+"Report-Msgid-Bugs-To: alanwww1@kodi.org\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: English (http://www.transifex.com/projects/p/xbmc-addons/language/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# Language strings
+
+msgctxt "#30101"
+msgid "Unable to download page!"
+msgstr "¡No se puede descargar la página!"
+
+msgctxt "#30102"
+msgid "Error!"
+msgstr "¡Error!"
+
+msgctxt "#30103"
+msgid "Something wicked happened :("
+msgstr "Algo malo sucedió :("
+
+msgctxt "#30104"
+msgid "Unable to download stream :("
+msgstr "No se puede descargar la secuencia :("
+
+msgctxt "#30105"
+msgid "No stream available!"
+msgstr "¡No hay flujo disponible!"
+
+msgctxt "#30106"
+msgid "No Stream!"
+msgstr "¡Sin transmisión!"
+
+msgctxt "#30107"
+msgid "Blaze TV (live)"
+msgstr "Blaze TV (en vivo)"
+
+msgctxt "#30108"
+msgid "Blaze live broadcast."
+msgstr "Blaze transmisión en vivo."
+
+msgctxt "#30109"
+msgid "Blaze TV (catchup)"
+msgstr "Blaze TV (catchup)"
+
+msgctxt "#30110"
+msgid "Watch recent programmes broadcast on Blaze TV."
+msgstr "Mira programas recientes transmitidos en Blaze TV."
+
+msgctxt "#30111"
+msgid "Blaze TV (series)"
+msgstr "Blaze TV (serie)"
+
+msgctxt "#30112"
+msgid "Browse Blaze TV shows alphabetically."
+msgstr "Navega por los shows de Blaze TV alfabéticamente."
+
+msgctxt "#30113"
+msgid "Blaze TV (guide)"
+msgstr "Blaze TV (guía)"
+
+msgctxt "#30114"
+msgid "Displays schedule of recent and upcoming programmes."
+msgstr "Muestra el calendario de los programas recientes y futuros."

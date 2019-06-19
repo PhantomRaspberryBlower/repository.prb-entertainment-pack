@@ -1,0 +1,88 @@
+# Kodi Media Center language file
+# Addon Name: Quest TV
+# Addon id: plugin.video.quest-tv
+# Addon Provider: Phantom Raspberry Blower
+msgid ""
+msgstr ""
+"Project-Id-Version: Kodi Addons\n"
+"Report-Msgid-Bugs-To: alanwww1@kodi.org\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: English (http://www.transifex.com/projects/p/xbmc-addons/language/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# Language strings
+
+msgctxt "#30101"
+msgid "Shows"
+msgstr "Zeigt an"
+
+msgctxt "#30102"
+msgid "Quest TV (shows)"
+msgstr "Quest TV (Sendungen)"
+
+msgctxt "#30103"
+msgid "Watch shows broadcast on Quest TV."
+msgstr "Auf Quest TV ausgestrahlte Shows"
+
+msgctxt "#30104"
+msgid "Genres"
+msgstr "Genres"
+
+msgctxt "#30105"
+msgid "Quest TV (genres)"
+msgstr "Quest TV (Genres)"
+
+msgctxt "#30106"
+msgid "Browse Quest TV shows by genre."
+msgstr "Durchsuchen Sie Quest TV-Sendungen nach Genre."
+
+msgctxt "#30107"
+msgid "Guide"
+msgstr "Führen"
+
+msgctxt "#30108"
+msgid "Quest TV (guide)"
+msgstr "Quest TV (Anleitung)"
+
+msgctxt "#30109"
+msgid "Displays schedule of recent and upcoming programmes."
+msgstr "Zeigt den Zeitplan für aktuelle und kommende Programme an."
+
+msgctxt "#30110"
+msgid "[COLOR green]Live[/COLOR]"
+msgstr "[COLOR green]Leben[/COLOR]"
+
+msgctxt "#30111"
+msgid "Quest TV ([COLOR green]live[/COLOR])"
+msgstr "Quest TV ([COLOR green]Leben[/COLOR])"
+
+msgctxt "#30112"
+msgid "Shows live stream of Quest TV."
+msgstr "Zeigt Live-Stream von Quest TV."
+
+msgctxt "#30113"
+msgid "[COLOR red]No Streams Available![/COLOR]"
+msgstr "[COLOR red]Keine Streams verfügbar![/COLOR]"
+
+msgctxt "#30114"
+msgid "Something Wicked Happened :("
+msgstr "Etwas Böses geschah :("
+
+msgctxt "#30115"
+msgid "Unable to download page!"
+msgstr "Die Seite konnte nicht heruntergeladen werden!"
+
+msgctxt "#30116"
+msgid "Error!"
+msgstr "Error!"
+
+msgctxt "#30117"
+msgid "Unable to download stream!"
+msgstr "Der Stream konnte nicht heruntergeladen werden!"
+

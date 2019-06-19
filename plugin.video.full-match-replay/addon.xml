@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.full-match-replay" name="Full Match Replay" version="0.0.2" provider-name="Phantom Raspberry Blower">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Replay Football Matches From Around The World</summary>
+    <description lang="en_GB">
+      Full Match Replay brings you football matches from around the world including the Premier League, Seria A, La Liga, Bundesliga, Ligue 1, Champions League, Europa League, EURO, UEFA Nations League, World Cup, Copa America and the Africa Cup.
+    </description>
+    <disclaimer lang="en_GB">
+      [COLOR red][B]Phantom Raspberry Blower[/B][/COLOR] does not host or distribute any of the content provided by this addon. Does not have any affiliation with the content provider and accepts no responsibility for the included addon.
+    </disclaimer>
+    <platform>all</platform>
+    <language></language>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum></forum>
+    <website></website>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+    </assets>
+    <news>Added World Cup, EURO, UEFA Nations League, Africa Cup</news>
+    <email></email>
+    <source></source>
+  </extension>
+</addon>
