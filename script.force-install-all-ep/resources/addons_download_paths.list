@@ -1,0 +1,19 @@
+Dreamcatcher<>plugin.program.dreamcatcher<>download_folder_default<>movies_download_path<>Movies
+Dreamcatcher<>plugin.program.dreamcatcher<>download_folder_audio<>music_download_path<>Music
+Exodus<>plugin.video.exodus<>downloads<>true<>Boolean
+Exodus<>plugin.video.exodus<>movie.download.path<>movies_download_path<>Movies
+Exodus<>plugin.video.exodus<>tv.download.path<>tv_shows_download_path<>TV Shows
+MP3Music<>plugin.audio.mp3music<>custom_directory<>true<>Boolean
+MP3Music<>plugin.audio.mp3music<>music_dir<>music_download_path<>Music
+Neptune<>plugin.video.neptune<>downloads<>true<>Boolean
+Neptune<>plugin.video.neptune<>movie.download.path<>movies_download_path<>Movies
+Neptune<>plugin.video.neptune<>tv.download.path<>tv_shows_download_path<>TV Shows
+Placenta<>plugin.video.placenta<>downloads<>true<>Boolean
+Placenta<>plugin.video.placenta<>movie.download.path<>movies_download_path<>Movies
+Placenta<>plugin.video.placenta<>tv.download.path<>tv_shows_download_path<>TV Shows
+Supremacy<>plugin.video.supremacy<>downloads<>true<>Boolean
+Supremacy<>plugin.video.supremacy<>movie.download.path<>movies_download_path<>Movies
+Supremacy<>plugin.video.supremacy<>tv.download.path<>tv_shows_download_path<>TV Shows
+yoda<>plugin.video.yoda<>downloads<>true<>Boolean
+yoda<>plugin.video.yoda<>movie.download.path<>movies_download_path<>Movies
+yoda<>plugin.video.yoda<>tv.download.path<>tv_shows_download_path<>TV Shows

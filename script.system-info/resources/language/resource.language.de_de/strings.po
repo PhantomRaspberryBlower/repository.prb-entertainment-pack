@@ -1,0 +1,211 @@
+# Kodi Media Center language file
+# Addon Name: System Info
+# Addon id: script.system-info
+# Addon Provider: Phantom Raspberry Blower
+msgid ""
+msgstr ""
+"Project-Id-Version: Kodi Addons\n"
+"Report-Msgid-Bugs-To: alanwww1@kodi.org\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: English (http://www.transifex.com/projects/p/xbmc-addons/language/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# Language strings
+
+msgctxt "#30101"
+msgid "System Info"
+msgstr "Systeminformationen"
+
+msgctxt "#30102"
+msgid "Software"
+msgstr "Software"
+
+msgctxt "#30103"
+msgid "Username"
+msgstr "Nutzername"
+
+msgctxt "#30104"
+msgid "Hostname"
+msgstr "Hostname"
+
+msgctxt "#30105"
+msgid "Platform"
+msgstr "Plattform"
+
+msgctxt "#30106"
+msgid "Distribution"
+msgstr "Verteilung"
+
+msgctxt "#30107"
+msgid "Vertriebsversion"
+msgstr "Dist. Version"
+
+msgctxt "#30108"
+msgid "System"
+msgstr "System"
+
+msgctxt "#30109"
+msgid "Node"
+msgstr "Knoten"
+
+msgctxt "#30110"
+msgid "Release"
+msgstr "Veröffentlichung"
+
+msgctxt "#30111"
+msgid "Version"
+msgstr "Ausführung"
+
+msgctxt "#30112"
+msgid "Machine"
+msgstr "Maschine"
+
+msgctxt "#30113"
+msgid "Processor"
+msgstr "Prozessor"
+
+msgctxt "#30114"
+msgid "CPU"
+msgstr "Zentralprozessor"
+
+msgctxt "#30115"
+msgid "Model"
+msgstr "Modell"
+
+msgctxt "#30116"
+msgid "Cores"
+msgstr "Kerne"
+
+msgctxt "#30117"
+msgid "Temp"
+msgstr "Temp"
+
+msgctxt "#30118"
+msgid "Hardware"
+msgstr "Hardware"
+
+msgctxt "#30119"
+msgid "Revision"
+msgstr "Revision"
+
+msgctxt "#30120"
+msgid "Serial number"
+msgstr "Ordnungsnummer"
+
+msgctxt "#30121"
+msgid "Memory"
+msgstr "Erinnerung"
+
+msgctxt "#30122"
+msgid "Total"
+msgstr "Gesamt"
+
+msgctxt "#30123"
+msgid "Used"
+msgstr "Gebraucht"
+
+msgctxt "#30124"
+msgid "Free"
+msgstr "Kostenlos"
+
+msgctxt "#30125"
+msgid "Network"
+msgstr "Netzwerk"
+
+msgctxt "#30126"
+msgid "LAN IP Address"
+msgstr "LAN-IP-Adresse"
+
+msgctxt "#30127"
+msgid "eth0"
+msgstr "eth0"
+
+msgctxt "#30128"
+msgid "wlan0"
+msgstr "wlan0"
+
+msgctxt "#30129"
+msgid "Gateway IP Address"
+msgstr "Gateway-IP-Adresse"
+
+msgctxt "#30130"
+msgid "WAN IP Address"
+msgstr "WAN-IP-Adresse"
+
+msgctxt "#30131"
+msgid "Whois"
+msgstr "Wer ist"
+
+msgctxt "#30132"
+msgid "netname"
+msgstr "Netzname"
+
+msgctxt "#30133"
+msgid "role"
+msgstr "Rolle"
+
+msgctxt "#30134"
+msgid "descr"
+msgstr "beschreibung"
+
+msgctxt "#30135"
+msgid "country"
+msgstr "Land"
+
+msgctxt "#30136"
+msgid "Error! Unable to get system informtaion :("
+msgstr "Error! Systeminformationen konnten nicht abgerufen werden :("
+
+msgctxt "#30137"
+msgid "Error getting WAN IP Address!"
+msgstr "Fehler beim Abrufen der WAN-IP-Adresse!"
+
+msgctxt "#30138"
+msgid "Error: Unable to get "
+msgstr "Fehler: Nicht erreichbar "
+
+msgctxt "#30139"
+msgid "Error getting Network Settings!"
+msgstr "Fehler beim Abrufen der Netzwerkeinstellungen!"
+
+msgctxt "#30140"
+msgid "Error getting Networks!"
+msgstr "Fehler beim Erhalten von Netzwerken!"
+
+msgctxt "#30141"
+msgid "Error! Unable to get LAN IP address :("
+msgstr "Error! LAN-IP-Adresse konnte nicht abgerufen werden :("
+
+msgctxt "#30142"
+msgid "Storage"
+msgstr "Lager"
+
+msgctxt "#30143"
+msgid "Network Devices"
+msgstr "Netzwerkgeräte"
+
+msgctxt "#30144"
+msgid "Previous Networks"
+msgstr "Vorherige Netzwerke"
+
+msgctxt "#30145"
+msgid "Addons Installed"
+msgstr "Addons installiert"
+
+msgctxt "#30146"
+msgid "Form Sent"
+msgstr "Formular gesendet"
+
+msgctxt "#30147"
+msgid "System Information"
+msgstr "System Information"
+
+msgctxt "#30148"
+msgid "Does not work with MS Windows :("
+msgstr "Funktioniert nicht mit MS Windows :("

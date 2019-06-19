@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Translated using Transifex web application. For support, or if you would like to to help out, please visit your language team! -->
+<!-- Russian language-Team URL: http://www.transifex.com/projects/p/xbmc-addons/language/ru/ -->
+<!-- Report language file syntax bugs at: alanwww1@xbmc.org -->
+
+<strings>
+    <!-- Help -->
+    <string id="32001">Влево + Вправо = Переключение Альбом/Фото</string>
+    <string id="32002">Вверх + Вниз = Сменить источник</string>
+    <string id="32003">Выбор = Зайти в альбом</string>
+    <string id="32004">Назад = выйти из альбома/дополнения</string>
+
+    <!-- Settings categories -->
+    <string id="32200">Справка</string>
+    <string id="32201">Настройка</string>
+    <string id="32304">Скачивание в: %s</string>
+</strings>

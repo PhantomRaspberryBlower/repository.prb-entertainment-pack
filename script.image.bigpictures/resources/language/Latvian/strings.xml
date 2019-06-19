@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Translated using Transifex web application. For support, or if you would like to to help out, please visit your language team! -->
+<!-- Latvian language-Team URL: http://www.transifex.com/projects/p/xbmc-addons/language/lv/ -->
+<!-- Report language file syntax bugs at: alanwww1@xbmc.org -->
+
+<strings>
+    <string id="32008">0 = Pārslēdz malu attiecību</string>
+    <string id="32110">Noklusētā malu attiecība</string>
+
+    <!-- Settings categories -->
+    <string id="32200">Palīdzība</string>
+    <string id="32201">Iestatījumi</string>
+</strings>

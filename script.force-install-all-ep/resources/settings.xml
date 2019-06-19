@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <!-- General Settings -->
+    <category label="30000">
+        <setting label="Media Source" default="" action="RunScript($ID,?action=set_media_source)" id="set_media_source" type="action"/>
+        <setting type="lsep" label="Select the location where the media is stored. This will create the following"/>
+        <setting type="lsep" label="folders if not already present:"/>
+        <setting type="lsep" label="    - [COLOR orange]Addons, Backups, Movies, Music, Pictures, Screen Shots, TV Shows[/COLOR]."/>
+        <setting type="lsep" label="If not already defined it will set the download path settings to the above folders."/>
+        <setting type="lsep" label="It then sets the download paths for all addons with a download option."/>
+        <setting type="lsep"/>
+        <setting type="lsep"/>
+        <setting type="lsep" label="You must select 'OK' to save changes."/>
+    </category>
+    <!-- Downloads Settings -->
+    <category label="30004">
+        <setting label="30001" default="" id="addons_path" type="folder"/>
+        <setting label="30002" default="" id="backups_path" type="folder"/>
+        <setting label="30005" default="" id="movies_download_path" type="folder"/>
+        <setting label="30006" default="" id="music_download_path" type="folder"/>
+        <setting label="30007" default="" id="pictures_download_path" type="folder"/>
+        <setting label="30003" default="" id="screenshots_path" type="folder"/>    
+        <setting label="30008" default="" id="tv_shows_download_path" type="folder"/>
+        <setting type="sep"/>
+        <setting type="lsep" label="You must select 'OK' to save changes."/>
+    </category>
+    <!-- Tools Settings -->
+    <category label="Tools">
+        <setting label="Run PRB Clean" default="" action="RunScript($ID,?action=run_prb_clean)" id="run_prb_clean" type="action"/>        
+        <setting type="lsep" label="PRB Clean removes the following:"/>
+        <setting type="lsep" label="    - Obsolete or depricated addons no longer maintained."/>
+        <setting type="lsep" label="    - Colours from addon names so listings are sorted alphabetically."/>
+        <setting type="lsep" label="    - Multi-purpose addons from music addons list."/>
+        <setting type="sep"/>
+        <setting label="Send Web Form to PRB" default="" action="RunScript($ID,?action=send_web_form)" id="send_web_form" type="action"/>        
+        <setting type="lsep" label="Used to notify PRB of your current system settings helping PRB when trying"/>
+        <setting type="lsep" label="to diagnose any issues. The following information is sent:"/>
+        <setting type="lsep" label="    - [COLOR orange]Software, CPU, Hardware, Memory, Storage, Addons and Networks[/COLOR]."/>
+        <setting type="sep"/>
+    </category>
+</settings>

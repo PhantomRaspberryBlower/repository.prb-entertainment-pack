@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="true"?>
+<strings>
+	<!-- Settings -->
+      <string id="30000">General</string>
+      <string id="30001">Addons</string>
+      <string id="30002">Backups</string>
+      <string id="30003">Screen Shots</string>
+      <string id="30004">Download Paths</string>
+      <string id="30005">Movies</string>
+      <string id="30006">Music</string>
+      <string id="30007">Pictures</string>
+      <string id="30008">TV Shows</string>
+</strings>

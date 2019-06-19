@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.force-install-all-ep" name="PRB Install Everything EP" version="1.12.5" provider-name="Phantom Raspberry Blower">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="plugin.audio.absolute-radio"/>
+    <import addon="plugin.audio.bbc-radio"/>
+    <import addon="plugin.audio.demon-fm"/>
+    <import addon="plugin.audio.leicester-community-radio"/>
+    <import addon="plugin.audio.mp3music"/>
+    <import addon="plugin.audio.prb-radio"/>
+    <import addon="plugin.program.dreamcatcher"/>
+    <import addon="plugin.video.cartoongo"/>
+    <import addon="plugin.video.ds"/>
+    <import addon="plugin.video.exodus"/>
+    <import addon="plugin.video.f1-replay"/>
+    <import addon="plugin.video.Fido"/>
+    <import addon="plugin.video.full-match-replay"/>
+    <import addon="plugin.video.iplayerwww"/>
+    <import addon="plugin.video.itv"/>
+    <import addon="plugin.video.JokerSports"/>
+    <import addon="plugin.video.MaverickTV"/>
+    <import addon="plugin.video.motogp-replay"/>
+    <import addon="plugin.video.neptune"/>
+    <import addon="plugin.video.placenta"/>
+    <import addon="plugin.video.Rising.Tides"/>
+    <import addon="plugin.video.snagfilms"/>
+    <import addon="plugin.video.squadcontrol"/>
+    <import addon="plugin.video.SkyNet"/>
+    <import addon="plugin.video.ted.talks"/>
+    <import addon="plugin.video.ukturk"/>
+    <import addon="plugin.video.uktvplay"/>
+    <import addon="plugin.video.world.news.live"/>
+    <import addon="plugin.video.youtube"/>
+    <import addon="plugin.video.yt-comedy"/>
+    <import addon="script.image.websterswildshots"/>
+    <import addon="script.module.liveresolver"/>
+    <import addon="script.module.universalscrapers"/>
+    <import addon="script.rss.editor"/>
+    <import addon="script.rss-reader"/>
+    <import addon="script.system-info"/>
+    <import addon="service.subtitles.opensubtitles_by_opensubtitles"/>
+    <import addon="service.prb-clean"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>executable</provides>
+  </extension>    
+  <extension point="xbmc.addon.metadata">
+    <summary>Entertainment Pack</summary>
+    <description>Defines media sources and download settings.[CR][CR]Downloads and installs add-ons from Phantom Raspberry Blower Repo[CR][CR]Addons installed by this addon are:[CR]Absolute Radio, Aspis, BBC Radio, Blaze TV, Cartoongo, Classic British Comedy, DeathStar, Dreamcatcher, Exodus, Fido Video, Football Replays, Exodus, ITV, Joker Sports, Neptune Rising, Maverick TV, MP3 Music, Placenta, PRB Clean, Quest TV, RSS Editor, RSS Viewer, Sanity, Scythe, SkyNet, Snag Films, Squad Control, Supremacy, TED Talks, The Magic Dragon, UK Turks, UKTV Play, Websters Wildshots, World News Live, Yoda, YouTube[CR]</description>
+    <disclaimer>[COLOR red][B]Phantom Raspberry Blower[/B][/COLOR] accepts no responsibility for included addons.</disclaimer>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum></forum>
+    <website></website>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+      <screenshot>resources/media/screenshot000.jpg</screenshot>
+      <screenshot>resources/media/screenshot001.jpg</screenshot>
+      <screenshot>resources/media/screenshot002.jpg</screenshot>
+      <screenshot>resources/media/screenshot003.jpg</screenshot>
+    </assets>
+    <news>Removed Aspis, Sanity, Scythe, Supremacy, Supremacy Sports and The Magic Dragon</news>
+    <email></email>
+    <source></source>
+  </extension>
+</addon>
