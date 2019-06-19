@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="service.prb-clean" name="PRB Clean" version="0.2.6" provider-name="Phantom Raspberry Blower">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.service" library="service.py" start="startup"/>
+  <extension point="xbmc.addon.metadata">
+    <summary>Cleans PRB Entertainment Pack</summary>
+    <description>PRB Clean removes depricated addons, cleans colours from addon names, cleans music addons and enables RSS feeds.</description>
+    <disclaimer>[COLOR red][B]Phantom Raspberry Blower[/B][/COLOR] accepts no responsibility for included addon.[CR]</disclaimer>
+    <platform>all</platform>
+    <license></license>
+    <forum></forum>
+    <website></website>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+    </assets>
+    <news>Removed Aspis, Sanity, Scythe, Supremacy, Supremacy Sports and The Magic Dragon</news>
+    <email></email>
+    <source></source>
+  </extension>
+</addon>
+
+
