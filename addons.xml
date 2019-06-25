@@ -615,6 +615,20 @@
   </extension>
 </addon>
 
+<!-- Crypto Libraries Module -->
+<addon id="script.module.cryptolib" name="Crypto Libraries" version="1.0.0" provider-name="Twilight0">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary>Pure Python implementation of some cryptographic libraries</summary>
+    <source>https://github.com/Twilight0/script.module.cryptolib</source>
+    <platform>all</platform>
+    <license>MIT</license>
+  </extension>
+</addon>
+
 <!-- CypherStream module -->
 <addon id="script.cypherstream" name="Cypher Live" version="0.0.4" provider-name="Cypher">
   <requires>
@@ -935,21 +949,21 @@
 </addon>
 
 <!-- Exodus Scrapers Module -->
-<addon id="script.module.exoscrapers" name="ExoScrapers Module" version="1.0.0" provider-name="Exodus">
+<addon id="script.module.exoscrapers" name="ExoScrapers Module" version="1.0.2" provider-name="Exodus">
   <requires>
-    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="xbmc.python" version="2.25.0" />
     <import addon="script.module.beautifulsoup4"/>
+    <import addon="script.module.js2py"/>
   </requires>
   <extension point="xbmc.python.module" library="lib" />
   <extension point="xbmc.python.pluginsource" library="lib/default.py">
     <provides>executable</provides>
-  </extension>
+  </extension> 
   <extension point="xbmc.addon.metadata">
     <platform>all</platform>
     <summary lang="en">ExoScrapers Module</summary>
     <description>Scrape common video host for URL's to be playable in Kodi, simplifying addon development of video plugins requiring multi video hosts.</description>
     <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
-    <platform>all</platform>
     <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
     <assets>
       <icon>icon.png</icon>
@@ -1404,6 +1418,28 @@ Fixed new JSON format for Highlights.
     <website></website>
     <email></email>
     <source></source>
+  </extension>
+</addon>
+
+<!-- js2py Module -->
+<addon id="script.module.js2py" name="js2py" version="0.6.3" provider-name="Addons4Kodi">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="script.module.six" version="1.11.0"/>
+    <import addon="script.module.pyjsparser" version="2.7.1"/>
+    <import addon="script.module.tzlocal" version="1.5.1"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary>Pure Python JavaScript Translator/Interpreter</summary>
+    <description>Packed for Kodi from https://github.com/PiotrDabkowski/Js2Py</description>
+    <platform>all</platform>
+    <language></language>
+    <license>MIT</license>
+    <forum></forum>
+    <website>https://github.com/PiotrDabkowski/Js2Py</website>
+    <source>https://github.com/PiotrDabkowski/Js2Py</source>
+    <email></email>
   </extension>
 </addon>
 
@@ -2250,6 +2286,25 @@ AMF3, the default serialization for ActionScript 3.0, provides various advantage
   </extension>
 </addon>
 
+<!-- Pyjsparser Module -->
+<addon id="script.module.pyjsparser" name="pyjsparser" version="2.7.1" provider-name="Addons4Kodi">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary>Pure Python JavaScript Translator/Interpreter</summary>
+    <description>Packed for Kodi from https://github.com/PiotrDabkowski/pyjsparser</description>
+    <platform>all</platform>
+    <language></language>
+    <license>MIT</license>
+    <forum></forum>
+    <website>https://github.com/PiotrDabkowski/pyjsparser</website>
+    <source>https://github.com/PiotrDabkowski/pyjsparser</source>
+    <email></email>
+  </extension>
+</addon>
+
 <!-- Python Koding AIO Module -->
 <addon id="script.module.python.koding.aio" name="Python Koding AIO" version="0.9.9.4" provider-name="Total Revolution">
   <requires>
@@ -2271,6 +2326,26 @@ AMF3, the default serialization for ActionScript 3.0, provides various advantage
     <website>http://totalrevolution.tv</website>
     <news>Added custom resolver option for Play_Video</news>
     <source>https://github.com/totalrevolution/python-koding/tree/master/script.module.python.koding.aio</source>
+  </extension>
+</addon>
+
+<!-- Pytz Module -->
+<addon id="script.module.pytz" name="pytz" version="2014.2" provider-name="Stuart Bishop, Paul Backhouse">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">World Timezone Definitions for Python.</summary>
+    <description lang="en">pytz brings the Olson tz database into Python. This library allows accurate and cross platform timezone calculations using Python 2.4 or higher. It also solves the issue of ambiguous times at the end of daylight saving time, which you can read more about in the Python Library Reference (datetime.tzinfo).</description>
+    <platform>all</platform>
+    <language></language>
+    <license>MIT</license>
+    <forum></forum>
+    <website>https://pypi.python.org/pypi/pytz/</website>
+    <source>https://github.com/powlo/script.module.pytz</source>
+    <email></email>
+    <disclaimer lang="en">Use at your own risk. The authors accept no liability. May cause permanent and/or catastrophic damage. Side effects include, but are not limited to loss of memory, seizures, sudden fits of rage, sudden fits of melancholy, inability to recall prominent capital cities, lack of respect for authority, fear of cats, temporary and/or permanent black outs. Avoid inhalation. Use in a well ventilated space. Keep away from small children.</disclaimer>
   </extension>
 </addon>
 
@@ -2401,7 +2476,7 @@ AMF3, the default serialization for ActionScript 3.0, provides various advantage
 </addon>
 
 <!-- Resolver URL -->
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.0.31" provider-name="jsergio">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.0.33" provider-name="jsergio">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
     <import addon="plugin.video.youtube" optional="true" />
@@ -2416,6 +2491,7 @@ AMF3, the default serialization for ActionScript 3.0, provides various advantage
     <summary lang="en">Resolve common video host URL's to be playable in XBMC/Kodi.</summary>
     <summary lang="es">Resolver enlaces a videos de sitios populares para poder reproducirlos en XBMC/Kodi.</summary>
     <summary lang="hr">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju.</summary>
+    <summary lang="el">Επίλυση συνδέσμων κοινών εξυπηρετητών σε μορφή βίντεο ικανό για αναπαραγωγή στο XBMC/Kodi.</summary>
     <description lang="en">Resolve common video host URL's to be playable in XBMC/Kodi, simplify addon development of video plugins requiring multi video hosts.</description>
     <description lang="hr">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju, pojednostavnjuje razvoj priključaka za video dodatke koji zahtjevaju višestruke video izvore.</description>
   </extension>
@@ -2772,18 +2848,18 @@ Documentation: https://github.com/tamland/kodi-plugin-routing</description>
   </extension>
 </addon>
 
-<!-- Streamlink module -->
-<addon id="script.module.streamlink.base" name="Streamlink Library" version="2019.05.08" provider-name="Streamlink Devs, Twilight0">
+<!-- Streamlink Base module -->
+<addon id="script.module.streamlink.base" name="Streamlink Library" version="2019.06.23" provider-name="Streamlink Devs, Twilight0">
   <requires>
     <import addon="xbmc.python" version="2.24.0"/>
     <import addon="script.module.requests" version="2.12.4"/>
     <import addon="script.module.futures" version="2.2.0"/>
-    <import addon="script.module.streamlink.crypto" version="1.5.2"/>
+    <import addon="script.module.cryptolib" version="1.0.0"/>
   </requires>
   <extension point="xbmc.python.module" library="resources/lib/"/>
   <extension point="xbmc.addon.metadata">
-    <summary>Streamlink Library</summary>
-    <description>Streamlink Library for Kodi. Known issue: Does not work on Xbox, when trying to import something from ctypes module.</description>
+    <summary>Streamlink Library for Kodi</summary>
+    <description>Streamlink Library for Kodi. It is a collection of plugins to help resolve web page urls into streamable links. Known issue: Does not work on Xbox, specifically throws exception when trying to import something from ctypes module.</description>
     <platform>all</platform>
     <license>Simplified BSD</license>
     <source>https://github.com/Twilight0/script.module.streamlink.base/</source>
@@ -2791,13 +2867,9 @@ Documentation: https://github.com/tamland/kodi-plugin-routing</description>
     <assets>
       <icon>icon.png</icon>
     </assets>
-    <news>+2019.05.08
-- Added vimeo plugin
-
-+2019.05.03
-- Bumped to upstream commit c8ed1daff14ac03195870238b9b900c1109dd5c1
-- Include PR #2441 from upstream
-- Add exception for ctypes on namedpipe for XBOX (MemoryError). So its a known issue that streamlink does not work on this platform</news>
+    <news>+2019.06.23
+- Changed crypto module addon id
+- Updated description</news>
   </extension>
 </addon>
 
@@ -2913,11 +2985,12 @@ Documentation: https://github.com/tamland/kodi-plugin-routing</description>
 </addon>
 
 <!-- TED Talks Addon -->
-<addon id="plugin.video.ted.talks" name="TED Talks" version="4.2.12" provider-name="Scripmode A1, moreginger, rwparris2">
+<addon id="plugin.video.ted.talks" name="TED Talks" version="4.3.1" provider-name="moreginger, rwparris2">
   <requires>
-    <import addon="xbmc.python" version="2.24.0"/>
-    <import addon="script.module.elementtree" version="1.2.7"/>
-    <import addon="script.module.parsedom" version="0.9.1"/>
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="script.module.requests" version="2.22.0"/>
+    <import addon="script.module.elementtree" version="1.2.8"/>
+    <import addon="script.module.parsedom" version="2.5.2"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>video</provides>
@@ -2926,14 +2999,27 @@ Documentation: https://github.com/tamland/kodi-plugin-routing</description>
     <!-- There are subtitles on TED in many languages,
     and this plugin is (partially) internationalized in several,
     but it seems better to claim the one we are sure of for now. -->
-    <language>en_GB</language>
+    <language>en</language>
     <summary lang="en_GB">Watch talks from TED.com, a site dedicated to 'Ideas Worth Spreading'</summary>
-    <description lang="en_GB">TED is a small nonprofit devoted to Ideas Worth Spreading. It started out (in 1984) as a conference bringing together people from three worlds: Technology, Entertainment, Design. Since then its scope has become ever broader.</description>
+    <summary lang="hu_HU">Beszédek megtekintése a TED.com-ról</summary>
+    <summary lang="pt_PT">Veja debates de TED.com, um site dedicado a 'Ideias com Valor'</summary>
+    <description lang="en_GB">TED is a nonprofit devoted to spreading ideas, usually in the form of short, powerful talks (18 minutes or less). TED began in 1984 as a conference where Technology, Entertainment and Design converged, and today covers almost all topics — from science to business to global issues — in more than 100 languages. Meanwhile, independently run TEDx events help share ideas in communities around the world.</description>
+    <description lang="hu_HU">TED egy kicsi non-profit szervezet aminek célpontjában az Ötlet áll amit érdemes megosztani. A webhely kezdete 1984-re nyúlik vissza egy konferenciára ami 3 külön világot hozott össze: Technológia, Szórakozás, Tervezés. Azóta a kör csak bővült.</description>
+    <description lang="pt_PT">TED é uma organização sem fins lucrativos dedicada a 'Ideias com Valor'. Foi iniciada em 1984 como uma conferência que pretendia juntar pessoas de três mundos: Tecnologia, Entretenimento e Design. Desde ai tornou-se muito mais abrangente.</description>
     <platform>all</platform>
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-    <forum>http://forum.xbmc.org/showthread.php?tid=36866</forum>
-    <website>https://github.com/slipmodea1/plugin.video.ted.talks</website>
-    <source>https://github.com/skipmodea1/plugin.video.ted.talks.git</source>
+    <news>
+v4.3.1
+- Dropped support for Kodi versions older than 17 (Krypton)
+- High resolution plugin icon (pull#71 thanks to MarhyCZ)
+- Updates to support new TED site (pull#64 thanks to and3md)
+    </news>
+    <forum>https://forum.kodi.tv/showthread.php?tid=36866</forum>
+    <website>https://github.com/moreginger/xbmc-plugin.video.ted.talks</website>
+    <source>https://github.com/moreginger/xbmc-plugin.video.ted.talks</source>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
   </extension>
 </addon>
 
@@ -3000,6 +3086,26 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
     <platform>all</platform>
     <forum>https://www.tvaddons.co/forums</forum>
     <website>https://www.tvaddons.co</website>
+  </extension>
+</addon>
+
+<!-- Tzlocal Module -->
+<addon id="script.module.tzlocal" name="tzlocal" version="1.5.1" provider-name="Addons4Kodi">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="script.module.pytz" version="2014.2"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary>Python Module to find out the current time zone</summary>
+    <description>Packed for Kodi from https://github.com/regebro/tzlocal</description>
+    <platform>all</platform>
+    <language></language>
+    <license>MIT</license>
+    <forum></forum>
+    <website>https://github.com/regebro/tzlocal</website>
+    <source>https://github.com/regebro/tzlocal</source>
+    <email></email>
   </extension>
 </addon>
 
@@ -3122,7 +3228,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- URL Resolver -->
-<addon id="script.module.urlresolver" name="URLResolver" version="5.0.36" provider-name="tvaddons">
+<addon id="script.module.urlresolver" name="URLResolver" version="5.0.37" provider-name="tvaddons">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
     <import addon="plugin.video.youtube" optional="true" />
@@ -3137,6 +3243,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
     <summary lang="en">Resolve common video host URL's to be playable in XBMC/Kodi.</summary>
     <summary lang="es">Resolver enlaces a videos de sitios populares para poder reproducirlos en XBMC/Kodi.</summary>
     <summary lang="hr">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju.</summary>
+    <summary lang="el">Επίλυση συνδέσμων κοινών εξυπηρετητών σε μορφή βίντεο ικανό για αναπαραγωγή στο XBMC/Kodi.</summary>
     <description lang="en">Resolve common video host URL's to be playable in XBMC/Kodi, simplify addon development of video plugins requiring multi video hosts.</description>
     <description lang="hr">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju, pojednostavnjuje razvoj priključaka za video dodatke koji zahtjevaju višestruke video izvore.</description>
     <forum>https://www.tvaddons.co/forums</forum>

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.ted.talks" name="TED Talks" version="4.2.12-SNAPSHOT" provider-name="Skipmode A1, moreginger, rwparris2">
+<addon id="plugin.video.ted.talks" name="TED Talks" version="4.3.1" provider-name="moreginger, rwparris2">
   <requires>
-    <import addon="xbmc.python" version="2.24.0"/>
-    <import addon="script.module.elementtree" version="1.2.7"/>
-    <import addon="script.module.parsedom" version="0.9.1"/>
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="script.module.requests" version="2.22.0"/>
+    <import addon="script.module.elementtree" version="1.2.8"/>
+    <import addon="script.module.parsedom" version="2.5.2"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>video</provides>
@@ -12,7 +13,7 @@
     <!-- There are subtitles on TED in many languages,
     and this plugin is (partially) internationalized in several,
     but it seems better to claim the one we are sure of for now. -->
-    <language>en_GB</language>
+    <language>en</language>
     <summary lang="en_GB">Watch talks from TED.com, a site dedicated to 'Ideas Worth Spreading'</summary>
     <summary lang="hu_HU">Beszédek megtekintése a TED.com-ról</summary>
     <summary lang="pt_PT">Veja debates de TED.com, um site dedicado a 'Ideias com Valor'</summary>
@@ -21,8 +22,17 @@
     <description lang="pt_PT">TED é uma organização sem fins lucrativos dedicada a 'Ideias com Valor'. Foi iniciada em 1984 como uma conferência que pretendia juntar pessoas de três mundos: Tecnologia, Entretenimento e Design. Desde ai tornou-se muito mais abrangente.</description>
     <platform>all</platform>
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-    <forum>http://forum.xbmc.org/showthread.php?tid=36866</forum>
-    <website>https://github.com/skipmodea1/plugin.video.ted.talks</website>
-    <source>https://github.com/skipmodea1/plugin.video.ted.talks.git</source>
+    <news>
+v4.3.1
+- Dropped support for Kodi versions older than 17 (Krypton)
+- High resolution plugin icon (pull#71 thanks to MarhyCZ)
+- Updates to support new TED site (pull#64 thanks to and3md)
+    </news>
+    <forum>https://forum.kodi.tv/showthread.php?tid=36866</forum>
+    <website>https://github.com/moreginger/xbmc-plugin.video.ted.talks</website>
+    <source>https://github.com/moreginger/xbmc-plugin.video.ted.talks</source>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
   </extension>
 </addon>
