@@ -9,8 +9,6 @@ Downloads and installs addons.
 
 Addons installed by this addon:
   - Absolute Radio (Stream Music)
-  - Artwork Downloader (Downloads Movies, TV, Artists and Album artwork)
-  - At The Flix (Movies & TV Shows)
   - BBC Radio (Stream Live Radio)
   - Cartoongo (Kids Animation)
   - Classic British Comedy (Movies & TV Shows)
@@ -27,10 +25,8 @@ Addons installed by this addon:
   - ITV (Live & Catch-Up TV)
   - IP 2 Location (Displays location based on IP address)
   - iPlayer (Live and Catch-Up TV)
-  - Joker Sports (Sport)
   - Leicester Community Radio (Internet Radio)
   - Mail (Email Reader)
-  - Maverick TV (Movies & TV Shows)
   - MotoGP Replays
   - MP3 Music (Music Albums & Songs)
   - Neptune Rising TV (Movies & TV Shows)
@@ -41,12 +37,10 @@ Addons installed by this addon:
   - Rising Tides (Sport)
   - RSS Editor (Add RSS Subcriptions)
   - RSS Reader (Displays RSS Feeds)
-  - SkyNet (Movies & TV Shows)
   - Snagfilms (Classic Movies)
   - Squad Control (Animations)
   - System Info (Displays System Information)
   - TED Talks (lectures)
-  - The Magic Dragon (Movies & TV Shows)
   - UKTV Play (Live & Catch-up TV)
   - UK Turks Playlist
   - Virtual DJ (Internet Music)

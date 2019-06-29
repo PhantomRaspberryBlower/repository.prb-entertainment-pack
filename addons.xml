@@ -2,7 +2,7 @@
 <addons>
 
 <!-- PRB Install Everything Addon -->
-<addon id="script.force-install-all-ep" name="PRB Install Everything EP" version="1.12.5" provider-name="Phantom Raspberry Blower">
+<addon id="script.force-install-all-ep" name="PRB Install Everything EP" version="1.12.6" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="plugin.audio.absolute-radio"/>
@@ -20,19 +20,17 @@
     <import addon="plugin.video.full-match-replay"/>
     <import addon="plugin.video.iplayerwww"/>
     <import addon="plugin.video.itv"/>
-    <import addon="plugin.video.JokerSports"/>
-    <import addon="plugin.video.MaverickTV"/>
     <import addon="plugin.video.motogp-replay"/>
     <import addon="plugin.video.neptune"/>
     <import addon="plugin.video.placenta"/>
     <import addon="plugin.video.Rising.Tides"/>
     <import addon="plugin.video.snagfilms"/>
     <import addon="plugin.video.squadcontrol"/>
-    <import addon="plugin.video.SkyNet"/>
     <import addon="plugin.video.ted.talks"/>
     <import addon="plugin.video.ukturk"/>
     <import addon="plugin.video.uktvplay"/>
     <import addon="plugin.video.world.news.live"/>
+    <import addon="plugin.video.yoda"/>
     <import addon="plugin.video.youtube"/>
     <import addon="plugin.video.yt-comedy"/>
     <import addon="script.image.websterswildshots"/>
@@ -49,7 +47,7 @@
   </extension>    
   <extension point="xbmc.addon.metadata">
     <summary>Entertainment Pack</summary>
-    <description>Defines media sources and download settings.[CR][CR]Downloads and installs add-ons from Phantom Raspberry Blower Repo[CR][CR]Addons installed by this addon are:[CR]Absolute Radio, Aspis, BBC Radio, Blaze TV, Cartoongo, Classic British Comedy, DeathStar, Dreamcatcher, Exodus, Fido Video, Football Replays, Exodus, ITV, Joker Sports, Neptune Rising, Maverick TV, MP3 Music, Placenta, PRB Clean, Quest TV, RSS Editor, RSS Viewer, Sanity, Scythe, SkyNet, Snag Films, Squad Control, Supremacy, TED Talks, The Magic Dragon, UK Turks, UKTV Play, Websters Wildshots, World News Live, Yoda, YouTube[CR]</description>
+    <description>Defines media sources and download settings.[CR][CR]Downloads and installs add-ons from Phantom Raspberry Blower Repo[CR][CR]Addons installed by this addon are:[CR]Absolute Radio, BBC Radio, Blaze TV, Cartoongo, Classic British Comedy, DeathStar, Dreamcatcher, Exodus, Fido Video, Exodus, ITV, Neptune Rising, MP3 Music, Placenta, PRB Clean, Quest TV, RSS Editor, RSS Viewer, Snag Films, Squad Control, TED Talks, UK Turks, UKTV Play, Websters Wildshots, World News Live, Yoda, YouTube[CR]</description>
     <disclaimer>[COLOR red][B]Phantom Raspberry Blower[/B][/COLOR] accepts no responsibility for included addons.</disclaimer>
     <platform>all</platform>
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
@@ -63,7 +61,7 @@
       <screenshot>resources/media/screenshot002.jpg</screenshot>
       <screenshot>resources/media/screenshot003.jpg</screenshot>
     </assets>
-    <news>Removed Aspis, Sanity, Scythe, Supremacy, Supremacy Sports and The Magic Dragon</news>
+    <news>Removed SkyNet, Maverick TV, Joker Sports, Planet MMA</news>
     <email></email>
     <source></source>
   </extension>
@@ -140,117 +138,6 @@
     <summary lang="en">ARNU Box Speed Tester</summary>
     <description lang="en">ARNU Box Speed Tester powered by speedtest.net will give you accurate Internet speed/ping test results. \n Brought to you by http://www.arnubox.com</description>
     <platform>all</platform>
-  </extension>
-</addon>
-
-<!-- At The Flix Addon -->
-<addon id="plugin.video.AtTheFlix" name="[COLORred]At The Flix[/COLOR]" version="5.0.8.9" provider-name="Maverick">
-  <requires>
-    <import addon="xbmc.python" version="2.19.0" />
-    <import addon="script.module.universalscrapers" version="1.0.0" />
-    <import addon="script.module.python.koding.aio" version="0.9.6.6" />
-    <import addon="script.module.beautifulsoup" version="3.2.1" />
-    <import addon="script.module.requests" version="2.9.1" />
-    <import addon="script.module.addon.common" version="2.0.0" />
-    <import addon="script.module.xmltodict" version="0.9.0" />
-    <import addon="plugin.video.youtube" version="3.0.0"/>
-    <import addon="script.module.dateutil" />
-    <!--<import addon="script.module.web-pdb" version="1.0"/>-->
-    <import addon="script.module.resolveurl" />
-    <import addon="script.module.ATFlive" />
-    <import addon="script.module.ATFmobdro" />
-    <import addon="script.module.ATFTV" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>audio video</provides>
-  </extension>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>audio video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <reuselanguageinvoker>false</reuselanguageinvoker>
-  </extension>
-  <extension point="xbmc.service" library="service.py" start="[login|startup]" />
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Maverick TV</summary>
-    <description lang="en">Maverick TV</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<!-- ATF Live -->
-<addon id="script.module.ATFlive" name="[COLOR red]ATF IPTV Extra[/COLOR]" version="1.6" provider-name="Maverick">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.livestreamer" />
-    <import addon="script.module.requests" />
-    <import addon="script.module.routing" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-    <provides>all</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <reuselanguageinvoker>true</reuselanguageinvoker>
-    <summary lang="en_gb">Maverick</summary>
-    <description lang="en_gb">Maverick</description>
-    <disclaimer lang="en_gb"></disclaimer>
-    <language></language>
-    <platform>all</platform>
-    <license></license>
-    <forum></forum>
-    <website></website>
-    <email></email>
-    <source></source>
-  </extension>
-</addon>
-
-<!-- ATF Mobdro -->
-<addon id="script.module.ATFmobdro" name="ATF Mobdro" version="1.6" provider-name="Maverick">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.livestreamer" />
-    <import addon="script.module.requests" />
-    <import addon="script.module.routing" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-    <provides>all</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en_gb">Maverick</summary>
-    <description lang="en_gb">Maverick</description>
-    <disclaimer lang="en_gb"></disclaimer>
-    <language></language>
-    <platform>all</platform>
-    <license></license>
-    <forum></forum>
-    <website></website>
-    <email></email>
-    <source></source>
-  </extension>
-</addon>
-
-<!-- ATF TV -->
-<addon id="script.module.ATFTV" name="[COLORred]ATF Live[/COLOR]" version="1.5" provider-name="Maverick">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.livestreamer" />
-    <import addon="script.module.requests" />
-    <import addon="script.module.routing" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-    <provides>all</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en_gb">Maverick</summary>
-    <description lang="en_gb">Maverick</description>
-    <disclaimer lang="en_gb"></disclaimer>
-    <language></language>
-    <platform>all</platform>
-    <license></license>
-    <forum></forum>
-    <website></website>
-    <email></email>
-    <source></source>
   </extension>
 </addon>
 
@@ -1364,63 +1251,6 @@ Fixed new JSON format for Highlights.
   </extension>
 </addon>
 
-<!-- Joker Sports -->
-<addon id="plugin.video.JokerSports" name="[COLORgold]Joker Sports[/COLOR]" version="2.3.3" provider-name="Maverick">
-  <requires>
-    <import addon="xbmc.python" version="2.19.0" />
-    <import addon="script.module.universalscrapers" version="1.0.0" />
-    <import addon="script.module.python.koding.aio" version="0.9.6.6" />
-    <import addon="script.module.beautifulsoup" version="3.2.1" />
-    <import addon="script.module.requests" version="2.9.1" />
-    <import addon="script.module.addon.common" version="2.0.0" />
-    <import addon="script.module.xmltodict" version="0.9.0" />
-    <import addon="plugin.video.youtube" version="3.0.0"/>
-    <import addon="script.module.dateutil" />
-    <!--<import addon="script.module.web-pdb" version="1.0"/>-->
-    <import addon="script.module.resolveurl" />
-    <import addon="script.module.ATFlive" />
-    <import addon="script.module.jokerHD" />
-    <import addon="script.module.ATFmobdro" />
-    <import addon="script.module.ATFTV" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>audio video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <reuselanguageinvoker>false</reuselanguageinvoker>
-  </extension>
-  <extension point="xbmc.service" library="service.py" start="[login|startup]" />
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Maverick TV</summary>
-    <description lang="en">Maverick TV</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<!-- Joker HD -->
-<addon id="script.module.jokerHD" name="Joker Sports HD" version="1.0" provider-name="Maverick">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.requests" />
-    <import addon="script.module.routing" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-    <provides>all</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en_gb">Joker Sports</summary>
-    <description lang="en_gb">Joker Sports</description>
-    <disclaimer lang="en_gb"></disclaimer>
-    <language></language>
-    <platform>all</platform>
-    <license></license>
-    <forum></forum>
-    <website></website>
-    <email></email>
-    <source></source>
-  </extension>
-</addon>
-
 <!-- js2py Module -->
 <addon id="script.module.js2py" name="js2py" version="0.6.3" provider-name="Addons4Kodi">
   <requires>
@@ -1656,68 +1486,6 @@ Fixed new JSON format for Highlights.
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
     <summary lang="en">XBMC (IMAP) Email Client</summary>
     <description lang="en">With this Add-on you can read your eMails from any IMAP-based Email Providers like GMail, Yahoo, AOL, iCloud and others.[CR]Current Features:[CR] -List Mailboxes with total/unseen status[CR] -Mark eMails as seen/unseen (via Context Menu)[CR] -Read (text based) eMails[CR] -Delete eMails (via Context Menu)</description>
-  </extension>
-</addon>
-
-<!-- Maverick TV -->
-<addon id="plugin.video.MaverickTV" name="[COLORlime]Maverick TV[/COLOR]" version="9.1.5.8" provider-name="Maverick">
-  <requires>
-    <import addon="xbmc.python" version="2.19.0" />
-    <import addon="script.module.universalscrapers" version="1.0.0" />
-    <import addon="script.module.python.koding.aio" version="0.9.6.6" />
-    <import addon="script.module.beautifulsoup" version="3.2.1" />
-    <import addon="script.module.requests" version="2.9.1" />
-    <import addon="script.module.addon.common" version="2.0.0" />
-    <import addon="script.module.xmltodict" version="0.9.0" />
-    <import addon="plugin.video.youtube" version="3.0.0"/>
-    <import addon="script.module.dateutil" />
-    <!--<import addon="script.module.web-pdb" version="1.0"/>-->
-    <import addon="script.module.resolveurl" />
-    <import addon="script.module.MaverickLive" />
-    <import addon="script.module.ATFmobdro" />
-    <import addon="script.module.ATFTV" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>audio video</provides>
-  </extension>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>audio video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <reuselanguageinvoker>false</reuselanguageinvoker>
-  </extension>
-  <extension point="xbmc.service" library="service.py" start="[login|startup]" />
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Maverick TV</summary>
-    <description lang="en">Maverick TV</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<!-- Maverick TV Live -->
-<addon id="script.module.MaverickLive" name="[COLORlime]MaverickLive[/COLOR]" version="1.0" provider-name="Maverick">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.pyamf" />
-    <import addon="script.module.livestreamer" />
-    <import addon="script.module.requests" />
-    <import addon="script.module.routing" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-    <provides>all</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <reuselanguageinvoker>true</reuselanguageinvoker>
-    <summary lang="en_gb">Maverick</summary>
-    <description lang="en_gb">Maverick</description>
-    <disclaimer lang="en_gb"></disclaimer>
-    <language></language>
-    <platform>all</platform>
-    <license></license>
-    <forum></forum>
-    <website></website>
-    <email></email>
-    <source></source>
   </extension>
 </addon>
 
@@ -2164,38 +1932,8 @@ This is a Non-profit resource, organized solely for educational purposes which i
   </extension>
 </addon>
 
-<!-- Planet MMA -->
-<addon id="plugin.video.ufc-finest" name="Planet MMA" version="4.2" provider-name="DK">
-  <requires>
-    <import addon="xbmc.python" version="2.19.0" />
-    <import addon="script.module.universalscrapers" version="1.0.0" />
-    <import addon="script.module.python.koding.aio" version="0.9.6.6" />
-    <import addon="script.module.beautifulsoup" version="3.2.1" />
-    <import addon="script.module.requests" version="2.9.1" />
-    <import addon="script.module.addon.common" version="2.0.0" />
-    <import addon="script.module.xmltodict" version="0.9.0" />
-    <import addon="script.module.dateutil" />
-    <!--<import addon="script.module.web-pdb" version="1.0"/>-->
-    <import addon="script.module.resolveurl" />
-    <!--<import addon="script.module.urlresolver" />-->
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.service" library="service.py" start="[login|startup]" />
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Planet MMA.</summary>
-    <description lang="en">All your MMA needs</description>
-    <disclaimer lang="en">None of the videos are hosted by this site. Streams hosted from sites like Openload and HLS sources available over Internet are embedded here. This Addon is not responsible for the legality of the content. For legal issues, please contact appropriate media file owners/hosters.</disclaimer>
-    <platform>all</platform>
-    <website/>
-    <video_guide>https://</video_guide>
-    <reuselanguageinvoker>false</reuselanguageinvoker>
-  </extension>
-</addon>
-
 <!-- PRB Clean Service -->
-<addon id="service.prb-clean" name="PRB Clean" version="0.2.6" provider-name="Phantom Raspberry Blower">
+<addon id="service.prb-clean" name="PRB Clean" version="0.2.7" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -2212,7 +1950,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
       <icon>resources/icon.png</icon>
       <fanart>resources/fanart.jpg</fanart>
     </assets>
-    <news>Removed Aspis, Sanity, Scythe, Supremacy, Supremacy Sports and The Magic Dragon</news>
+    <news>Removed Maverick TV, Joker Sports, Planet MMA, SkyNet</news>
     <email></email>
     <source></source>
   </extension>
@@ -2689,37 +2427,6 @@ Documentation: https://github.com/tamland/kodi-plugin-routing</description>
     <license>MIT</license>
     <source>https://pypi.python.org/pypi/six</source>
     <website>https://pypi.python.org/pypi/six</website>
-  </extension>
-</addon>
-
-<!-- SkyNet Addon -->
-<addon id="plugin.video.SkyNet" name="[COLOR white]SkyNet[/COLOR]" version="5.0.2" provider-name="SkyNet">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.t0mm0.common" version="2.0.0"/>
-    <import addon="script.module.beautifulsoup" version="3.2.1"/>
-    <import addon="script.module.simple.downloader" version="0.9.4"/>
-    <import addon="script.module.beautifulsoup4" />
-    <import addon="script.module.simple.downloader" version="0.9.4"/>
-    <import addon="script.module.requests" />
-    <import addon="script.module.httplib2" />
-    <import addon="script.module.youtube.dl" optional="true"/>
-    <import addon="plugin.video.youtube" version="3.0.0"/>
-    <import addon="script.module.urlresolver" optional="true"/>
-    <import addon="script.module.resolveurl" version="5.0.00"/>
-    <import addon="script.module.simplejson" /> 
-    <import addon="script.common.plugin.cache" version="2.5.2"/>
-    <import addon="script.module.metahandler" version="2.5.1"/>
-    <import addon="script.module.python.koding.aio" version="0.9.6.6"/>
-    <import addon="script.module.web-pdb" version="1.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">SkyNet</summary>
-    <description lang="en">SkyNet</description>
-    <platform>all</platform>
   </extension>
 </addon>
 
