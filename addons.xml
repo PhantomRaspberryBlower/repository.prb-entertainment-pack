@@ -2,7 +2,7 @@
 <addons>
 
 <!-- PRB Install Everything Addon -->
-<addon id="script.force-install-all-ep" name="PRB Install Everything EP" version="1.12.6" provider-name="Phantom Raspberry Blower">
+<addon id="script.force-install-all-ep" name="PRB Install Everything EP" version="1.12.7" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="plugin.audio.absolute-radio"/>
@@ -27,6 +27,7 @@
     <import addon="plugin.video.snagfilms"/>
     <import addon="plugin.video.squadcontrol"/>
     <import addon="plugin.video.ted.talks"/>
+    <import addon="plugin.video.themagicdragon"/>
     <import addon="plugin.video.ukturk"/>
     <import addon="plugin.video.uktvplay"/>
     <import addon="plugin.video.world.news.live"/>
@@ -61,7 +62,7 @@
       <screenshot>resources/media/screenshot002.jpg</screenshot>
       <screenshot>resources/media/screenshot003.jpg</screenshot>
     </assets>
-    <news>Removed SkyNet, Maverick TV, Joker Sports, Planet MMA</news>
+    <news>Added The Magic Dragon</news>
     <email></email>
     <source></source>
   </extension>
@@ -710,6 +711,54 @@
   </extension>
 </addon>
 
+<!-- Diamond Wizard Repo -->
+<addon id="repository.Diamond-Wizard-Repo" name=".[COLORwhite]***[/COLOR][COLOR crimson]D[/COLOR][COLOR silver]iamond Build Repo (Server 1 Main)[/COLOR][COLORwhite]***[/COLOR]" version="3.6.7" provider-name="Team Diamond">
+  <extension point="xbmc.addon.repository" name="Diamond Wizard Repo - Main">
+    <dir>
+      <info compressed="false">http://m3u.xyz/repo-files/wizard/addons.xml</info>
+      <checksum>http://m3u.xyz/repo-files/wizard/addons.xml.md5</checksum>
+      <datadir zip="true">http://repo.rubyjewelwizard.com/repo/diamond/wizard/zips/</datadir>
+      <hashes>false</hashes>
+    </dir>
+    <dir>
+      <info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/</datadir>
+    </dir>
+    <dir>
+      <info compressed="false">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/</datadir>
+    </dir>
+    <dir>
+      <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
+    </dir>
+    <dir>
+      <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
+    </dir>
+    <dir>
+      <info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
+    </dir>
+    <dir>
+      <info compressed="false">https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/</datadir>
+    </dir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Diamond Addons / BackUp Repo</summary>
+    <description lang="en">Repo For Diamond Build, Bought to you by Diamond Build</description>
+    <disclaimer>The owners and submitters to this repository do not host or distribute any of the content displayed by these addons nor do they have any affiliation with the content providers.</disclaimer>
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <!-- Dreamcatcher Addon -->
 <addon id="plugin.program.dreamcatcher" version="0.1.6" name="Dreamcatcher" provider-name="The[COLOR tan]Highway[/COLOR]">
   <requires>
@@ -909,13 +958,13 @@
 </addon>
 
 <!-- F4mTester Addon -->
-<addon id="plugin.video.f4mTester" name="f4mTester" version="2.7.2" provider-name="Shani">
+<addon id="plugin.video.f4mTester" name="f4mTester" version="2.7.2b" provider-name="Shani">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.video.F4mProxy" version="2.7.1"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
+    <provides>executable</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary>f4mTester</summary>
@@ -1529,7 +1578,7 @@ Fixed new JSON format for Highlights.
 </addon>
 
 <!-- Metahandler Module -->
-<addon id="script.module.metahandler" name="metahandler" version="3.0.4" provider-name="Eldorado">
+<addon id="script.module.metahandler" name="metahandler" version="3.99.02" provider-name="Eldorado">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
     <import addon="script.module.simplejson" version="3.3.0"/>
@@ -1933,7 +1982,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- PRB Clean Service -->
-<addon id="service.prb-clean" name="PRB Clean" version="0.2.7" provider-name="Phantom Raspberry Blower">
+<addon id="service.prb-clean" name="PRB Clean" version="0.2.8" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -1950,7 +1999,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
       <icon>resources/icon.png</icon>
       <fanart>resources/fanart.jpg</fanart>
     </assets>
-    <news>Removed Maverick TV, Joker Sports, Planet MMA, SkyNet</news>
+    <news>Removed The Magic Dragon</news>
     <email></email>
     <source></source>
   </extension>
@@ -2431,11 +2480,11 @@ Documentation: https://github.com/tamland/kodi-plugin-routing</description>
 </addon>
 
 <!-- SLProxy module -->
-<addon id="script.module.slproxy" name="SLProxy" version="0.0.5" provider-name="devilsport">
+<addon id="script.module.slproxy" name="SLProxy" version="0.1.1" provider-name="devilsport">
   <requires>
     <import addon="xbmc.python" version="2.24.0"/>
     <import addon="script.module.requests"/>
-    <import addon="script.module.streamlink.base" version="2018.07.03" />  
+    <import addon="script.module.streamlink.base" />  
   </requires>
   <extension point="xbmc.python.module" library="lib/"/>
   <extension point="xbmc.addon.metadata">
@@ -2594,35 +2643,6 @@ Documentation: https://github.com/tamland/kodi-plugin-routing</description>
   </extension>
 </addon>
 
-<!-- Supreamcy Repo -->
-<addon id="repository.supremacy" name="[COLORaqua]supremacy[/COLOR]" version="1.0" provider-name="supremacy">
-  <extension point="xbmc.addon.repository" name="[COLORaqua]supremacy[/COLOR]">
-  <dir>
-    <info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>	
-    <checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
-    <datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
-  </dir>
-  <dir>
-    <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
-    <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
-    <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
-  </dir>
-  <dir>
-    <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
-    <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
-    <datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
-  </dir>
-    <info compressed="false">http://2supremacy.uk/addons/addon.xml</info>
-    <checksum>http://2supremacy.uk/addons/addons.xml.md5</checksum>
-    <datadir zip="true">http://2supremacy.uk/addons/</datadir>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>video addon for supremacy</summary>
-    <description>Latest Addon Updates For Supremacy Repository</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
 <!-- System Info Addon -->
 <addon id="script.system-info" name="System Info" version="0.0.9" provider-name="Phantom Raspberry Blower">
   <requires>
@@ -2740,6 +2760,34 @@ v4.3.1
   <extension point="xbmc.addon.metadata">
     <summary>Backup Kodi Addon Repository</summary>
     <description>I'm Lovin' It</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<!-- The Magic Dragon Addon -->
+<addon id="plugin.video.themagicdragon" name="The Magic Dragon" version="1.30" provider-name="Magic Dragon">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.t0mm0.common" version="2.0.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
+    <import addon="script.module.urlresolver" />
+    <import addon="script.module.simplejson" /> 
+    <import addon="script.common.plugin.cache" version="2.5.2"/>
+    <import addon="script.module.metahandler" version="2.5.1"/>
+    <import addon="script.module.resolveurl" version="5.0.00"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">[COLORblue]Magic Dragon All In One Add On[/COLOR]</summary>
+    <description lang="en">[COLORblue]This Is A 3rd Party Add On And Is Not Linked To Kodi In Any Way. All The Content We Provide Is Freely Available On The Internet. We Do Not Store Any Content Ourselves.[/COLOR]</description>
     <platform>all</platform>
   </extension>
 </addon>
@@ -2935,7 +2983,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- URL Resolver -->
-<addon id="script.module.urlresolver" name="URLResolver" version="5.0.37" provider-name="tvaddons">
+<addon id="script.module.urlresolver" name="URLResolver" version="5.0.38" provider-name="tvaddons">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
     <import addon="plugin.video.youtube" optional="true" />
@@ -3320,7 +3368,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- YouTube Addon -->
-<addon id="plugin.video.youtube" name="YouTube" version="6.4.1" provider-name="anxdpanic, bromix">
+<addon id="plugin.video.youtube" name="YouTube" version="6.5.0" provider-name="anxdpanic, bromix">
   <requires>
     <import addon="xbmc.python" version="2.20.0"/>
     <import addon="script.module.six" version="1.11.0"/>
@@ -3334,22 +3382,21 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
   <extension point="xbmc.python.module" library="resources/lib/"/>
   <extension point="xbmc.addon.metadata">
     <news>
-6.4.1
-[upd] Use the activation url provided by the authentication request
-[add] add Settings - MPEG-DASH - Default to WEBM adaptation set
-        - required for 4k stream automatic selection
-[add] add Settings - MPEG-DASH - Include VP9.2
-        - includes HDR content in the manifest
-[add] add support for &amp;hide_folders=true parameter in search query urls
-        - when added to the url it will hide the Playlists, Channels, and Live folders
-[add] &amp;seek=&lt;time_in_seconds&gt; to play urls
-[fix] fix playback of Purchases
-[fix] fixed saved playlists that don't belong to a channel
-[fix] mpeg-dash frame rate representation
-[fix] datetime parsing if no datetime string is available
-[chg] handle playback monitoring in threads
-[lang] nl_nl strings |contrib: MB1968|
+6.5.0
+[add] Video quality selection to Settings - MPEG-DASH
+[add] Limit to 30fps to Settings - MPEG-DASH
+[add] Uploads playlist to channel playlists
+[chg] Use search for channel videos instead of the Uploads playlist
+[fix] Signature cipher, some videos unplayable (ie. music videos)
+[fix] Playback monitoring using Python 3
+[fix] unescape html entities in title and plot
+[fix] handling of invalid grant when refreshing access token
+[fix] adding suggested videos when played from some widgets
+[fix] http server /client_ip using Python 3 |contrib: t6|
+[upd] refactor youtube_resolver.resolve
 [lang] el_gr strings |contrib: twilight0|
+[lang] es_es strings |contrib: roliverosc|
+[lang] ko_kr strings |contrib: parkmino|
     </news>
     <assets>
       <icon>icon.png</icon>

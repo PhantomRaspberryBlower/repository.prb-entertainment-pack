@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.module.slproxy" name="SLProxy" version="0.0.5" provider-name="devilsport">
+<addon id="script.module.slproxy" name="SLProxy" version="0.1.1" provider-name="devilsport">
   <requires>
     <import addon="xbmc.python" version="2.24.0"/>
     <import addon="script.module.requests"/>
-	  <import addon="script.module.streamlink.base" version="2018.07.03" />  
+	  <import addon="script.module.streamlink.base" />  
   </requires>
   <extension point="xbmc.python.module" library="lib/"/>
   <extension point="xbmc.addon.metadata">

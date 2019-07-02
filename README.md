@@ -31,7 +31,7 @@ Addons installed by this addon:
   - MP3 Music (Music Albums & Songs)
   - Neptune Rising TV (Movies & TV Shows)
   - Placenta (Movies & TV Shows)
-  - PRB Clean (Remove obsolete addons)
+  - PRB Clean (Removes obsolete addons)
   - PRB Radio (Stream music)
   - PRB Install Everything EP (Forces installation of most addons)
   - Rising Tides (Sport)
@@ -41,6 +41,7 @@ Addons installed by this addon:
   - Squad Control (Animations)
   - System Info (Displays System Information)
   - TED Talks (lectures)
+  - The Magic Dragon (Movies & TV Shows)
   - UKTV Play (Live & Catch-up TV)
   - UK Turks Playlist
   - Virtual DJ (Internet Music)
