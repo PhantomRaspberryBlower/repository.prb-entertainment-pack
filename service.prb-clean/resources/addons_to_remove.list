@@ -28,8 +28,25 @@ plugin.video.ZemTV-shani<>Zem TV
 script.covenant.artwork<>Covenant Artwork
 script.covenant.metadata<>Covenant Metadata
 script.elysium.artwork<>Elysium Artwork
+script.module.Aspis<>Aspis
+script.module.Aspis.Mobdro<>Aspis Mobdro
+script.module.Aspis.Sports<>Aspis Sports
+script.module.Aspis.Tv<>Aspis TV
+script.module.Aspis-live<>Aspis Live
+script.module.ATFlive<>ATF Live
+script.module.ATFmobdro<>ATF Mobdro
+script.module.ATFTV<>ATF TV
 script.module.covenant<>Covenant Module
-script.module.TheYid.common<>The Yid
+script.module.dslive<>DSLIVE
+script.module.jokerHD<>Joker Module
+script.module.MaverickLive<>Maverick Live
 script.module.nanscrapers<>NaN Scrapers
+script.module.supremacy<>Supremacy Scrapers
+script.module.Supremacy.sportsHD<>Supremacy Sports HD
+script.module.Supremacy.Tv<>Supremacy TV
+script.module.Supremacyhd<> Supremacy HD
+script.movietheaterbutter.artwork<>Movie Theater Butter Artwork
+script.movietheaterbutter.metadata<>Movie Theater Butter Metadata
+script.module.TheYid.common<>The Yid
 script.mrknow.urlresolver<>Mr Know resolver
 script.navi-x<>Navi X

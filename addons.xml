@@ -517,51 +517,6 @@
   </extension>
 </addon>
 
-<!-- CypherStream module -->
-<addon id="script.cypherstream" name="Cypher Live" version="0.0.4" provider-name="Cypher">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.requests" />
-    <import addon="script.module.urlresolver" />
-    <import addon="script.module.liveresolver"/>
-    <import addon="script.module.beautifulsoup4" />
-    <import addon="script.module.livestreamer" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>all</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Dependency Addon for Project Cypher</summary>
-    <description lang="en">Dependency Addon for Project Cypher</description>
-	<disclaimer lang="en">Dependency Addon for Project Cypher</disclaimer>
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<!-- Cypherswift module -->
-<addon id="script.module.cypherswift" name="Cypher IPTV Svr.2" version="0.2" provider-name="Cypher">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.livestreamer" />
-    <import addon="script.module.requests" />
-    <import addon="script.module.routing" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">    
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en_gb"></summary>
-    <description lang="en_gb"></description>
-    <disclaimer lang="en_gb"></disclaimer>
-    <language></language>
-    <platform>all</platform>
-    <license></license>
-    <forum></forum>
-    <website></website>
-    <email></email>
-    <source></source>
-  </extension>
-</addon>
-
 <!-- DateUtil Module -->
 <addon id="script.module.dateutil" name="dateutil" version="2.5.3" provider-name="Gustavo Niemeyer, Tomi Pieviläinen, Yaron de Leeuw, Razzeee">
   <requires>
@@ -618,31 +573,6 @@
       <screenshot>resources/media/screenshot-02.jpg</screenshot>
       <screenshot>resources/media/screenshot-03.jpg</screenshot>
     </assets>
-  </extension>
-</addon>
-
-<!-- DeathStar Modle -->
-<addon id="script.module.dslive" name=" DSLIVE" version="1.1" provider-name="RACC">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.livestreamer" />
-    <import addon="script.module.requests" />
-    <import addon="script.module.routing" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-    <provides>all</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en_gb">DSLIVE</summary>
-    <description lang="en_gb">DSLIVE</description>
-    <disclaimer lang="en_gb"></disclaimer>
-    <language></language>
-    <platform>all</platform>
-    <license></license>
-    <forum></forum>
-    <website></website>
-    <email></email>
-    <source></source>
   </extension>
 </addon>
 
@@ -957,22 +887,6 @@
   </extension>
 </addon>
 
-<!-- F4mTester Addon -->
-<addon id="plugin.video.f4mTester" name="f4mTester" version="2.7.2b" provider-name="Shani">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.video.F4mProxy" version="2.7.1"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>executable</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>f4mTester</summary>
-    <description></description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
 <!-- Feedparser Module -->
 <addon id="script.module.feedparser" name="feedparser" version="5.1.3" provider-name="Tristan Fischer (sphere@dersphere.de)">
   <requires>
@@ -1219,13 +1133,13 @@
 </addon>
 
 <!-- iPlayer Addon -->
-<addon id="plugin.video.iplayerwww" name="iPlayer WWW" version="3.0.44" provider-name="CaptainT, Cas, ihurst, primaeval">
+<addon id="plugin.video.iplayerwww" name="iPlayer WWW" version="3.0.45" provider-name="CaptainT, Cas, ihurst, primaeval">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.requests" version="2.7.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>audio video</provides>
+        <provides>audio video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">TV and Radio from BBC iPlayer</summary>
@@ -1236,14 +1150,13 @@
     <source>https://github.com/vonH/plugin.video.iplayerwww</source>
     <disclaimer lang="en">This add-on is a front end to the BBC iPlayer website. It is not an official BBC product. A UK TV Licence is required to watch the live, catch-up, or on-demand TV content.</disclaimer>
     <assets>
-      <icon>resources/icon.png</icon>
-      <fanart>resources/fanart.jpg</fanart>
+        <icon>resources/icon.png</icon>
+        <fanart>resources/fanart.jpg</fanart>
     </assets>
     <news>
-v3.0.44
-Preserve all subtitle colours to indicate speaker changes.
-Fixed new JSON format for Highlights.
-    </news>
+v3.0.45
+Fixed Added and Watching.
+   </news>
   </extension>
 </addon>
 
@@ -1460,25 +1373,6 @@ Fixed new JSON format for Highlights.
     <platform>all</platform>
     <summary lang="en">Resolve common live video host URL's to be playable in XBMC/Kodi + find links embeded in sites.</summary>
     <description lang="en"></description>    
-  </extension>
-</addon>
-
-<!-- Livestreamer Module -->
-<addon id="script.module.livestreamer" name="livestreamer" version="1.12.0" provider-name="Christopher Rosell">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.requests" version="1.1.0" optional="false"/>
-    <import addon="script.module.singledispatch" version="3.4.0.3" optional="false"/>
-    <import addon="script.module.futures" version="2.2.0" optional="false"/>
-  </requires>
-  <extension point="xbmc.python.module" library="lib"/>
-  <extension point="xbmc.addon.metadata">
-    <summary>Livestreamer extracts streams from various services</summary>
-    <description>Livestreamer is a command-line utility that pipes video streams from various services into a video player, such as VLC. The main purpose of Livestreamer is to allow the user to avoid buggy and CPU heavy flash plugins but still be able to enjoy various streamed content. There is also an API available for developers who want access to the video stream data.</description>
-    <platform>all</platform>
-    <license>Simplified BSD</license>
-    <source>https://github.com/chrippa/livestreamer.git</source>
-    <website>http://livestreamer.io</website>
   </extension>
 </addon>
 
@@ -2057,22 +1951,6 @@ This is a Non-profit resource, organized solely for educational purposes which i
   </extension>
 </addon>
 
-<!-- Pyamf Module -->
-<addon id="script.module.pyamf" name="PyAMF" version="0.6.2" provider-name="Mark Honeychurch (markhoney)">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-  </requires>
-  <extension point="xbmc.python.module" library="lib" />
-  <extension point="xbmc.addon.metadata">
-    <summary>PyAMF provides Action Message Format (AMF) support for Python that is compatible with the Adobe Flash Player.</summary>
-    <description>The Adobe Integrated Runtime and Adobe Flash Player use AMF to communicate between an application and a remote server. AMF encodes remote procedure calls (RPC) into a compact binary representation that can be transferred over HTTP/HTTPS or the RTMP/RTMPS protocol. Objects and data values are serialized into this binary format, which increases performance, allowing applications to load data up to 10 times faster than with text-based formats such as XML or SOAP.
-AMF3, the default serialization for ActionScript 3.0, provides various advantages over AMF0, which is used for ActionScript 1.0 and 2.0. AMF3 sends data over the network more efficiently than AMF0. AMF3 supports sending int and uint objects as integers and supports data types that are available only in ActionScript 3.0, such as ByteArray, ArrayCollection, ObjectProxy and IExternalizable.</description>
-    <license>MIT</license>
-    <platform>all</platform>
-    <source>http://www.pyamf.org/</source>
-  </extension>
-</addon>
-
 <!-- Pyjsparser Module -->
 <addon id="script.module.pyjsparser" name="pyjsparser" version="2.7.2" provider-name="Addons4Kodi">
   <requires>
@@ -2172,26 +2050,6 @@ AMF3, the default serialization for ActionScript 3.0, provides various advantage
   </extension>
 </addon>
 
-<!-- RealDebrid Addon -->
-<addon id="script.realdebrid.mod" name="RealDebrid-Mod" version="1.1.2" provider-name="ptom">
-  <requires>
-    <import addon="script.module.requests" version="2.3.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>executable</provides>
-  </extension>
-  <extension point="xbmc.python.module" library="lib" />
-  <extension point="xbmc.addon.metadata">
-    <description lang="en">Unofficial RealDebrid client. Manage your torrents, unrestricted links and view host statuses all within Kodi.</description>
-    <summary>Unofficial RealDebrid client. Manage your torrents, unrestricted links and view host statuses all within Kodi.</summary>
-    <news>v0.5 - added "Play using RealDebrid" to context menu</news>
-    <website>http://www.ptom.co.uk</website>
-    <platform>all</platform>
-    <language>en</language>
-    <email>ptom98@gmail.com</email>
-  </extension>
-</addon>
-
 <!-- RSS Feeds -->
 <addon id="script.rss.editor" name="RSS Editor" version="3.0.3" provider-name="rwparris2, Team Kodi">
   <requires>
@@ -2240,25 +2098,6 @@ AMF3, the default serialization for ActionScript 3.0, provides various advantage
     <assets>
       <icon>resources/icon.png</icon>
     </assets>
-  </extension>
-</addon>
-
-<!-- Requests Cache Module -->
-<addon id="script.module.requests-cache" name="requests-cache" version="0.4.13" provider-name="gedisony">
-  <requires>
-    <import addon="xbmc.python" version="2.25.0"/>
-  </requires>
-  <extension point="xbmc.python.module" library="lib" />
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en_GB">Persistent cache for requests library</summary>
-    <description lang="en_GB">Packed for KODI: requests-cache</description>
-    <platform>all</platform>
-    <language></language>
-    <license>BSD</license>
-    <forum>https://forum.kodi.tv/showthread.php?tid=316817</forum>
-    <website>https://pypi.python.org/pypi/requests-cache</website>
-    <source>https://github.com/gedisony/script.module.requests-cache</source>
-    <email>gedisony AT gmail.com</email>
   </extension>
 </addon>
 
@@ -2328,22 +2167,6 @@ AMF3, the default serialization for ActionScript 3.0, provides various advantage
     <disclaimer lang="en">Author does not host or distribute any of the content displayed by this addon. Author does not have any affiliation with the content provider.
     </disclaimer>
     <platform>all</platform>
-  </extension>
-</addon>
-
-<!-- Routing Module -->
-<addon id="script.module.routing" name="Plugin routing" version="0.2.1" provider-name="takoi">
-  <requires>
-    <import addon="xbmc.python" version="2.14.0"/>
-  </requires>
-  <extension point="xbmc.python.module" library="lib" />
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Routing module for plugins</summary>
-    <description lang="en">Library for building and parsing plugin URLs.
-Documentation: https://github.com/tamland/kodi-plugin-routing</description>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-    <platform>all</platform>
-    <source>https://github.com/tamland/kodi-plugin-routing</source>
   </extension>
 </addon>
 
@@ -2479,29 +2302,6 @@ Documentation: https://github.com/tamland/kodi-plugin-routing</description>
   </extension>
 </addon>
 
-<!-- SLProxy module -->
-<addon id="script.module.slproxy" name="SLProxy" version="0.1.1" provider-name="devilsport">
-  <requires>
-    <import addon="xbmc.python" version="2.24.0"/>
-    <import addon="script.module.requests"/>
-    <import addon="script.module.streamlink.base" />  
-  </requires>
-  <extension point="xbmc.python.module" library="lib/"/>
-  <extension point="xbmc.addon.metadata">
-    <summary>StreamLink Proxy DS</summary>
-    <description>Streamlink proxy for Kodi</description>
-    <platform>all</platform>
-    <license>Simplified BSD</license>
-    <source></source>
-    <language>en</language>
-    <assets>
-      <icon>icon.png</icon>
-    </assets>
-    <news>
-    </news>
-  </extension>
-</addon>
-
 <!-- SnagFilms Addon -->
 <addon id="plugin.video.snagfilms" name="Snagfilms" version="3.0.6" provider-name="t1m">
   <requires>
@@ -2626,20 +2426,6 @@ Documentation: https://github.com/tamland/kodi-plugin-routing</description>
     <news>+2019.06.23
 - Changed crypto module addon id
 - Updated description</news>
-  </extension>
-</addon>
-
-<!-- Streamlink crypto module -->
-<addon id="script.module.streamlink.crypto" name="Streamlink Crypto" version="1.5.2" provider-name="Twilight0">
-  <requires>
-    <import addon="xbmc.python" version="2.14.0"/>
-  </requires>
-  <extension point="xbmc.python.module" library="lib" />
-  <extension point="xbmc.addon.metadata">
-    <summary>Pure Python implementation of the cryptographic libraries required by Streamlink</summary>
-    <source>https://github.com/Twilight0/script.module.streamlink.crypto</source>
-    <platform>all</platform>
-    <license>MIT</license>
   </extension>
 </addon>
 
@@ -3107,31 +2893,6 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
     <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
     <forum>http://forum.xbmc.org/showthread.php?tid=128896</forum>
     <source>https://github.com/takoi/xbmc-addon-watchdog</source>
-  </extension>
-</addon>
-
-<!-- Web-PDB Module -->
-<addon id="script.module.web-pdb" name="Web-PDB" version="1.5.1" provider-name="Roman V.M.">
-  <requires>
-    <import addon="xbmc.python" version="2.25.0"/>
-    <import addon="script.module.bottle" version="0.12.0"/>
-  </requires>
-  <extension point="xbmc.python.script" library="main.py">
-    <provides>executable</provides>
-  </extension>
-  <extension point="xbmc.python.module" library="libs" />
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en_GB">Web-based remote Python debugger</summary>
-    <description lang="en_GB">Provides a web-UI for Python's built-in PDB debugger for remote debugging Kodi addons.</description>
-    <platform>all</platform>
-    <license>MIT</license>
-    <forum>http://forum.kodi.tv/showthread.php?tid=292141</forum>
-    <source>https://github.com/romanvm/kodi.web-pdb</source>
-    <assets>
-      <icon>icon.png</icon>
-      <screenshot>resources/screenshot.png</screenshot>
-    </assets>
-    <news>1.5.1: Added new &quot;inspect&quot; debugging command.</news>
   </extension>
 </addon>
 
