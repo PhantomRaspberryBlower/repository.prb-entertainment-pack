@@ -14,7 +14,6 @@ Addons installed by this addon:
   - Classic British Comedy (Movies & TV Shows)
   - Confluence OSMC (Confluence Skin for OSMC)
   - Dbmc (Dropbox)
-  - DeathStar (Movies & TV Shows)
   - DemonFM (Internet Radio)
   - Dreamcatcher (Download Current Stream)
   - Exodus (Movies & TV Shows)

@@ -53,13 +53,16 @@ def main_menu():
     nosubmenus = re.compile('<a target="_blank" rel="noopener noreferrer" href="(.+?)" itemprop="url">'
                        '<span itemprop="name">(.+?)</span></a>').findall(content)
     for menu_item, clss, url, name in menus:
-        addDir(name,
-               url,
-               1,
-               thumbs[name],
-               __fanart__,
-               {'title': name,
-                'plot': name})
+    	try:
+            addDir(name,
+                   url,
+                   1,
+                   thumbs[name],
+                   __fanart__,
+                   {'title': name,
+                    'plot': name})
+        except:
+            pass
     for url, name in nosubmenus:
         try:
             addDir(name,

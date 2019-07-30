@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.force-install-all-ep" name="PRB Install Everything EP" version="1.12.7" provider-name="Phantom Raspberry Blower">
+<addon id="script.force-install-all-ep" name="PRB Install Everything EP" version="1.12.8" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="plugin.audio.absolute-radio"/>
@@ -10,7 +10,6 @@
     <import addon="plugin.audio.prb-radio"/>
     <import addon="plugin.program.dreamcatcher"/>
     <import addon="plugin.video.cartoongo"/>
-    <import addon="plugin.video.ds"/>
     <import addon="plugin.video.exodus"/>
     <import addon="plugin.video.f1-replay"/>
     <import addon="plugin.video.Fido"/>
@@ -59,7 +58,7 @@
       <screenshot>resources/media/screenshot002.jpg</screenshot>
       <screenshot>resources/media/screenshot003.jpg</screenshot>
     </assets>
-    <news>Added The Magic Dragon</news>
+    <news>Removed Death Star</news>
     <email></email>
     <source></source>
   </extension>
