@@ -7,11 +7,14 @@ import os
 import re
 import sys
 
+import urlresolver # Resolves media file from url
+
+from resources.lib import unjuice # Returns url from JuicyCodes.run()
 from resources.lib import commontasks
 
 # Written by: Phantom Raspberry Blower (The PRB)
 # Date: 21-12-2017
-# Description: Testing playing URL's
+# Description: Streams Forumla 1 races since 2014
 
 # Get addon details
 __addon_id__ = 'plugin.video.f1-replay'
@@ -31,8 +34,7 @@ image_path = xbmc.translatePath(os.path.join('special://home/addons/',
 def main_menu():
     # Shows menu items
     resp = commontasks.get_html(__baseurl__)
-    #content = commontasks.regex_from_to(resp, '<a title="MotoGP Race" href="#" itemprop="url">', '</ul></li>')
-    content = commontasks.regex_from_to(resp, '<a title="Formula 1 Race" ', '</ul></li>')
+    content = commontasks.regex_from_to(resp, '<a title="Formula 1 Race" href="#" itemprop="url">', '</ul></li>')
     menus = re.compile('<li id="(.+?)" class="(.+?)"><a target="_blank" rel="noopener noreferrer" href="(.+?)" itemprop="url"><span itemprop="name">(.+?)</span></a></li>').findall(content)
     for menu_item, clas, url, name in menus:
         addDir(name,
@@ -61,7 +63,7 @@ def submenu(url):
                                      'rel="bookmark"><img width="(.+?)" height="(.+?)" src="(.+?)" '
                                      'class="(.+?)" alt="(.+?)" itemprop="image" title="(.+?)" /></a>').findall(article)
                 for href, title, imgwidth, imgheight, img, clss, alt, img_title in matches:
-                    addDir(title.replace('Highlights Full Match', ''),
+                    addDir(title.replace('Race Replay', '').strip(),
                            href,
                            2,
                            img,
@@ -72,34 +74,72 @@ def submenu(url):
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
 
-def links_menu(name, url):
-    resp = commontasks.get_html(url + '?tab=download')
-    matches = re.compile('<a class="btn" href="(.+?)" target="_blank" rel="(.+?)">(.+?)</a>').findall(resp)
-    for href, rel, title in matches:
-        if 'videoz.me' in href:
-            new_title = name + ' ' + title.replace('Videoz', '')
-            menu_icon = __icon__
-            menu_fanart = __fanart__
-            addDir(new_title,
-                   href,
+def links_menu(name, url, thumb):
+    resp = commontasks.get_html(url)
+    resp = commontasks.regex_from_to(resp, '<div class="streaming"', '<div class="tab-content"')
+    matches = re.compile('<div class="tab-title(.+?)"><a href="(.+?)">(.+?)</a></div>').findall(resp)
+    for junk, href, title in matches:
+        if not ('720p' in title or '/' in title or 'LINKS' in title):
+            addDir(name + ' ' + title.replace('HD', '').replace(' 1080p', '').replace('BTSport', '').replace('&#8211;', ''),
+                   url + href,
                    3,
-                   menu_icon,
-                   menu_fanart,
-                   {'title': new_title,
-                    'plot': new_title})
+                   thumb,
+                   __fanart__,
+                   {'title': title,
+                    'plot': title})
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
 
-def get_streams(name, url):
+def get_streams(name, url, thumb):
+    format_text = {'1080P': '([COLOR orange]1080[/COLOR])',
+                   '720P': '([COLOR orange]720[/COLOR])',
+                   '480P': '([COLOR orange]480[/COLOR])',
+                   '360P': '([COLOR orange]360[/COLOR])'}
     resp = commontasks.get_html(url)
-    content = re.compile('image(.+?)sources').findall(resp)
-    string = ''
-    parts = content[0].split('|')
-    for part in parts:
-        if len(part) > 1:
-            string = part + "/" + string
-    string = string.replace('/m3u8/', '.m3u8')
-    play_stream(name, 'https://videoz.me/' + string, __icon__)
+    resp = commontasks.regex_from_to(resp, '<div class="tab-content">', '</div>')
+    matches = re.compile('<iframe src="(.+?)"').findall(resp)
+    resp = commontasks.get_html('https:' + str(matches[0]))
+    resp = commontasks.regex_from_to(resp, 'JuicyCodes.Run(', ');</script>')
+    resp = 'JuicyCodes.Run%s)' % resp
+    resp = unjuice.run(resp)
+    resp = commontasks.regex_from_to(resp, 'sources:', ',tracks:')
+    matches = re.compile('{"file":"(.+?)","label":"(.+?)","type":"(.+?)"}').findall(resp)
+    name = name.replace(' HD 720p', '').replace(' HD 1080p', '')
+    menu_icon = thumb
+    menu_fanart = __fanart__
+    for url, label, stype in matches:
+        for item in format_text:
+            label = label.replace(item, format_text[item])
+        addDir((name + ' ' + label).replace(' NA', ' ([COLOR red]No longer available![/COLOR])'),
+               url,
+               4,
+               menu_icon,
+               menu_fanart,
+               {'title': name,
+                'plot': name})
+    xbmcplugin.endOfDirectory(int(sys.argv[1]))
+
+
+def get_stream(name, url, thumb):
+    sources = []
+    label = name
+    format_text = [' ([COLOR orange]',
+                   '[/COLOR])',
+                   '1080',
+                   '720',
+                   '480',
+                   '360']
+
+    hosted_media = urlresolver.HostedMediaFile(url=url,title=name)
+    sources.append(hosted_media)
+    source = urlresolver.choose_source(sources)
+    for item in format_text:
+        name = name.replace(item, '')
+    if source:
+        vidlink = source.resolve()
+        play_stream(name, vidlink, thumb)
+    else:
+        play_stream(name, url, thumb)
 
 
 def play_stream(name, url, thumb):
@@ -193,6 +233,8 @@ if mode == None or url == None or len(url) < 1:
 elif mode == 1:
     submenu(url)
 elif mode == 2:
-    links_menu(name, url)
+    links_menu(name, url, thumb)
 elif mode == 3:
-    get_streams(name, url)
+    get_streams(name, url, thumb)
+elif mode == 4:
+    get_stream(name, url, thumb)

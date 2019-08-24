@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.full-match-replay" name="Full Match Replay" version="0.0.3" provider-name="Phantom Raspberry Blower">
+<addon id="plugin.video.full-match-replay" name="Full Match Replay" version="0.1.0" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="script.module.urlresolver"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
     <provides>video</provides>
@@ -23,7 +24,7 @@
       <icon>resources/icon.png</icon>
       <fanart>resources/fanart.jpg</fanart>
     </assets>
-    <news>Fixed Menu for EURO Links</news>
+    <news>Imported unjuice and urlresolver modules.</news>
     <email></email>
     <source></source>
   </extension>
