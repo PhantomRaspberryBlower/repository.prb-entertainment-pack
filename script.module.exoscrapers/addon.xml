@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.module.exoscrapers" name="ExoScrapers Module" version="1.0.2" provider-name="Exodus">
+<addon id="script.module.exoscrapers" name="ExoScrapers Module" version="1.0.3" provider-name="Exodus">
     <requires>
         <import addon="xbmc.python" version="2.25.0" />
         <import addon="script.module.beautifulsoup4"/>
-		<import addon="script.module.js2py"/>
     </requires>
     <extension point="xbmc.python.module" library="lib" />
     <extension point="xbmc.python.pluginsource" library="lib/default.py">
@@ -20,6 +19,6 @@
         <icon>icon.png</icon>
         <fanart></fanart>
     </assets>
-    <news></news>
+    <news>v1.0.3 - Scraper cleanup and EOL fixes</news>
     </extension>
 </addon>

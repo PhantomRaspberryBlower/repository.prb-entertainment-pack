@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.exodus" version="8.0.4a" name="Exodus" provider-name="Exodus">
+<addon id="plugin.video.exodus" version="8.0.5a" name="Exodus" provider-name="Exodus">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="script.module.exodus" />
@@ -7,6 +7,7 @@
 		<import addon="script.exodus.metadata" />
 		<import addon="script.module.urlresolver" />
 		<import addon="script.module.requests" />
+<!--		<import addon="script.module.lambdascrapers" />-->
 		<import addon="script.module.exoscrapers" />
 		<import addon="script.module.metahandler" version="1.0.0" />
 	</requires>
