@@ -1075,7 +1075,7 @@
 </addon>
 
 <!-- F1 Replay -->
-<addon id="plugin.video.f1-replay" name="Formula 1 Replay" version="0.1.0" provider-name="Phantom Raspberry Blower">
+<addon id="plugin.video.f1-replay" name="Formula 1 Replay" version="0.1.1" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.urlresolver"/>
@@ -1100,7 +1100,7 @@
       <icon>resources/icon.png</icon>
       <fanart>resources/fanart.jpg</fanart>
     </assets>
-    <news>Imported unjuice and urlresolver modules.</news>
+    <news>Refactored code</news>
     <email></email>
     <source></source>
   </extension>
@@ -1182,7 +1182,7 @@
 </addon>
 
 <!-- Full Match Replay -->
-<addon id="plugin.video.full-match-replay" name="Full Match Replay" version="0.1.0" provider-name="Phantom Raspberry Blower">
+<addon id="plugin.video.full-match-replay" name="Full Match Replay" version="0.1.1" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.urlresolver"/>
@@ -1207,7 +1207,7 @@
       <icon>resources/icon.png</icon>
       <fanart>resources/fanart.jpg</fanart>
     </assets>
-    <news>Imported unjuice and urlresolver modules.</news>
+    <news>Refactored code.</news>
     <email></email>
     <source></source>
   </extension>
@@ -1688,7 +1688,7 @@ Fixed Added and Watching.
 </addon>
 
 <!-- MotoGP Replay -->
-<addon id="plugin.video.motogp-replay" name="MotoGP Replay" version="0.1.0" provider-name="Phantom Raspberry Blower">
+<addon id="plugin.video.motogp-replay" name="MotoGP Replay" version="0.1.1" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.urlresolver"/>
@@ -1713,7 +1713,7 @@ Fixed Added and Watching.
       <icon>resources/icon.png</icon>
       <fanart>resources/fanart.jpg</fanart>
     </assets>
-    <news>Added MotoE (electric bikes). Also imported unjuice and urlresolver modules.</news>
+    <news>Refacted code.</news>
     <email></email>
     <source></source>
   </extension>
@@ -1812,6 +1812,38 @@ Fixed Added and Watching.
     <platform>all</platform>
     <website>http://dev.mysql.com/doc/connector-python/en/index.html</website>
     <source>http://dev.mysql.com/downloads/connector/python/</source>
+  </extension>
+</addon>
+
+<!-- NBA Replay -->
+<addon id="plugin.video.nba-replay" name="NBA Replay" version="0.0.1" provider-name="Phantom Raspberry Blower">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="script.module.urlresolver"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Replay NBA Games</summary>
+    <description lang="en_GB">
+      The National Basketball Association is a men's professional basketball league in North America; composed of 30 teams. It is one of the four major professional sports leagues in the United States and Canada, and is widely considered to be the premier men's professional basketball league in the world.
+    </description>
+    <disclaimer lang="en_GB">
+      [COLOR red][B]Phantom Raspberry Blower[/B][/COLOR] does not host or distribute any of the content provided by this addon. Does not have any affiliation with the content provider and accepts no responsibility for the included addon.
+    </disclaimer>
+    <platform>all</platform>
+    <language></language>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum></forum>
+    <website></website>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+    </assets>
+    <news>Initial release.</news>
+    <email></email>
+    <source></source>
   </extension>
 </addon>
 

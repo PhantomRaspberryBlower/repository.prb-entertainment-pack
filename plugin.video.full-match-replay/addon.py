@@ -31,20 +31,20 @@ __baseurl__ = 'http://fullmatchsports.com/'
 image_path = xbmc.translatePath(os.path.join('special://home/addons/',
                                 __addon_id__ + '/resources/media/'))
 thumbs = {'Premier League': image_path + 'Premier_League.png',
-         'Serie A Italy': image_path + 'Serie_A.png',
-         'La Liga Spain': image_path + 'La_Liga.png',
-         'Bundesliga Germany': image_path + 'Bundesliga.png',
-         'Ligue 1 France': image_path + 'Ligue_1.png',
-         'Champions League': image_path + 'Champions_League.png',
-         'Europa League': image_path + 'Europa_League.png',
-         'EURO 2020': image_path + 'Euro_2020.png',
-         'UEFA Nations League': image_path + 'Nations_League.png',
-         'World Cup 2018': image_path + 'World_Cup_2018.png',
-         'World Cup 2014': image_path + 'World_Cup_2014.png',
-         'Friendly Match': image_path + 'Friendly_Match.png',
-         'EURO 2016': image_path + 'Euro_2016.png',
-         'Copa America': image_path + 'Copa_America.png',
-         'Africa Cup 2015': image_path + 'Africa_Cup_2015.png'}
+          'Serie A Italy': image_path + 'Serie_A.png',
+          'La Liga Spain': image_path + 'La_Liga.png',
+          'Bundesliga Germany': image_path + 'Bundesliga.png',
+          'Ligue 1 France': image_path + 'Ligue_1.png',
+          'Champions League': image_path + 'Champions_League.png',
+          'Europa League': image_path + 'Europa_League.png',
+          'EURO 2020': image_path + 'Euro_2020.png',
+          'UEFA Nations League': image_path + 'Nations_League.png',
+          'World Cup 2018': image_path + 'World_Cup_2018.png',
+          'World Cup 2014': image_path + 'World_Cup_2014.png',
+          'Friendly Match': image_path + 'Friendly_Match.png',
+          'EURO 2016': image_path + 'Euro_2016.png',
+          'Copa America': image_path + 'Copa_America.png',
+          'Africa Cup 2015': image_path + 'Africa_Cup_2015.png'}
 
 
 def main_menu():
@@ -96,7 +96,7 @@ def seasons(league, thumb):
             new_mode = 2
             new_name = name
         addDir(new_name,
-               new_url,
+               new_url + 'page/1',
                new_mode,
                thumb,
                __fanart__,
@@ -105,50 +105,108 @@ def seasons(league, thumb):
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
 
-def matches(url):
-    page = 1
-    loop = True
-    while loop == True:
-        resp = commontasks.get_html(url + 'page/%d' % page)
+def matches(url, thumb):
+    items_per_page = 40
+    item = 0
+    if url.find('page/') > 0:
+        pgnumf = url.find('page/') + 5
+        pgnum = int(url[pgnumf:])
+    else:
+      pgnum = 1
+    url = url.replace('page/%d' % pgnum, '')
+    while item < items_per_page:
+        resp = commontasks.get_html(url + 'page/%d' % pgnum)
         try:
             articles = re.compile('<article(.+?)</article>').findall(resp)
         except:
             articles = ''
-            loop = False
         if len(articles) > 0:
             for article in articles:
+                item += 1
                 matches = re.compile('<a href="(.+?)" itemprop="url" title="Permalink to: (.+?)" rel="bookmark">'
                                      '<img width="(.+?)" height="(.+?)" src="(.+?)" class="(.+?)" alt="(.+?)" '
                                      'itemprop="image" title="(.+?)" /></a>').findall(article)
                 for href, title, imgwidth, imgheight, img, clss, alt, img_title in matches:
-                    addDir(title.replace('Full Match', '').replace('Highlights', '').strip(),
+                    title = title.replace('Full Match', '').replace('FULL MATCH', '').replace('Highlights', '').strip()
+                    addDir(title,
                            href,
                            3,
                            img,
                            __fanart__,
                            {'title': title,
                             'plot': title})
-        page += 1
+        else:
+            break
+        pgnum += 1
+    url = url + 'page/%d' % (pgnum - 1)
+    if url.find('page/') > 0:
+        pgnumf = url.find('page/') + 5
+        pgnum = int(url[pgnumf:]) + 1
+        nxtpgurl = url[:pgnumf]
+        nxtpgurl = "%s%s" % (nxtpgurl, pgnum)
+        if item < 1 and pagenum <= 1:
+            addDir('[COLOR red]No streams available! :([/COLOR]', url, 0, thumb, '', '')
+        if item >= items_per_page:
+            addDir('[COLOR green]>> Next page[/COLOR]', nxtpgurl, 2, thumb, '', '')
+        else:
+            addDir("[COLOR orange]That's all folks!!![/COLOR]", url, 0, thumb, '', '')
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
+
+
+def matches_old(url, thumb):
+    items_per_page = 10
+    item = 0
+    resp = commontasks.get_html(url)
+    try:
+        articles = re.compile('<article(.+?)</article>').findall(resp)
+    except:
+        articles = ''
+    if len(articles) > 0:
+        for article in articles:
+            item += 1
+            matches = re.compile('<a href="(.+?)" itemprop="url" title="Permalink to: (.+?)" rel="bookmark">'
+                                 '<img width="(.+?)" height="(.+?)" src="(.+?)" class="(.+?)" alt="(.+?)" '
+                                 'itemprop="image" title="(.+?)" /></a>').findall(article)
+            for href, title, imgwidth, imgheight, img, clss, alt, img_title in matches:
+                addDir(title.replace('Full Match', '').replace('Highlights', '').strip(),
+                       href,
+                       3,
+                       img,
+                       __fanart__,
+                       {'title': title,
+                        'plot': title})
+        if url.find('page/') > 0:
+            pgnumf = url.find('page/') + 5
+            pgnum = int(url[pgnumf:]) + 1
+            nxtpgurl = url[:pgnumf]
+            nxtpgurl = "%s%s" % (nxtpgurl, pgnum)
+            if item >= items_per_page:
+                addDir('[COLOR green]>> Next page[/COLOR]', nxtpgurl, 2, thumb, '', '')
+            else:
+                addDir("[COLOR red]That's All Folks!!![/COLOR]", url, 0, thumb, '', '')
+        xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
 
 def match(name, url, thumb):
     resp = commontasks.get_html(url)
-    resp = commontasks.regex_from_to(resp, '<div class="streaming"', '<div class="tab-content"')
-    matches = re.compile('<div class="tab-title(.+?)"><a href="(.+?)">(.+?)</a></div>').findall(resp)
-    for junk, href, title in matches:
-        if not ('/' in title or 'LINKS' in title):
-            addDir((name + ' ' + title).replace('BTSport UK', '').strip(),
-                   url + href,
-                   4,
-                   thumb,
-                   __fanart__,
-                   {'title': title,
-                    'plot': title})
-    xbmcplugin.endOfDirectory(int(sys.argv[1]))
+    try:
+        resp = commontasks.regex_from_to(resp, '<div class="streaming"', '<div class="tab-content"')
+        matches = re.compile('<div class="tab-title(.+?)"><a href="(.+?)">(.+?)</a></div>').findall(resp)
+        for junk, href, title in matches:
+            if not ('/' in title or 'LINKS' in title):
+                addDir((name + ' ' + title).replace('BTSport UK', '').strip(),
+                       url + href,
+                       4,
+                       thumb,
+                       __fanart__,
+                       {'title': title,
+                        'plot': title})
+        xbmcplugin.endOfDirectory(int(sys.argv[1]))
+    except:
+        commontasks.notification('No Streams! :(', 'No streams available!', xbmcgui.NOTIFICATION_INFO, 5000)
 
 
-def get_streams(name, url, thumb):
+def streams(name, url, thumb):
     format_text = {'1080P': '([COLOR orange]1080[/COLOR])',
                    '720P': '([COLOR orange]720[/COLOR])',
                    '480P': '([COLOR orange]480[/COLOR])',
@@ -156,29 +214,32 @@ def get_streams(name, url, thumb):
     resp = commontasks.get_html(url)
     resp = commontasks.regex_from_to(resp, '<div class="tab-content">', '</div>')
     matches = re.compile('<iframe src="(.+?)"').findall(resp)
-    resp = commontasks.get_html('https:' + str(matches[0]))
-    resp = commontasks.regex_from_to(resp, 'JuicyCodes.Run(', ');</script>')
-    resp = 'JuicyCodes.Run%s)' % resp
-    resp = unjuice.run(resp)
-    resp = commontasks.regex_from_to(resp, 'sources:', ',tracks:')
-    matches = re.compile('{"file":"(.+?)","label":"(.+?)","type":"(.+?)"}').findall(resp)
-    name = name.replace(' HD 720p', '').replace(' HD 1080p', '')
-    menu_icon = thumb
-    menu_fanart = __fanart__
-    for url, label, stype in matches:
-        for item in format_text:
-            label = label.replace(item, format_text[item])
-        addDir((name + ' ' + label).replace(' NA', ' ([COLOR red]No longer available![/COLOR])'),
-               url,
-               5,
-               menu_icon,
-               menu_fanart,
-               {'title': name,
-                'plot': name})
-    xbmcplugin.endOfDirectory(int(sys.argv[1]))
+    if len(matches) > 0:
+        resp = commontasks.get_html('https:' + str(matches[0]))
+        resp = commontasks.regex_from_to(resp, 'JuicyCodes.Run(', ');</script>')
+        resp = 'JuicyCodes.Run%s)' % resp
+        resp = unjuice.run(resp)
+        resp = commontasks.regex_from_to(resp, 'sources:', ',tracks:')
+        matches = re.compile('{"file":"(.+?)","label":"(.+?)","type":"(.+?)"}').findall(resp)
+        name = name.replace(' HD 720p', '').replace(' HD 1080p', '')
+        menu_icon = thumb
+        menu_fanart = __fanart__
+        for url, label, stype in matches:
+            for item in format_text:
+                label = label.replace(item, format_text[item])
+            addDir((name + ' ' + label).replace(' NA', ' ([COLOR red]No longer available![/COLOR])'),
+                   url,
+                   5,
+                   menu_icon,
+                   menu_fanart,
+                   {'title': name,
+                    'plot': name})
+        xbmcplugin.endOfDirectory(int(sys.argv[1]))
+    else:
+        commontasks.notification('No Streams! :(', 'No streams available!', xbmcgui.NOTIFICATION_INFO, 5000)
 
 
-def get_stream(name, url, thumb):
+def stream(name, url, thumb):
     sources = []
     label = name
     format_text = [' ([COLOR orange]',
@@ -288,10 +349,10 @@ if mode == None or url == None or len(url) < 1:
 elif mode == 1:
     seasons(name, thumb)
 elif mode == 2:
-    matches(url)
+    matches(url, thumb)
 elif mode == 3:
     match(name, url, thumb)
 elif mode == 4:
-    get_streams(name, url, thumb)
+    streams(name, url, thumb)
 elif mode == 5:
-    get_stream(name, url, thumb)
+    stream(name, url, thumb)

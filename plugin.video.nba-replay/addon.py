@@ -14,10 +14,10 @@ from resources.lib import commontasks
 
 # Written by: Phantom Raspberry Blower (The PRB)
 # Date: 21-12-2017
-# Description: Streams MotoGP, Moto2, Moto3, MotoE races since 2014
+# Description: Streams NBA games since 2017
 
 # Get addon details
-__addon_id__ = 'plugin.video.motogp-replay'
+__addon_id__ = 'plugin.video.nba-replay'
 __addon__ = xbmcaddon.Addon(id=__addon_id__)
 __addonname__ = __addon__.getAddonInfo('name')
 __icon__ = __addon__.getAddonInfo('icon')
@@ -25,31 +25,49 @@ __fanart__ = __addon__.getAddonInfo('fanart')
 __author__ = 'Phantom Raspberry Blower'
 __url__ = sys.argv[0]
 __handle__ = int(sys.argv[1])
-__baseurl__ = 'http://fullmatchsports.com/'
+__baseurl__ = 'http://fullmatch.net/'
 
 # Define local variables
 image_path = xbmc.translatePath(os.path.join('special://home/addons/',
                                 __addon_id__ + '/resources/media/'))
-thumbs = {'MotoGP': image_path + 'MotoGP.png',
-          'Moto2': image_path + 'Moto2.png',
-          'Moto3': image_path + 'Moto3.png',
-          'MotoE': image_path + 'MotoE.png'}
-fanarts = {'MotoGP': image_path + 'MotoGP_fanart.jpg',
-           'Moto2': image_path + 'Moto2_fanart.jpg',
-           'Moto3': image_path + 'Moto3_fanart.jpg',
-           'MotoE': image_path + 'MotoE_fanart.jpg'}
-
 
 def main_menu():
     # Shows menu items
     resp = commontasks.get_html(__baseurl__)
-    content = commontasks.regex_from_to(resp, '<a title="MotoGP Race" ', '</ul></li>')
-    menus = re.compile('<a target="_blank" rel="noopener noreferrer" href="(.+?)" '
-                       'itemprop="url"><span itemprop="name">(.+?)</span></a></li>').findall(content)
+    content = commontasks.regex_from_to(resp, 'data-toggle="dropdown">NBA ', 'data-toggle=')
+    menus_content = commontasks.regex_from_to(content, '<ul class="dropdown-menu menu-depth-1">',
+                                              'parent dropdown-submenu">')
+    submenus_content = commontasks.regex_from_to(content, '<ul class="dropdown-menu menu-depth-2">', '</ul>')
+    menus = re.compile('<a target="_blank" href="(.+?)" class="menu-link  sub-menu-link">(.+?)</a>').findall(menus_content)
+    submenus = re.compile('<a target="_blank" href="(.+?)" class="menu-link  sub-menu-link">(.+?)</a>').findall(submenus_content)
     for url, name in menus:
         addDir(name,
+               url + 'page/1',
+               2,
+               __icon__,
+               __fanart__,
+               {'title': name,
+                'plot': name})
+    for url, name in submenus:
+        addDir(name,
                url,
-               1,
+               4,
+               __icon__,
+               __fanart__,
+               {'title': name,
+                'plot': name})
+    xbmcplugin.endOfDirectory(int(sys.argv[1]))
+
+
+def main_menu_old():
+    # Shows menu items
+    resp = commontasks.get_html(__baseurl__)
+    content = commontasks.regex_from_to(resp, 'data-toggle="dropdown">NBA ', 'data-toggle=')
+    menus = re.compile('<a target="_blank" href="(.+?)" class="menu-link  sub-menu-link">(.+?)</a>').findall(content)
+    for url, name in menus:
+        addDir(name,
+               url + 'page/1',
+               2,
                __icon__,
                __fanart__,
                {'title': name,
@@ -58,6 +76,54 @@ def main_menu():
 
 
 def submenu(url):
+    items_per_page = 48
+    item = 0
+    if url.find('page/') > 0:
+        pgnumf = url.find('page/') + 5
+        pgnum = int(url[pgnumf:])
+    else:
+      pgnum = 1
+    url = url.replace('page/%d' % pgnum, '')
+    while item < items_per_page:
+        resp = commontasks.get_html(url + 'page/%d' % pgnum)
+        try:
+            articles = re.compile('<article(.+?)</article>').findall(resp)
+        except:
+            articles = ''
+        if len(articles) > 0:
+            for article in articles:
+                item += 1
+                matches = re.compile('<div class="picture-content " data-post-id="(.+?)"> '
+                                     '<a href="(.+?)" target="_self" title="(.+?)"> <img (.+?) '
+                                     'data-src="(.+?)" data-srcset=').findall(article)
+                for dpi, href, title, junk, img in matches:
+                    title = title.replace('Replay', '').replace('NBA', '').replace('  ', ' ').strip()
+                    addDir(title,
+                           href,
+                           3,
+                           img,
+                           __fanart__,
+                           {'title': title,
+                            'plot': title})
+        else:
+            break
+        pgnum += 1
+    url = url + 'page/%d' % (pgnum - 1)
+    if url.find('page/') > 0:
+        pgnumf = url.find('page/') + 5
+        pgnum = int(url[pgnumf:]) + 1
+        nxtpgurl = url[:pgnumf]
+        nxtpgurl = "%s%s" % (nxtpgurl, pgnum)
+        if item < 1 and pagenum <= 1:
+            addDir('[COLOR red]No streams available! :([/COLOR]', url, 0, thumb, '', '')
+        if item >= items_per_page:
+            addDir('[COLOR green]>> Next page[/COLOR]', nxtpgurl, 2, thumb, '', '')
+        else:
+            addDir("[COLOR orange]That's all folks!!![/COLOR]", url, 0, thumb, '', '')
+    xbmcplugin.endOfDirectory(int(sys.argv[1]))
+
+
+def submenu_old(url):
     page = 1
     loop = True
     while loop == True:
@@ -69,13 +135,13 @@ def submenu(url):
             loop = False
         if len(articles) > 0:
             for article in articles:
-                matches = re.compile('<a href="(.+?)" itemprop="url" title="Permalink to: (.+?)" '
-                                     'rel="bookmark"><img width="(.+?)" height="(.+?)" src="(.+?)" '
-                                     'class="(.+?)" alt="(.+?)" itemprop="image" title="(.+?)" /></a>').findall(article)
-                for href, title, imgwidth, imgheight, img, clss, alt, img_title in matches:
-                    addDir(title.replace('Race', '').replace('Replay', '').strip(),
+                matches = re.compile('<div class="picture-content " data-post-id="(.+?)"> '
+                                     '<a href="(.+?)" target="_self" title="(.+?)"> <img (.+?) '
+                                     'data-src="(.+?)" data-srcset=').findall(article)
+                for dpi, href, title, junk, img in matches:
+                    addDir(title.replace('Race Replay', '').strip(),
                            href,
-                           2,
+                           3,
                            img,
                            __fanart__,
                            {'title': title,
@@ -85,26 +151,28 @@ def submenu(url):
 
 
 def links_menu(name, url, thumb):
+    format_text = {'1080p': '([COLOR orange]1080[/COLOR])',
+                   '720p': '([COLOR orange]720[/COLOR])',
+                   '480p': '([COLOR orange]480[/COLOR])',
+                   '360p': '([COLOR orange]360[/COLOR])',
+                   'Main Video': '',
+                   'Server 2 -': '',
+                   'Server 3 -': '',
+                   ' -': '',
+                   '  ': ' '}
     resp = commontasks.get_html(url)
-    resp = commontasks.regex_from_to(resp, '<div class="streaming"', '<div class="tab-content"')
-    matches = re.compile('<div class="tab-title(.+?)"><a href="(.+?)">(.+?)</a></div>').findall(resp)
-    for junk, href, title in matches:
-        if not ('720p' in title or '/' in title or 'LINKS' in title):
-            if 'Moto2' in title:
-                menu_fanart = fanarts['Moto2']
-            elif 'Moto3' in title:
-                menu_fanart = fanarts['Moto3']
-            elif 'MotoE' in title:
-                menu_fanart = fanarts['MotoE']
-            else:
-                menu_fanart = __fanart__
-            addDir(name + ' ' + title.replace('HD', '').replace(' 1080p', '').replace('BTSport', '').replace('&#8211;', ''),
-                   url + href,
-                   3,
-                   thumb,
-                   menu_fanart,
-                   {'title': title,
-                    'plot': title})
+    matches = re.compile('<a id="video-server-(.+?)" class="" href="(.+?)"><i class="fas fa-play"></i>(.+?)</a>').findall(resp)
+    for junk, href, label in matches:
+        menu_fanart = __fanart__
+        for item in format_text:
+            label = label.replace(item, format_text[item]).strip()
+        addDir(name.replace('([COLOR orange]720[/COLOR])', '') + ' ' + label.replace('HD', '').replace(' 1080p', ''),
+               href,
+               4,
+               thumb,
+               menu_fanart,
+               {'title': label,
+                'plot': label})
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
 
@@ -113,36 +181,31 @@ def get_streams(name, url, thumb):
                    '720P': '([COLOR orange]720[/COLOR])',
                    '480P': '([COLOR orange]480[/COLOR])',
                    '360P': '([COLOR orange]360[/COLOR])'}
+    format_text = {'1080P': '([COLOR orange]1080[/COLOR])',
+                   '720P': '([COLOR orange]720[/COLOR])',
+                   '480P': '([COLOR orange]480[/COLOR])',
+                   '360P': '([COLOR orange]360[/COLOR])',
+                   'Server 1 -': '',
+                   '- Main Video': '',
+                   '  ': ' '}
     resp = commontasks.get_html(url)
-    resp = commontasks.regex_from_to(resp, '<div class="tab-content">', '</div>')
-    matches = re.compile('<iframe src="(.+?)"').findall(resp)
-    resp = commontasks.get_html('https:' + str(matches[0]))
+    resp = commontasks.regex_from_to(resp, '<div id="player-embed">', '</div>')
+    matches = re.compile('<iframe (.+?) src="(.+?)"').findall(resp)
+    resp = commontasks.get_html(matches[0][1])
     resp = commontasks.regex_from_to(resp, 'JuicyCodes.Run(', ');</script>')
     resp = 'JuicyCodes.Run%s)' % resp
     resp = unjuice.run(resp)
     resp = commontasks.regex_from_to(resp, 'sources:', ',tracks:')
     matches = re.compile('{"file":"(.+?)","label":"(.+?)","type":"(.+?)"}').findall(resp)
-    name = name.replace(' HD 720p', '').replace(' HD 1080p', '')
+    name = name.replace(' HD 720p', '').replace(' HD 1080p', '').replace('([COLOR orange]720[/COLOR])', '').replace('Server 1 ', '').replace('Server 2 ', '').replace('Server 3 ', '').strip()
     menu_icon = thumb
     menu_fanart = __fanart__
     for url, label, stype in matches:
-        if 'MotoGP Race' in name:
-            menu_icon = thumbs['MotoGP']
-            menu_fanart = fanarts['MotoGP']
-        elif 'Moto2 Race' in name:
-            menu_icon = thumbs['Moto2']
-            menu_fanart = fanarts['Moto2']
-        elif 'Moto3 Race' in name:
-            menu_icon = thumbs['Moto3']
-            menu_fanart = fanarts['Moto3']
-        elif 'MotoE Race' in name:
-            menu_icon = thumbs['MotoE']
-            menu_fanart = fanarts['MotoE']
         for item in format_text:
-            label = label.replace(item, format_text[item])
+            label = label.replace(item, format_text[item]).strip()
         addDir((name + ' ' + label).replace(' NA', ' ([COLOR red]No longer available![/COLOR])'),
                url,
-               4,
+               5,
                menu_icon,
                menu_fanart,
                {'title': name,
@@ -273,10 +336,13 @@ except:
 if mode == None or url == None or len(url) < 1:
     main_menu()
 elif mode == 1:
+    if url is not None:
+        play_stream(_stream_name, url, __icon__)
+elif mode ==2:
     submenu(url)
-elif mode == 2:
+elif mode ==3:
     links_menu(name, url, thumb)
-elif mode == 3:
-    get_streams(name, url, thumb)
 elif mode == 4:
+    get_streams(name, url, thumb)
+elif mode == 5:
     get_stream(name, url, thumb)

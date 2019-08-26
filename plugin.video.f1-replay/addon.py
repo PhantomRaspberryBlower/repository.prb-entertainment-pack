@@ -34,9 +34,10 @@ image_path = xbmc.translatePath(os.path.join('special://home/addons/',
 def main_menu():
     # Shows menu items
     resp = commontasks.get_html(__baseurl__)
-    content = commontasks.regex_from_to(resp, '<a title="Formula 1 Race" href="#" itemprop="url">', '</ul></li>')
-    menus = re.compile('<li id="(.+?)" class="(.+?)"><a target="_blank" rel="noopener noreferrer" href="(.+?)" itemprop="url"><span itemprop="name">(.+?)</span></a></li>').findall(content)
-    for menu_item, clas, url, name in menus:
+    content = commontasks.regex_from_to(resp, '<a title="Formula 1 Race" ', '</ul></li>')
+    menus = re.compile('<a target="_blank" rel="noopener noreferrer" href="(.+?)" '
+                       'itemprop="url"><span itemprop="name">(.+?)</span></a></li>').findall(content)
+    for url, name in menus:
         addDir(name,
                url,
                1,

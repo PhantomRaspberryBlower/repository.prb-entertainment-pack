@@ -18,22 +18,23 @@ Addons installed by this addon:
   - Dreamcatcher (Download Current Stream)
   - Exodus (Movies & TV Shows)
   - Exodus Artwork Downloader
-  - F1 Replays
+  - F1 Replays (Formula 1 Replays)
   - Fido Video (Movies & TV Shows)
-  - Full Match Replays
+  - Full Match Replays (Football Replays)
   - ITV (Live & Catch-Up TV)
   - IP 2 Location (Displays location based on IP address)
   - iPlayer (Live and Catch-Up TV)
   - Leicester Community Radio (Internet Radio)
   - Mail (Email Reader)
-  - MotoGP Replays
+  - MotoGP Replays (Moto GP Motorcycle Replays)
   - MP3 Music (Music Albums & Songs)
+  - NBA Replay (NBA Basketball Replays)
   - Neptune Rising TV (Movies & TV Shows)
   - Placenta (Movies & TV Shows)
   - PRB Clean (Removes obsolete addons)
   - PRB Radio (Stream music)
   - PRB Install Everything EP (Forces installation of most addons)
-  - Rising Tides (Sport)
+  - Rising Tides (Live Sports Events)
   - RSS Editor (Add RSS Subcriptions)
   - RSS Reader (Displays RSS Feeds)
   - Snagfilms (Classic Movies)
