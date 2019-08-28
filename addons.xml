@@ -973,7 +973,7 @@
 </addon>
 
 <!-- Exodus Addon -->
-<addon id="plugin.video.exodus" version="8.0.6a" name="Exodus" provider-name="Exodus">
+<addon id="plugin.video.exodus" version="8.0.7a" name="Exodus" provider-name="Exodus">
   <requires>
     <import addon="xbmc.python" version="2.19.0" />
     <import addon="script.module.exodus" />
@@ -1050,7 +1050,7 @@
 </addon>
 
 <!-- Exodus Scrapers Module -->
-<addon id="script.module.exoscrapers" name="ExoScrapers Module" version="1.0.3" provider-name="Exodus">
+<addon id="script.module.exoscrapers" name="ExoScrapers Module" version="1.0.5" provider-name="Exodus">
   <requires>
     <import addon="xbmc.python" version="2.25.0" />
     <import addon="script.module.beautifulsoup4"/>
@@ -1070,7 +1070,7 @@
       <icon>icon.png</icon>
       <fanart></fanart>
     </assets>
-    <news>v1.0.3 - Scraper cleanup and EOL fixes</news>
+    <news>v1.0.5 - Scraper cleanup and EOL fixes</news>
   </extension>
 </addon>
 
