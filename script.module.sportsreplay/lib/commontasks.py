@@ -1,9 +1,10 @@
 #!/bin/python
 
-import os
-import re
 import xbmc
 import xbmcgui
+import sys
+import os
+import re
 import urllib2
 
 try:
@@ -14,6 +15,8 @@ except ImportError:
     # Python2
     import urllib
 
+import jsunpack
+
 '''
 Written by: Phantom Raspberry Blower
 Date: 21-08-2017
@@ -21,7 +24,7 @@ Description: Common Tasks for Addons
 '''
 
 INVALID_FILENAME_CHARS = u'\/:*?"<>|'
-
+Juice = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="
 
 def urlencode(values):
     try:
@@ -208,3 +211,44 @@ def getLibrarySources(db_type):
     response = xbmc.executeJSONRPC(json_request)
     response = eval(response)
     return [source['file'] for source in response['result']['sources']]
+
+
+def unjuice(e):
+    try:
+        e = re.findall(r'JuicyCodes.Run\(([^\)]+)', e, re.IGNORECASE)[0]
+        e = re.sub(r'\"\s*\+\s*\"','', e)
+        e = re.sub(r'[^A-Za-z0-9+\\/=]','', e)
+    except:
+        return None
+
+    t = ""
+    n=r=i=s=o=u=a=f=0
+
+    while f < len(e):
+        try:
+            s = Juice.index(e[f]);f+=1; 
+            o = Juice.index(e[f]);f+=1; 
+            u = Juice.index(e[f]);f+=1; 
+            a = Juice.index(e[f]);f+=1; 
+            n = s << 2 | o >> 4; r = (15 & o) << 4 | u >> 2; i = (3 & u) << 6 | a
+            t += chr(n)
+            if 64 != u: t += chr(r)
+            if 64 != a: t += chr(i)
+        except:
+            continue
+        pass
+
+    try:
+        t = jsunpack.unpack(t)
+        t = unicode(t, 'utf-8')
+    except:
+        t = None
+    
+    return t
+
+
+def play(name, url, thumb):
+    liz = xbmcgui.ListItem(name)
+    liz.setArt({'thumb': thumb})
+    xbmc.Player().play(url, liz)
+    sys.exit("Stop Video")

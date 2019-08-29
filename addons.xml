@@ -1075,10 +1075,10 @@
 </addon>
 
 <!-- F1 Replay -->
-<addon id="plugin.video.f1-replay" name="Formula 1 Replay" version="0.1.1" provider-name="Phantom Raspberry Blower">
+<addon id="plugin.video.f1-replay" name="Formula 1 Replay" version="0.2.1" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
-    <import addon="script.module.urlresolver"/>
+    <import addon="script.module.sportsreplay"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
     <provides>video</provides>
@@ -1688,10 +1688,10 @@ Fixed Added and Watching.
 </addon>
 
 <!-- MotoGP Replay -->
-<addon id="plugin.video.motogp-replay" name="MotoGP Replay" version="0.1.1" provider-name="Phantom Raspberry Blower">
+<addon id="plugin.video.motogp-replay" name="MotoGP Replay" version="0.2.2" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
-    <import addon="script.module.urlresolver"/>
+    <import addon="script.module.sportsreplay"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
     <provides>video</provides>
@@ -2594,6 +2594,23 @@ This is a Non-profit resource, organized solely for educational purposes which i
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
     </assets>
+  </extension>
+</addon>
+
+<!-- Sports Replay Module -->
+<addon id="script.module.sportsreplay" name="Sports Replay" version="0.0.1" provider-name="Phantom Raspberry Blower">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="script.module.urlresolver"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Sports Replay web scaper</summary>
+    <description lang="en">Web scraper and common tasks for F1 Replay, Full Match Replay, MotoGP Replay and NBA Replay.</description>
+    <forum></forum>
+    <website></website>
+    <news>Initial Release.</news>
   </extension>
 </addon>
 
