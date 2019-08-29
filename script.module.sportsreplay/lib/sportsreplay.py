@@ -1,8 +1,15 @@
+#!/usr/bin/python
+
 import re
 
 import urlresolver # Resolves media file from url
 import commontasks
 
+# Written by: Phantom Raspberry Blower (The PRB)
+# Date: 21-08-2019
+# Description: Web scraper for capturing sports streams
+
+# Define local variables
 __baseurl__ = 'http://fullmatchsports.com/'
 
 
@@ -15,27 +22,89 @@ def main_menu(title):
     return menus
 
 
-def submenu(url):
-    submenus = []
-    page = 1
-    loop = True
-    while loop == True:
-        resp = commontasks.get_html(url + 'page/%d' % page)
+def main_menu_and_no_submenus(title):
+    # Shows menu items and items with no submenus
+    main_menus = []
+    resp = commontasks.get_html(__baseurl__)
+    content = commontasks.regex_from_to(resp, '<a title="' + title + '" ', '<li id="menu-item-54"')
+    menus = re.compile('<li id="(.+?)" class="(.+?)"><a(.+?)href="#" itemprop="url">'
+                       '<span itemprop="name">(.+?)</span></a>').findall(content)
+    nosubmenus = re.compile('<a target="_blank" rel="noopener noreferrer" href="(.+?)" itemprop="url">'
+                       '<span itemprop="name">(.+?)</span></a>').findall(content)
+    mode = 1
+    for menu_item, clss, url, name in menus:
+        main_menus.append((url, name, mode))
+
+    mode = 2
+    for href, name in nosubmenus:
+        main_menus.append((href, name, mode))
+
+    return main_menus
+
+
+def seasons(league):
+    seasons = []
+    resp = commontasks.get_html(__baseurl__)
+    content = commontasks.regex_from_to(resp, league + '</span>', '</ul></li>')
+    menus = re.compile('<li id="(.+?)" class="(.+?)"><a target="_blank" rel="noopener '
+                       'noreferrer" href="(.+?)" itemprop="url"><span itemprop="name">'
+                       '(.+?)</span></a></li>').findall(content)
+    for menu_item, clss, url, name in menus:
+        if url == '#':
+            new_url = __baseurl__
+            new_mode = None
+            new_name = ''
+        else:
+            new_url = url
+            new_mode = 2
+            new_name = name
+        seasons.append((new_name, new_url + 'page/1', new_mode))
+    return seasons
+
+
+def submenu(url, thumb):
+    fmatches = []
+    items_per_page = 40
+    item = 0
+    if url.find('page/') > 0:
+        pgnumf = url.find('page/') + 5
+        pgnum = int(url[pgnumf:])
+    else:
+      pgnum = 1
+    url = url.replace('page/%d' % pgnum, '')
+    while item < items_per_page:
+        resp = commontasks.get_html(url + 'page/%d' % pgnum)
         try:
             articles = re.compile('<article(.+?)</article>').findall(resp)
         except:
             articles = ''
-            loop = False
         if len(articles) > 0:
             for article in articles:
-                matches = re.compile('<a href="(.+?)" itemprop="url" title="Permalink to: (.+?)" '
-                                     'rel="bookmark"><img width="(.+?)" height="(.+?)" src="(.+?)" '
-                                     'class="(.+?)" alt="(.+?)" itemprop="image" title="(.+?)" /></a>').findall(article)
+                item += 1
+                matches = re.compile('<a href="(.+?)" itemprop="url" title="Permalink to: (.+?)" rel="bookmark">'
+                                     '<img width="(.+?)" height="(.+?)" src="(.+?)" class="(.+?)" alt="(.+?)" '
+                                     'itemprop="image" title="(.+?)" /></a>').findall(article)
                 for href, title, imgwidth, imgheight, img, clss, alt, img_title in matches:
+                    title = title.replace('Full Match', '').replace('FULL MATCH', '').replace('Highlights', '').strip()
                     title = title.replace('  ', '').strip()
-                    submenus.append((href, title, img))
-        page += 1
-    return submenus
+                    mode = None
+                    fmatches.append((href, title, img, mode))
+        else:
+            break
+        pgnum += 1
+    url = url + 'page/%d' % (pgnum - 1)
+    if url.find('page/') > 0:
+        pgnumf = url.find('page/') + 5
+        pgnum = int(url[pgnumf:]) + 1
+        nxtpgurl = url[:pgnumf]
+        nxtpgurl = "%s%s" % (nxtpgurl, pgnum)
+        if item < 1 and pagenum <= 1:
+            fmatches.append((url, '[COLOR red]No streams available! :([/COLOR]', thumb, 0))
+        if item >= items_per_page:
+            fmatches.append((nxtpgurl, '[COLOR green]>> Next page[/COLOR]', thumb, 2))
+        elif pgnum > 3:
+            fmatches.append((url, "[COLOR orange]That's all folks!!![/COLOR]", thumb, 0))
+    return fmatches
 
 
 def get_links(url):

@@ -2,7 +2,7 @@
 <addons>
 
 <!-- PRB Install Everything Addon -->
-<addon id="script.force-install-all-ep" name="PRB Install Everything EP" version="1.12.8" provider-name="Phantom Raspberry Blower">
+<addon id="script.force-install-all-ep" name="PRB Install Everything EP" version="1.12.9" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="plugin.audio.absolute-radio"/>
@@ -20,6 +20,7 @@
     <import addon="plugin.video.iplayerwww"/>
     <import addon="plugin.video.itv"/>
     <import addon="plugin.video.motogp-replay"/>
+    <import addon="plugin.video.nba-replay"/>
     <import addon="plugin.video.neptune"/>
     <import addon="plugin.video.placenta"/>
     <import addon="plugin.video.Rising.Tides"/>
@@ -35,6 +36,7 @@
     <import addon="plugin.video.yt-comedy"/>
     <import addon="script.image.websterswildshots"/>
     <import addon="script.module.liveresolver"/>
+    <import addon="script.module.sportsreplay"/>
     <import addon="script.module.universalscrapers"/>
     <import addon="script.rss.editor"/>
     <import addon="script.rss-reader"/>
@@ -1075,7 +1077,7 @@
 </addon>
 
 <!-- F1 Replay -->
-<addon id="plugin.video.f1-replay" name="Formula 1 Replay" version="0.2.1" provider-name="Phantom Raspberry Blower">
+<addon id="plugin.video.f1-replay" name="Formula 1 Replay" version="0.3.1" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.sportsreplay"/>
@@ -1182,7 +1184,7 @@
 </addon>
 
 <!-- Full Match Replay -->
-<addon id="plugin.video.full-match-replay" name="Full Match Replay" version="0.1.1" provider-name="Phantom Raspberry Blower">
+<addon id="plugin.video.full-match-replay" name="Full Match Replay" version="0.3.1" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.urlresolver"/>
@@ -1688,7 +1690,7 @@ Fixed Added and Watching.
 </addon>
 
 <!-- MotoGP Replay -->
-<addon id="plugin.video.motogp-replay" name="MotoGP Replay" version="0.2.2" provider-name="Phantom Raspberry Blower">
+<addon id="plugin.video.motogp-replay" name="MotoGP Replay" version="0.3.1" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.sportsreplay"/>
@@ -2101,7 +2103,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- PRB Clean Service -->
-<addon id="service.prb-clean" name="PRB Clean" version="0.2.9" provider-name="Phantom Raspberry Blower">
+<addon id="service.prb-clean" name="PRB Clean" version="0.3.1" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -2118,7 +2120,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
       <icon>resources/icon.png</icon>
       <fanart>resources/fanart.jpg</fanart>
     </assets>
-    <news>Removed Death Star</news>
+    <news>Removed The Magic Dragon</news>
     <email></email>
     <source></source>
   </extension>
@@ -2598,7 +2600,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- Sports Replay Module -->
-<addon id="script.module.sportsreplay" name="Sports Replay" version="0.0.1" provider-name="Phantom Raspberry Blower">
+<addon id="script.module.sportsreplay" name="Sports Replay" version="0.0.2" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.urlresolver"/>
@@ -2610,7 +2612,10 @@ This is a Non-profit resource, organized solely for educational purposes which i
     <description lang="en">Web scraper and common tasks for F1 Replay, Full Match Replay, MotoGP Replay and NBA Replay.</description>
     <forum></forum>
     <website></website>
-    <news>Initial Release.</news>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
+    <news>Refactored code</news>
   </extension>
 </addon>
 

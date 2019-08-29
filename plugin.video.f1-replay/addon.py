@@ -9,16 +9,16 @@ import os
 import sportsreplay
 
 # Written by: Phantom Raspberry Blower (The PRB)
-# Date: 21-12-2017
+# Date: 11-06-2019
 # Description: Streams Forumla 1 races since 2014
 
 # Get addon details
-__addon_id__ = 'plugin.video.f1-replay'
+__addon_id__ = u'plugin.video.f1-replay'
 __addon__ = xbmcaddon.Addon(id=__addon_id__)
 __addonname__ = __addon__.getAddonInfo('name')
 __icon__ = __addon__.getAddonInfo('icon')
 __fanart__ = __addon__.getAddonInfo('fanart')
-__author__ = 'Phantom Raspberry Blower'
+__author__ = u'Phantom Raspberry Blower'
 __url__ = sys.argv[0]
 __handle__ = int(sys.argv[1])
 
@@ -40,12 +40,16 @@ def main_menu():
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
 
-def submenu(url):
-    for href, title, img in sportsreplay.submenu(url):
+def submenu(url, thumb):
+    for href, title, img, mode in sportsreplay.submenu(url, thumb):
         title = title.replace('Race', '').replace('Replay', '').replace('  ', ' ')
+        if mode == None:
+          new_mode = 2
+        else:
+          new_mode = mode
         addDir(title.strip(),
             href,
-            2,
+            new_mode,
             img,
             __fanart__,
             {'title': title,
@@ -146,7 +150,7 @@ if mode == None or url == None or len(url) < 1:
     main_menu()
 elif mode == 1:
     # Display Submenu Items
-    submenu(url)
+    submenu(url, thumb)
 elif mode == 2:
     # Display Links
     get_links(name, url, thumb)
