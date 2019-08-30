@@ -193,10 +193,10 @@ elif mode == 1:
 elif mode == 2:
     submenu(url, thumb)
 elif mode == 3:
-    # Display Links
+    # Get Links
     get_links(name, url, thumb)
-#    match(name, url, thumb)
 elif mode == 4:
+    # Get Streams
     get_streams(name, url, thumb)
 elif mode == 5:
     # Play Stream

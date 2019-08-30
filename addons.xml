@@ -878,13 +878,13 @@
 </addon>
 
 <!-- Diamond Wizard Repo -->
-<addon id="repository.Diamond-Wizard-Repo" name=".[COLORwhite]***[/COLOR][COLOR crimson]D[/COLOR][COLOR silver]iamond Build Repo (Server 1 Main)[/COLOR][COLORwhite]***[/COLOR]" version="3.6.7" provider-name="Team Diamond">
-  <extension point="xbmc.addon.repository" name="Diamond Wizard Repo - Main">
+<addon id="repository.Diamond-Wizard-Repo" name=".[COLORwhite]***[/COLOR][COLOR crimson]D[/COLOR][COLOR silver]iamond Build Repo (Primary Server, Main Repo)[/COLOR][COLORwhite]***[/COLOR]" version="3.7.6" provider-name="Diamond Build">
+  <extension point="xbmc.addon.repository" name="Diamond Wizard Repo - Primary Server">
+    <!-- Diamond Repository -->
     <dir>
       <info compressed="false">http://m3u.xyz/repo-files/wizard/addons.xml</info>
       <checksum>http://m3u.xyz/repo-files/wizard/addons.xml.md5</checksum>
       <datadir zip="true">http://repo.rubyjewelwizard.com/repo/diamond/wizard/zips/</datadir>
-      <hashes>false</hashes>
     </dir>
     <dir>
       <info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml</info>
@@ -918,7 +918,7 @@
     </dir>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en">Diamond Addons / BackUp Repo</summary>
+    <summary lang="en">Diamond Addons / Primary Server, Main Repo</summary>
     <description lang="en">Repo For Diamond Build, Bought to you by Diamond Build</description>
     <disclaimer>The owners and submitters to this repository do not host or distribute any of the content displayed by these addons nor do they have any affiliation with the content providers.</disclaimer>
     <platform>all</platform>
@@ -1818,10 +1818,10 @@ Fixed Added and Watching.
 </addon>
 
 <!-- NBA Replay -->
-<addon id="plugin.video.nba-replay" name="NBA Replay" version="0.0.1" provider-name="Phantom Raspberry Blower">
+<addon id="plugin.video.nba-replay" name="NBA Replay" version="0.1.1" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
-    <import addon="script.module.urlresolver"/>
+    <import addon="script.module.sportsreplay"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
     <provides>video</provides>
@@ -1843,7 +1843,7 @@ Fixed Added and Watching.
       <icon>resources/icon.png</icon>
       <fanart>resources/fanart.jpg</fanart>
     </assets>
-    <news>Initial release.</news>
+    <news></news>
     <email></email>
     <source></source>
   </extension>
@@ -2351,7 +2351,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- Rising Tides -->
-<addon id="plugin.video.Rising.Tides" name="[COLOR red][B]R[/B][/COLOR]ising [COLOR pink][B]T[/B][/COLOR]ides" version="1.4.18" provider-name="[COLOR turquoise][B]@mullafabz[/B][/COLOR]">
+<addon id="plugin.video.Rising.Tides" name="[COLOR red][B]R[/B][/COLOR][COLOR white][B]ising[/B][/COLOR] [COLOR pink][B]T[/B][/COLOR][COLOR white][B]ides[/B][/COLOR]" version="1.4.19" provider-name="[COLOR turquoise][B]mullafabz[/B][/COLOR]">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.simple.downloader" optional="true"/>
@@ -2370,8 +2370,8 @@ This is a Non-profit resource, organized solely for educational purposes which i
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en">Watch all TVs and types of content from the World</summary>
-    <description lang="en">We don't have any affiliation with the content provider nor KODI.Content freely available on the internet.More info at [COLOR red][B]@mullafabz[/B][/COLOR]</description>
+    <summary lang="en">Watch many sports and events from the world</summary>
+    <description lang="en">I don't have any affiliation with the content provider nor KODI.Content freely available on the internet.More info at [COLOR lime][B]@mullafabz[/B][/COLOR]</description>
     <platform>all</platform>
   </extension>
 </addon>
@@ -2600,7 +2600,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- Sports Replay Module -->
-<addon id="script.module.sportsreplay" name="Sports Replay" version="0.0.2" provider-name="Phantom Raspberry Blower">
+<addon id="script.module.sportsreplay" name="Sports Replay" version="0.1.1" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.urlresolver"/>
@@ -2817,7 +2817,7 @@ v4.3.1
 </addon>
 
 <!-- The Magic Dragon Addon -->
-<addon id="plugin.video.themagicdragon" name="The Magic Dragon" version="1.30" provider-name="Magic Dragon">
+<addon id="plugin.video.themagicdragon" name="The Magic Dragon" version="1.31" provider-name="Magic Dragon">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.t0mm0.common" version="2.0.0"/>

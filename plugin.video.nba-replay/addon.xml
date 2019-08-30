@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.nba-replay" name="NBA Replay" version="0.0.1" provider-name="Phantom Raspberry Blower">
+<addon id="plugin.video.nba-replay" name="NBA Replay" version="0.1.1" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
-    <import addon="script.module.urlresolver"/>
+    <import addon="script.module.sportsreplay"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
     <provides>video</provides>
@@ -24,7 +24,7 @@
       <icon>resources/icon.png</icon>
       <fanart>resources/fanart.jpg</fanart>
     </assets>
-    <news>Initial release.</news>
+    <news></news>
     <email></email>
     <source></source>
   </extension>

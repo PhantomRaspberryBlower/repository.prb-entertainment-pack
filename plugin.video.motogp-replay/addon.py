@@ -96,7 +96,8 @@ def get_links(name, url, thumb):
 
 def get_streams(name, url, thumb):
     name = name.replace(' HD 720p', '').replace(' HD 1080p', '')
-    for href, label in sportsreplay.get_streams(url):
+    streams = sportsreplay.get_streams(url)
+    for href, label in streams:
         if 'MotoGP' in name:
             menu_fanart = fanarts['MotoGP']
         elif 'Moto2' in name:
@@ -114,7 +115,8 @@ def get_streams(name, url, thumb):
                menu_fanart,
                {'title': name,
                 'plot': name})
-    xbmcplugin.endOfDirectory(int(sys.argv[1]))
+    if streams:
+        xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
 
 def addDir(name, url, mode, thumb, fanart=False, infoLabels=True):
