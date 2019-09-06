@@ -45,7 +45,7 @@ thumbs = {'Premier League': image_path + 'Premier_League.png',
 
 def main_menu():
     # Shows menu items
-    for url, name, mode in sportsreplay.main_menu_and_no_submenus('Full Match Replay'):
+    for url, name, mode in sportsreplay.main_menu('Full Match Replay'):
         try:
             addDir(name,
                    url,
@@ -82,16 +82,12 @@ def submenu(url, thumb):
                    '2015-16': '',
                    '  ': ' ',
                    ' NA': ' ([COLOR red]No longer available![/COLOR])'}
-    for href, title, img, mode in sportsreplay.submenu(url, thumb):
+    for href, title, img, mode in sportsreplay.submenu(url, thumb, items_per_page=40, currmode=2):
         for item in format_text:
           title = title.replace(item, format_text[item])
-        if mode == None:
-          new_mode = 3
-        else:
-          new_mode = mode
         addDir(title.strip(),
             href,
-            new_mode,
+            mode,
             img,
             __fanart__,
             {'title': title,

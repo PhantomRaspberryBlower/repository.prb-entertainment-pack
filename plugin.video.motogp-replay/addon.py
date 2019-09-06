@@ -50,15 +50,11 @@ def main_menu():
 
 
 def submenu(url, thumb):
-    for href, title, img, mode in sportsreplay.submenu(url, thumb):
+    for href, title, img, mode in sportsreplay.submenu(url, thumb, items_per_page=40, currmode=1):
         title = title.replace('Race', '').replace('Replay', '').replace('  ', ' ')
-        if mode == None:
-          new_mode = 2
-        else:
-          new_mode = mode
         addDir(title.strip(),
             href,
-            new_mode,
+            mode,
             img,
             __fanart__,
             {'title': title,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.f1-replay" name="Formula 1 Replay" version="0.3.1" provider-name="Phantom Raspberry Blower">
+<addon id="plugin.video.f1-replay" name="Formula 1 Replay" version="0.4.1 provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.sportsreplay"/>
@@ -24,7 +24,7 @@
       <icon>resources/icon.png</icon>
       <fanart>resources/fanart.jpg</fanart>
     </assets>
-    <news>Refactored code</news>
+    <news>Moved code to Sports Replay module</news>
     <email></email>
     <source></source>
   </extension>

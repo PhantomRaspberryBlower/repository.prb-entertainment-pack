@@ -29,7 +29,9 @@ image_path = xbmc.translatePath(os.path.join('special://home/addons/',
 
 def main_menu():
     # Shows menu items
-    for url, name, mode in sportsreplay.main_menu_and_no_submenus('NBA '):
+    for url, name, mode in sportsreplay.main_menu('NBA '):
+        if 'All Star' in name:
+            mode = 2
         addDir(name,
                url,
                mode,
@@ -41,15 +43,11 @@ def main_menu():
 
 
 def submenu(url, thumb):
-    for href, title, img, mode in sportsreplay.submenu(url, thumb, 48):
-        title = title.replace('Race', '').replace('Replay', '').replace('  ', ' ')
-        if mode == None:
-          new_mode = 2
-        else:
-          new_mode = mode
+    for href, title, img, mode in sportsreplay.submenu(url, thumb, items_per_page=48, currmode=1):
+        title = title.replace('Replay', '').replace('  ', ' ')
         addDir(title.strip(),
             href,
-            new_mode,
+            mode,
             img,
             __fanart__,
             {'title': title,

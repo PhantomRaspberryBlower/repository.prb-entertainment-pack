@@ -9,11 +9,11 @@ import os
 import sportsreplay
 
 # Written by: Phantom Raspberry Blower (The PRB)
-# Date: 11-06-2019
-# Description: Streams Forumla 1 races since 2014
+# Date: 11-08-2019
+# Description: Streams UFC fights since 2019
 
 # Get addon details
-__addon_id__ = u'plugin.video.f1-replay'
+__addon_id__ = u'plugin.video.ufc-replay'
 __addon__ = xbmcaddon.Addon(id=__addon_id__)
 __addonname__ = __addon__.getAddonInfo('name')
 __icon__ = __addon__.getAddonInfo('icon')
@@ -21,27 +21,14 @@ __fanart__ = __addon__.getAddonInfo('fanart')
 __author__ = u'Phantom Raspberry Blower'
 __url__ = sys.argv[0]
 __handle__ = int(sys.argv[1])
+__baseurl__ = 'http://fullmatch.net/'
 
 # Define local variables
 image_path = xbmc.translatePath(os.path.join('special://home/addons/',
                                 __addon_id__ + '/resources/media/'))
 
-def main_menu():
-    # Shows menu items
-    menus = sportsreplay.main_menu('Formula 1 Race')
-    for url, name in menus:
-        addDir(name.strip(),
-               url,
-               1,
-               __icon__,
-               __fanart__,
-               {'title': name,
-                'plot': name})
-    xbmcplugin.endOfDirectory(int(sys.argv[1]))
-
-
 def submenu(url, thumb):
-    for href, title, img, mode in sportsreplay.submenu(url, thumb, items_per_page=40, currmode=1):
+    for href, title, img, mode in sportsreplay.submenu(url, thumb, items_per_page=48, currmode=1):
         title = title.replace('Race', '').replace('Replay', '').replace('  ', ' ')
         addDir(title.strip(),
             href,
@@ -53,28 +40,14 @@ def submenu(url, thumb):
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
 
-def get_links(name, url, thumb):
-    for href, title in sportsreplay.get_links(url):
-        label = '%s %s' % (name, title.strip())
-        addDir(label,
-               url + href,
-               3,
-               __icon__,
-               __fanart__,
-               {'title': label,
-                'plot': label})
-    xbmcplugin.endOfDirectory(int(sys.argv[1]))
-
-
 def get_streams(name, url, thumb):
     name = name.replace(' HD 720p', '').replace(' HD 1080p', '')
-    menu_fanart = __fanart__
     for href, label in sportsreplay.get_streams(url):
-        addDir('%s %s'% (name, label),
+        addDir('%s %s' % (name, label.strip()),
                href,
-               4,
+               3,
                thumb,
-               menu_fanart,
+               __fanart__,
                {'title': name,
                 'plot': name})
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
@@ -142,17 +115,14 @@ except:
 #sportsreplay.commontasks.message("Mode: %s\nURL: %s\nName: %s" % (mode, url, name), "Test")
 
 if mode == None or url == None or len(url) < 1:
-    # Dsiplay Main Menu Items
-    main_menu()
+    # Dsiplay Main Menu
+    submenu('%sufc-full-fights/' % __baseurl__, thumb)
 elif mode == 1:
-    # Display Submenu Items
+    # Display Submenu
     submenu(url, thumb)
 elif mode == 2:
-    # Display Links
-    get_links(name, url, thumb)
-elif mode == 3:
-    # Display Link Streams
+    # Display Streams
     get_streams(name, url, thumb)
-elif mode == 4:
+elif mode == 3:
     # Play Stream
     sportsreplay.play_stream(name, url, thumb)

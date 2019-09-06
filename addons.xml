@@ -1077,7 +1077,7 @@
 </addon>
 
 <!-- F1 Replay -->
-<addon id="plugin.video.f1-replay" name="Formula 1 Replay" version="0.3.1" provider-name="Phantom Raspberry Blower">
+<addon id="plugin.video.f1-replay" name="Formula 1 Replay" version="0.4.1 provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.sportsreplay"/>
@@ -1102,7 +1102,7 @@
       <icon>resources/icon.png</icon>
       <fanart>resources/fanart.jpg</fanart>
     </assets>
-    <news>Refactored code</news>
+    <news>Moved code to Sports Replay module</news>
     <email></email>
     <source></source>
   </extension>
@@ -1184,10 +1184,10 @@
 </addon>
 
 <!-- Full Match Replay -->
-<addon id="plugin.video.full-match-replay" name="Full Match Replay" version="0.3.1" provider-name="Phantom Raspberry Blower">
+<addon id="plugin.video.full-match-replay" name="Full Match Replay" version="0.4.1" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
-    <import addon="script.module.urlresolver"/>
+    <import addon="script.module.sportsreplay"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
     <provides>video</provides>
@@ -1209,7 +1209,7 @@
       <icon>resources/icon.png</icon>
       <fanart>resources/fanart.jpg</fanart>
     </assets>
-    <news>Refactored code.</news>
+    <news>Moved code to Sports Replay module.</news>
     <email></email>
     <source></source>
   </extension>
@@ -1690,7 +1690,7 @@ Fixed Added and Watching.
 </addon>
 
 <!-- MotoGP Replay -->
-<addon id="plugin.video.motogp-replay" name="MotoGP Replay" version="0.3.1" provider-name="Phantom Raspberry Blower">
+<addon id="plugin.video.motogp-replay" name="MotoGP Replay" version="0.4.1" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.sportsreplay"/>
@@ -1818,7 +1818,7 @@ Fixed Added and Watching.
 </addon>
 
 <!-- NBA Replay -->
-<addon id="plugin.video.nba-replay" name="NBA Replay" version="0.1.1" provider-name="Phantom Raspberry Blower">
+<addon id="plugin.video.nba-replay" name="NBA Replay" version="0.2.1" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.sportsreplay"/>
@@ -1917,6 +1917,38 @@ This is a Non-profit resource, organized solely for educational purposes which i
       <fanart>fanart.jpg</fanart>
     </assets>
     <news></news>
+  </extension>
+</addon>
+
+<!-- NFL Replay -->
+<addon id="plugin.video.nfl-replay" name="NFL Replay" version="0.0.1" provider-name="Phantom Raspberry Blower">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="script.module.sportsreplay"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Replay NFL Games</summary>
+    <description lang="en_GB">
+      The National Football League is a professional American football league consisting of 32 teams, divided equally between the National Football Conference and the American Football Conference.
+    </description>
+    <disclaimer lang="en_GB">
+      [COLOR red][B]Phantom Raspberry Blower[/B][/COLOR] does not host or distribute any of the content provided by this addon. Does not have any affiliation with the content provider and accepts no responsibility for the included addon.
+    </disclaimer>
+    <platform>all</platform>
+    <language></language>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum></forum>
+    <website></website>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+    </assets>
+    <news>Initial Release</news>
+    <email></email>
+    <source></source>
   </extension>
 </addon>
 
@@ -2600,7 +2632,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- Sports Replay Module -->
-<addon id="script.module.sportsreplay" name="Sports Replay" version="0.1.1" provider-name="Phantom Raspberry Blower">
+<addon id="script.module.sportsreplay" name="Sports Replay" version="0.2.1" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.urlresolver"/>
@@ -2915,6 +2947,38 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
     <assets>
       <icon>resources/icon.png</icon>
     </assets>
+  </extension>
+</addon>
+
+<!-- UFC Replay -->
+<addon id="plugin.video.ufc-replay" name="UFC Replay" version="0.1.1" provider-name="Phantom Raspberry Blower">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="script.module.sportsreplay"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Replay UFC Fights</summary>
+    <description lang="en_GB">
+      The Ultimate Fighting Championship is an American mixed martial arts promotion company based in Las Vegas, Nevada, that is owned and operated by parent company William Morris Endeavor. It is the largest MMA promotion company in the world and features the highest-level fighters on the roster..
+    </description>
+    <disclaimer lang="en_GB">
+      [COLOR red][B]Phantom Raspberry Blower[/B][/COLOR] does not host or distribute any of the content provided by this addon. Does not have any affiliation with the content provider and accepts no responsibility for the included addon.
+    </disclaimer>
+    <platform>all</platform>
+    <language></language>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum></forum>
+    <website></website>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+    </assets>
+    <news>Initial Release.</news>
+    <email></email>
+    <source></source>
   </extension>
 </addon>
 

@@ -29,6 +29,7 @@ Addons installed by this addon:
   - MotoGP Replays (Moto GP Motorcycle Replays)
   - MP3 Music (Music Albums & Songs)
   - NBA Replay (NBA Basketball Replays)
+  - NFL Replay (NFL American Football Replays)
   - Neptune Rising TV (Movies & TV Shows)
   - Placenta (Movies & TV Shows)
   - PRB Clean (Removes obsolete addons)
@@ -42,6 +43,7 @@ Addons installed by this addon:
   - System Info (Displays System Information)
   - TED Talks (lectures)
   - The Magic Dragon (Movies & TV Shows)
+  - UFC Replay (UFC Fight Replays)
   - UKTV Play (Live & Catch-up TV)
   - UK Turks Playlist
   - Virtual DJ (Internet Music)

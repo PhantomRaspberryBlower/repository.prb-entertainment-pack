@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.motogp-replay" name="MotoGP Replay" version="0.4.1" provider-name="Phantom Raspberry Blower">
+<addon id="plugin.video.nfl-replay" name="NFL Replay" version="0.0.1" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.sportsreplay"/>
@@ -8,9 +8,9 @@
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en_GB">Replay MotoGP, Moto2 and Moto3 Races</summary>
+    <summary lang="en_GB">Replay NFL Games</summary>
     <description lang="en_GB">
-      The MotoGP Championship is the pinnacle class of world championship road racing. It developed primarily in Europe after the FIM (Federation Internationale de Motocyclisme) consolidated the regulations for motorcycle competition for the first time in 1949
+      The National Football League is a professional American football league consisting of 32 teams, divided equally between the National Football Conference and the American Football Conference.
     </description>
     <disclaimer lang="en_GB">
       [COLOR red][B]Phantom Raspberry Blower[/B][/COLOR] does not host or distribute any of the content provided by this addon. Does not have any affiliation with the content provider and accepts no responsibility for the included addon.
@@ -24,7 +24,7 @@
       <icon>resources/icon.png</icon>
       <fanart>resources/fanart.jpg</fanart>
     </assets>
-    <news>Refacted code.</news>
+    <news>Initial Release</news>
     <email></email>
     <source></source>
   </extension>
