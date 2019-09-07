@@ -59,6 +59,7 @@ def alt_main_menu(title):
             main_menu.append((href, name, mode))
     else:
         # NBA, NFL, MLB and UFC streams
+        resp = ct.get_html(__alturl__)
         content = ct.regex_from_to(resp, '<div class="cactus-main-menu navigation-font">', '</div>')
         match1 = _menus(__alturl__,
                         '<div class="cactus-main-menu navigation-font">',

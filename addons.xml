@@ -2593,7 +2593,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- Sports Replay Module -->
-<addon id="script.module.sportsreplay" name="Sports Replay" version="0.2.1" provider-name="Phantom Raspberry Blower">
+<addon id="script.module.sportsreplay" name="Sports Replay" version="0.2.2" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.urlresolver"/>
