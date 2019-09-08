@@ -1,7 +1,6 @@
 #!/usr/bin/python
 
 import re
-
 import urlresolver # Resolves media file from url
 import commontasks as ct
 
@@ -13,6 +12,13 @@ import commontasks as ct
 __baseurl__ = 'http://fullmatchsports.com/'
 __alturl__ = 'https://fullmatch.net/'
 
+sport_links = {'MotoGP Race': __baseurl__,
+               'Formula 1 Race': __baseurl__,
+               'Full Match Replay': __baseurl__,
+               'MLB': __alturl__,
+               'NBA': __alturl__,
+               'NFL': __alturl__,
+               'UFC': __alturl__}
 
 def _menus(url, expstart, expend, regexp):
     resp = ct.get_html(url)
@@ -32,10 +38,10 @@ def main_menu(title):
                        '"name">(.+?)</span></a></li>')
     else:
         # Used for Full Match, MLB, NBA, NFL and UFC
-        return alt_main_menu(title)
+        return _alt_main_menu(title)
 
 
-def alt_main_menu(title):
+def _alt_main_menu(title):
     main_menu = []
     sub_menu = []
     my_menus =[]

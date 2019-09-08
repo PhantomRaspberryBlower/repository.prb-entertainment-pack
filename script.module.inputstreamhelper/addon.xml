@@ -1,27 +1,36 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<addon id="script.module.inputstreamhelper"
-       version="0.3.5"
-       name="InputStream Helper"
-       provider-name="emilsvennesson">
-    <requires>
-        <import addon="xbmc.python" version="2.25.0"/>
-        <import addon="script.module.kodi-six" version="0.0.4"/>
-        <import addon="script.module.requests" version="2.9.1"/>
-    </requires>
-    <extension library="lib" point="xbmc.python.module"/>
-    <extension point="xbmc.addon.metadata">
-        <description lang="en_GB">A simple Kodi module that makes life easier for add-on developers relying on InputStream based add-ons and DRM playback.</description>
-        <description lang="el_GR">Μία απλή μονάδα για το Kodi η οποία διευκολύνει την ζωή των προγραμματιστών οι οποίοι εξαρτώνται από τα πρόσθετσ InputStream και αναπαραγωγή τύπου DRM.</description>
-        <news>2019.08.15 v0.3.5
-        + Auto install inputstream.adaptive (mediaminister)
-        + Fix latest Widevine version detection (dagwieers)
-        + Check for Widevine updates on new release (mediaminister)
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.module.inputstreamhelper" name="InputStream Helper" version="0.4.2" provider-name="emilsvennesson, dagwieers">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="script.module.kodi-six" version="0.0.4"/>
+    <import addon="script.module.pysocks" version="1.6.8" optional="true"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib"/>
+  <!-- This is needed to get an addon icon -->
+  <extension point="xbmc.python.script" library="default.py"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Kodi InputStream and DRM playback made easy</summary>
+    <description lang="en_GB">A simple Kodi module that makes life easier for add-on developers relying on InputStream based add-ons and DRM playback.</description>
+    <description lang="el_GR">Μία απλή μονάδα για το Kodi η οποία διευκολύνει την ζωή των προγραμματιστών οι οποίοι εξαρτώνται από τα πρόσθετσ InputStream και αναπαραγωγή τύπου DRM.</description>
+    <description lang="ru_RU">Простой модуль для Kodi, который облегчает жизнь разработчикам дополнений, с использованием InputStream дополнений и воспроизведения DRM контента.</description>
+    <news>
+      v0.4.2 (2019-09-03)
+        - Move release history to readme file
+        - Clean up coverage/codecov config
+        - Add InputStream Helper Information to settings page
+        - Make sure addon.xml meets all requirements
+        - Simplify add-on entry point to speed up loading time
+        - Unicode fix for os.walk
+        - Revert "Fix ARM processing in unittest locally"
+        - Fix unresponsive Kodi when opening add-on information pane
+        - Add-on structure improvements        
     </news>
-        <platform>all</platform>
-        <license>MIT License</license>
-        <source>https://github.com/emilsvennesson/script.module.inputstreamhelper</source>
-        <assets>
-            <icon>resources/icon.png</icon>
-        </assets>
-    </extension>
+    <platform>all</platform>
+    <license>MIT</license>
+    <website>https://github.com/emilsvennesson/script.module.inputstreamhelper/wiki</website>
+    <source>https://github.com/emilsvennesson/script.module.inputstreamhelper</source>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
+  </extension>
 </addon>

@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.Diamond-Wizard-Repo" name=".[COLORwhite]***[/COLOR][COLOR crimson]D[/COLOR][COLOR silver]iamond Build Repo (Primary Server, Main Repo)[/COLOR][COLORwhite]***[/COLOR]" version="3.7.6" provider-name="Diamond Build">
+<addon id="repository.Diamond-Wizard-Repo" name=".[COLORwhite]***[/COLOR][COLOR crimson]D[/COLOR][COLOR silver]iamond Build Repo (Primary Server, Main Repo)[/COLOR][COLORwhite]***[/COLOR]" version="3.8.5" provider-name="Diamond Build">
 <extension point="xbmc.addon.repository" name="Diamond Wizard Repo - Primary Server">
 <!-- Diamond Repository -->
 
 <dir>
-<info compressed="false">http://m3u.xyz/repo-files/wizard/addons.xml</info>
-<checksum>http://m3u.xyz/repo-files/wizard/addons.xml.md5</checksum>
-<datadir zip="true">http://repo.rubyjewelwizard.com/repo/diamond/wizard/zips/</datadir>
+<info compressed="false">https://raw.githubusercontent.com/bobbybark/diamond-build-repo/master/addons.xml</info>
+<checksum>https://raw.githubusercontent.com/bobbybark/diamond-build-repo/master/addons.xml.md5</checksum>
+<datadir zip="true">https://raw.githubusercontent.com/bobbybark/diamond-build-repo/master/</datadir>
+</dir>
+
+<dir>
+<info compressed="false">https://raw.githubusercontent.com/bobbybark/diamond-7of9-dependency-repo/master/addons.xml</info>
+<checksum>https://raw.githubusercontent.com/bobbybark/diamond-7of9-dependency-repo/master/addons.xml.md5</checksum>
+<datadir zip="true">https://raw.githubusercontent.com/bobbybark/diamond-7of9-dependency-repo/master/</datadir>
 </dir>
 
 <dir>

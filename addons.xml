@@ -839,13 +839,18 @@
 </addon>
 
 <!-- Diamond Wizard Repo -->
-<addon id="repository.Diamond-Wizard-Repo" name=".[COLORwhite]***[/COLOR][COLOR crimson]D[/COLOR][COLOR silver]iamond Build Repo (Primary Server, Main Repo)[/COLOR][COLORwhite]***[/COLOR]" version="3.7.6" provider-name="Diamond Build">
+<addon id="repository.Diamond-Wizard-Repo" name=".[COLORwhite]***[/COLOR][COLOR crimson]D[/COLOR][COLOR silver]iamond Build Repo (Primary Server, Main Repo)[/COLOR][COLORwhite]***[/COLOR]" version="3.8.5" provider-name="Diamond Build">
   <extension point="xbmc.addon.repository" name="Diamond Wizard Repo - Primary Server">
-    <!-- Diamond Repository -->
+  <!-- Diamond Repository -->
     <dir>
-      <info compressed="false">http://m3u.xyz/repo-files/wizard/addons.xml</info>
-      <checksum>http://m3u.xyz/repo-files/wizard/addons.xml.md5</checksum>
-      <datadir zip="true">http://repo.rubyjewelwizard.com/repo/diamond/wizard/zips/</datadir>
+      <info compressed="false">https://raw.githubusercontent.com/bobbybark/diamond-build-repo/master/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/bobbybark/diamond-build-repo/master/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/bobbybark/diamond-build-repo/master/</datadir>
+    </dir>
+    <dir>
+      <info compressed="false">https://raw.githubusercontent.com/bobbybark/diamond-7of9-dependency-repo/master/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/bobbybark/diamond-7of9-dependency-repo/master/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/bobbybark/diamond-7of9-dependency-repo/master/</datadir>
     </dir>
     <dir>
       <info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml</info>
@@ -857,7 +862,7 @@
       <checksum>https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml.md5</checksum>
       <datadir zip="true">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/</datadir>
     </dir>
-    <dir>
+      <dir>
       <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
       <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
       <datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
@@ -936,7 +941,7 @@
 </addon>
 
 <!-- Exodus Addon -->
-<addon id="plugin.video.exodus" version="8.0.7a" name="Exodus" provider-name="Exodus">
+<addon id="plugin.video.exodus" version="8.0.8a" name="Exodus" provider-name="Exodus">
   <requires>
     <import addon="xbmc.python" version="2.19.0" />
     <import addon="script.module.exodus" />
@@ -944,7 +949,6 @@
     <import addon="script.exodus.metadata" />
     <import addon="script.module.urlresolver" />
     <import addon="script.module.requests" />
-    <!--<import addon="script.module.lambdascrapers" />-->
     <import addon="script.module.exoscrapers" />
     <import addon="script.module.metahandler" version="1.0.0" />
   </requires>
@@ -1013,7 +1017,7 @@
 </addon>
 
 <!-- Exodus Scrapers Module -->
-<addon id="script.module.exoscrapers" name="ExoScrapers Module" version="1.0.5" provider-name="Exodus">
+<addon id="script.module.exoscrapers" name="ExoScrapers Module" version="1.0.6" provider-name="Exodus">
   <requires>
     <import addon="xbmc.python" version="2.25.0" />
     <import addon="script.module.beautifulsoup4"/>
@@ -1033,7 +1037,7 @@
       <icon>icon.png</icon>
       <fanart></fanart>
     </assets>
-    <news>v1.0.5 - Scraper cleanup and EOL fixes</news>
+    <news>v1.0.6 - Cache reset</news>
   </extension>
 </addon>
 
@@ -1177,7 +1181,7 @@
 </addon>
 
 <!-- Future Module -->
-<addon id="script.module.future" name="future" version="0.16.0.4" provider-name="Ed Schofield">
+<addon id="script.module.future" name="future" version="0.17.1" provider-name="Ed Schofield">
   <requires>
     <import addon="xbmc.python" version="2.14.0" />
   </requires>
@@ -1267,23 +1271,35 @@
 </addon>
 
 <!-- Input Stream Helper Module -->
-<addon id="script.module.inputstreamhelper" version="0.3.5" name="InputStream Helper" provider-name="emilsvennesson">
+<addon id="script.module.inputstreamhelper" name="InputStream Helper" version="0.4.2" provider-name="emilsvennesson, dagwieers">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.kodi-six" version="0.0.4"/>
-    <import addon="script.module.requests" version="2.9.1"/>
+    <import addon="script.module.pysocks" version="1.6.8" optional="true"/>
   </requires>
-  <extension library="lib" point="xbmc.python.module"/>
+  <extension point="xbmc.python.module" library="lib"/>
+  <!-- This is needed to get an addon icon -->
+  <extension point="xbmc.python.script" library="default.py"/>
   <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Kodi InputStream and DRM playback made easy</summary>
     <description lang="en_GB">A simple Kodi module that makes life easier for add-on developers relying on InputStream based add-ons and DRM playback.</description>
     <description lang="el_GR">Μία απλή μονάδα για το Kodi η οποία διευκολύνει την ζωή των προγραμματιστών οι οποίοι εξαρτώνται από τα πρόσθετσ InputStream και αναπαραγωγή τύπου DRM.</description>
-    <news>2019.08.15 v0.3.5
-        + Auto install inputstream.adaptive (mediaminister)
-        + Fix latest Widevine version detection (dagwieers)
-        + Check for Widevine updates on new release (mediaminister)
+    <description lang="ru_RU">Простой модуль для Kodi, который облегчает жизнь разработчикам дополнений, с использованием InputStream дополнений и воспроизведения DRM контента.</description>
+    <news>
+      v0.4.2 (2019-09-03)
+        - Move release history to readme file
+        - Clean up coverage/codecov config
+        - Add InputStream Helper Information to settings page
+        - Make sure addon.xml meets all requirements
+        - Simplify add-on entry point to speed up loading time
+        - Unicode fix for os.walk
+        - Revert "Fix ARM processing in unittest locally"
+        - Fix unresponsive Kodi when opening add-on information pane
+        - Add-on structure improvements        
     </news>
     <platform>all</platform>
-    <license>MIT License</license>
+    <license>MIT</license>
+    <website>https://github.com/emilsvennesson/script.module.inputstreamhelper/wiki</website>
     <source>https://github.com/emilsvennesson/script.module.inputstreamhelper</source>
     <assets>
       <icon>resources/icon.png</icon>
@@ -1327,13 +1343,13 @@
 </addon>
 
 <!-- iPlayer Addon -->
-<addon id="plugin.video.iplayerwww" name="iPlayer WWW" version="3.0.45" provider-name="CaptainT, Cas, ihurst, primaeval">
+<addon id="plugin.video.iplayerwww" name="iPlayer WWW" version="3.0.46" provider-name="CaptainT, Cas, ihurst, primaeval">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.requests" version="2.7.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>audio video</provides>
+    <provides>audio video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">TV and Radio from BBC iPlayer</summary>
@@ -1344,13 +1360,14 @@
     <source>https://github.com/vonH/plugin.video.iplayerwww</source>
     <disclaimer lang="en">This add-on is a front end to the BBC iPlayer website. It is not an official BBC product. A UK TV Licence is required to watch the live, catch-up, or on-demand TV content.</disclaimer>
     <assets>
-        <icon>resources/icon.png</icon>
-        <fanart>resources/fanart.jpg</fanart>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
     </assets>
     <news>
-v3.0.45
-Fixed Added and Watching.
-   </news>
+v3.0.46
+Fixed sign in.
+Fixed CRLF in changelog.txt
+    </news>
   </extension>
 </addon>
 
@@ -2390,6 +2407,23 @@ This is a Non-profit resource, organized solely for educational purposes which i
   </extension>
 </addon>
 
+<!-- Routing Module -->
+<addon id="script.module.routing" name="Plugin routing" version="0.2.2" provider-name="takoi">
+  <requires>
+    <import addon="xbmc.python" version="2.14.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Routing module for plugins</summary>
+    <description lang="en">Library for building and parsing plugin URLs.
+Documentation: https://github.com/tamland/kodi-plugin-routing
+    </description>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+    <platform>all</platform>
+    <source>https://github.com/tamland/kodi-plugin-routing</source>
+  </extension>
+</addon>
+
 <!-- RSS Reader Addon -->
 <addon id="script.rss-reader" name="RSS Reader" version="0.0.2" provider-name="Phantom Raspberry Blower">
   <requires>
@@ -3261,6 +3295,21 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
     <source>https://github.com/k3oni/plugin.video.world.news.live</source>
     <forum>http://forum.xbmc.org/showthread.php?tid=97488</forum>
   </extension>
+</addon>
+
+<!-- XBMC Python -->
+<addon id="xbmc.python" version="2.25.0" provider-name="Team Kodi">
+  <backwards-compatibility abi="2.1.0"/>
+  <requires>
+    <import addon="xbmc.core" version="0.1.0"/>
+  </requires>
+  <extension-point id="script" schema="script.xsd"/>
+  <extension-point id="subtitles" schema="script.xsd"/>
+  <extension-point id="lyrics" schema="script.xsd"/>
+  <extension-point id="weather" schema="script.xsd"/>
+  <extension-point id="library" schema="script.xsd"/>
+  <extension-point id="plugin" schema="pluginsource.xsd"/>
+  <extension-point id="context.item" schema="contextitem.xsd"/>
 </addon>
 
 <!-- XMLtoDict Module -->
