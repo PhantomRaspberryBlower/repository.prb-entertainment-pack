@@ -46,29 +46,27 @@ thumbs = {'Premier League': image_path + 'Premier_League.png',
 def main_menu():
     # Shows menu items
     for url, name, mode in sportsreplay.main_menu('Full Match Replay'):
-        try:
+        if name in thumbs:
             addDir(name,
                    url,
-                   mode,
+                   sportsreplay.Mode.SEASONS_MENU,
                    thumbs[name],
                    __fanart__,
                    {'title': name,
                     'plot': name})
-        except:
-            pass
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
 
 def seasons(league, thumb):
     # Shows seasons
-    for name, url, mode in sportsreplay.seasons(league):
-      addDir(name,
-             url,
-             mode,
-             thumb,
-             __fanart__,
-             {'title': name,
-              'plot': name})
+    for url, name, mode in sportsreplay.seasons(league):
+        addDir(name,
+               url,
+               sportsreplay.Mode.SUB_MENU,
+               thumb,
+               __fanart__,
+               {'title': name,
+                'plot': name})
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
 
@@ -82,7 +80,7 @@ def submenu(url, thumb):
                    '2015-16': '',
                    '  ': ' ',
                    ' NA': ' ([COLOR red]No longer available![/COLOR])'}
-    for href, title, img, mode in sportsreplay.submenu(url, thumb, items_per_page=40, currmode=2):
+    for href, title, img, mode in sportsreplay.submenu(url, thumb, items_per_page=36, currmode=sportsreplay.Mode.SUB_MENU):
         for item in format_text:
           title = title.replace(item, format_text[item])
         addDir(title.strip(),
@@ -100,7 +98,7 @@ def get_links(name, url, thumb):
         label = '%s %s' % (name, title.strip())
         addDir(label,
                url + href,
-               4,
+               sportsreplay.Mode.GET_STREAMS,
                thumb,
                __fanart__,
                {'title': label,
@@ -113,7 +111,7 @@ def get_streams(name, url, thumb):
     for href, label in sportsreplay.get_streams(url):
         addDir('%s %s' % (name, label.strip()),
                href,
-               5,
+               sportsreplay.Mode.PLAY_STREAM,
                thumb,
                __fanart__,
                {'title': name,
@@ -163,37 +161,40 @@ name = None
 thumb = None
 
 try:
-    mode = int(params["mode"])
+    mode = int(params['mode'])
 except:
     pass
 try:
-    url = sportsreplay.unquote_plus(params["url"])
+    url = sportsreplay.unquote_plus(params['url'])
 except:
     pass
 try:
-    name = sportsreplay.unquote_plus(params["name"])
+    name = sportsreplay.unquote_plus(params['name'])
 except:
     pass
 try:
-    thumb = sportsreplay.unquote(params["thumb"])
+    thumb = sportsreplay.unquote(params['thumb'])
 except:
     pass
 
 # Message below used to test the addon
-#sportsreplay.commontasks.message("Mode: %s\nURL: %s\nName: %s" % (mode, url, name), "Test")
+#sportsreplay.ct.message("Mode: %s\nURL: %s\nName: %s" % (mode, url, name), "Test")
 
 if mode == None or url == None or len(url) < 1:
+    # Display Main Menu Items
     main_menu()
-elif mode == 1:
+elif mode == sportsreplay.Mode.SEASONS_MENU:
+    # Display Seasons Menu Items
     seasons(name, thumb)
-elif mode == 2:
+elif mode == sportsreplay.Mode.SUB_MENU:
+    # Display Submenu Items
     submenu(url, thumb)
-elif mode == 3:
-    # Get Links
+elif mode == sportsreplay.Mode.GET_LINKS:
+    # Display Links
     get_links(name, url, thumb)
-elif mode == 4:
-    # Get Streams
+elif mode == sportsreplay.Mode.GET_STREAMS:
+    # Display Link Streams
     get_streams(name, url, thumb)
-elif mode == 5:
+elif mode == sportsreplay.Mode.PLAY_STREAM:
     # Play Stream
     sportsreplay.play_stream(name, url, thumb)

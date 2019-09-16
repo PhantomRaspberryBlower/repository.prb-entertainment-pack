@@ -38,10 +38,10 @@ fanarts = {'MotoGP': image_path + 'MotoGP_fanart.jpg',
 def main_menu():
     # Shows menu items
     menus = sportsreplay.main_menu('MotoGP Race')
-    for url, name in menus:
+    for url, name, mode in menus:
         addDir(name.strip(),
                url,
-               1,
+               sportsreplay.Mode.SUB_MENU,
                __icon__,
                __fanart__,
                {'title': name,
@@ -54,7 +54,7 @@ def submenu(url, thumb):
         title = title.replace('Race', '').replace('Replay', '').replace('  ', ' ')
         addDir(title.strip(),
             href,
-            mode,
+            sportsreplay.Mode.GET_LINKS,
             img,
             __fanart__,
             {'title': title,
@@ -82,7 +82,7 @@ def get_links(name, url, thumb):
         label = '%s %s' % (name, title.strip())
         addDir(label,
                url + href,
-               3,
+               sportsreplay.Mode.GET_STREAMS,
                menu_icon,
                menu_fanart,
                {'title': label,
@@ -106,7 +106,7 @@ def get_streams(name, url, thumb):
             menu_fanart = __fanart__
         addDir('%s %s' % (name, label.strip()),
                href,
-               4,
+               sportsreplay.Mode.PLAY_STREAM,
                thumb,
                menu_fanart,
                {'title': name,
@@ -174,20 +174,20 @@ except:
     pass
 
 # Message below used to test the addon
-#sportsreplay.commontasks.message("Mode: %s\nURL: %s\nName: %s" % (mode, url, name), "Test")
+#sportsreplay.ct.message("Mode: %s\nURL: %s\nName: %s" % (mode, url, name), "Test")
 
-if mode == None or url == None or len(url) < 1:
+if mode == None or mode == sportsreplay.Mode.MAIN_MENU or len(url) < 1:
     # Dsiplay Main Menu Items
     main_menu()
-elif mode == 1:
+elif mode == sportsreplay.Mode.SUB_MENU:
     # Display Submenu Items
     submenu(url, thumb)
-elif mode == 2:
+elif mode == sportsreplay.Mode.GET_LINKS:
     # Display Links
     get_links(name, url, thumb)
-elif mode == 3:
+elif mode == sportsreplay.Mode.GET_STREAMS:
     # Display Link Streams
     get_streams(name, url, thumb)
-elif mode == 4:
+elif mode == sportsreplay.Mode.PLAY_STREAM:
     # Play Stream
     sportsreplay.play_stream(name, url, thumb)

@@ -8,6 +8,17 @@ import commontasks as ct
 # Date: 21-08-2019
 # Description: Web scraper for capturing sports streams
 
+# Enumerate mode values
+class Mode:
+    MAIN_MENU = 0
+    SUBMAIN_MENU = 1
+    SEASONS_MENU = 2
+    SUB_MENU = 3
+    GET_LINKS = 4
+    GET_STREAMS = 5
+    PLAY_STREAM = 6
+
+
 # Define local variables
 __baseurl__ = 'http://fullmatchsports.com/'
 __alturl__ = 'https://fullmatch.net/'
@@ -28,14 +39,18 @@ def _menus(url, expstart, expend, regexp):
 
 def main_menu(title):
     # Shows menu items
+    main_menus = []
     if (title == 'MotoGP Race') or (title == 'Formula 1 Race'):
         # Used for F1 and MotoGP
-        return _menus(__baseurl__,
+        menus = _menus(__baseurl__,
                        '<a title="%s" ' % title,
                        '</ul></li>',
                        '<a target="_blank" rel="noopener noreferrer"'
                        ' href="(.+?)" itemprop="url"><span itemprop='
                        '"name">(.+?)</span></a></li>')
+        for url, title in menus:
+            main_menus.append((url, title, Mode.SUBMAIN_MENU))
+        return main_menus
     else:
         # Used for Full Match, MLB, NBA, NFL and UFC
         return _alt_main_menu(title)
@@ -45,7 +60,7 @@ def _alt_main_menu(title):
     main_menu = []
     sub_menu = []
     my_menus =[]
-    mode = 1
+    mode = Mode.SUBMAIN_MENU
     if title == 'Full Match Replay':
         # Full Match streams
         menus = _menus(__baseurl__,
@@ -59,10 +74,9 @@ def _alt_main_menu(title):
                        '<a target="_blank" rel="noopener noreferrer" href='
                        '"(.+?)" itemprop="url"><span itemprop="name">(.+?)</span></a>')
         for menu_item, clss, url, name in menus:
-            main_menu.append((url, name, mode))
-        mode = 2
+            main_menu.append((url, name, Mode.SUBMAIN_MENU))
         for href, name in nosubmenus:
-            main_menu.append((href, name, mode))
+            main_menu.append((href, name, Mode.SEASONS_MENU))
     else:
         # NBA, NFL, MLB and UFC streams
         resp = ct.get_html(__alturl__)
@@ -81,16 +95,15 @@ def _alt_main_menu(title):
                     match3 = re.compile('<a target="_blank" href="(.+?)" class="(.+?)">(.+?) </a>').findall(content2)
                     sub_menu = []
                     for href2, junk2, title2 in match3:
-                        sub_menu.append({'title': title2, 'url': href2})
+                        sub_menu.append({'url': href2, 'title': title2})
                 if (title1 in title) or (title == 'All'):
-                    my_menus.append((title1, href1, sub_menu))
-
+                    my_menus.append((href1, title1, sub_menu))
     for item in my_menus:
-        if item[1] == '#':
+        if item[0] == '#':
             for title in item[2]:
-                main_menu.append((title['url'], title['title'], 1))
+                main_menu.append((title['url'], title['title'], Mode.SUB_MENU))
         else:
-            main_menu.append((item[1], item[0], 2))
+            main_menu.append((item[0], item[1], Mode.GET_STREAMS))
 
     return main_menu
 
@@ -106,17 +119,17 @@ def seasons(league):
     for menu_item, clss, url, name in menus:
         if url == '#':
             new_url = __baseurl__
-            new_mode = None
+            new_mode = Mode.MAIN_MENU
             new_name = ''
         else:
             new_url = url
             new_mode = 2
             new_name = name
-        seasons.append((new_name, new_url + 'page/1', new_mode))
+        seasons.append((new_url + 'page/1', new_name, new_mode))
     return seasons
 
 
-def submenu(url, thumb, items_per_page=40, currmode=2):
+def submenu(url, thumb, items_per_page=40, currmode=Mode.SUB_MENU):
     fmatches = []
     item = 0
     nxtmode = currmode + 1
@@ -183,6 +196,7 @@ def get_links(url):
 
 
 def get_streams(url):
+    new_url = ''
     streams = []
     format_text = {'1080P': '([COLOR orange]1080[/COLOR])',
                    '720P': '([COLOR orange]720[/COLOR])',
@@ -195,7 +209,8 @@ def get_streams(url):
     try:
         resp = ct.regex_from_to(resp, '<div class="tab-content">', '</div>')
         matches = re.compile('<iframe src="(.+?)"').findall(resp)
-        resp = ct.get_html('https:' + str(matches[0]))
+        new_url = 'https:' + str(matches[0])
+        resp = ct.get_html(new_url)
     except:
         try:
             resp = ct.regex_from_to(resp, '<div id="player-embed">', '</div>')
@@ -208,7 +223,7 @@ def get_streams(url):
                                      ct.xbmcgui.NOTIFICATION_INFO, 5000)
             return streams
 
-    try:
+    if 'JuicyCodes.Run' in resp:
         resp = ct.regex_from_to(resp, 'JuicyCodes.Run(', ');</script>')
         resp = 'JuicyCodes.Run%s)' % resp
         resp = ct.unjuice(resp)
@@ -218,8 +233,17 @@ def get_streams(url):
             for item in format_text:
                 label = label.replace(item, format_text[item])
             streams.append((url, label))
-    except:
-        streams.append((matches[0][1], "Test"))
+    else:
+        try:
+#            ct.message(url[40:], "url")
+#            ct.message(new_url, "new_url")
+#            ct.message(resp, "resp1")
+            matches = re.compile("file:'(.+?)',type:").findall(resp)
+            ct.message(str(matches), "matches")
+            for item in matches:
+                streams.append((item, "Label"))
+        except:
+            streams.append((matches[0][1], "Test"))
     return streams
 
 

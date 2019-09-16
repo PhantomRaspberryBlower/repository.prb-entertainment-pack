@@ -398,20 +398,17 @@
 </addon>
 
 <!-- Certifi Module -->
-<addon id="script.module.certifi" name="certifi" version="2019.3.9" provider-name="Kenneth Reitz">
+<addon id="script.module.certifi" name="certifi" version="2019.6.16" provider-name="Kenneth Reitz">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
   </requires>
   <extension point="xbmc.python.module" library="lib" />
   <extension point="xbmc.addon.metadata">
-    <summary lang="en_GB">Python SSL Root Certificates</summary>
-    <description lang="en_GB">Packed for KODI from https://pypi.org/project/certifi/</description>
-    <platform>all</platform>
-    <language></language>
+    <summary lang="en_GB">Python package for providing Mozilla's CA Bundle.</summary>
+    <description lang="en_GB">Certifi is a carefully curated collection of Root Certificates for validating the trustworthiness of SSL certificates while verifying the identity of TLS hosts. It has been extracted from the Requests project.</description>
     <license>MPL-2.0</license>
-    <forum></forum>
-    <website>https://github.com/certifi/python-certifi</website>
-    <source>https://github.com/Freso/script.module.certifi</source>
+    <website>https://certifi.io</website>
+    <source>https://github.com/certifi/python-certifi</source>
     <email>freso.dk AT gmail.com</email>
     <assets>
       <icon>resources/icon.png</icon>
@@ -839,13 +836,18 @@
 </addon>
 
 <!-- Diamond Wizard Repo -->
-<addon id="repository.Diamond-Wizard-Repo" name=".[COLORwhite]***[/COLOR][COLOR crimson]D[/COLOR][COLOR silver]iamond Build Repo (Primary Server, Main Repo)[/COLOR][COLORwhite]***[/COLOR]" version="3.8.5" provider-name="Diamond Build">
+<addon id="repository.Diamond-Wizard-Repo" name=".[COLORwhite]***[/COLOR][COLOR crimson]D[/COLOR][COLOR silver]iamond Build Repo (Primary Server, Main Repo)[/COLOR][COLORwhite]***[/COLOR]" version="3.8.6" provider-name="Diamond Build">
   <extension point="xbmc.addon.repository" name="Diamond Wizard Repo - Primary Server">
-  <!-- Diamond Repository -->
+    <!-- Diamond Repository -->
     <dir>
       <info compressed="false">https://raw.githubusercontent.com/bobbybark/diamond-build-repo/master/addons.xml</info>
       <checksum>https://raw.githubusercontent.com/bobbybark/diamond-build-repo/master/addons.xml.md5</checksum>
       <datadir zip="true">https://raw.githubusercontent.com/bobbybark/diamond-build-repo/master/</datadir>
+    </dir>
+    <dir>
+      <info compressed="false">https://raw.githubusercontent.com/bobbybark/diamond-7of9-addon-repo/master/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/bobbybark/diamond-7of9-addon-repo/master/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/bobbybark/diamond-7of9-addon-repo/master/</datadir>
     </dir>
     <dir>
       <info compressed="false">https://raw.githubusercontent.com/bobbybark/diamond-7of9-dependency-repo/master/addons.xml</info>
@@ -862,7 +864,7 @@
       <checksum>https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml.md5</checksum>
       <datadir zip="true">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/</datadir>
     </dir>
-      <dir>
+    <dir>
       <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
       <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
       <datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
@@ -941,7 +943,7 @@
 </addon>
 
 <!-- Exodus Addon -->
-<addon id="plugin.video.exodus" version="8.0.8a" name="Exodus" provider-name="Exodus">
+<addon id="plugin.video.exodus" version="8.0.9a" name="Exodus" provider-name="Exodus">
   <requires>
     <import addon="xbmc.python" version="2.19.0" />
     <import addon="script.module.exodus" />
@@ -1017,7 +1019,7 @@
 </addon>
 
 <!-- Exodus Scrapers Module -->
-<addon id="script.module.exoscrapers" name="ExoScrapers Module" version="1.0.6" provider-name="Exodus">
+<addon id="script.module.exoscrapers" name="ExoScrapers Module" version="1.0.7" provider-name="Exodus">
   <requires>
     <import addon="xbmc.python" version="2.25.0" />
     <import addon="script.module.beautifulsoup4"/>
@@ -1042,7 +1044,7 @@
 </addon>
 
 <!-- F1 Replay -->
-<addon id="plugin.video.f1-replay" name="Formula 1 Replay" version="0.4.1" provider-name="Phantom Raspberry Blower">
+<addon id="plugin.video.f1-replay" name="Formula 1 Replay" version="0.5.1" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.sportsreplay"/>
@@ -1149,7 +1151,7 @@
 </addon>
 
 <!-- Full Match Replay -->
-<addon id="plugin.video.full-match-replay" name="Full Match Replay" version="0.4.1" provider-name="Phantom Raspberry Blower">
+<addon id="plugin.video.full-match-replay" name="Full Match Replay" version="0.5.1" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.sportsreplay"/>
@@ -1667,8 +1669,40 @@ Fixed CRLF in changelog.txt
   </extension>
 </addon>
 
+<!-- MLB Replay -->
+<addon id="plugin.video.mlb-replay" name="MLB Replay" version="0.0.1" provider-name="Phantom Raspberry Blower">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="script.module.sportsreplay"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Replay MLB Games</summary>
+    <description lang="en_GB">
+      Major League Baseball is a professional baseball organization, and the oldest of the major professional sports leagues in the United States and Canada. A total of 30 teams play in the National League and American League, with 15 teams in each league.
+    </description>
+    <disclaimer lang="en_GB">
+      [COLOR red][B]Phantom Raspberry Blower[/B][/COLOR] does not host or distribute any of the content provided by this addon. Does not have any affiliation with the content provider and accepts no responsibility for the included addon.
+    </disclaimer>
+    <platform>all</platform>
+    <language></language>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum></forum>
+    <website></website>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+    </assets>
+    <news></news>
+    <email></email>
+    <source></source>
+  </extension>
+</addon>
+
 <!-- MotoGP Replay -->
-<addon id="plugin.video.motogp-replay" name="MotoGP Replay" version="0.4.1" provider-name="Phantom Raspberry Blower">
+<addon id="plugin.video.motogp-replay" name="MotoGP Replay" version="0.5.1" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.sportsreplay"/>
@@ -1796,7 +1830,7 @@ Fixed CRLF in changelog.txt
 </addon>
 
 <!-- NBA Replay -->
-<addon id="plugin.video.nba-replay" name="NBA Replay" version="0.2.1" provider-name="Phantom Raspberry Blower">
+<addon id="plugin.video.nba-replay" name="NBA Replay" version="0.3.1" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.sportsreplay"/>
@@ -1899,7 +1933,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- NFL Replay -->
-<addon id="plugin.video.nfl-replay" name="NFL Replay" version="0.0.1" provider-name="Phantom Raspberry Blower">
+<addon id="plugin.video.nfl-replay" name="NFL Replay" version="0.1.1" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.sportsreplay"/>
@@ -1924,7 +1958,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
       <icon>resources/icon.png</icon>
       <fanart>resources/fanart.jpg</fanart>
     </assets>
-    <news>Initial Release</news>
+    <news></news>
     <email></email>
     <source></source>
   </extension>
@@ -2408,19 +2442,21 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- Routing Module -->
-<addon id="script.module.routing" name="Plugin routing" version="0.2.2" provider-name="takoi">
+<addon id="script.module.routing" name="Plugin routing" version="0.2.3" provider-name="takoi">
   <requires>
     <import addon="xbmc.python" version="2.14.0"/>
   </requires>
-  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.python.module" library="lib"/>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en">Routing module for plugins</summary>
-    <description lang="en">Library for building and parsing plugin URLs.
-Documentation: https://github.com/tamland/kodi-plugin-routing
-    </description>
+    <summary lang="en_GB">Routing module for plugins</summary>
+    <description lang="en_GB">Library for building and parsing plugin URLs.</description>
     <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
     <platform>all</platform>
+    <language>en_GB</language>
     <source>https://github.com/tamland/kodi-plugin-routing</source>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
   </extension>
 </addon>
 
@@ -2626,8 +2662,40 @@ Documentation: https://github.com/tamland/kodi-plugin-routing
   </extension>
 </addon>
 
+<!-- Sports Replay -->
+<addon id="plugin.video.sports-replay" name="Sports Replay" version="0.0.1" provider-name="Phantom Raspberry Blower">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="script.module.sportsreplay"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Replay Sports Events</summary>
+    <description lang="en_GB">
+      Replay Formula 1, Football, MotoGP, MLB, NBA, NFL and UFC sporting events from around the world.
+    </description>
+    <disclaimer lang="en_GB">
+      [COLOR red][B]Phantom Raspberry Blower[/B][/COLOR] does not host or distribute any of the content provided by this addon. Does not have any affiliation with the content provider and accepts no responsibility for the included addon.
+    </disclaimer>
+    <platform>all</platform>
+    <language></language>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum></forum>
+    <website></website>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+    </assets>
+    <news>Initial release.</news>
+    <email></email>
+    <source></source>
+  </extension>
+</addon>
+
 <!-- Sports Replay Module -->
-<addon id="script.module.sportsreplay" name="Sports Replay" version="0.2.2" provider-name="Phantom Raspberry Blower">
+<addon id="script.module.sportsreplay" name="Sports Replay" version="0.2.4" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.urlresolver"/>
@@ -2946,7 +3014,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- UFC Replay -->
-<addon id="plugin.video.ufc-replay" name="UFC Replay" version="0.1.1" provider-name="Phantom Raspberry Blower">
+<addon id="plugin.video.ufc-replay" name="UFC Replay" version="0.2.1" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.sportsreplay"/>
@@ -3472,7 +3540,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- YouTube Addon -->
-<addon id="plugin.video.youtube" name="YouTube" version="6.5.1" provider-name="anxdpanic, bromix">
+<addon id="plugin.video.youtube" name="YouTube" version="6.5.2~beta2" provider-name="anxdpanic, bromix">
   <requires>
     <import addon="xbmc.python" version="2.20.0"/>
     <import addon="script.module.six" version="1.11.0"/>
@@ -3486,14 +3554,11 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
   <extension point="xbmc.python.module" library="resources/lib/"/>
   <extension point="xbmc.addon.metadata">
     <news>
-6.5.1
-[add] get_live to youtube_requests module to retrieve live stream info for a channel
-[add] Adaptive (MP4) and Adaptive (WEBM) to MPEG-DASH - Video quality
-[fix] live stream playback
-[fix] unable to seek when using mpeg-dash
-[fix] mpeg-dash video quality selection
-[fix] sqlite requests breaking when another add-on/module uses sqlite3.register_converter(..)
-[fix] signal endofdirectory in case of a provider navigation exception |contrib: enen92|
+6.5.2
+[fix] playback (No streams found)
+[fix] missing metadata
+[fix] ended live streams not using mpeg-dash when enabled
+[fix] check for and convert unexpected timestamp format
     </news>
     <assets>
       <icon>icon.png</icon>

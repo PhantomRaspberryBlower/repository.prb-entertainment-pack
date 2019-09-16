@@ -31,7 +31,7 @@ def main_menu():
     # Shows menu items
     for url, name, mode in sportsreplay.main_menu('NFL '):
         if 'Bowl' in name:
-            mode = 2
+            mode = sportsreplay.Mode.GET_STREAMS
         addDir(name,
                url,
                mode,
@@ -43,11 +43,11 @@ def main_menu():
 
 
 def submenu(url, thumb):
-    for href, title, img, mode in sportsreplay.submenu(url, thumb, items_per_page=48, currmode=1):
+    for href, title, img, mode in sportsreplay.submenu(url, thumb, items_per_page=48, currmode=sportsreplay.Mode.SUB_MENU):
         title = title.replace('Replay', '').replace('  ', ' ')
         addDir(title.strip(),
             href,
-            mode,
+            mode+1,
             img,
             __fanart__,
             {'title': title,
@@ -60,7 +60,7 @@ def get_streams(name, url, thumb):
     for href, label in sportsreplay.get_streams(url):
         addDir('%s %s' % (name, label.strip()),
                href,
-               3,
+               sportsreplay.Mode.PLAY_STREAM,
                thumb,
                __fanart__,
                {'title': name,
@@ -110,34 +110,34 @@ name = None
 thumb = None
 
 try:
-    mode = int(params["mode"])
+    mode = int(params['mode'])
 except:
     pass
 try:
-    url = sportsreplay.unquote_plus(params["url"])
+    url = sportsreplay.unquote_plus(params['url'])
 except:
     pass
 try:
-    name = sportsreplay.unquote_plus(params["name"])
+    name = sportsreplay.unquote_plus(params['name'])
 except:
     pass
 try:
-    thumb = sportsreplay.unquote(params["thumb"])
+    thumb = sportsreplay.unquote(params['thumb'])
 except:
     pass
 
 # Message below used to test the addon
-#sportsreplay.commontasks.message("Mode: %s\nURL: %s\nName: %s" % (mode, url, name), "Test")
+sportsreplay.ct.message('Mode: %s\nURL: %s\nName: %s' % (mode, url, name), 'Test')
 
 if mode == None or url == None or len(url) < 1:
-    # Dsiplay Main Menu Items
+    # Display Main Menu Items
     main_menu()
-elif mode == 1:
+elif mode == sportsreplay.Mode.SUB_MENU:
     # Display Submenu Items
     submenu(url, thumb)
-elif mode == 2:
+elif mode == sportsreplay.Mode.GET_STREAMS:
     # Display Streams
     get_streams(name, url, thumb)
-elif mode == 3:
+elif mode == sportsreplay.Mode.PLAY_STREAM:
     # Play Stream
     sportsreplay.play_stream(name, url, thumb)
