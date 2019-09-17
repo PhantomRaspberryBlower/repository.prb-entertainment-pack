@@ -2,7 +2,7 @@
 <addons>
 
 <!-- PRB Install Everything Addon -->
-<addon id="script.force-install-all-ep" name="PRB Install Everything EP" version="1.12.9" provider-name="Phantom Raspberry Blower">
+<addon id="script.force-install-all-ep" name="PRB Install Everything EP" version="1.13.1" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="plugin.audio.absolute-radio"/>
@@ -14,16 +14,13 @@
     <import addon="plugin.program.dreamcatcher"/>
     <import addon="plugin.video.cartoongo"/>
     <import addon="plugin.video.exodus"/>
-    <import addon="plugin.video.f1-replay"/>
     <import addon="plugin.video.Fido"/>
-    <import addon="plugin.video.full-match-replay"/>
     <import addon="plugin.video.iplayerwww"/>
     <import addon="plugin.video.itv"/>
-    <import addon="plugin.video.motogp-replay"/>
-    <import addon="plugin.video.nba-replay"/>
     <import addon="plugin.video.neptune"/>
     <import addon="plugin.video.placenta"/>
     <import addon="plugin.video.Rising.Tides"/>
+    <import addon="plugin.video.sports-replay"/>
     <import addon="plugin.video.snagfilms"/>
     <import addon="plugin.video.squadcontrol"/>
     <import addon="plugin.video.ted.talks"/>
@@ -2147,7 +2144,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- PRB Clean Service -->
-<addon id="service.prb-clean" name="PRB Clean" version="0.3.1" provider-name="Phantom Raspberry Blower">
+<addon id="service.prb-clean" name="PRB Clean" version="0.3.2" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -2164,7 +2161,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
       <icon>resources/icon.png</icon>
       <fanart>resources/fanart.jpg</fanart>
     </assets>
-    <news>Removed The Magic Dragon</news>
+    <news>Removed MLB, NBA, NFL and UFC Replay. These are all present in the new addon - Sports Replay.</news>
     <email></email>
     <source></source>
   </extension>
@@ -2791,7 +2788,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- System Info Addon -->
-<addon id="script.system-info" name="System Info" version="0.0.9" provider-name="Phantom Raspberry Blower">
+<addon id="script.system-info" name="System Info" version="0.1.1" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.requests"/>

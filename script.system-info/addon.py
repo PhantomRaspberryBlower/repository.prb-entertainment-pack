@@ -45,7 +45,7 @@ _addon_resources_lib_path_ = xbmc.translatePath(os.path.join('special://home/add
 def showText(heading, text):
     id = 10147
     xbmc.executebuiltin('ActivateWindow(%d)' % id)
-    xbmc.sleep(500)
+#    xbmc.sleep(500)
     win = xbmcgui.Window(id)
     retry = 50
     while (retry > 0):

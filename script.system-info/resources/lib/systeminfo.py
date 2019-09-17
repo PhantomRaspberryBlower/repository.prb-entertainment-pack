@@ -153,7 +153,7 @@ class SystemInfo():
         # Return CPU temperature as a character string
         try:
             output = Popen(['vcgencmd', 'measure_temp'], stdout=PIPE).communicate()[0]
-            return output.replace('temp=', '').replace("'C\n", "")
+            return str(output[5:len(output)-3])
         except:
             return 'Unable to get CPU temperature! :('
 
@@ -183,19 +183,6 @@ class SystemInfo():
         return devices
 
     # ## Network Informtion ## #
-
-    @property
-    def geo_ip_addr(self):
-        # Geolocate the WAN IP address
-        try:
-            dic = {}
-            response = urlopen('http://ip-api.com/json/').read()
-            response = response.replace('{', '').replace('}', '')
-            for item in response.split(','):
-                dic.update(item)
-            return dic
-        except:
-            return 'Unable to geolocate WAN IP Address! :('
 
     @property
     def wan_ip_addr(self):
@@ -245,7 +232,7 @@ class SystemInfo():
 
     def get_installed_addons(self, dir=None):
         if not dir == None:
-            output = [dI for dI in os.listdir(dir) if os.path.isdir(os.path.join(dir,dI))]
+            output = [dI for dI in os.listdir(dir) if os.path.isdir(os.path.join(dir, dI))]
             output.sort()
             return output
 
@@ -291,14 +278,17 @@ class SystemInfo():
         settings = []
         if os.path.exists('/var/lib/connman'):
             for network in next(os.walk('/var/lib/connman'))[1]:
-                settings.append((network, ''))
-                file = open('/var/lib/connman/%s/settings' % network, 'r')
-                for line in file:
-                    settings.append((line[:line.find('=')],
-                                     line[line.find('=')+1:].replace('\n',
-                                     '')))
-                file.close()
-                settings.append(('', ''))
+                try:
+                    settings.append((network, ''))
+                    file = open('/var/lib/connman/%s/settings' % network, 'r')
+                    for line in file:
+                        settings.append((line[:line.find('=')],
+                                         line[line.find('=')+1:].replace('\n',
+                                         '')))
+                    file.close()
+                    settings.append(('', ''))
+                except:
+                    pass
         elif os.path.exists('/etc/wpa_supplicant/wpa_supplicant.conf'):
             file = open('/etc/wpa_supplicant/wpa_supplicant.conf', 'r')
             for line in file:
@@ -405,7 +395,8 @@ class SystemInfo():
             addons_info = self.get_installed_addons('/home/osmc/.kodi/addons')
             addons_info_txt = '\nAddons Installed:'
             for addon in addons_info:
-                if not addon == 'packages' and not addon == 'temp':
+                if (not addon == 'packages' and not addon == 'temp' 
+                    and not 'resource.language.' in addon):
                     addons_info_txt = addons_info_txt + '\n \
                     %s' % (addon)
 
@@ -421,7 +412,7 @@ class SystemInfo():
              machine,
              processor) = self.get_platform_info()
             for item in disk_info:
-                disk_info_txt = disk_info_txt + '\n \
+                disk_info_txt = disk_info_txt + u'\n \
                     Path:\t\t\t%s\n \
                     Total:\t\t\t%sGB\n \
                     Used:\t\t\t%sGB\n \
@@ -434,7 +425,7 @@ class SystemInfo():
             for device in arp_info:
                 arp_info_txt = arp_info_txt + '\t\t%s\n' % device
 
-            return '\nSoftware:\n \
+            return u'\nSoftware:\n \
                     Username:\t\t\t%s\n \
                     Hostname:\t\t\t%s\n \
                     Platform:\t\t\t%s\n \
@@ -503,15 +494,15 @@ class SystemInfo():
                            networks_info_txt,
                            arp_info_txt,
                            addons_info_txt)
-        except:
+        except: 
             return 'Error! Unable to get system informtaion! :('
 
 # Check if running stand-alone or imported
-if __name__ == '__main__':
-    if platform.system() != 'Windows':
+if __name__ == u'__main__':
+    if platform.system() != u'Windows':
         import systeminfo
         si = SystemInfo()
         info = si.get_system_info()
-        print info
+        print(info)
     else:
-        print 'This script does not work with a Windows operating system. :('
+        print(u'This script does not work with a Windows operating system. :( - Yet!')
