@@ -2,7 +2,7 @@
 <addons>
 
 <!-- PRB Install Everything Addon -->
-<addon id="script.force-install-all-ep" name="PRB Install Everything EP" version="1.13.1" provider-name="Phantom Raspberry Blower">
+<addon id="script.force-install-all-ep" name="PRB Install Everything EP" version="1.13.2" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="plugin.audio.absolute-radio"/>
@@ -22,10 +22,8 @@
     <import addon="plugin.video.Rising.Tides"/>
     <import addon="plugin.video.sports-replay"/>
     <import addon="plugin.video.snagfilms"/>
-    <import addon="plugin.video.squadcontrol"/>
     <import addon="plugin.video.ted.talks"/>
     <import addon="plugin.video.themagicdragon"/>
-    <import addon="plugin.video.ukturk"/>
     <import addon="plugin.video.uktvplay"/>
     <import addon="plugin.video.world.news.live"/>
     <import addon="plugin.video.yoda"/>
@@ -833,9 +831,9 @@
 </addon>
 
 <!-- Diamond Wizard Repo -->
-<addon id="repository.Diamond-Wizard-Repo" name=".[COLORwhite]***[/COLOR][COLOR crimson]D[/COLOR][COLOR silver]iamond Build Repo (Primary Server, Main Repo)[/COLOR][COLORwhite]***[/COLOR]" version="3.8.6" provider-name="Diamond Build">
+<addon id="repository.Diamond-Wizard-Repo" name=".[COLORwhite]***[/COLOR][COLOR crimson]D[/COLOR][COLOR silver]iamond Build Repo (Primary Server, Main Repo)[/COLOR][COLORwhite]***[/COLOR]" version="3.8.8" provider-name="Diamond Build">
   <extension point="xbmc.addon.repository" name="Diamond Wizard Repo - Primary Server">
-    <!-- Diamond Repository -->
+  <!-- Diamond Repository -->
     <dir>
       <info compressed="false">https://raw.githubusercontent.com/bobbybark/diamond-build-repo/master/addons.xml</info>
       <checksum>https://raw.githubusercontent.com/bobbybark/diamond-build-repo/master/addons.xml.md5</checksum>
@@ -940,7 +938,7 @@
 </addon>
 
 <!-- Exodus Addon -->
-<addon id="plugin.video.exodus" version="8.0.9a" name="Exodus" provider-name="Exodus">
+<addon id="plugin.video.exodus" version="8.1.3a" name="Exodus" provider-name="Exodus">
   <requires>
     <import addon="xbmc.python" version="2.19.0" />
     <import addon="script.module.exodus" />
@@ -1016,7 +1014,7 @@
 </addon>
 
 <!-- Exodus Scrapers Module -->
-<addon id="script.module.exoscrapers" name="ExoScrapers Module" version="1.0.7" provider-name="Exodus">
+<addon id="script.module.exoscrapers" name="ExoScrapers Module" version="1.1.0" provider-name="Exodus">
   <requires>
     <import addon="xbmc.python" version="2.25.0" />
     <import addon="script.module.beautifulsoup4"/>
@@ -1024,7 +1022,7 @@
   <extension point="xbmc.python.module" library="lib" />
   <extension point="xbmc.python.pluginsource" library="lib/default.py">
     <provides>executable</provides>
-  </extension> 
+  </extension>
   <extension point="xbmc.addon.metadata">
     <platform>all</platform>
     <summary lang="en">ExoScrapers Module</summary>
@@ -1036,7 +1034,7 @@
       <icon>icon.png</icon>
       <fanart></fanart>
     </assets>
-    <news>v1.0.6 - Cache reset</news>
+    <news>v1.1.0 - Scraper cleanup and EOL fixes</news>
   </extension>
 </addon>
 
@@ -2144,7 +2142,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- PRB Clean Service -->
-<addon id="service.prb-clean" name="PRB Clean" version="0.3.2" provider-name="Phantom Raspberry Blower">
+<addon id="service.prb-clean" name="PRB Clean" version="0.3.3" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -2161,7 +2159,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
       <icon>resources/icon.png</icon>
       <fanart>resources/fanart.jpg</fanart>
     </assets>
-    <news>Removed MLB, NBA, NFL and UFC Replay. These are all present in the new addon - Sports Replay.</news>
+    <news>Removed squad control, UK Turks.</news>
     <email></email>
     <source></source>
   </extension>
@@ -2711,31 +2709,6 @@ This is a Non-profit resource, organized solely for educational purposes which i
   </extension>
 </addon>
 
-<!-- Squad Control -->
-<addon id="plugin.video.squadcontrol" name="Squad Control" version="0.0.3" provider-name="69 Death Squad">
-  <requires>
-    <import addon="xbmc.python" version="2.19.0" />
-    <import addon="script.module.universalscrapers" version="1.0.0" />
-    <import addon="script.module.python.koding.aio" version="0.9.6.6" />
-    <import addon="script.module.beautifulsoup" version="3.2.1" />
-    <import addon="script.module.requests" version="2.9.1" />
-    <import addon="script.module.addon.common" version="2.0.0" />
-    <import addon="script.module.xmltodict" version="0.9.0" />
-    <!--<import addon="script.module.web-pdb" version="1.0"/>-->
-    <import addon="script.module.resolveurl" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.jen" library="service.py" start="[login|startup]" />
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Cartoon/Anime Series and Movies from WatchCartoon Online</summary>
-    <description lang="en">Cartoon/Anime Series and Movies from WatchCartoon Online</description>
-    <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
-    <platform>all</platform>
-  </extension>
-</addon>
-
 <!-- SuperRepo (Krypton) Repository -->
 <addon id="superrepo.kodi.krypton.all" name="SuperRepo All [Krypton][v7]" version="0.7.04a" provider-name="Bart Otten">
   <requires>
@@ -3039,49 +3012,6 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
     <news>Initial Release.</news>
     <email></email>
     <source></source>
-  </extension>
-</addon>
-
-<!-- UK Turks Addon -->
-<addon id="plugin.video.ukturk" name="UK Turk Playlists" version="6.00.001" provider-name="UKTurk">
-  <requires>
-    <import addon="script.module.simplejson" />
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.t0mm0.common" />
-    <import addon="plugin.video.youtube" />
-    <import addon="script.module.resolveurl" />
-    <import addon="script.common.plugin.cache" />
-    <import addon="script.module.metahandler" />
-    <import addon="script.video.F4mProxy" />
-    <import addon="script.module.beautifulsoup4" />
-    <import addon="script.module.html5lib" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Free Playlists courtesy of @uk_turk</summary>
-    <description lang="en">Free Playlists courtesy of @uk_turk</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<!-- UK Turks Repository -->
-<addon id="repository.ukturk" name="UKTurk Addon Repository" version="2.0.0" provider-name="UKTurk">
-  <extension point="xbmc.addon.repository" name="UKTurk Addon Repository">
-    <info compressed="false">https://addoncloud.org/ukturk/repofiles/addons.xml</info>
-    <checksum>https://addoncloud.org/ukturk/repofiles/addons.xml.md5</checksum>
-    <datadir zip="true">https://addoncloud.org/ukturk/repofiles/zips/</datadir>
-    <dir>
-      <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
-      <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
-      <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
-    </dir>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Install UKTurk</summary>
-    <description>Install UKTurk</description>
-    <platform>all</platform>
   </extension>
 </addon>
 

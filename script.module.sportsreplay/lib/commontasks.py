@@ -24,7 +24,7 @@ Description: Common Tasks for Addons
 '''
 
 INVALID_FILENAME_CHARS = u'\/:*?"<>|'
-Juice = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="
+Juice = u"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="
 
 def urlencode(values):
     try:
@@ -54,6 +54,7 @@ def get_html(url, policy=None):
     header_dict = {}
     header_dict['Accept'] = 'application/json;pk=' + str(policy)
     header_dict['User-Agent'] = 'AppleWebKit/<WebKit Rev>'
+    header_dict['Range'] = 'bytes=0-'
     req = urllib2.Request(url, headers=header_dict)
     try:
         response = urllib2.urlopen(req)
@@ -248,6 +249,7 @@ def unjuice(e):
 
 
 def play(name, url, thumb):
+    message(url, "url")
     liz = xbmcgui.ListItem(name)
     liz.setArt({'thumb': thumb})
     xbmc.Player().play(url, liz)
