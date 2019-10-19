@@ -393,7 +393,7 @@
 </addon>
 
 <!-- Certifi Module -->
-<addon id="script.module.certifi" name="certifi" version="2019.6.16" provider-name="Kenneth Reitz">
+<addon id="script.module.certifi" name="certifi" version="2019.9.11" provider-name="Kenneth Reitz">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
   </requires>
@@ -464,7 +464,7 @@
 </addon>
 
 <!-- Confluence Skin -->
-<addon id="skin.confluence" version="4.6.5" name="Confluence" provider-name="Jezz_X, Team Kodi">
+<addon id="skin.confluence" version="4.6.9" name="Confluence" provider-name="Jezz_X, Team Kodi">
   <requires>
     <import addon="xbmc.gui" version="5.14.0"/>
   </requires>
@@ -479,7 +479,7 @@
     <summary lang="ca_ES">Aparença Confluence per Jezz_X.</summary>
     <summary lang="cs_CZ">Vzhled Confluence od Jezz_X.</summary>
     <summary lang="cy_GB">Croen Confluence gan Jezz_X. (Croen rhagosodedig Kodi)</summary>
-    <summary lang="da_DK">Confluence-tema af Jezz_X. (Kodis standardtema)</summary>
+    <summary lang="da_DK">Confluence-tema af Jezz_X.</summary>
     <summary lang="de_DE">Confluence Skin von Jezz_X. (Standard-Skin von Kodi)</summary>
     <summary lang="el_GR">Το κέλυφος Confluence από τον Jezz_X (προεπιλεγμένο κέλυφος του Kodi).</summary>
     <summary lang="en_AU">Confluence skin by Jezz_X. (Kodi's default skin)</summary>
@@ -504,7 +504,7 @@
     <summary lang="id_ID">Skin Confluence oleh Jezz_X. (Skin bawaan Kodi)</summary>
     <summary lang="is_IS">Confluence eftir Jezz_X. (Sjálfgefið útlit Kodi)</summary>
     <summary lang="it_IT">Skin Confluence da Jezz_X. (Skin predefinita di Kodi)</summary>
-    <summary lang="ja_JP">Confluence スキン by Jezz_X. (Kodi デフォルトスキン)</summary>
+    <summary lang="ja_JP">Confluenceスキン by Jezz_X.</summary>
     <summary lang="ko_KR">Jezz_X가 만든 Confluence 스킨.</summary>
     <summary lang="lt_LT">Confluence teminė išvaizda, kurią sukūrė Jezz_X. (Kodi numatytoji teminė išvaizda)</summary>
     <summary lang="lv_LV">Confluence apvalks no Jeez_X.</summary>
@@ -539,7 +539,7 @@
     <description lang="ca_ES">Confluence és una combinació de conceptes de moltes aparences populars i intenta adoptar i integrar les seves bones idees en una aparença que sigui senzilla d'entendre i utilitzar per als nous usuaris de Kodi.</description>
     <description lang="cs_CZ">Confluence je kombinací konceptů z mnoha oblíbených vzhledů a pokouší se pojmout a integrovat jejich dobré nápady do vzhledu, který by měl být pro nové uživatele Kodi jednoduchý na pochopení a používání.</description>
     <description lang="cy_GB">Confluence yw croen rhagosodedig Kodi 9.11 ac uwch. Mae'n gyfuniad o gysyniadau o nifer o grwyn poblogaidd ac mae'n ymdrechu i gyfuno eu syniadau da hwy i groen ddylai fod yn hawdd i ddefnyddiwr cyntaf Kodi ei deall a'i ddefnyddio.</description>
-    <description lang="da_DK">Confluence er standardskin'et til Kodi 9.11 og senere versioner. Det er en kombination af koncepter fra mange populære skins, og det forsøger at omfavne og integrere de gode ideer i et skin, der er let for førstegangsbrugere af Kodi at forstå og bruge.</description>
+    <description lang="da_DK">Confluence er en kombination af koncepter fra mange populære skins, og det forsøger at omfavne og integrere de gode ideer i et skin, der er let for førstegangsbrugere af Kodi at forstå og bruge.</description>
     <description lang="de_DE">Confluence ist der Standardskin ab Kodi 14.0. Er ist eine Kombination mehrerer unterschiedlicher Skin-Konzepte und versucht dabei, die besten Ideen zu kombinieren, um einen einfachen Einstieg für neue Kodi-Nutzer zu ermöglichen.</description>
     <description lang="el_GR">Το Confluence είναι η προεπιλεγμένη αμφίεση για τις εκδόσεις Kodi 14.0 και άνω. Είναι ένας συνδυασμός από πολλές δημοφιλής αμφιέσεις, και επιχειρεί να παρέχει τις καλύτερες ιδέες τους σε μία αμφίεση, το οποίο είναι εύκολο για τους αρχάριους χρήστες του Kodi να κατανοήσουν και να χρησιμοποιήσουν.</description>
     <description lang="en_AU">Confluence is the default skin for Kodi 9.11 and above. It is a combination of concepts from many popular skins, and attempts to embrace and integrate their good ideas into a skin that should be easy for first time Kodi users to understand and use.</description>
@@ -563,7 +563,7 @@
     <description lang="id_ID">Confluence merupakan skin bawaan untuk Kodi 9.11 dan selanjutnya. Merupakan kombinasi konsep dari beberapa skin populer, dan berusaha untuk merangkul dan menyatukan ide bagus mereka ke sebuah skin yang mudah dipakai dan dipahami oleh pengguna Kodi pertama kali.</description>
     <description lang="is_IS">Confluence er sjálfgefið útlit Kodi 14.0 og nýrra. Það er samsetning hugmynda frá mörgum vinsælum útlitum og er tilraun til að fanga og innlima þær góðu hugmyndir í útlit sem sé einfalt fyrir fyrir nýja Kodi notendur að skilja og nota</description>
     <description lang="it_IT">Confluence è la skin predefinita di Kodi dalla versione 14.0 in poi. È una combinazione di elementi provenienti da altre skin popolari e cerca di integrare e coinvolgere tutte le loro grandi idee in una skin facile da usare e comprendere per l'utente inesperto di Kodi.</description>
-    <description lang="ja_JP">Confluence は Kodi 9.11 およびそれ以上のバージョンで標準のスキンです。さまざまな人気のスキンのコンセプトを組み合わせ、ユーザが初めて Kodi に触れる際に便利に使えるようにしてあります。</description>
+    <description lang="ja_JP">Confluenceは、さまざまな人気のあるスキンのコンセプトを組み合わせ、ユーザが初めて Kodi に触れる際、使い勝手が良いようにアイデアを盛り込み、簡単で分かり易くユーザーが使用できるようにしてあります。</description>
     <description lang="ko_KR">Confluence 는 Kodi 14.0 이상을 위한 기본 스킨입니다. 많은 인기 스킨의 컨셉과 좋은 아이디어를 모아서 하나의 스킨으로 만들었으며 초보자도 사용하기 쉽습니다.</description>
     <description lang="lt_LT">Confluence yra numatytoji teminė išvaizda pradedant Kodi 9.11 versija. Tai daugelio populiarių teminų išvaizdų derinys. Bandymas priimti ir integruoti vartotojų idėjas į teminę išvaizdą katra turėtų būti lengvai suprantama  pirmą kartą naudojantiems Kodi</description>
     <description lang="lv_LV">Confluence ir apvienota daudzu populāru apvalku koncepcija un centieni pieņemt un integrēt labākās idejas, lai jaunajiem Kodi ietotājiem to būtu viegli izprast un lietot.</description>
@@ -596,17 +596,17 @@
     <forum>https://forum.kodi.tv/forumdisplay.php?fid=125</forum>
     <source>https://github.com/xbmc/skin.confluence</source>
     <assets>
-        <icon>resources/icon.png</icon>
-        <fanart>resources/fanart.jpg</fanart>
-        <screenshot>resources/screenshot-01.jpg</screenshot>
-        <screenshot>resources/screenshot-02.jpg</screenshot>
-        <screenshot>resources/screenshot-03.jpg</screenshot>
-        <screenshot>resources/screenshot-04.jpg</screenshot>
-        <screenshot>resources/screenshot-05.jpg</screenshot>
-        <screenshot>resources/screenshot-06.jpg</screenshot>
-        <screenshot>resources/screenshot-07.jpg</screenshot>
-        <screenshot>resources/screenshot-08.jpg</screenshot>
-        <screenshot>resources/screenshot-09.jpg</screenshot>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+      <screenshot>resources/screenshot-01.jpg</screenshot>
+      <screenshot>resources/screenshot-02.jpg</screenshot>
+      <screenshot>resources/screenshot-03.jpg</screenshot>
+      <screenshot>resources/screenshot-04.jpg</screenshot>
+      <screenshot>resources/screenshot-05.jpg</screenshot>
+      <screenshot>resources/screenshot-06.jpg</screenshot>
+      <screenshot>resources/screenshot-07.jpg</screenshot>
+      <screenshot>resources/screenshot-08.jpg</screenshot>
+      <screenshot>resources/screenshot-09.jpg</screenshot>
     </assets>
     <news>Updated music artist info.</news>
   </extension>
@@ -746,22 +746,21 @@
 </addon>
 
 <!-- DateUtil Module -->
-<addon id="script.module.dateutil" name="dateutil" version="2.5.3" provider-name="Gustavo Niemeyer, Tomi Pieviläinen, Yaron de Leeuw, Razzeee">
+<addon id="script.module.dateutil" name="python-dateutil" version="2.8.0" provider-name="Paul Ganssle, Gustavo Niemeyer">
   <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.six" version="1.9.0"/>
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="script.module.six" version="1.5"/>
   </requires>
   <extension point="xbmc.python.module" library="lib" />
   <extension point="xbmc.addon.metadata">
-    <summary>dateutil - powerful extensions to datetime</summary>
-    <description>Packed for Kodi from https://github.com/dateutil/dateutil</description>
-    <platform>all</platform>
-    <language></language>
-    <license>Revised BSD License</license>
-    <forum></forum>
-    <website>https://dateutil.readthedocs.org/en/latest/</website>
-    <source>https://github.com/Razzeee/script.module.dateutil</source>
-    <email></email>
+    <summary lang="en_GB">Extensions to the standard Python datetime module</summary>
+    <description lang="en_GB">The dateutil module provides powerful extensions to the standard datetime module, available in Python.</description>
+    <license>Apache-2.0, BSD-3-Clause</license>
+    <website>https://dateutil.readthedocs.io/en/stable/</website>
+    <source>https://github.com/dateutil/dateutil</source>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
   </extension>
 </addon>
 
@@ -831,49 +830,58 @@
 </addon>
 
 <!-- Diamond Wizard Repo -->
-<addon id="repository.Diamond-Wizard-Repo" name=".[COLORwhite]***[/COLOR][COLOR crimson]D[/COLOR][COLOR silver]iamond Build Repo (Primary Server, Main Repo)[/COLOR][COLORwhite]***[/COLOR]" version="3.8.8" provider-name="Diamond Build">
+<addon id="repository.Diamond-Wizard-Repo" name=".[COLORwhite]***[/COLOR][COLOR crimson]D[/COLOR][COLOR silver]iamond Build Repo (Primary Server, Main Repo)[/COLOR][COLORwhite]***[/COLOR]" version="3.8.9" provider-name="Diamond Build">
   <extension point="xbmc.addon.repository" name="Diamond Wizard Repo - Primary Server">
-  <!-- Diamond Repository -->
+<!-- Diamond Repository -->
+
     <dir>
       <info compressed="false">https://raw.githubusercontent.com/bobbybark/diamond-build-repo/master/addons.xml</info>
       <checksum>https://raw.githubusercontent.com/bobbybark/diamond-build-repo/master/addons.xml.md5</checksum>
       <datadir zip="true">https://raw.githubusercontent.com/bobbybark/diamond-build-repo/master/</datadir>
     </dir>
+
     <dir>
       <info compressed="false">https://raw.githubusercontent.com/bobbybark/diamond-7of9-addon-repo/master/addons.xml</info>
       <checksum>https://raw.githubusercontent.com/bobbybark/diamond-7of9-addon-repo/master/addons.xml.md5</checksum>
       <datadir zip="true">https://raw.githubusercontent.com/bobbybark/diamond-7of9-addon-repo/master/</datadir>
     </dir>
+
     <dir>
       <info compressed="false">https://raw.githubusercontent.com/bobbybark/diamond-7of9-dependency-repo/master/addons.xml</info>
       <checksum>https://raw.githubusercontent.com/bobbybark/diamond-7of9-dependency-repo/master/addons.xml.md5</checksum>
       <datadir zip="true">https://raw.githubusercontent.com/bobbybark/diamond-7of9-dependency-repo/master/</datadir>
     </dir>
+
     <dir>
       <info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml</info>
       <checksum>https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml.md5</checksum>
       <datadir zip="true">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/</datadir>
     </dir>
+
     <dir>
       <info compressed="false">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml</info>
       <checksum>https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml.md5</checksum>
       <datadir zip="true">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/</datadir>
     </dir>
+
     <dir>
       <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
       <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
       <datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
     </dir>
+
     <dir>
       <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
       <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
       <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
     </dir>
+
     <dir>
       <info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
       <checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
       <datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
     </dir>
+
     <dir>
       <info compressed="false">https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/addons.xml</info>
       <checksum>https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/addons.xml.md5</checksum>
@@ -938,7 +946,7 @@
 </addon>
 
 <!-- Exodus Addon -->
-<addon id="plugin.video.exodus" version="8.1.3a" name="Exodus" provider-name="Exodus">
+<addon id="plugin.video.exodus" version="8.1.6a" name="Exodus" provider-name="Exodus">
   <requires>
     <import addon="xbmc.python" version="2.19.0" />
     <import addon="script.module.exodus" />
@@ -955,12 +963,12 @@
   <extension point="xbmc.service" library="service.py" start="startup" />
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Exodus</summary>
-    <description lang="en">Please visit [COLOR blue]www.tvaddons.co[/COLOR] for Exodus support and assistance! Kindly note that Exodus is not an official part of the media player you are running, and therefore not to be mentioned within official support channels, this addon has nothing to do with the media player itself, nor it’s intended use, it is simply a third party plugin which has been added to your system.</description>
+    <description lang="en">Please visit [COLOR blue]www.tvaddons.co[/COLOR] for Exodus support and assistance! Kindly note that Exodus is not an official part of the media player you are running, and therefore not to be mentioned within official support channels, this addon has nothing to do with the media player itself, nor it�s intended use, it is simply a third party plugin which has been added to your system.</description>
     <disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.</disclaimer>
-    <description lang="de">Bitte besuche [COLOR blue]www.tvaddons.co[/COLOR] für Unterstützung und Fragen zu Exodus! Beachte dabei, dass Exodus nicht offizieller Teil des Media Players ist den du gerade verwendest und daher nicht von dem offiziellen Support-Kanäle abgedeckt wird, dieses Addon hat nichts zu tun mit dem Media-Player selbst, noch ist es dafür beabsichtigt, es handelt sich hierbei lediglich um ein Drittanbieter-Anwendung die dem System hinzugefügt wurde.</description>
+    <description lang="de">Bitte besuche [COLOR blue]www.tvaddons.co[/COLOR] f�r Unterst�tzung und Fragen zu Exodus! Beachte dabei, dass Exodus nicht offizieller Teil des Media Players ist den du gerade verwendest und daher nicht von dem offiziellen Support-Kan�le abgedeckt wird, dieses Addon hat nichts zu tun mit dem Media-Player selbst, noch ist es daf�r beabsichtigt, es handelt sich hierbei lediglich um ein Drittanbieter-Anwendung die dem System hinzugef�gt wurde.</description>
     <disclaimer lang="de">Die von diesem Addon dargestellten Inhalte werden von den Erstellern des Addons weder gehostet oder verbreitet, noch stehen die Ersteller in irgendeiner Beziehung zu den Content-Anbietern.</disclaimer>
-    <description lang="fr">SVP visitez [COLOR blue]www.tvaddons.co[/COLOR] pour avoir de l'aide sur Exodus. Prenez note qu'Exodus n'est pas une partie intégrante de votre outil de visionnement multimedia et SVP ne le mentionnez pas dans les media sociaux officiels, cet addiciel n'a rien a voir avec votre lecteur multimedia lui même, c'est simplement un addiciel qui a été ajouté à votre système.</description>
-    <disclaimer lang="fr">L'auteur n'héberge pas ou ne distribue pas le contenu qui vous est affiché avec cet addiciel. L'auteur n'a pas d'alliance avec les distributeurs de contenu.</disclaimer>
+    <description lang="fr">SVP visitez [COLOR blue]www.tvaddons.co[/COLOR] pour avoir de l'aide sur Exodus. Prenez note qu'Exodus n'est pas une partie int�grante de votre outil de visionnement multimedia et SVP ne le mentionnez pas dans les media sociaux officiels, cet addiciel n'a rien a voir avec votre lecteur multimedia lui m�me, c'est simplement un addiciel qui a �t� ajout� � votre syst�me.</description>
+    <disclaimer lang="fr">L'auteur n'h�berge pas ou ne distribue pas le contenu qui vous est affich� avec cet addiciel. L'auteur n'a pas d'alliance avec les distributeurs de contenu.</disclaimer>
     <platform>all</platform>
     <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
     <forum>https://www.tvaddons.co/forums/</forum>
@@ -1001,7 +1009,7 @@
 </addon>
 
 <!-- Exodus Module -->
-<addon id="script.module.exodus" name="Exodus Module" version="3.2.0" provider-name="Exodus">
+<addon id="script.module.exodus" name="Exodus Module" version="3.2.1" provider-name="Exodus">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
     <import addon="script.module.beautifulsoup4"/>
@@ -1481,7 +1489,7 @@ Fixed CRLF in changelog.txt
 </addon>
 
 <!-- Kodi Six Module -->
-<addon id="script.module.kodi-six" name="Kodi Six" version="0.1.0" provider-name="Roman V.M.">
+<addon id="script.module.kodi-six" name="Kodi Six" version="0.1.1" provider-name="Roman V.M.">
   <requires>
     <import addon="xbmc.python" version="2.26.0"/>
   </requires>
@@ -1496,7 +1504,9 @@ Fixed CRLF in changelog.txt
     <assets>
       <icon>icon.png</icon>
     </assets>
-    <news>0.1.0:
+    <news>0.1.1
+- Fixed UnicodeDecodeErrors when Kodi API returns non-UTF-8 byte strings.
+0.1.0:
 - Implemented lazy patching of Kodi API functions and classes.
 0.0.3:
 - Added xbmcdrm module.</news>
@@ -3092,7 +3102,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- URL Resolver -->
-<addon id="script.module.urlresolver" name="URLResolver" version="5.0.39" provider-name="tvaddons">
+<addon id="script.module.urlresolver" name="URLResolver" version="5.0.41" provider-name="tvaddons">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
     <import addon="plugin.video.youtube" optional="true" />
@@ -3326,7 +3336,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- Yahoo Weather Addon -->
-<addon id="weather.yahoo" name="Yahoo! Weather" version="5.0.5" provider-name="ronie">
+<addon id="weather.yahoo" name="Yahoo! Weather" version="5.0.6" provider-name="ronie">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.requests" version="2.19.1"/>
@@ -3538,9 +3548,9 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- YouTube Downloader Module -->
-<addon id="script.module.youtube.dl" name="youtube-dl Control" version="18.1107.0" provider-name="Rick Phillips (ruuk)">
+<addon id="script.module.youtube.dl" name="youtube-dl Control" version="19.912.0" provider-name="Rick Phillips (ruuk)">
   <requires>
-    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="xbmc.python" version="2.14.0" />
     <import addon="script.module.addon.signals" version="0.0.1"/>
   </requires>
   <extension point="xbmc.python.script" library="control.py">
@@ -3557,7 +3567,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
     <description lang="es">Módulo que proporciona acceso a YouTube-dl para la extracción de flujos de video de cientos de sitios. La versión está basada en la versión de fecha youtube-dl: YY.MDD.V donde V es la subversión específica del complemento. También permite descargas con la opción de descarga en segundo plano con una cola y un administrador de colas.</description>
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
     <forum>https://forum.kodi.tv/showthread.php?tid=200877</forum>
-    <source>http://github.com/ruuk/script.module.youtube.dl</source>
+    <source>https://github.com/ruuk/script.module.youtube.dl</source>
   </extension>
 </addon>
 
