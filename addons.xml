@@ -649,7 +649,7 @@
 </addon>
 
 <!-- Crypto Libraries Module -->
-<addon id="script.module.cryptolib" name="Crypto Libraries" version="1.0.0" provider-name="Twilight0">
+<addon id="script.module.cryptolib" name="Crypto Libraries" version="1.1.1" provider-name="Twilight0">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -946,7 +946,7 @@
 </addon>
 
 <!-- Exodus Addon -->
-<addon id="plugin.video.exodus" version="8.2.0a" name="Exodus" provider-name="Exodus">
+<addon id="plugin.video.exodus" version="8.2.7a" name="Exodus" provider-name="Exodus">
   <requires>
     <import addon="xbmc.python" version="2.19.0" />
     <import addon="script.module.exodus" />
@@ -1008,7 +1008,7 @@
 </addon>
 
 <!-- Exodus Module -->
-<addon id="script.module.exodus" name="Exodus Module" version="3.2.1" provider-name="Exodus">
+<addon id="script.module.exodus" name="Exodus Module" version="3.2.2" provider-name="Exodus">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
     <import addon="script.module.beautifulsoup4"/>
@@ -1021,7 +1021,7 @@
 </addon>
 
 <!-- Exodus Scrapers Module -->
-<addon id="script.module.exoscrapers" name="ExoScrapers Module" version="2.0.3" provider-name="Exodus">
+<addon id="script.module.exoscrapers" name="ExoScrapers Module" version="2.1.4" provider-name="Exodus">
   <requires>
     <import addon="xbmc.python" version="2.25.0" />
     <import addon="script.module.beautifulsoup4"/>
@@ -1035,12 +1035,13 @@
     <summary lang="en">ExoScrapers Module</summary>
     <description>Scrape common video host for URL's to be playable in Kodi, simplifying addon development of video plugins requiring multi video hosts.</description>
     <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
+    <platform>all</platform>
     <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
     <assets>
       <icon>icon.png</icon>
       <fanart></fanart>
     </assets>
-    <news>v2.0.3 - New scrapers</news>
+    <news>v2.1.4 - Scraper updates and language additions</news>
   </extension>
 </addon>
 
@@ -2381,7 +2382,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- Resolver URL -->
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.0.34" provider-name="jsergio">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.0.36" provider-name="jsergio">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
     <import addon="plugin.video.youtube" optional="true" />
@@ -2749,12 +2750,12 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- Streamlink Base module -->
-<addon id="script.module.streamlink.base" name="Streamlink Library" version="2019.06.23" provider-name="Streamlink Devs, Twilight0">
+<addon id="script.module.streamlink.base" name="Streamlink Library" version="2019.11.11.1" provider-name="Streamlink Devs, Twilight0">
   <requires>
     <import addon="xbmc.python" version="2.24.0"/>
     <import addon="script.module.requests" version="2.12.4"/>
     <import addon="script.module.futures" version="2.2.0"/>
-    <import addon="script.module.cryptolib" version="1.0.0"/>
+    <import addon="script.module.cryptolib" version="1.1.0"/>
   </requires>
   <extension point="xbmc.python.module" library="resources/lib/"/>
   <extension point="xbmc.addon.metadata">
@@ -2767,11 +2768,12 @@ This is a Non-profit resource, organized solely for educational purposes which i
     <assets>
       <icon>icon.png</icon>
     </assets>
-    <news>+2019.06.23
-- Changed crypto module addon id
-- Updated description</news>
+    <news>+2019.11.11.X
+- Updated to cc32730ea7c9749169df34e2f1a82c1fdb704df4 from upstream
+      > USTVNOW plugin has been removed due to improper crypto library imports (due to backwards compatibility)</news>
   </extension>
 </addon>
+
 
 <!-- System Info Addon -->
 <addon id="script.system-info" name="System Info" version="0.1.1" provider-name="Phantom Raspberry Blower">
@@ -3104,7 +3106,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- URL Resolver -->
-<addon id="script.module.urlresolver" name="URLResolver" version="5.0.41" provider-name="tvaddons">
+<addon id="script.module.urlresolver" name="URLResolver" version="5.0.44" provider-name="tvaddons">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
     <import addon="plugin.video.youtube" optional="true" />
