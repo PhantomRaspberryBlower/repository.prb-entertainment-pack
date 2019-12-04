@@ -123,6 +123,21 @@
   </extension>
 </addon>
 
+<!-- Addon Signals -->
+<addon id="script.module.addon.signals" name="Addon Signals" version="0.0.4" provider-name="Rick Phillips (ruuk)">
+  <requires>
+    <import addon="xbmc.python" version="2.14.0" />
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Inter-addon signalling</summary>
+    <description lang="en">Provides signal/slot mechanism for inter-addon communication</description>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE Version 2.1, February 1999</license>
+    <source>https://github.com/ruuk/script.module.addon.signals</source>
+  </extension>
+</addon>
+
 <!-- ARNU SpeedTest -->
 <addon id="script.speedtestnet" name="ARNU Box Speed Tester" version="1.0.0" provider-name="ARNU Box / Josh.5">
   <requires>
@@ -450,17 +465,29 @@
 </addon>
 
 <!-- Common Plugin Cache -->
-<addon id="script.common.plugin.cache" name="Common plugin cache" provider-name="TheCollective" version="2.5.10">
+<addon id="script.common.plugin.cache" name="Common plugin cache" provider-name="anxdpanic, TheCollective" version="2.6.0">
   <requires>
-    <import addon="xbmc.python" version="2.24.0" />
+    <import addon="xbmc.python" version="2.24.0"/>
   </requires>
-  <extension library="default.py" point="xbmc.service" start="startup">
-  </extension>
+  <extension point="xbmc.service" library="resources/lib/entry_point.py" start="startup"/>
+  <extension point="xbmc.python.module" library="resources/lib/storage_server/"/>
   <extension point="xbmc.addon.metadata">
+    <news>
+- Kodi 19 / Python 3 ready
+- convert strings.xml to strings.po
+- use new language paths ie. ../resource.language.en_gb
+- refactor
+- housekeeping
+- replace icon to resolve transparency issue
+    </news>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
     <platform>all</platform>
-    <summary lang="en">Common caching api for xbmc plugins.</summary>
+    <summary lang="en_GB">A common caching API for Kodi add-ons.</summary>
+    <license>GPL-3.0-only</license>
+    <source>https://github.com/anxdpanic/script.common.plugin.cache</source>
   </extension>
-  <extension library="lib" point="xbmc.python.module" />
 </addon>
 
 <!-- Confluence Skin -->
@@ -663,7 +690,7 @@
 </addon>
 
 <!-- CU LRC Lyrics -->
-<addon id="script.cu.lrclyrics" name="CU LRC Lyrics" version="5.6.1" provider-name="Taxigps, ronie">
+<addon id="script.cu.lrclyrics" name="CU LRC Lyrics" version="5.7.1" provider-name="Taxigps, ronie">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.chardet" version="2.2.1"/>
@@ -946,7 +973,7 @@
 </addon>
 
 <!-- Exodus Addon -->
-<addon id="plugin.video.exodus" version="8.2.7a" name="Exodus" provider-name="Exodus">
+<addon id="plugin.video.exodus" version="8.3.1a" name="Exodus" provider-name="Exodus">
   <requires>
     <import addon="xbmc.python" version="2.19.0" />
     <import addon="script.module.exodus" />
@@ -1008,7 +1035,7 @@
 </addon>
 
 <!-- Exodus Module -->
-<addon id="script.module.exodus" name="Exodus Module" version="3.2.2" provider-name="Exodus">
+<addon id="script.module.exodus" name="Exodus Module" version="3.2.3" provider-name="Exodus">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
     <import addon="script.module.beautifulsoup4"/>
@@ -1021,28 +1048,28 @@
 </addon>
 
 <!-- Exodus Scrapers Module -->
-<addon id="script.module.exoscrapers" name="ExoScrapers Module" version="2.1.4" provider-name="Exodus">
-  <requires>
-    <import addon="xbmc.python" version="2.25.0" />
-    <import addon="script.module.beautifulsoup4"/>
-  </requires>
-  <extension point="xbmc.python.module" library="lib" />
-  <extension point="xbmc.python.pluginsource" library="lib/default.py">
-    <provides>executable</provides>
-  </extension> 
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-    <summary lang="en">ExoScrapers Module</summary>
-    <description>Scrape common video host for URL's to be playable in Kodi, simplifying addon development of video plugins requiring multi video hosts.</description>
-    <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
+<addon id="script.module.exoscrapers" name="ExoScrapers Module" version="2.1.5" provider-name="Exodus">
+    <requires>
+        <import addon="xbmc.python" version="2.25.0" />
+        <import addon="script.module.beautifulsoup4"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.python.pluginsource" library="lib/default.py">
+        <provides>executable</provides>
+    </extension> 
+        <extension point="xbmc.addon.metadata">
+            <platform>all</platform>
+            <summary lang="en">ExoScrapers Module</summary>
+            <description>Scrape common video host for URL's to be playable in Kodi, simplifying addon development of video plugins requiring multi video hosts.</description>
+                <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
     <platform>all</platform>
     <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
     <assets>
-      <icon>icon.png</icon>
-      <fanart></fanart>
+        <icon>icon.png</icon>
+        <fanart></fanart>
     </assets>
-    <news>v2.1.4 - Scraper updates and language additions</news>
-  </extension>
+    <news>v2.1.5 - Updated torrent scrapers, fixed meta info and much more! (Ty 123Venom!), Updated client and source_utils, Code reformat and optimize</news>
+    </extension>
 </addon>
 
 <!-- F1 Replay -->
@@ -3106,7 +3133,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- URL Resolver -->
-<addon id="script.module.urlresolver" name="URLResolver" version="5.0.44" provider-name="tvaddons">
+<addon id="script.module.urlresolver" name="URLResolver" version="5.0.45" provider-name="tvaddons">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
     <import addon="plugin.video.youtube" optional="true" />
@@ -3549,7 +3576,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- YouTube Downloader Module -->
-<addon id="script.module.youtube.dl" name="youtube-dl Control" version="19.912.0" provider-name="Rick Phillips (ruuk)">
+<addon id="script.module.youtube.dl" name="youtube-dl Control" version="19.912.1" provider-name="Rick Phillips (ruuk)">
   <requires>
     <import addon="xbmc.python" version="2.14.0" />
     <import addon="script.module.addon.signals" version="0.0.1"/>
