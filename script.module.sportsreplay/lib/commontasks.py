@@ -2,6 +2,7 @@
 
 import xbmc
 import xbmcgui
+import xbmcvfs
 import sys
 import os
 import re
@@ -24,7 +25,7 @@ Description: Common Tasks for Addons
 '''
 
 INVALID_FILENAME_CHARS = u'\/:*?"<>|'
-Juice = u"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="
+Juice = u'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/='
 
 def urlencode(values):
     try:
@@ -54,7 +55,6 @@ def get_html(url, policy=None):
     header_dict = {}
     header_dict['Accept'] = 'application/json;pk=' + str(policy)
     header_dict['User-Agent'] = 'AppleWebKit/<WebKit Rev>'
-    header_dict['Range'] = 'bytes=0-'
     req = urllib2.Request(url, headers=header_dict)
     try:
         response = urllib2.urlopen(req)
@@ -95,7 +95,7 @@ def xbmc_version():
     return float(xbmc.getInfoLabel("System.BuildVersion")[:4])
 
 
-def notification(title, message, icon, duration):
+def notification(message, title, icon, duration):
     # Display notification to user
     dialog = xbmcgui.Dialog()
     dialog.notification(title,
@@ -108,6 +108,29 @@ def message(message, title):
     # Display message to user
     dialog = xbmcgui.Dialog()
     dialog.ok(title, message)
+
+
+def showText(message, title):
+    id = 10147
+    xbmc.executebuiltin('ActivateWindow(%d)' % id)
+    win = xbmcgui.Window(id)
+    retry = 50
+    while (retry > 0):
+        try:
+            xbmc.sleep(10)
+            retry -= 1
+            win.getControl(1).setLabel(title)
+            win.getControl(5).setText(message)
+            quit()
+            return
+        except: pass
+
+
+def keyboard(text='', heading='', hidden=False):
+    keyboard = xbmc.Keyboard(text, heading, hidden)
+    keyboard.doModal()
+    if keyboard.isConfirmed():
+        return keyboard.getText()
 
 
 def remove_from_list(list, file):
@@ -155,9 +178,10 @@ def add_to_list(list, file, refresh):
         xbmc.executebuiltin("Container.Refresh")
 
 
-def read_from_file(path):
+def read_from_file(file):
     try:
-        f = open(path, 'r')
+#        f = open(path, 'r') # DEPRICATED!!!
+        f = xbmcvfs.File(file)
         r = f.read()
         f.close()
         return str(r)
@@ -165,12 +189,14 @@ def read_from_file(path):
         return None
 
 
-def write_to_file(path, content, append=False):
+def write_to_file(file, content, append=False):
     try:
         if append:
-            f = open(path, 'a')
+#            f = open(path, 'a') # DEPRICATED!!!
+            f = xbmcvfs.File(file, 'a')
         else:
-            f = open(path, 'w')
+#            f = open(path, 'w') # DEPRICATED!!!
+            f = xbmcvfs.File(file, 'w')
         f.write(content)
         f.close()
         return True
@@ -178,24 +204,30 @@ def write_to_file(path, content, append=False):
         return False
 
 
-def create_directory(dir_path, dir_name=None):
-    if dir_name:
-        dir_path = os.path.join(dir_path, dir_name)
-    dir_path = dir_path.strip()
-    if not os.path.exists(dir_path):
-        os.makedirs(dir_path)
-    return dir_path
+def rename_file(file, newFileName):
+    xbmcvfs.rename(file,newFileName)
 
 
-def create_file(dir_path, file_name=None):
-    if file_name:
-        file_path = os.path.join(dir_path, file_name)
-    file_path = file_path.strip()
-    if not os.path.exists(file_path):
-        f = open(file_path, 'w')
+def create_directory(path, name=None):
+    if name:
+        path = os.path.join(path, name)
+    path = path.strip()
+    if not xbmcvfs.exists(path):
+#        os.makedirs(dir_path) # DEPRICATED!!!
+        xbmcvfs.makedirs(path)
+    return path
+
+
+def create_file(path, filename=None):
+    if filename:
+        path = os.path.join(path, filename)
+    path = path.strip()
+    if not xbmcvfs.exists(path):
+#        f = open(path, 'w')
+        f = xbmcvfs.File(path, 'w')
         f.write('')
         f.close()
-    return file_path
+    return path
 
 
 def validate_filename(filename):
@@ -249,7 +281,6 @@ def unjuice(e):
 
 
 def play(name, url, thumb):
-    message(url, "url")
     liz = xbmcgui.ListItem(name)
     liz.setArt({'thumb': thumb})
     xbmc.Player().play(url, liz)

@@ -65,7 +65,7 @@
 </addon>
 
 <!-- Absolute Radio -->
-<addon id="plugin.audio.absolute-radio" name="Absolute Radio" version="1.0.8" provider-name="Phantom Raspberry Blower">
+<addon id="plugin.audio.absolute-radio" name="Absolute Radio" version="1.1.0" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
   </requires>
@@ -96,7 +96,7 @@
       <screenshot>resources/media/screenshot005.jpg</screenshot>
       <screenshot>resources/media/screenshot006.jpg</screenshot>
     </assets>
-    <news></news>
+    <news>URL's have been relocated to new feeds.</news>
     <email></email>
     <source>https://github.com/PhantomRaspberryBlower/repository.prb-entertainment-pack/tree/master/plugin.video.leicester-community-radio</source>
   </extension>
@@ -973,7 +973,7 @@
 </addon>
 
 <!-- Exodus Addon -->
-<addon id="plugin.video.exodus" version="8.3.1a" name="Exodus" provider-name="Exodus">
+<addon id="plugin.video.exodus" version="8.3.2a" name="Exodus" provider-name="Exodus">
   <requires>
     <import addon="xbmc.python" version="2.19.0" />
     <import addon="script.module.exodus" />
@@ -2699,7 +2699,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- Sports Replay -->
-<addon id="plugin.video.sports-replay" name="Sports Replay" version="0.0.1" provider-name="Phantom Raspberry Blower">
+<addon id="plugin.video.sports-replay" name="Sports Replay" version="1.0.1" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.sportsreplay"/>
@@ -2724,14 +2724,14 @@ This is a Non-profit resource, organized solely for educational purposes which i
       <icon>resources/icon.png</icon>
       <fanart>resources/fanart.jpg</fanart>
     </assets>
-    <news>Initial release.</news>
+    <news>Added search.</news>
     <email></email>
     <source></source>
   </extension>
 </addon>
 
 <!-- Sports Replay Module -->
-<addon id="script.module.sportsreplay" name="Sports Replay" version="0.2.4" provider-name="Phantom Raspberry Blower">
+<addon id="script.module.sportsreplay" name="Sports Replay" version="1.0.1" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.urlresolver"/>
@@ -2746,7 +2746,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
     <assets>
       <icon>resources/icon.png</icon>
     </assets>
-    <news>Refactored code</news>
+    <news>Included xbmcvfs.</news>
   </extension>
 </addon>
 
@@ -2800,7 +2800,6 @@ This is a Non-profit resource, organized solely for educational purposes which i
       > USTVNOW plugin has been removed due to improper crypto library imports (due to backwards compatibility)</news>
   </extension>
 </addon>
-
 
 <!-- System Info Addon -->
 <addon id="script.system-info" name="System Info" version="0.1.1" provider-name="Phantom Raspberry Blower">

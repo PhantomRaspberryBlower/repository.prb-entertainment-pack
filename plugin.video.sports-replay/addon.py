@@ -1,4 +1,4 @@
-#!/usr/bin/python
+ #!/usr/bin/python
 
 import xbmcplugin
 import xbmcaddon
@@ -22,17 +22,9 @@ __author__ = u'Phantom Raspberry Blower'
 __url__ = sys.argv[0]
 __handle__ = int(sys.argv[1])
 
-# Enumerate mode values
-class Mode:
-    MAIN_MENU = 0
-    SUBMAIN_MENU = 1
-    SEASONS_MENU = 2
-    SUB_MENU = 3
-    GET_LINKS = 4
-    GET_STREAMS = 5
-    PLAY_STREAM = 6
-
 # Define local variables
+__search_list__ = xbmc.translatePath(os.path.join('special://home/addons/',
+                                     __addon_id__ + '/resources/search.list'))
 image_path = xbmc.translatePath(os.path.join('special://home/addons/',
                                 __addon_id__ + '/resources/media/'))
 thumbs = {'Africa Cup 2015': image_path + 'Africa_Cup_2015.png',
@@ -61,7 +53,8 @@ thumbs = {'Africa Cup 2015': image_path + 'Africa_Cup_2015.png',
           'UEFA Nations League': image_path + 'Nations_League.png',
           'UFC': image_path + 'UFC_Replay.png',
           'World Cup 2018': image_path + 'World_Cup_2018.png',
-          'World Cup 2014': image_path + 'World_Cup_2014.png'}
+          'World Cup 2014': image_path + 'World_Cup_2014.png',
+          'Search': image_path + 'search.png'}
 fanarts = {'Africa Cup 2015': image_path + 'Full_Match_fanart.jpg',
            'Bundesliga Germany': image_path + 'Full_Match_fanart.jpg',
            'Champions League': image_path + 'Full_Match_fanart.jpg',
@@ -89,15 +82,7 @@ fanarts = {'Africa Cup 2015': image_path + 'Full_Match_fanart.jpg',
            'UFC': image_path + 'UFC_fanart.jpg',
            'World Cup 2018': image_path + 'Full_Match_fanart.jpg',
            'World Cup 2014': image_path + 'Full_Match_fanart.jpg'}
-menu_items = {'Formula 1':{'mode': Mode.SUBMAIN_MENU,
-                            'title': 'Formula 1',
-                            'menuname': 'Formula 1 Race',
-                            'url': 'http://fullmatchsports.com/',
-                            'thumb': thumbs['Formula 1'],
-                            'fanart': fanarts['Formula 1'],
-                            'desc': 'Formula 1 race replays.',
-                            'itemsperpage': 36},
-              'Football': {'mode': Mode.SUBMAIN_MENU,
+menu_items = {'Football': {'mode': sportsreplay.Mode.SUBMAIN_MENU,
                            'title': 'Football',
                            'menuname': 'Full Match Replay',
                            'url': 'http://fullmatchsports.com/',
@@ -105,7 +90,15 @@ menu_items = {'Formula 1':{'mode': Mode.SUBMAIN_MENU,
                            'fanart': fanarts['Football'],
                            'desc': 'Full match football replays from around the world.',
                            'itemsperpage': 36},
-              'MLB': {'mode': Mode.SUB_MENU,
+              'Formula 1':{'mode': sportsreplay.Mode.SUBMAIN_MENU,
+                            'title': 'Formula 1',
+                            'menuname': 'Formula 1 Race',
+                            'url': 'http://fullmatchsports.com/',
+                            'thumb': thumbs['Formula 1'],
+                            'fanart': fanarts['Formula 1'],
+                            'desc': 'Formula 1 race replays.',
+                            'itemsperpage': 36},
+              'MLB': {'mode': sportsreplay.Mode.SUB_MENU,
                       'title': 'MLB',
                       'menuname': 'MLB ',
                       'url': 'http://fullmatch.net/mlb-full-game-replay/',
@@ -113,7 +106,7 @@ menu_items = {'Formula 1':{'mode': Mode.SUBMAIN_MENU,
                       'fanart': fanarts['MLB'],
                       'desc': 'Major League Baseball game replays.',
                       'itemsperpage': 48},
-              'MotoGP': {'mode': Mode.SUBMAIN_MENU,
+              'MotoGP': {'mode': sportsreplay.Mode.SUBMAIN_MENU,
                          'title': 'MotoGP',
                          'menuname': 'MotoGP Race',
                          'url': 'http://fullmatchsports.com/',
@@ -121,7 +114,7 @@ menu_items = {'Formula 1':{'mode': Mode.SUBMAIN_MENU,
                          'fanart': fanarts['Moto GP'],
                          'desc': 'MotoGP, Moto2, Moto3 and MotoE race replays.',
                          'itemsperpage': 36},
-              'NBA': {'mode': Mode.SUBMAIN_MENU,
+              'NBA': {'mode': sportsreplay.Mode.SUBMAIN_MENU,
                       'title': 'NBA',
                       'menuname': 'NBA ',
                       'url': 'http://fullmatch.net/',
@@ -129,7 +122,7 @@ menu_items = {'Formula 1':{'mode': Mode.SUBMAIN_MENU,
                       'fanart': fanarts['NBA'],
                       'desc': 'National Basketball Association game replays.',
                       'itemsperpage': 36},
-              'NFL': {'mode': Mode.SUBMAIN_MENU,
+              'NFL': {'mode': sportsreplay.Mode.SUBMAIN_MENU,
                       'title': 'NFL',
                       'menuname': 'NFL ',
                       'url': 'http://fullmatch.net/',
@@ -137,13 +130,21 @@ menu_items = {'Formula 1':{'mode': Mode.SUBMAIN_MENU,
                       'fanart': fanarts['NFL'],
                       'desc': 'National Football League game replays.',
                       'itemsperpage': 48},
-              'UFC': {'mode': Mode.SUB_MENU,
+              'UFC': {'mode': sportsreplay.Mode.SUB_MENU,
                       'title': 'UFC',
                       'menuname': 'UFC ',
                       'url': 'http://fullmatch.net/ufc-full-fights/',
                       'thumb': thumbs['UFC'],
                       'fanart': fanarts['UFC'],
                       'desc': 'Ultimate Fightig Championship fight replays.',
+                      'itemsperpage': 48},
+              'Search': {'mode': sportsreplay.Mode.SEARCH,
+                      'title': 'Search',
+                      'menuname': '',
+                      'url': 'http://fullmatchsports.com/',
+                      'thumb': thumbs['Search'],
+                      'fanart': __fanart__,
+                      'desc': 'Search for replay of a specific sporting event.',
                       'itemsperpage': 48}}
 
 def main_menu():
@@ -165,7 +166,8 @@ def submain_menu(name, thumb, fanart):
     menuname = menu_items[name]['menuname']
     for url, title, mode in sportsreplay.main_menu(menuname):
         if name == 'Football':
-            try:
+            # Footbal menu needs extra submenu for showing leagues
+            if title in thumbs.keys():
                 addDir(title,
                        url,
                        sportsreplay.Mode.SEASONS_MENU,
@@ -173,30 +175,29 @@ def submain_menu(name, thumb, fanart):
                        fanart,
                        {'title': title,
                         'plot': title})
-            except:
-                pass
         elif name == 'NBA' or name == 'NFL':
+            # NBA and NFL some menu items need a submenu
             if 'All Star' in title or 'Bowl' in title:
+                # Some items do not require a submenu
                 mode = sportsreplay.Mode.GET_STREAMS
-            try:
-                addDir(title,
-                       url,
-                       mode,
-                       thumbs[name],
-                       fanart,
-                       {'title': title,
-                        'plot': title})
-            except:
-                pass
-        elif name == 'Formula 1' or name =='MotoGP':
             addDir(title,
                    url,
-                   Mode.SUB_MENU,
+                   mode,
+                   thumbs[name],
+                   fanart,
+                   {'title': title,
+                    'plot': title})
+        elif name == 'Formula 1' or name =='MotoGP':
+            # F1 and MotoGP require submenus
+            addDir(title,
+                   url,
+                   sportsreplay.Mode.SUB_MENU,
                    thumb,
                    fanart,
                    {'title': title,
                     'plot': title})
         else:
+            # MLB and UFC do not require submenus
             addDir(title,
                    url,
                    mode,
@@ -208,7 +209,7 @@ def submain_menu(name, thumb, fanart):
 
 
 def seasons(league, thumb, fanart):
-    # Shows seasons
+    # Shows seasons for Football
     for url, name, mode in sportsreplay.seasons(league):
         addDir(name,
                url,
@@ -221,8 +222,11 @@ def seasons(league, thumb, fanart):
 
 
 def submenu(name, url, thumb, fanart):
-    for href, title, img, mode in sportsreplay.submenu(url, thumb, items_per_page=36, currmode=sportsreplay.Mode.SUB_MENU):
-        title = title.replace('Race', '').replace('Replay', '').replace('  ', ' ')
+    # Display submenus with pagination 
+    for href, title, img, mode in sportsreplay.submenu(url,
+                                                       thumb,
+                                                       items_per_page=36,
+                                                       currmode=sportsreplay.Mode.SUB_MENU):
         addDir(title.strip(),
             href,
             mode,
@@ -301,6 +305,12 @@ def get_streams(name, url, thumb, fanart):
         xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
 
+def search(name, url, thumb, fanart):
+    query = sportsreplay.ct.keyboard(text='', heading='Search', hidden=False)
+    if query:
+        submenu(name, 'http://fullmatchsports.com/?s=%s#' % query, thumb, fanart)
+
+
 def addDir(name, url, mode, thumb, fanart=False, infoLabels=True):
     u = sys.argv[0] + "?url=" + sportsreplay.quote_plus(url) + "&mode=" + str(mode) + "&name=" + sportsreplay.quote_plus(name) + "&thumb=" + str(thumb) + "&fanart=" + str(fanart)
     ok = True
@@ -364,7 +374,7 @@ try:
 except:
     pass
 
-# Message below used to test the addon
+# Message below used to test addon
 #sportsreplay.ct.message("Mode: %s\nURL: %s\nName: %s" % (mode, url, name), "Test")
 
 if mode == None or url == None or len(url) < 1:
@@ -388,3 +398,6 @@ elif mode == sportsreplay.Mode.GET_STREAMS:
 elif mode == sportsreplay.Mode.PLAY_STREAM:
     # Play Stream
     sportsreplay.play_stream(name, url, thumb)
+elif mode == sportsreplay.Mode.SEARCH:
+    # Search Streams
+    search(name, url, thumb, fanart)

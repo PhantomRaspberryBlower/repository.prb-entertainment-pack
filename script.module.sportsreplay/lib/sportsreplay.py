@@ -17,6 +17,7 @@ class Mode:
     GET_LINKS = 4
     GET_STREAMS = 5
     PLAY_STREAM = 6
+    SEARCH = 7
 
 
 # Define local variables
@@ -235,11 +236,7 @@ def get_streams(url):
             streams.append((url, label))
     else:
         try:
-#            ct.message(url[40:], "url")
-#            ct.message(new_url, "new_url")
-#            ct.message(resp, "resp1")
             matches = re.compile("file:'(.+?)',type:").findall(resp)
-            ct.message(str(matches), "matches")
             for item in matches:
                 streams.append((item, "Label"))
         except:
