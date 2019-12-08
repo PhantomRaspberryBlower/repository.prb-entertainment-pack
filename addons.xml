@@ -65,7 +65,7 @@
 </addon>
 
 <!-- Absolute Radio -->
-<addon id="plugin.audio.absolute-radio" name="Absolute Radio" version="1.1.0" provider-name="Phantom Raspberry Blower">
+<addon id="plugin.audio.absolute-radio" name="Absolute Radio" version="1.1.1" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
   </requires>
