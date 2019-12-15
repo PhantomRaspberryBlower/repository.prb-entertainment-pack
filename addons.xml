@@ -2,7 +2,7 @@
 <addons>
 
 <!-- PRB Install Everything Addon -->
-<addon id="script.force-install-all-ep" name="PRB Install Everything EP" version="1.13.2" provider-name="Phantom Raspberry Blower">
+<addon id="script.force-install-all-ep" name="PRB Install Everything EP" version="1.14.0" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="plugin.audio.absolute-radio"/>
@@ -17,14 +17,12 @@
     <import addon="plugin.video.Fido"/>
     <import addon="plugin.video.iplayerwww"/>
     <import addon="plugin.video.itv"/>
-    <import addon="plugin.video.neptune"/>
     <import addon="plugin.video.placenta"/>
     <import addon="plugin.video.Rising.Tides"/>
     <import addon="plugin.video.sports-replay"/>
     <import addon="plugin.video.snagfilms"/>
     <import addon="plugin.video.ted.talks"/>
     <import addon="plugin.video.themagicdragon"/>
-    <import addon="plugin.video.uktvplay"/>
     <import addon="plugin.video.world.news.live"/>
     <import addon="plugin.video.yoda"/>
     <import addon="plugin.video.youtube"/>
@@ -58,7 +56,7 @@
       <screenshot>resources/media/screenshot002.jpg</screenshot>
       <screenshot>resources/media/screenshot003.jpg</screenshot>
     </assets>
-    <news>Removed Death Star</news>
+    <news>Removed Squad Control, UK Turks</news>
     <email></email>
     <source></source>
   </extension>
@@ -2212,7 +2210,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- PRB Clean Service -->
-<addon id="service.prb-clean" name="PRB Clean" version="0.3.3" provider-name="Phantom Raspberry Blower">
+<addon id="service.prb-clean" name="PRB Clean" version="0.3.4" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -2229,7 +2227,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
       <icon>resources/icon.png</icon>
       <fanart>resources/fanart.jpg</fanart>
     </assets>
-    <news>Removed squad control, UK Turks.</news>
+    <news>Removed Squad Control, UK Turks.</news>
     <email></email>
     <source></source>
   </extension>
