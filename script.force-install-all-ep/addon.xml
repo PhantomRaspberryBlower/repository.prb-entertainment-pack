@@ -10,10 +10,12 @@
     <import addon="plugin.audio.prb-radio"/>
     <import addon="plugin.program.dreamcatcher"/>
     <import addon="plugin.video.cartoongo"/>
+    <import addon="plugin.video.crackle"/>
     <import addon="plugin.video.exodus"/>
     <import addon="plugin.video.Fido"/>
     <import addon="plugin.video.iplayerwww"/>
     <import addon="plugin.video.itv"/>
+    <import addon="plugin.video.learnlanguageallstars"/>
     <import addon="plugin.video.placenta"/>
     <import addon="plugin.video.Rising.Tides"/>
     <import addon="plugin.video.sports-replay"/>
@@ -53,7 +55,7 @@
       <screenshot>resources/media/screenshot002.jpg</screenshot>
       <screenshot>resources/media/screenshot003.jpg</screenshot>
     </assets>
-    <news>Removed Squad Control, UK Turks</news>
+    <news>Added Learn a Language, Crackle</news>
     <email></email>
     <source></source>
   </extension>
