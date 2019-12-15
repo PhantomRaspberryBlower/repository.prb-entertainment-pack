@@ -1,4 +1,4 @@
-![Absolute Radio logo](https://github.com/PhantomRaspberryBlower/plugin.audio.absolute-radio/blob/master/resources/icon.png)
+![Absolute Radio logo](https://github.com/PhantomRaspberryBlower/repository.prb-entertainment-pack/blob/master/plugin.audio.absolute-radio/resources/icon.png)
 
 plugin.audio.absolute-radio
 ===========================

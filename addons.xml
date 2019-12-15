@@ -465,7 +465,7 @@
 </addon>
 
 <!-- Common Plugin Cache -->
-<addon id="script.common.plugin.cache" name="Common plugin cache" provider-name="anxdpanic, TheCollective" version="2.6.0">
+<addon id="script.common.plugin.cache" name="Common plugin cache" provider-name="anxdpanic, TheCollective" version="2.6.1">
   <requires>
     <import addon="xbmc.python" version="2.24.0"/>
   </requires>
@@ -473,12 +473,8 @@
   <extension point="xbmc.python.module" library="resources/lib/storage_server/"/>
   <extension point="xbmc.addon.metadata">
     <news>
-- Kodi 19 / Python 3 ready
-- convert strings.xml to strings.po
-- use new language paths ie. ../resource.language.en_gb
-- refactor
-- housekeeping
-- replace icon to resolve transparency issue
+[fix] shutdown taking longer than 5 seconds
+[fix] ignore encoding issues for socket data
     </news>
     <assets>
       <icon>icon.png</icon>
@@ -675,6 +671,40 @@
   </extension>
 </addon>
 
+<!-- Crackle -->
+<addon id="plugin.video.crackle" name="Crackle" version="2019.10.2" provider-name="eracknaphobia">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="script.module.requests" version="2.9.1"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="main.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en_GB">Crackle delivers popular, award-winning TV, movies and originals. With no limit to how much you can watch across all your devices, you can binge all you want, wherever you want.</summary>
+    <description lang="en_GB">Crackle is a video streaming distributor of original web shows, Hollywood movies, and TV shows. Founded in the early 2000s as Grouper, and rebranded in 2007, Crackle is owned by Sony Pictures Entertainment.</description>
+      <news>
+        Thanks to Sreekanth for the following updates
+        - set mediatype for movies, tvshows and episodes appropriately
+        - use addon_url variable
+        - little bit of cleanup
+        - set the correct content type for directory listing
+        - set fanart and poster for list items in directory. Now, it can displa…
+        - display tvshow title for episodes
+      </news>
+    <language>en</language>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum></forum>
+    <source>https://github.com/eracknaphobia/plugin.video.crackle</source>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
 <!-- Crypto Libraries Module -->
 <addon id="script.module.cryptolib" name="Crypto Libraries" version="1.1.1" provider-name="Twilight0">
   <requires>
@@ -773,10 +803,10 @@
 </addon>
 
 <!-- DateUtil Module -->
-<addon id="script.module.dateutil" name="python-dateutil" version="2.8.0" provider-name="Paul Ganssle, Gustavo Niemeyer">
+<addon id="script.module.dateutil" name="python-dateutil" version="2.8.1" provider-name="Paul Ganssle, Gustavo Niemeyer">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
-    <import addon="script.module.six" version="1.5"/>
+    <import addon="script.module.six" version="1.12.0"/>
   </requires>
   <extension point="xbmc.python.module" library="lib" />
   <extension point="xbmc.addon.metadata">
@@ -973,7 +1003,7 @@
 </addon>
 
 <!-- Exodus Addon -->
-<addon id="plugin.video.exodus" version="8.3.2a" name="Exodus" provider-name="Exodus">
+<addon id="plugin.video.exodus" version="8.3.3a" name="Exodus" provider-name="Exodus">
   <requires>
     <import addon="xbmc.python" version="2.19.0" />
     <import addon="script.module.exodus" />
@@ -1626,7 +1656,7 @@ Fixed CRLF in changelog.txt
 </addon>
 
 <!-- Log Viewer for Kodi -->
-<addon id="script.logviewer" name="Log Viewer for Kodi" provider-name="i96751414" version="2.0.0">
+<addon id="script.logviewer" name="Log Viewer for Kodi" provider-name="i96751414" version="2.1.1">
   <requires>
     <import addon="xbmc.python" version="2.14.0"/>
   </requires>
@@ -1634,10 +1664,11 @@ Fixed CRLF in changelog.txt
     <provides>executable</provides>
   </extension>
   <extension point="xbmc.service" library="service.py" start="login"/>
-  <extension library="lib" point="xbmc.python.module"/>
+  <extension point="xbmc.python.module" library="resources/lib/"/>
   <extension point="xbmc.addon.metadata">
     <platform>all</platform>
-    <forum>http://forum.kodi.tv/showthread.php?tid=223490</forum>
+    <license>GPL-2.0-or-later</license>
+    <forum>https://forum.kodi.tv/showthread.php?tid=223490</forum>
     <source>https://github.com/i96751414/script.logviewer</source>
     <summary lang="en">View Kodi logfile directly on Kodi</summary>
     <summary lang="pt">Veja o log do Kodi directamente no Kodi</summary>
@@ -1645,10 +1676,8 @@ Fixed CRLF in changelog.txt
     <description lang="pt">Ferramenta para verificar e ler facilmente o log do Kodi.</description>
     <platform>all</platform>
     <news>
-- Fix text box not opening
-- Added a custom window for reading log
-- Changed all api calls: xbmc.executebuiltin("RunScript(script.logviewer, show_log)")
-- Added service for monitoring errors
+- Fix android file handling
+- Add http server (webtail)
     </news>
     <assets>
       <icon>icon.png</icon>
@@ -2431,7 +2460,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- Rising Tides -->
-<addon id="plugin.video.Rising.Tides" name="[COLOR red][B]R[/B][/COLOR][COLOR white][B]ising[/B][/COLOR] [COLOR pink][B]T[/B][/COLOR][COLOR white][B]ides[/B][/COLOR]" version="1.4.19" provider-name="[COLOR turquoise][B]mullafabz[/B][/COLOR]">
+<addon id="plugin.video.Rising.Tides" name="[COLOR red][B]R[/B][/COLOR][COLOR white][B]ising[/B][/COLOR] [COLOR pink][B]T[/B][/COLOR][COLOR white][B]ides[/B][/COLOR]" version="1.4.21" provider-name="[COLOR turquoise][B]mullafabz[/B][/COLOR]">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.simple.downloader" optional="true"/>
@@ -2632,18 +2661,18 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- Six Module -->
-<addon id="script.module.six" name="six" version="1.11.0" provider-name="gutworth">
+<addon id="script.module.six" name="six" version="1.13.0" provider-name="gutworth">
   <requires>
     <import addon="xbmc.python" version="2.14.0"/>
   </requires>
   <extension point="xbmc.python.module" library="lib" />
   <extension point="xbmc.addon.metadata">
-    <summary>Python 2 and 3 compatibility utilities.</summary>
-    <description>Six is a Python 2 and 3 compatibility library. It provides utility functions for smoothing over the differences between the Python versions with the goal of writing Python code that is compatible on both Python versions. See the documentation for more information on what is provided.</description>
+    <summary lang="en">Python 2 and 3 compatibility utilities.</summary>
+    <description lang="en">Six is a Python 2 and 3 compatibility library. It provides utility functions for smoothing over the differences between the Python versions with the goal of writing Python code that is compatible on both Python versions. See the documentation for more information on what is provided.</description>
     <platform>all</platform>
     <license>MIT</license>
-    <source>https://pypi.python.org/pypi/six</source>
-    <website>https://pypi.python.org/pypi/six</website>
+    <source>https://pypi.org/project/six/</source>
+    <website>https://pypi.org/project/six/</website>
   </extension>
 </addon>
 
@@ -3132,13 +3161,12 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- URL Resolver -->
-<addon id="script.module.urlresolver" name="URLResolver" version="5.0.45" provider-name="tvaddons">
+<addon id="script.module.urlresolver" name="URLResolver" version="5.0.46a" provider-name="tvaddons">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
     <import addon="plugin.video.youtube" optional="true" />
     <import addon="script.module.python.twitch" optional="true" />
     <import addon="script.module.cryptopy" version="1.2.6" optional="true" />
-    <import addon="plugin.video.gdrive" optional="true" />
   </requires>
   <extension point="xbmc.python.module" library="lib" />
   <extension point="xbmc.python.pluginsource" library="lib/default.py" />
