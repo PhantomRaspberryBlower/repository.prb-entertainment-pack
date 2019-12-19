@@ -183,7 +183,6 @@ def add_to_list(list, file, refresh):
 
 def read_from_file(file):
     try:
-#        f = open(path, 'r') # DEPRICATED!!!
         f = xbmcvfs.File(file)
         r = f.read()
         f.close()
@@ -195,10 +194,8 @@ def read_from_file(file):
 def write_to_file(file, content, append=False):
     try:
         if append:
-#            f = open(path, 'a') # DEPRICATED!!!
             f = xbmcvfs.File(file, 'a')
         else:
-#            f = open(path, 'w') # DEPRICATED!!!
             f = xbmcvfs.File(file, 'w')
         f.write(content)
         f.close()
@@ -216,7 +213,6 @@ def create_directory(path, name=None):
         path = os.path.join(path, name)
     path = path.strip()
     if not xbmcvfs.exists(path):
-#        os.makedirs(dir_path) # DEPRICATED!!!
         xbmcvfs.makedirs(path)
     return path
 
@@ -226,7 +222,6 @@ def create_file(path, filename=None):
         path = os.path.join(path, filename)
     path = path.strip()
     if not xbmcvfs.exists(path):
-#        f = open(path, 'w')
         f = xbmcvfs.File(path, 'w')
         f.write('')
         f.close()
