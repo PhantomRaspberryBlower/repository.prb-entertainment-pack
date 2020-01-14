@@ -720,7 +720,7 @@
 </addon>
 
 <!-- CU LRC Lyrics -->
-<addon id="script.cu.lrclyrics" name="CU LRC Lyrics" version="5.7.3" provider-name="Taxigps, ronie">
+<addon id="script.cu.lrclyrics" name="CU LRC Lyrics" version="5.7.4" provider-name="Taxigps, ronie">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.chardet" version="2.2.1"/>
@@ -887,58 +887,48 @@
 </addon>
 
 <!-- Diamond Wizard Repo -->
-<addon id="repository.Diamond-Wizard-Repo" name=".[COLORwhite]***[/COLOR][COLOR crimson]D[/COLOR][COLOR silver]iamond Build Repo (Primary Server, Main Repo)[/COLOR][COLORwhite]***[/COLOR]" version="3.9.6" provider-name="Diamond Build">
+<addon id="repository.Diamond-Wizard-Repo" name=".[COLORwhite]***[/COLOR][COLOR crimson]D[/COLOR][COLOR silver]iamond Build Repo (Primary Server, Main Repo)[/COLOR][COLORwhite]***[/COLOR]" version="3.9.8" provider-name="Diamond Build">
   <extension point="xbmc.addon.repository" name="Diamond Wizard Repo - Primary Server">
-  <!-- Diamond Repository -->
-
     <dir>
       <info compressed="false">https://raw.githubusercontent.com/bobbybark/diamond-build-repo/master/addons.xml</info>
       <checksum>https://raw.githubusercontent.com/bobbybark/diamond-build-repo/master/addons.xml.md5</checksum>
       <datadir zip="true">https://raw.githubusercontent.com/bobbybark/diamond-build-repo/master/</datadir>
     </dir>
-
     <dir>
       <info compressed="false">https://raw.githubusercontent.com/bobbybark/diamond-7of9-addon-repo/master/addons.xml</info>
       <checksum>https://raw.githubusercontent.com/bobbybark/diamond-7of9-addon-repo/master/addons.xml.md5</checksum>
       <datadir zip="true">https://raw.githubusercontent.com/bobbybark/diamond-7of9-addon-repo/master/</datadir>
     </dir>
-
     <dir>
       <info compressed="false">https://raw.githubusercontent.com/bobbybark/diamond-7of9-dependency-repo/master/addons.xml</info>
       <checksum>https://raw.githubusercontent.com/bobbybark/diamond-7of9-dependency-repo/master/addons.xml.md5</checksum>
       <datadir zip="true">https://raw.githubusercontent.com/bobbybark/diamond-7of9-dependency-repo/master/</datadir>
     </dir>
-
     <dir>
       <info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml</info>
       <checksum>https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml.md5</checksum>
       <datadir zip="true">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/</datadir>
     </dir>
-
     <dir>
       <info compressed="false">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml</info>
       <checksum>https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml.md5</checksum>
       <datadir zip="true">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/</datadir>
     </dir>
-
     <dir>
       <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
       <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
       <datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
     </dir>
-
     <dir>
       <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
       <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
       <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
     </dir>
-
     <dir>
       <info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
       <checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
       <datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
     </dir>
-
     <dir>
       <info compressed="false">https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/addons.xml</info>
       <checksum>https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/addons.xml.md5</checksum>
@@ -1003,7 +993,7 @@
 </addon>
 
 <!-- Exodus Addon -->
-<addon id="plugin.video.exodus" version="8.3.5a" name="Exodus" provider-name="Exodus">
+<addon id="plugin.video.exodus" version="8.3.6a" name="Exodus" provider-name="Exodus">
   <requires>
     <import addon="xbmc.python" version="2.19.0" />
     <import addon="script.module.exodus" />
@@ -1184,7 +1174,7 @@
 </addon>
 
 <!-- Fido Video -->
-<addon id="plugin.video.Fido" name="Fido Video Addon" version="1.8" provider-name="Fido">
+<addon id="plugin.video.Fido" name="Fido Video Addon" version="1.9a" provider-name="Fido">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.t0mm0.common" version="2.0.0"/>
@@ -1203,7 +1193,7 @@
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en">Thanks to SimpleCore and Update by Danny (the man who can)</summary>
+    <summary lang="en">Thanks to Danny</summary>
     <description lang="en">Dedicated to Fido</description>
     <platform>all</platform>
   </extension>
@@ -2479,10 +2469,10 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- Rising Tides -->
-<addon id="plugin.video.Rising.Tides" name="[COLOR red][B]R[/B][/COLOR][COLOR white][B]ising[/B][/COLOR] [COLOR pink][B]T[/B][/COLOR][COLOR white][B]ides[/B][/COLOR]" version="1.4.22" provider-name="[COLOR turquoise][B]mullafabz[/B][/COLOR]">
+<addon id="plugin.video.Rising.Tides" name="[COLOR red][B]R[/B][/COLOR][COLOR white][B]ising[/B][/COLOR] [COLOR pink][B]T[/B][/COLOR][COLOR white][B]ides[/B][/COLOR]" version="1.4.22.1" provider-name="[COLOR turquoise][B]mullafabz[/B][/COLOR]">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.simple.downloader" optional="true"/>
+    <import addon="script.module.simple.downloader" optional="false"/>
     <import addon="script.module.beautifulsoup" version="3.2.1"/>
     <import addon="script.module.beautifulsoup4"/>
     <import addon="script.module.requests"/>
