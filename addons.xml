@@ -3189,7 +3189,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- URL Resolver -->
-<addon id="script.module.urlresolver" name="URLResolver" version="5.0.51a" provider-name="tvaddons">
+<addon id="script.module.urlresolver" name="URLResolver" version="5.0.52a" provider-name="tvaddons">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
     <import addon="plugin.video.youtube" optional="true" />
