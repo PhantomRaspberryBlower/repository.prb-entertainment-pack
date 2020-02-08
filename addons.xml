@@ -1401,7 +1401,7 @@
 </addon>
 
 <!-- iPlayer Addon -->
-<addon id="plugin.video.iplayerwww" name="iPlayer WWW" version="3.0.46" provider-name="CaptainT, Cas, ihurst, primaeval">
+<addon id="plugin.video.iplayerwww" name="iPlayer WWW" version="3.0.47" provider-name="CaptainT, Cas, ihurst, primaeval">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.requests" version="2.7.0"/>
@@ -1422,9 +1422,8 @@
       <fanart>resources/fanart.jpg</fanart>
     </assets>
     <news>
-v3.0.46
-Fixed sign in.
-Fixed CRLF in changelog.txt
+v3.0.47
+Fixed broken DASH streaming due to discontinuation of http service.
     </news>
   </extension>
 </addon>
