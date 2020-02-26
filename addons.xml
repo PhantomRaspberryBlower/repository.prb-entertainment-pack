@@ -997,7 +997,7 @@
 </addon>
 
 <!-- Exodus Addon -->
-<addon id="plugin.video.exodus" version="8.4.7a" name="Exodus" provider-name="Exodus">
+<addon id="plugin.video.exodus" version="8.4.8a" name="Exodus" provider-name="Exodus">
   <requires>
     <import addon="xbmc.python" version="2.19.0" />
     <import addon="script.module.exodus" />
