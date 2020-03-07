@@ -997,7 +997,7 @@
 </addon>
 
 <!-- Exodus Addon -->
-<addon id="plugin.video.exodus" version="8.4.8a" name="Exodus" provider-name="Exodus">
+<addon id="plugin.video.exodus" version="8.4.9a" name="Exodus" provider-name="Exodus">
   <requires>
     <import addon="xbmc.python" version="2.19.0" />
     <import addon="script.module.exodus" />
@@ -1011,6 +1011,7 @@
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>video</provides>
   </extension>
+  <extension point="xbmc.service" library="service.py" start="startup" />
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Exodus</summary>
     <description lang="en">Please visit [COLOR blue]www.exodusvpn.com[/COLOR] for Exodus support and assistance! Kindly note that Exodus is not an official part of the media player you are running, and therefore not to be mentioned within official support channels, this addon has nothing to do with the media player itself, nor it�s intended use, it is simply a third party plugin which has been added to your system.</description>
@@ -1071,7 +1072,7 @@
 </addon>
 
 <!-- Exodus Scrapers Module -->
-<addon id="script.module.exoscrapers" name="ExoScrapers Module" version="2.2.1" provider-name="Exodus">
+<addon id="script.module.exoscrapers" name="ExoScrapers Module" version="2.2.3" provider-name="Exodus">
   <requires>
     <import addon="xbmc.python" version="2.25.0" />
     <import addon="script.module.beautifulsoup4"/>
@@ -1091,7 +1092,7 @@
       <icon>icon.png</icon>
       <fanart></fanart>
     </assets>
-    <news>v2.2.1 - scrapers and log_utils fix, torrent updates, scraper fixes</news>
+    <news>v2.2.3 - scrapers and log_utils fix, torrent updates, scraper fixes</news>
   </extension>
 </addon>
 
@@ -1325,12 +1326,14 @@
 </addon>
 
 <!-- Input Stream Helper Module -->
-<addon id="script.module.inputstreamhelper" name="InputStream Helper" version="0.4.3" provider-name="emilsvennesson, dagwieers, mediaminister">
+<addon id="script.module.inputstreamhelper" name="InputStream Helper" version="0.4.4" provider-name="emilsvennesson, dagwieers, mediaminister">
   <requires>
+    <!--py3 compliant-->
+    <!--<import addon="xbmc.python" version="2.25.0" target="3.0.0"/>-->
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.pysocks" version="1.6.8" optional="true"/>
   </requires>
-  <!-- This is needed to get an addon icon -->
+  <!-- This is needed to get an add-on icon -->
   <extension point="xbmc.python.script" library="default.py">
     <provides>executable</provides>
   </extension>
@@ -1338,22 +1341,18 @@
   <extension point="xbmc.addon.metadata">
     <summary lang="en_GB">Kodi InputStream and DRM playback made easy</summary>
     <summary lang="de_DE">Kodi InputStream und DRM Wiedergabe einfach gemacht</summary>
-    <summary lang="el_GR">Βοηθός Inputstream για το Kodi και εύκολη αναπαραγωγή DRM</summary>
-    <summary lang="fr_FR">La lecture Kodi InputStream et DRM en toute simplicité</summary>
     <description lang="en_GB">A simple Kodi module that makes life easier for add-on developers relying on InputStream based add-ons and DRM playback.</description>
-    <description lang="de_DE">Dieses einfache Kodi-Modul macht das Leben für Addon Entwickler einfacher, die auf InputStream basierte Addons und DRM Wiedergabe angewiesen sind.</description>
-    <description lang="el_GR">Μία απλή μονάδα για το Kodi η οποία διευκολύνει την ζωή των προγραμματιστών οι οποίοι εξαρτώνται από τα πρόσθετσ InputStream και αναπαραγωγή τύπου DRM.</description>
-    <description lang="ru_RU">Простой модуль для Kodi, который облегчает жизнь разработчикам дополнений, с использованием InputStream дополнений и воспроизведения DRM контента.</description>
-    <description lang="fr_FR">Un simple module Kodi qui simplifie la vie des développeurs de modules complémentaires en s’appuyant sur des modules complémentaires basés sur InputStream et sur la lecture de DRM.</description>
+    <description lang="de_DE">Dieses einfache Kodi-Modul macht das Leben f�r Addon Entwickler einfacher, die auf InputStream basierte Addons und DRM Wiedergabe angewiesen sind.</description>
     <news>
-      v0.4.3 (2019-09-25)
-        - French translation
-        - Updated translations
-        - Ensure Kodi 19 compatibility
-        - Configurable temporary download directory for devices with limited space
-        - Configurable Widevine CDM update frequency
-        - Fix add-on settings crashes when InputStream Adaptive is missing
-        - Improve unicode character support
+      v0.4.4 (2020-03-01)
+        - Added option to restore a previously installed Widevine version
+        - Improve progress bar when extracting Widevine on ARM devices
+        - Improve Widevine library version detection
+        - Improve InputStream Helper information
+        - Increase download reliability for Chrome OS on ARM devices
+        - Added Japanese, Korean, Croatian and Hungarian translations
+        - Updated existing translations
+        - Various small bugfixes for Widevine installation on ARM devices
     </news>
     <platform>all</platform>
     <license>MIT</license>
@@ -1503,24 +1502,21 @@ Fixed broken DASH streaming due to discontinuation of http service.
 </addon>
 
 <!-- Kodi Bae Repo -->
-<addon id="repository.kodibae" name="[COLOR pink]Kodi Bae Repository[/COLOR]" version="2.0.0" provider-name="kodibae">
-  <requires>
-    <import addon="repository.thebackup" version="1.0.0"/>
-  </requires>
+<addon id="repository.kodibae" name="[COLOR pink]Kodi Bae Repository[/COLOR]" version="3.0.0" provider-name="kodibae">
   <extension point="xbmc.addon.repository" name="[COLOR pink]Kodi Bae Repository[/COLOR]">
     <dir>
       <info compressed="false">https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/addons.xml</info>
       <checksum>https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/addons.xml.md5</checksum>
       <datadir zip="true">https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/zips/</datadir>
     </dir>
-    <info compressed="false">https://raw.githubusercontent.com/kodibae/repository.kodibae/master/addons.xml</info>
-    <checksum>https://raw.githubusercontent.com/kodibae/repository.kodibae/master/addons.xml.md5</checksum>
-    <datadir zip="true">https://raw.githubusercontent.com/kodibae/repository.kodibae/master/</datadir>
+      <info compressed="false">https://raw.githubusercontent.com/kodibae/repository.kodibae/master/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/kodibae/repository.kodibae/master/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/kodibae/repository.kodibae/master/</datadir>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>Unofficial Addons for Kodi</summary>
-    <description>Would you care for some salt with that fork?</description>
-    <platform>all</platform>
+      <summary>Unofficial Addons for Kodi</summary>
+      <description>Would you care for some salt with that fork?</description>
+      <platform>all</platform>
   </extension>
 </addon>
 
@@ -2758,12 +2754,13 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- Streamlink Base module -->
-<addon id="script.module.streamlink.base" name="Streamlink Library" version="2020.01.28" provider-name="Streamlink Devs, Twilight0">
+<addon id="script.module.streamlink.base" name="Streamlink Library" version="2020.03.05" provider-name="Streamlink Devs, Twilight0">
   <requires>
     <import addon="xbmc.python" version="2.24.0"/>
     <import addon="script.module.requests" version="2.12.4"/>
     <import addon="script.module.futures" version="2.2.0"/>
     <import addon="script.module.cryptolib" version="1.1.0"/>
+<!--      <import addon="script.module.pycryptodome" version="3.4.3"/>-->
   </requires>
   <extension point="xbmc.python.module" library="resources/lib/"/>
   <extension point="xbmc.addon.metadata">
@@ -2776,7 +2773,10 @@ This is a Non-profit resource, organized solely for educational purposes which i
     <assets>
       <icon>icon.png</icon>
     </assets>
-    <news>+2020.01.28
+    <news>+2020.03.05
+- Updated to latest commit
+
++2020.01.28
 - Updated to latest upstream commit
 - Tweaks for import errors for Python 3</news>
   </extension>
@@ -3113,24 +3113,23 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- URL Resolver -->
-<addon id="script.module.urlresolver" name="URLResolver" version="5.0.55a" provider-name="tvaddons">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0" />
-    <import addon="plugin.video.youtube" optional="true" />
-    <import addon="script.module.python.twitch" optional="true" />
-    <import addon="script.module.cryptopy" version="1.2.6" optional="true" />
-    <import addon="plugin.video.gdrive" optional="true" />
-  </requires>
-  <extension point="xbmc.python.module" library="lib" />
-  <extension point="xbmc.python.pluginsource" library="lib/default.py" />
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-     <summary lang="en">Resolve common video host URL's to be playable in XBMC/Kodi.</summary>
-     <summary lang="es">Resolver enlaces a videos de sitios populares para poder reproducirlos en XBMC/Kodi.</summary>
-     <description lang="en">Resolve common video host URL's to be playable in XBMC/Kodi, simplify addon development of video plugins requiring multi video hosts.</description>
-     <forum>https://www.tvaddons.co/forums</forum>
-     <website>https://www.tvaddons.co</website>
-  </extension>
+<addon id="script.module.urlresolver" name="URLResolver" version="5.0.56a" provider-name="tvaddons">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0" />
+        <import addon="plugin.video.youtube" optional="true" />
+        <import addon="script.module.python.twitch" optional="true" />
+        <import addon="script.module.cryptopy" version="1.2.6" optional="true" />
+        <import addon="plugin.video.gdrive" optional="true" />
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.python.pluginsource" library="lib/default.py" />
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en">Resolve common video host URL's to be playable in XBMC/Kodi.</summary>
+        <description lang="en">Resolve common video host URL's to be playable in XBMC/Kodi, simplify addon development of video plugins requiring multi video hosts.</description>
+        <forum>https://www.tvaddons.co/forums</forum>
+        <website>https://www.tvaddons.co</website>
+    </extension>
 </addon>
 
 <!-- Urllib3 Module -->
