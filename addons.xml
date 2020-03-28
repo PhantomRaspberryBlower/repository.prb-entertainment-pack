@@ -1442,17 +1442,15 @@ Added support for BBC Scotland.
 </addon>
 
 <!-- JenRepo Repository -->
-<addon id="repository.jenrepo" name="Jen Repo" version="1.0.0" provider-name="Community">
+<addon id="repository.jenrepo" name="Jen Repo" version="1.0.1" provider-name="Community">
   <requires>
     <import addon="xbmc.addon" version="12.0.0"/>
   </requires>
   <extension point="xbmc.addon.repository" name="Jen Addon Repo">
-    <dir>
-      <info compressed="false">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml</info>
-      <checksum>https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml.md5</checksum>
-      <datadir zip="true">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/</datadir>
-      <hashes>false</hashes>
-    </dir>
+    <info compressed="false">https://raw.githubusercontent.com/jenaddon/jenrepo/__zips/addons.xml</info>
+    <checksum>https://raw.githubusercontent.com/jenaddon/jenrepo/__zips/addons.xml.md5</checksum>
+    <datadir zip="true">https://raw.githubusercontent.com/jenaddon/jenrepo/__zips/</datadir>
+    <hashes>false</hashes>
     <dir>
       <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
       <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
@@ -1464,9 +1462,14 @@ Added support for BBC Scotland.
       <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
     </dir>
     <dir>
+      <info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
+    </dir>
+    <dir>
       <info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
       <checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
-       <datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
+      <datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
     </dir>
   </extension>
   <extension point="xbmc.addon.metadata">
@@ -2434,16 +2437,16 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- Rockcrusher Repository -->
-<addon id="repository.Rockcrusher" name="[COLOR red]Rocks Repository[/COLOR]" version="2.2" provider-name="Rock">
+<addon id="repository.Rockcrusher" name="[COLOR red]Rocks Repository[/COLOR]" version="2.3" provider-name="Rock">
   <extension point="xbmc.addon.repository" name="[COLOR red]Rocks Repository[/COLOR]">
     <info compressed="false">http://Rockodi.com/addons.xml</info>
     <checksum>http://Rockodi.com/addons.xml.md5</checksum>
     <datadir zip="true">http://Rockodi.com/</datadir>
     <dir>
-      <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
-      <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
-      <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
-    </dir>
+      <info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
+    </dir>	
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary>Rocks Addons</summary>
@@ -3114,7 +3117,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- URL Resolver -->
-<addon id="script.module.urlresolver" name="URLResolver" version="5.0.59a" provider-name="tvaddons">
+<addon id="script.module.urlresolver" name="URLResolver" version="5.0.60a" provider-name="tvaddons">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
     <import addon="plugin.video.youtube" optional="true" />
