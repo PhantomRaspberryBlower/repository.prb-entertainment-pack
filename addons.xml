@@ -2,7 +2,7 @@
 <addons>
 
 <!-- PRB Install Everything Addon -->
-<addon id="script.force-install-all-ep" name="PRB Install Everything EP" version="1.14.1" provider-name="Phantom Raspberry Blower">
+<addon id="script.force-install-all-ep" name="PRB Install Everything EP" version="1.14.2" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="plugin.audio.absolute-radio"/>
@@ -22,7 +22,6 @@
     <import addon="plugin.video.placenta"/>
     <import addon="plugin.video.Rising.Tides"/>
     <import addon="plugin.video.sports-replay"/>
-    <import addon="plugin.video.snagfilms"/>
     <import addon="plugin.video.ted.talks"/>
     <import addon="plugin.video.themagicdragon"/>
     <import addon="plugin.video.world.news.live"/>
@@ -997,7 +996,7 @@
 </addon>
 
 <!-- Exodus Addon -->
-<addon id="plugin.video.exodus" version="8.5.1a" name="Exodus" provider-name="Exodus">
+<addon id="plugin.video.exodus" version="8.5.7a" name="Exodus" provider-name="Exodus">
   <requires>
     <import addon="xbmc.python" version="2.19.0" />
     <import addon="script.module.exodus" />
@@ -1071,7 +1070,7 @@
 </addon>
 
 <!-- Exodus Scrapers Module -->
-<addon id="script.module.exoscrapers" name="ExoScrapers Module" version="2.2.5" provider-name="Exodus">
+<addon id="script.module.exoscrapers" name="ExoScrapers Module" version="2.3.1" provider-name="Exodus">
   <requires>
     <import addon="xbmc.python" version="2.25.0" />
     <import addon="script.module.beautifulsoup4"/>
@@ -1085,12 +1084,13 @@
     <summary lang="en">ExoScrapers Module</summary>
     <description>Scrape common video host for URL's to be playable in Kodi, simplifying addon development of video plugins requiring multi video hosts.</description>
     <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
+    <platform>all</platform>
     <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
     <assets>
       <icon>icon.png</icon>
       <fanart></fanart>
     </assets>
-    <news>v2.2.5 - scrapers and log_utils fix, torrent updates, scraper fixes</news>
+    <news>v2.3.1 - scrapers and log_utils fix, torrent updates, scraper fixes</news>
   </extension>
 </addon>
 
@@ -1658,7 +1658,7 @@ Added support for BBC Scotland.
 </addon>
 
 <!-- Log Viewer for Kodi -->
-<addon id="script.logviewer" name="Log Viewer for Kodi" provider-name="i96751414" version="2.1.1">
+<addon id="script.logviewer" name="Log Viewer for Kodi" provider-name="i96751414" version="2.1.3">
   <requires>
     <import addon="xbmc.python" version="2.14.0"/>
   </requires>
@@ -1678,14 +1678,16 @@ Added support for BBC Scotland.
     <description lang="pt">Ferramenta para verificar e ler facilmente o log do Kodi.</description>
     <platform>all</platform>
     <news>
-- Fix android file handling
-- Add http server (webtail)
+        - Automated submissions to matrix branch
+        - Different branches for different versions
+        - Kodi addon structure adjustments for gotham and matrix
+        - Fix screenshots/artwork
     </news>
     <assets>
       <icon>icon.png</icon>
-      <screenshot>resources/images/screenshot-1.png</screenshot>
-      <screenshot>resources/images/screenshot-2.png</screenshot>
-      <screenshot>resources/images/screenshot-3.png</screenshot>
+      <screenshot>resources/images/screenshot-1.jpg</screenshot>
+      <screenshot>resources/images/screenshot-2.jpg</screenshot>
+      <screenshot>resources/images/screenshot-3.jpg</screenshot>
     </assets>
   </extension>
 </addon>
@@ -2143,7 +2145,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- PRB Clean Service -->
-<addon id="service.prb-clean" name="PRB Clean" version="0.3.5" provider-name="Phantom Raspberry Blower">
+<addon id="service.prb-clean" name="PRB Clean" version="0.3.6" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -2369,7 +2371,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- Resolver URL -->
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.0.41" provider-name="jsergio">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.0.47" provider-name="jsergio, gujal">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
     <import addon="plugin.video.youtube" optional="true" />
@@ -2625,29 +2627,6 @@ This is a Non-profit resource, organized solely for educational purposes which i
     <license>MIT</license>
     <source>https://pypi.org/project/six/</source>
     <website>https://pypi.org/project/six/</website>
-  </extension>
-</addon>
-
-<!-- SnagFilms Addon -->
-<addon id="plugin.video.snagfilms" name="Snagfilms" version="3.0.6" provider-name="t1m">
-  <requires>
-    <import addon="xbmc.python" version="2.20.0"/>
-    <import addon="script.module.t1mlib" version="1.0.18"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Snagfilms Video Addon</summary>
-    <description lang="en">SnagFilms offers a broad collection of great movies you can watch right now</description>
-    <disclaimer lang="en">Feel free to use this script. For information visit the wiki.</disclaimer>
-    <platform>all</platform>
-    <language>en</language>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-    <forum>http://forum.kodi.tv/showthread.php?tid=198859</forum>
-    <website>http://www.snagfilms.com</website>
-    <email></email>
-    <source>https://github.com/learningit/Kodi-plugins-source</source>
   </extension>
 </addon>
 
@@ -2936,7 +2915,7 @@ v4.3.1
 </addon>
 
 <!-- Transmission Addon -->
-<addon id="script.transmission" name="Transmission" version="0.7.6" provider-name="Correl Roush">
+<addon id="script.transmission" name="Transmission" version="0.7.7a" provider-name="Correl Roush">
   <requires>
     <import addon="xbmc.python" version="2.14.0"/>
     <import addon="script.module.simplejson" version="3.3.0"/>
@@ -2947,11 +2926,11 @@ v4.3.1
   <extension point="xbmc.service" library="resources/lib/player.py" start="startup"/>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">A client for the popular Transmission BitTorrent application</summary>
-    <summary lang="hu">A nÃ©pszerÅ± Transmission Bittorrent alkalmazÃ¡s vezÃ©rlÃ©se</summary>
-    <summary lang="ca">Un client de Transmission, la popular aplicaciÃ³ de Bittorrent</summary>
+    <summary lang="hu">A népszerű Transmission Bittorrent alkalmazás vezérlése</summary>
+    <summary lang="ca">Un client de Transmission, la popular aplicació de Bittorrent</summary>
     <description lang="en">Currently, Transmission-XBMC supports viewing, adding, removing, starting and stopping torrents. More advanced features may be added in future releases.</description>
-    <description lang="hu">Jelenleg a Transmission-XBMC kÃ©pes megnÃ©zni, hozzÃ¡adni, elkezdeni, Ã©s megÃ¡llÃ­tani a torrenteket. TovÃ¡bbi fejlesztÃ©sek vÃ¡rhatÃ³k a jÃ¶vÅ‘ben.</description>
-    <description lang="ca">Actualment, Transmission-XBMC permet veure, afegir, eliminar, iniciar i parar torrents. En futures versions de l'aplicaciÃ³ s'haniran afegint opcions mÃ©s avanÃ§ades.</description>
+    <description lang="hu">Jelenleg a Transmission-XBMC képes megnézni, hozzáadni, elkezdeni, és megállítani a torrenteket. További fejlesztések várhatók a jövőben.</description>
+    <description lang="ca">Actualment, Transmission-XBMC permet veure, afegir, eliminar, iniciar i parar torrents. En futures versions de l'aplicació s'haniran afegint opcions més avançades.</description>
     <platform>all</platform>
     <license>MIT</license>
     <forum></forum>
@@ -3075,7 +3054,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- Universal Scrapers Module -->
-<addon id="script.module.universalscrapers" name="Universal Scrapers" version="1.2.1a" provider-name="Team Universal">
+<addon id="script.module.universalscrapers" name="Universal Scrapers" version="1.2.3a" provider-name="Team Universal">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.beautifulsoup" version="3.2.1"/>
@@ -3117,7 +3096,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- URL Resolver -->
-<addon id="script.module.urlresolver" name="URLResolver" version="5.0.61a" provider-name="tvaddons">
+<addon id="script.module.urlresolver" name="URLResolver" version="5.0.67a" provider-name="tvaddons">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
     <import addon="plugin.video.youtube" optional="true" />
@@ -3237,6 +3216,32 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
     <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
     <forum>http://forum.xbmc.org/showthread.php?tid=128896</forum>
     <source>https://github.com/takoi/xbmc-addon-watchdog</source>
+  </extension>
+</addon>
+
+<!-- Web PDB Addon -->
+<addon id="script.module.web-pdb" name="Web-PDB" version="1.5.4" provider-name="Roman V.M.">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="script.module.bottle" version="0.12.0"/>
+  </requires>
+  <extension point="xbmc.python.script" library="main.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.python.module" library="libs" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Web-based remote Python debugger</summary>
+    <description lang="en_GB">Provides a web-UI for Python's built-in PDB debugger for remote debugging Kodi addons.</description>
+    <platform>all</platform>
+    <license>MIT</license>
+    <forum>http://forum.kodi.tv/showthread.php?tid=292141</forum>
+    <source>https://github.com/romanvm/kodi.web-pdb</source>
+    <assets>
+      <icon>icon.png</icon>
+      <screenshot>resources/screenshot.jpg</screenshot>
+    </assets>
+    <news>- 1.5.4: Fix info dialog in Kodi &quot;Matrix&quot;.
+- 1.5.3: Fix a rare issue when a debugger session cannot be started.</news>
   </extension>
 </addon>
 
@@ -3489,7 +3494,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- YouTube Addon -->
-<addon id="plugin.video.youtube" name="YouTube" version="6.7.0" provider-name="anxdpanic, bromix">
+<addon id="plugin.video.youtube" name="YouTube" version="6.8.2a" provider-name="anxdpanic, bromix">
   <requires>
     <import addon="xbmc.python" version="2.20.0"/>
     <import addon="script.module.six" version="1.11.0"/>
@@ -3503,19 +3508,15 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
   <extension point="xbmc.python.module" library="resources/lib/"/>
   <extension point="xbmc.addon.metadata">
     <news>
-[add] send PlaybackInit, PlaybackStarted, PlaybackStopped notifications containing video id, channel id, and the status of the playing video
-[fix] allow playback regardless of API status
-    - fixes playback for strm, playlists, other add-ons, and sharing videos from devices
-[fix] finding player config, allow playback to continue when not found if possible
-[fix] fix possible loop due to invalid keys and login information
-[fix] fix playback of mpeg-dash streams if HTTP Server - Listen on IP is blank
-[upd] use a dialog to notify users of API key requirements with link to wiki
-    - https://ytaddon.page.link/keys
-[rem] remove provided api keys
-[lang] de_de strings |contrib: tweimer|
-[lang] el_gr strings |contrib: twilight0|
-[lang] hu_hu strings |contrib: thelacesz|
+[fix] playback failing
+[fix] viewing comments when logged in
+[fix] intermittent issue with Subscriptions
+[fix] encoding of video unavailable messages
+[upd] updates to recommendations
+[upd] update logging for Kodi 19
+[lang] fr_fr strings |contrib: alan7000|
 [lang] pl_pl strings |contrib: drrak|
+[lang] nl_nl strings |contrib: Markman-B|
     </news>
     <assets>
       <icon>icon.png</icon>
@@ -3533,7 +3534,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
     <summary lang="hu_HU">YouTube kiegészítő</summary>
     <description lang="hu_HU">A YouTube világ egyik legnagyobb videómegosztó weboldala.</description>
     <summary lang="es_ES">Plugin para YouTube</summary>
-    <description lang="es_ES">YouTube es uno de los sitios web para compartir videos más grande del mundo.</description>
+    <description lang="es_ES">YouTube es uno de los sitios web más grande del mundo para compartir vídeos.</description>
     <disclaimer lang="es_ES">Este add-on no está respaldado por Google</disclaimer>
     <summary lang="es_MX">Plugin para YouTube</summary>
     <description lang="es_MX">YouTube es uno de los más grandes sitios web de intercambio de videos del mundo.</description>
@@ -3564,7 +3565,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
     <disclaimer lang="tr_TR">Bu eklenti Google tarafından üretilmemiştir</disclaimer>
     <platform>all</platform>
     <license>GPL-2.0-only</license>
-    <forum>https://forum.kodi.tv/showthread.php?tid=348464</forum>
+    <forum>https://ytaddon.page.link/forum</forum>
     <website>https://www.youtube.com</website>
     <email>ytplugin at datanet dot ws</email>
     <source>https://github.com/jdf76/plugin.video.youtube</source>
@@ -3573,10 +3574,11 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- YouTube Downloader Module -->
-<addon id="script.module.youtube.dl" name="youtube-dl Control" version="19.912.1" provider-name="Rick Phillips (ruuk)">
+<addon id="script.module.youtube.dl" name="youtube-dl Control" version="20.324.0" provider-name="Rick Phillips (ruuk)">
   <requires>
-    <import addon="xbmc.python" version="2.14.0" />
+    <import addon="xbmc.python" version="2.26.0" />
     <import addon="script.module.addon.signals" version="0.0.1"/>
+    <import addon="script.module.kodi-six" version="0.0.4"/>
   </requires>
   <extension point="xbmc.python.script" library="control.py">
     <provides>executable</provides>
@@ -3584,15 +3586,18 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
   <extension point="xbmc.python.module" library="lib" />
   <extension point="xbmc.addon.metadata">
     <platform>all</platform>
-    <summary lang="en">Module providing access to youtube-dl video stream extraction</summary>
-    <description lang="en">Module providing access to youtube-dl video stream extraction for hundreds of sites. Version is based on youtube-dl date version: YY.MDD.V where V is the addon specific sub-version. Also provides downloading with the option for background downloading with a queue and queue manager.</description>
-    <summary lang="el">Î’Î¿Î·Î¸Î·Ï„Î¹ÎºÎ® Î¼Î¿Î½Î¬Î´Î± Ï€ÏÏŒÏƒÎ²Î±ÏƒÎ·Ï‚ ÏƒÏ„Î¿Ï…Ï‚ ÎµÏ€Î¹Î»Ï…Ï„Î­Ï‚ youtube-dl Î³Î¹Î± Ï„Î·Î½ ÎµÎ¾Î±Î³Ï‰Î³Î® ÏÎ¿ÏŽÎ½ Î²Î¯Î½Ï„ÎµÎ¿</summary>
-    <description lang="el">Î’Î¿Î·Î¸Î·Ï„Î¹ÎºÎ® Î¼Î¿Î½Î¬Î´Î± Ï€ÏÏŒÏƒÎ²Î±ÏƒÎ·Ï‚ ÏƒÏ„Î¿Ï…Ï‚ ÎµÏ€Î¹Î»Ï…Ï„Î­Ï‚ youtube-dl Î³Î¹Î± Ï„Î·Î½ ÎµÎ¾Î±Î³Ï‰Î³Î® ÏÎ¿ÏŽÎ½ Î²Î¯Î½Ï„ÎµÎ¿ Î±Ï€ÏŒ ÎµÎºÎ±Ï„Î¿Î½Ï„Î¬Î´ÎµÏ‚ Î¹ÏƒÏ„ÏŒÏ„Î¿Ï€Î¿Ï…Ï‚. Î— Î­ÎºÎ´Î¿ÏƒÎ· Î²Î±ÏƒÎ¯Î¶ÎµÏ„Î±Î¹ ÏƒÏ„Î·Î½ Î­ÎºÎ´Î¿ÏƒÎ· Î·Î¼ÎµÏÎ¿Î¼Î·Î½Î¯Î±Ï‚ Ï„Î¿Ï… youtube-dl: EE.MHH.EK ÏŒÏ€Î¿Ï… Î•Îš Î· Ï…Ï€ÏŒ-Î­ÎºÎ´Î¿ÏƒÎ· ÏƒÏ…Î³ÎºÎµÎºÏÎ¹Î¼Î­Î½Î± Î³Î¹Î± Ï„Î¿ Ï€ÏÏŒÏƒÎ¸ÎµÏ„Î¿. Î•Ï€Î¹Ï€Î»Î­Î¿Î½ Î´Î¯Î½ÎµÎ¹ Î´Ï…Î½Î±Ï„ÏŒÏ„Î·Ï„Î± Î¼ÎµÏ„Î±Ï†ÏŒÏÏ„Ï‰ÏƒÎ·Ï‚ ÏƒÏ„Î¿ Ï€Î±ÏÎ±ÏƒÎºÎ®Î½Î¹Î¿ Î¼Îµ Î¿Ï…ÏÎ¬ ÎºÎ±Î¹ Î´Î¹Î±Ï‡ÎµÎ¹ÏÎ¹ÏƒÏ„Î® Î±Ï…Ï„Î®Ï‚.</description>
-    <summary lang="es">MÃ³dulo que proporciona acceso a YouTube-dl para la extracciÃ³n de flujos de video</summary>
-    <description lang="es">MÃ³dulo que proporciona acceso a YouTube-dl para la extracciÃ³n de flujos de video de cientos de sitios. La versiÃ³n estÃ¡ basada en la versiÃ³n de fecha youtube-dl: YY.MDD.V donde V es la subversiÃ³n especÃ­fica del complemento. TambiÃ©n permite descargas con la opciÃ³n de descarga en segundo plano con una cola y un administrador de colas.</description>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <summary lang="en_GB">Module providing access to youtube-dl video stream extraction</summary>
+    <description lang="en_GB">Module providing access to youtube-dl video stream extraction for hundreds of sites. Version is based on youtube-dl date version: YY.MDD.V where V is the addon specific sub-version. Also provides downloading with the option for background downloading with a queue and queue manager.</description>
+    <summary lang="el_EL">Βοηθητική μονάδα πρόσβασης στους επιλυτές youtube-dl για την εξαγωγή ροών βίντεο</summary>
+    <description lang="el_EL">Βοηθητική μονάδα πρόσβασης στους επιλυτές youtube-dl για την εξαγωγή ροών βίντεο από εκατοντάδες ιστότοπους. Η έκδοση βασίζεται στην έκδοση ημερομηνίας του youtube-dl: EE.MHH.EK όπου ΕΚ η υπό-έκδοση συγκεκριμένα για το πρόσθετο. Επιπλέον δίνει δυνατότητα μεταφόρτωσης στο παρασκήνιο με ουρά και διαχειριστή αυτής.</description>
+    <summary lang="es_ES">Módulo que proporciona acceso a YouTube-dl para la extracción de flujos de video</summary>
+    <description lang="es_ES">Módulo que proporciona acceso a YouTube-dl para la extracción de flujos de video de cientos de sitios. La versión está basada en la versión de fecha youtube-dl: YY.MDD.V donde V es la subversión específica del complemento. También permite descargas con la opción de descarga en segundo plano con una cola y un administrador de colas.</description>
+    <license>LGPL-2.1-only</license>
     <forum>https://forum.kodi.tv/showthread.php?tid=200877</forum>
     <source>https://github.com/ruuk/script.module.youtube.dl</source>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
   </extension>
 </addon>
 
