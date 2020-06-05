@@ -120,7 +120,7 @@
     <category label="30200">
         <setting id="youtube.api.enable" type="bool" label="30204" default="true"/>
         <setting id="youtube.api.key" type="text" label="30201" default="AIzaSyCfNRb2-D_PuN5huKnyYpC_yldyEJbQqCg" visible="eq(-1,true)"/>
-        <setting id="youtube.api.id" type="text" label="30202" default="849400600923-jc8dutd24lhqm5dlm5jj2j8nk9ulsfr7.apps.googleusercontent.com" visible="eq(-2,true)"/>
+        <setting id="youtube.api.id" type="text" label="30202" default="849400600923-jc8dutd24lhqm5dlm5jj2j8nk9ulsfr7" visible="eq(-2,true)"/>
         <setting id="youtube.api.secret" type="text" label="30203" default="yo0SOMIdR1h9i7WuQkvnUDqh" visible="eq(-3,true)"/>
         <setting id="youtube.api.key.switch" type="enum" label="30205" values="0|1|2|3|4|5" visible="eq(-4,false)" default="1"/>
         <setting id="youtube.allow.dev.keys" type="bool" label="30608" default="true"/>
