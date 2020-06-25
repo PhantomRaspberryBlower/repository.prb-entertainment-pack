@@ -30,7 +30,6 @@ Addons installed by this addon:
   - Rising Tides (Sport Live)
   - RSS Editor (Add RSS Subcriptions)
   - RSS Reader (Displays RSS Feeds)
-  - Snagfilms (Classic Movies)
   - Sports Replay (Sports Replay)
   - System Info (Displays System Information)
   - TED Talks (lectures)

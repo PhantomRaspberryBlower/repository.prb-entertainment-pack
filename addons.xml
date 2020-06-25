@@ -996,7 +996,7 @@
 </addon>
 
 <!-- Exodus Addon -->
-<addon id="plugin.video.exodus" version="8.5.9a" name="Exodus" provider-name="Exodus">
+<addon id="plugin.video.exodus" version="8.6.0a" name="Exodus" provider-name="Exodus">
   <requires>
     <import addon="xbmc.python" version="2.19.0" />
     <import addon="script.module.exodus" />
@@ -1070,7 +1070,7 @@
 </addon>
 
 <!-- Exodus Scrapers Module -->
-<addon id="script.module.exoscrapers" name="ExoScrapers Module" version="2.3.3" provider-name="Exodus">
+<addon id="script.module.exoscrapers" name="ExoScrapers Module" version="2.3.4" provider-name="Exodus">
   <requires>
     <import addon="xbmc.python" version="2.25.0" />
     <import addon="script.module.beautifulsoup4" />
@@ -1091,10 +1091,13 @@
       <icon>icon.png</icon>
       <fanart></fanart>
     </assets>
-    <news>2.3.3
-- begin work for py3 compatibility - tikipete
-- BTDB fix for domain change
-- torrents updates</news>
+    <news>2.3.4
+- Update cfscrape to 1.2.41
+- Added option to Settings "Show Changelog"
+- Added option to Settings "Notify Me About Available Updates"
+- Removed SEEHD, v2 cloudflare challenge
+- Added new free hoster WATCHEPISODESERIES1
+- fixed and brought back 5MOVIES</news>
   </extension>
 </addon>
 
@@ -2375,9 +2378,8 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- Resolver URL -->
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.0" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.1" provider-name="gujal">
   <requires>
-    <!-- <import addon="xbmc.python" version="3.0.0" /> -->
     <import addon="script.module.six" version="0.0.1"/>
     <import addon="plugin.video.youtube" optional="true" />
     <import addon="script.module.python.twitch" optional="true" />
@@ -2752,7 +2754,6 @@ This is a Non-profit resource, organized solely for educational purposes which i
     <import addon="script.module.requests" version="2.12.4"/>
     <import addon="script.module.futures" version="2.2.0"/>
     <import addon="script.module.cryptolib" version="1.1.0"/>
-<!--      <import addon="script.module.pycryptodome" version="3.4.3"/>-->
   </requires>
   <extension point="xbmc.python.module" library="resources/lib/"/>
   <extension point="xbmc.addon.metadata">
@@ -3105,13 +3106,13 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- URL Resolver -->
-<addon id="script.module.urlresolver" name="URLResolver" version="5.1.0a" provider-name="tvaddons">
+<addon id="script.module.urlresolver" name="URLResolver" version="5.1.1a" provider-name="tvaddons">
   <requires>
-    <!-- <import addon="xbmc.python" version="3.0.0" /> -->
     <import addon="script.module.six" version="0.0.1"/>
     <import addon="plugin.video.youtube" optional="true" />
     <import addon="script.module.python.twitch" optional="true" />
     <import addon="script.module.cryptopy" version="1.2.6" optional="true" />
+    <import addon="plugin.video.gdrive" optional="true" />
   </requires>
   <extension point="xbmc.python.module" library="lib" />
   <extension point="xbmc.python.pluginsource" library="lib/default.py" />
@@ -3582,7 +3583,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- YouTube Downloader Module -->
-<addon id="script.module.youtube.dl" name="youtube-dl Control" version="20.324.0" provider-name="Rick Phillips (ruuk)">
+<addon id="script.module.youtube.dl" name="youtube-dl Control" version="20.616.0" provider-name="Rick Phillips (ruuk)">
   <requires>
     <import addon="xbmc.python" version="2.26.0" />
     <import addon="script.module.addon.signals" version="0.0.1"/>
