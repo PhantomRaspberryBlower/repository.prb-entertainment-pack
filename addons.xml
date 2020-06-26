@@ -1370,7 +1370,7 @@
 </addon>
 
 <!-- IP 2 Location Addon -->
-<addon id="script.ip-2-location" name="IP 2 Location" version="0.0.5" provider-name="Phantom Raspberry Blower">
+<addon id="script.ip-2-location" name="IP 2 Location" version="0.0.6" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
   </requires>
@@ -1397,7 +1397,7 @@
       <screenshot>resources/media/screenshot002.jpg</screenshot>
       <screenshot>resources/media/screenshot003.jpg</screenshot>
     </assets>
-    <news>Updated IP Info Module</news>
+    <news>Updated changes made to underlining HTML</news>
     <email></email>
     <source>https://github.com/PhantomRaspberryBlower/repository.prb-entertainment-pack/tree/master/script.ip-2-location</source>
   </extension>

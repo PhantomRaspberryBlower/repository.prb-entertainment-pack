@@ -128,27 +128,24 @@ class IPInfo:
             return 'Error getting WAN IP Address!'
 
 
-    def  _ip_info(self, ipaddr=None):
+    def _ip_info(self, ipaddr=None):
+        text = ''
         """
         Show Location
         """
         try:
             response = self._get_url(URL + ipaddr)
-            address = self._regex_from_to(response.replace('\t', '')
-                                          .replace('\n', '').replace('  ', ''),
-                                          '<div class="address-inner">',
-                                          '</div></div></div></div>')
-            match1 = re.compile('<li class="clearfix">(.+?)</li>').findall(address)
-            text = ''
-            for item in match1:
-                match2 = re.compile('<span class="address-list-left">'
-                                    '(.+?)</span><spa(.+?)>(.+?)</span>').findall(item)
-                for key, junk, value in match2:
+            address = response.replace('\t', '').replace('\n', '').replace('  ', '')
+            matchrows = re.compile('<dl class="row">(.+?)</dl>').findall(address)
+            for item in matchrows:
+                matchitems = re.compile('<dt class="col-sm-4 mb-md-3">(.+?)</dt>'
+                                        '<dd class="col-sm-8 mb-md-9">(.+?)</dd>').findall(item)
+                for key, value in matchitems:
                     if '<a' in value:
                         value = self._regex_from_to(value, '">', '</a>')
                     text += ('%s: %s\n') % (key, value)
             self.__ip_addr = ipaddr
-            self.__coordinates = self._regex_from_to(text, 'Coordinates : ', '\n')
+            self.__coordinates = self._regex_from_to(text, 'Coordinates: ', '\n')
             self.__country = self._regex_from_to(text, 'Country: ', '\n')
             try:
                 self.__hostname = self._regex_from_to(text, 'Hostname: ', '\n')
@@ -164,8 +161,8 @@ class IPInfo:
             lat_lon = self.__coordinates
             self.__map_image = 'https://maps.googleapis.com/maps/api/staticmap' \
                                '?center=%s&zoom=11&&size=%s&key=%s' % (lat_lon,
-                               	                                       IMG_SIZE,
-                               	                                       API_KEY)
+                                                                       IMG_SIZE,
+                                                                       API_KEY)
             self.__city = self._regex_from_to(text, 'City: ', '\n')
             try:
                 url = 'https://en.wikipedia.org/w/api.php?action=query&prop=' \
@@ -194,6 +191,7 @@ class IPInfo:
                     'map_image': self.__map_image}
         except:
             return 'Error getting IP address info!'
+
 
     def get_ip_info(self, ipaddr):
         """
