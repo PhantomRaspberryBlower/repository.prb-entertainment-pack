@@ -10,7 +10,6 @@ Downloads and installs addons.
 Addons installed by this addon:
   - Absolute Radio (Stream Music)
   - BBC Radio (Stream Live Radio)
-  - Cartoongo (Kids Animation)
   - Classic British Comedy (Movies & TV Shows)
   - Confluence OSMC (Confluence Skin for OSMC)
   - Crackle (Sony Movies)
@@ -23,7 +22,6 @@ Addons installed by this addon:
   - Learn a Language (Tutorial)
   - Leicester Community Radio (Internet Radio)
   - MP3 Music (Music Albums & Songs)
-  - Placenta (Movies & TV Shows)
   - PRB Clean (Removes obsolete addons)
   - PRB Radio (Stream music)
   - PRB Install Everything EP (Forces installation of most addons)
@@ -34,6 +32,7 @@ Addons installed by this addon:
   - System Info (Displays System Information)
   - TED Talks (lectures)
   - The Magic Dragon (Movies & TV Shows)
+  - Venom (Movies & TV Shows)
   - Virtual DJ (Internet Music)
   - Websters Wildshots (Nature Picture Addon)
   - World News Live (News from Around the World)

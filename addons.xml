@@ -2,7 +2,7 @@
 <addons>
 
 <!-- PRB Install Everything Addon -->
-<addon id="script.force-install-all-ep" name="PRB Install Everything EP" version="1.14.2" provider-name="Phantom Raspberry Blower">
+<addon id="script.force-install-all-ep" name="PRB Install Everything EP" version="1.14.3" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="plugin.audio.absolute-radio"/>
@@ -12,18 +12,16 @@
     <import addon="plugin.audio.mp3music"/>
     <import addon="plugin.audio.prb-radio"/>
     <import addon="plugin.program.dreamcatcher"/>
-    <import addon="plugin.video.cartoongo"/>
-    <import addon="plugin.video.crackle"/>
     <import addon="plugin.video.exodus"/>
     <import addon="plugin.video.Fido"/>
     <import addon="plugin.video.iplayerwww"/>
     <import addon="plugin.video.itv"/>
     <import addon="plugin.video.learnlanguageallstars"/>
-    <import addon="plugin.video.placenta"/>
     <import addon="plugin.video.Rising.Tides"/>
     <import addon="plugin.video.sports-replay"/>
     <import addon="plugin.video.ted.talks"/>
     <import addon="plugin.video.themagicdragon"/>
+    <import addon="plugin.video.venom"/>
     <import addon="plugin.video.world.news.live"/>
     <import addon="plugin.video.yoda"/>
     <import addon="plugin.video.youtube"/>
@@ -1331,10 +1329,9 @@
 </addon>
 
 <!-- Input Stream Helper Module -->
-<addon id="script.module.inputstreamhelper" name="InputStream Helper" version="0.4.4" provider-name="emilsvennesson, dagwieers, mediaminister">
+<addon id="script.module.inputstreamhelper" name="InputStream Helper" version="0.5.0" provider-name="emilsvennesson, dagwieers, mediaminister, horstle">
   <requires>
     <!--py3 compliant-->
-    <!--<import addon="xbmc.python" version="2.25.0" target="3.0.0"/>-->
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.pysocks" version="1.6.8" optional="true"/>
   </requires>
@@ -1346,18 +1343,22 @@
   <extension point="xbmc.addon.metadata">
     <summary lang="en_GB">Kodi InputStream and DRM playback made easy</summary>
     <summary lang="de_DE">Kodi InputStream und DRM Wiedergabe einfach gemacht</summary>
+    <summary lang="el_GR">Βοηθός Inputstream για το Kodi και εύκολη αναπαραγωγή DRM</summary>
+    <summary lang="fr_FR">La lecture Kodi InputStream et DRM en toute simplicité</summary>
+    <summary lang="es_ES">Kodi InputStream y reproducción DRM echa fácil</summary>
     <description lang="en_GB">A simple Kodi module that makes life easier for add-on developers relying on InputStream based add-ons and DRM playback.</description>
     <description lang="de_DE">Dieses einfache Kodi-Modul macht das Leben für Addon Entwickler einfacher, die auf InputStream basierte Addons und DRM Wiedergabe angewiesen sind.</description>
+    <description lang="el_GR">Μία απλή μονάδα για το Kodi η οποία διευκολύνει την ζωή των προγραμματιστών οι οποίοι εξαρτώνται από τα πρόσθετσ InputStream και αναπαραγωγή τύπου DRM.</description>
+    <description lang="ru_RU">Простой модуль для Kodi, который облегчает жизнь разработчикам дополнений, с использованием InputStream дополнений и воспроизведения DRM контента.</description>
+    <description lang="fr_FR">Un simple module Kodi qui simplifie la vie des développeurs de modules complémentaires en s’appuyant sur des modules complémentaires basés sur InputStream et sur la lecture de DRM.</description>
+    <description lang="es_ES">Un módulo Kodi simple que hace la vida más fácil para los desarrolladores de complementos que dependen de complementos basados en InputStream y reproducción de DRM.</description>
     <news>
-      v0.4.4 (2020-03-01)
-        - Added option to restore a previously installed Widevine version
-        - Improve progress bar when extracting Widevine on ARM devices
-        - Improve Widevine library version detection
-        - Improve InputStream Helper information
-        - Increase download reliability for Chrome OS on ARM devices
-        - Added Japanese, Korean, Croatian and Hungarian translations
-        - Updated existing translations
-        - Various small bugfixes for Widevine installation on ARM devices
+     v0.5.0 (2020-06-25)
+        - Extract Widevine CDM directly from Chrome OS, minimizing disk space usage and eliminating the need for root access
+        - Improve progress dialog while extracting Widevine CDM on ARM devices
+        - Support resuming interrupted downloads on unreliable internet connections
+        - Reshape InputStream Helper information dialog
+        - Updated Dutch, English, French, German, Greek, Hungarian, Romanian, Russian, Spanish and Swedish translations
     </news>
     <platform>all</platform>
     <license>MIT</license>
@@ -1969,6 +1970,44 @@ Added support for BBC Scotland.
   </extension>
 </addon>
 
+<!-- Open Scrapers Addon -->
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="0.0.2.006" provider-name="Addons4Kodi">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0" />
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.requests" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="lib/default.py">
+    <provides>executable</provides>
+  </extension> 
+  <extension point="xbmc.service" library="lib/service.py" start="startup" />
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">OpenScrapers Module</summary>
+    <description>Scrape common video host for URL's to be playable in Kodi, simplifying addon development of video plugins requiring multi video hosts.</description>
+    <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+    <forum></forum>
+    <website>https://github.com/a4k-openproject/script.module.openscrapers</website>
+    <source>https://github.com/a4k-openproject/script.module.openscrapers</source>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart></fanart>
+      <screenshot></screenshot>
+    </assets>
+    <news>
+0.0.2.006
+- Small fix to client module for Referer link
+- Added new free hoster WATCHSERIESTV
+- fixed and brought back CARTOONHD
+- small fix for SHOWBOX vid quality
+- Added new free hoster MYPUTLOCKERS
+    </news>
+  </extension>
+</addon>
+
 <!-- Open subtitles Addon -->
 <addon id="service.subtitles.opensubtitles_by_opensubtitles" name="OpenSubtitles.org by OpenSubtitles" version="5.2.15" provider-name="amet, opensubtitles">
   <requires>
@@ -2152,7 +2191,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- PRB Clean Service -->
-<addon id="service.prb-clean" name="PRB Clean" version="0.3.6" provider-name="Phantom Raspberry Blower">
+<addon id="service.prb-clean" name="PRB Clean" version="0.3.7" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -3145,6 +3184,189 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
     <assets>
       <icon>resources/icon.png</icon>
     </assets>
+  </extension>
+</addon>
+
+<!-- Venom -->
+<addon id="plugin.video.venom" version="3.7.4" name="[COLOR red]Venom[/COLOR]" provider-name="Venom">
+  <requires>
+    <import addon="xbmc.python" version="2.19.0" />
+    <import addon="script.module.requests" version="2.19.1" />
+    <import addon="script.module.beautifulsoup4" version="4.5.3"/>
+    <import addon="script.module.metahandler" version="2.9.0" />
+    <import addon="plugin.video.youtube" version="6.2.0" />
+    <import addon="script.module.resolveurl" version="5.0.27" />
+    <import addon="script.module.openscrapers" />
+    <import addon="script.module.addon.signals" version="0.0.3" />
+    <import addon="context.venom" version="1.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="venom.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="startup" />
+  <extension point="xbmc.python.module" library="resources/lib/" />
+  <extension point="xbmc.addon.metadata">
+    <reuselanguageinvoker>false</reuselanguageinvoker> <!-- You can enable this if you want, expect some instability but much faster menu speeds -->
+    <summary lang="en">[B][COLOR red]Venom[/COLOR][/B] - We do not host any of the contents streamed</summary>
+    <description lang="en">[B][COLOR red]Venom[/COLOR][/B][CR] This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.[CR]The author does not host any of the content in this addon and takes no responsibility for content found</description>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+    <forum></forum>
+    <website>https://github.com/123Venom/plugin.video.venom</website>
+    <source>https://github.com/123Venom/plugin.video.venom</source>
+    <disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+      <screenshot>resources/screenshots/screenshot001.jpg</screenshot>
+      <screenshot>resources/screenshots/screenshot002.jpg</screenshot>
+      <screenshot>resources/screenshots/screenshot003.jpg</screenshot>
+    </assets>
+    <news>
+[B][COLOR red]Update - v3.7.4 - June 27, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Added new ability to show "Help" file text for settings options
+    deemed confusing.  I will add more upon request[/I]
+[COLOR yellow]--[/COLOR][I] Fixed issue with one item in Trakt progress not showing
+    show title.[/I]
+[COLOR yellow]--[/COLOR][I] Added option for multi episode lists to show or not show
+     unwatched count.  See new Help for more info[/I]
+    </news>
+  </extension>
+</addon>
+
+<!-- Venom Context -->
+<addon id="context.venom" version="1.0.5" name="Venom - Global Context Menu Items" provider-name="Venom">
+  <requires>
+    <import addon="xbmc.python" version="2.23.0" />
+  </requires>
+  <extension point="kodi.context.item">
+    <menu id="kodi.core.main">
+      <item library="contextSettings.py">
+        <label>[B][COLOR red]Venom[/COLOR][/B] - CM Settings</label>
+        <visible>
+          !String.IsEmpty(Window(home).Property(context.venom.settings)) +
+          String.StartsWith(ListItem.path,plugin://plugin.video.venom/) +
+          String.IsEqual(ListItem.Property(isVenom_widget),true)
+        </visible>
+      </item>
+      <item library="traktManager.py">
+        <label>[B][COLOR red]Venom[/COLOR][/B] - Trakt Manager</label>
+        <visible>
+          !String.IsEmpty(Window(home).Property(context.venom.traktManager)) +
+          String.StartsWith(ListItem.path,plugin://plugin.video.venom/) +
+          String.IsEqual(ListItem.Property(isVenom_widget),true) +
+          [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,movie)]
+        </visible>
+      </item>
+      <item library="clearProviders.py">
+        <label>[B][COLOR red]Venom[/COLOR][/B] - Clear Providers</label>
+        <visible>
+          !String.IsEmpty(Window(home).Property(context.venom.clearProviders)) +
+          String.StartsWith(ListItem.FolderPath,plugin://plugin.video.venom/?action=play) +
+          String.IsEqual(ListItem.Property(isVenom_widget),true) +
+          [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
+        </visible>
+      </item>
+      <item library="clearBookmark.py">
+        <label>[B][COLOR red]Venom[/COLOR][/B] - Clear Item Bookmark</label>
+        <visible>
+          !String.IsEmpty(Window(home).Property(context.venom.clearBookmark)) +
+          String.StartsWith(ListItem.FolderPath,plugin://plugin.video.venom/?action=play) +
+          String.IsEqual(ListItem.Property(isVenom_widget),true) +
+          <!-- !String.IsEqual(ListItem.Property(resumetime),0) + -->
+          !String.IsEqual(ListItem.Property(venom_resumetime),0) +
+          [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
+        </visible>
+      </item>
+      <item library="rescrape.py">
+        <label>[B][COLOR red]Venom[/COLOR][/B] - Rescrape Item</label>
+        <visible>
+          !String.IsEmpty(Window(home).Property(context.venom.rescrape)) +
+          String.StartsWith(ListItem.FolderPath,plugin://plugin.video.venom/?action=play) +
+          String.IsEqual(ListItem.Property(isVenom_widget),true) +
+          [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
+        </visible>
+      </item>
+      <item library="playFromHere.py">
+        <label>[B][COLOR red]Venom[/COLOR][/B] - Play from here</label>
+        <visible>
+          !String.IsEmpty(Window(home).Property(context.venom.playFromHere)) +
+          String.StartsWith(ListItem.path,plugin://plugin.video.venom/) +
+          String.IsEqual(ListItem.Property(isVenom_widget),true) +
+          String.IsEqual(ListItem.dbtype,episode)
+        </visible>
+      </item>
+      <item library="autoPlay.py">
+        <label>[B][COLOR red]Venom[/COLOR][/B] - Auto Play</label>
+        <visible>
+          String.IsEmpty(Window(home).Property(plugin.video.venom.autoPlay)) +
+          !String.IsEmpty(Window(home).Property(context.venom.autoPlay)) +
+          String.StartsWith(ListItem.FolderPath,plugin://plugin.video.venom/?action=play) +
+          String.IsEqual(ListItem.Property(isVenom_widget),true) +
+          [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
+        </visible>
+      </item>
+      <item library="sourceSelect.py">
+        <label>[B][COLOR red]Venom[/COLOR][/B] - Source Select</label>
+        <visible>
+          !String.IsEmpty(Window(home).Property(plugin.video.venom.autoPlay)) +
+          !String.IsEmpty(Window(home).Property(context.venom.sourceSelect)) +
+          String.StartsWith(ListItem.FolderPath,plugin://plugin.video.venom/?action=play) +
+          String.IsEqual(ListItem.Property(isVenom_widget),true) +
+          [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
+        </visible>
+      </item>
+      <item library="findSimilar.py">
+        <label>[B][COLOR red]Venom[/COLOR][/B] - Find Similar</label>
+        <visible>
+          !String.IsEmpty(Window(home).Property(context.venom.findSimilar)) +
+          String.StartsWith(ListItem.path,plugin://plugin.video.venom/) +
+          String.IsEqual(ListItem.Property(isVenom_widget),true) +
+          [String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie)]
+        </visible>
+      </item>
+      <item library="browseSeries.py">
+        <label>[B][COLOR red]Venom[/COLOR][/B] - Browse Series</label>
+        <visible>
+          !String.IsEmpty(Window(home).Property(context.venom.browseSeries)) +
+          String.StartsWith(ListItem.path,plugin://plugin.video.venom/) +
+          String.IsEqual(ListItem.Property(isVenom_widget),true) +
+          [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow)]
+        </visible>
+      </item>
+      <item library="browseEpisodes.py">
+        <label>[B][COLOR red]Venom[/COLOR][/B] - Browse Episodes</label>
+        <visible>
+          !String.IsEmpty(Window(home).Property(context.venom.browseEpisodes)) +
+          String.StartsWith(ListItem.path,plugin://plugin.video.venom/) +
+          String.IsEqual(ListItem.Property(isVenom_widget),true) +
+          String.IsEqual(ListItem.dbtype,episode)
+          <!-- [String.IsEqual(ListItem.dbtype,episode) | !String.IsEmpty(ListItem.Property(multi_episodes))] -->
+        </visible>
+      </item>
+    </menu>
+  </extension>
+  <extension point="xbmc.service" library="service.py" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Venom - This Addon is currently in beta. Please be aware there may be bugs present</summary>
+    <description lang="en">Adds Global Contextual Menu Items for Venom menu items throughout Kodi
+    </description>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+    <forum></forum>
+    <website></website>
+    <source></source>
+    <disclaimer lang="en"></disclaimer>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.png</fanart>
+    </assets>
+    <news>
+[B][COLOR red]Update - v1.0.5 - May 29, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Added service for settings changes.  This now helps items
+    to change and be more responsive than before.[/I]
+[COLOR yellow]--[/COLOR][I] Fixed issue where wrong year wascausing bookmark issues.[/I]
+    </news>
   </extension>
 </addon>
 
