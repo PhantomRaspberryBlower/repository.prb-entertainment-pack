@@ -994,7 +994,7 @@
 </addon>
 
 <!-- Exodus Addon -->
-<addon id="plugin.video.exodus" version="8.6.0a" name="Exodus" provider-name="Exodus">
+<addon id="plugin.video.exodus" version="8.6.1a" name="Exodus" provider-name="Exodus">
   <requires>
     <import addon="xbmc.python" version="2.19.0" />
     <import addon="script.module.exodus" />
@@ -1068,7 +1068,7 @@
 </addon>
 
 <!-- Exodus Scrapers Module -->
-<addon id="script.module.exoscrapers" name="ExoScrapers Module" version="2.3.4" provider-name="Exodus">
+<addon id="script.module.exoscrapers" name="ExoScrapers Module" version="2.3.5" provider-name="Exodus">
   <requires>
     <import addon="xbmc.python" version="2.25.0" />
     <import addon="script.module.beautifulsoup4" />
@@ -1089,13 +1089,16 @@
       <icon>icon.png</icon>
       <fanart></fanart>
     </assets>
-    <news>2.3.4
-- Update cfscrape to 1.2.41
-- Added option to Settings "Show Changelog"
-- Added option to Settings "Notify Me About Available Updates"
-- Removed SEEHD, v2 cloudflare challenge
-- Added new free hoster WATCHEPISODESERIES1
-- fixed and brought back 5MOVIES</news>
+    <news>2.3.5
+- More work for Py3 compatibility
+- changed settings.xml, moved foreign scrapers 
+- fixed and brought back ULTRAHDINDIR
+- fixed MYVIDEOLINK, again
+- fixed encode issue in 5MOVIES
+- changed YOURBITTORENT default to 'false'.  Server timeout issues of late
+- changed MKVHUB default to 'false'.  Cloudflare v2 challenge, may be removed if persists
+- changed YESMOVIESGG default to 'false'.  Cloudflare v2 challenge, may be removed if persists
+- fixed client module redundant error logging</news>
   </extension>
 </addon>
 
@@ -1971,7 +1974,7 @@ Added support for BBC Scotland.
 </addon>
 
 <!-- Open Scrapers Addon -->
-<addon id="script.module.openscrapers" name="OpenScrapers Module" version="0.0.2.006" provider-name="Addons4Kodi">
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="0.0.2.007" provider-name="Addons4Kodi">
   <requires>
     <import addon="xbmc.python" version="2.25.0" />
     <import addon="script.module.beautifulsoup4" />
@@ -1998,6 +2001,8 @@ Added support for BBC Scotland.
       <screenshot></screenshot>
     </assets>
     <news>
+0.0.2.007
+- More work for Py3 compatibility
 0.0.2.006
 - Small fix to client module for Referer link
 - Added new free hoster WATCHSERIESTV

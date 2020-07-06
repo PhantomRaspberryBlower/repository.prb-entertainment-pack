@@ -12,7 +12,6 @@ Addons installed by this addon:
   - BBC Radio (Stream Live Radio)
   - Classic British Comedy (Movies & TV Shows)
   - Confluence OSMC (Confluence Skin for OSMC)
-  - Crackle (Sony Movies)
   - DemonFM (Internet Radio)
   - Dreamcatcher (Download Current Stream)
   - Exodus (Movies & TV Shows)
