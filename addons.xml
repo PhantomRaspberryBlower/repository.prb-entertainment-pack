@@ -994,7 +994,7 @@
 </addon>
 
 <!-- Exodus Addon -->
-<addon id="plugin.video.exodus" version="8.6.1a" name="Exodus" provider-name="Exodus">
+<addon id="plugin.video.exodus" version="8.6.2a" name="Exodus" provider-name="Exodus">
   <requires>
     <import addon="xbmc.python" version="2.19.0" />
     <import addon="script.module.exodus" />
@@ -1068,7 +1068,7 @@
 </addon>
 
 <!-- Exodus Scrapers Module -->
-<addon id="script.module.exoscrapers" name="ExoScrapers Module" version="2.3.5" provider-name="Exodus">
+<addon id="script.module.exoscrapers" name="ExoScrapers Module" version="2.3.6" provider-name="Exodus">
   <requires>
     <import addon="xbmc.python" version="2.25.0" />
     <import addon="script.module.beautifulsoup4" />
@@ -1089,7 +1089,7 @@
       <icon>icon.png</icon>
       <fanart></fanart>
     </assets>
-    <news>2.3.5
+    <news>2.3.6
 - More work for Py3 compatibility
 - changed settings.xml, moved foreign scrapers 
 - fixed and brought back ULTRAHDINDIR
@@ -2422,8 +2422,9 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- Resolver URL -->
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.1" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.2" provider-name="gujal">
   <requires>
+    <!-- <import addon="xbmc.python" version="3.0.0" /> -->
     <import addon="script.module.six" version="0.0.1"/>
     <import addon="plugin.video.youtube" optional="true" />
     <import addon="script.module.python.twitch" optional="true" />
