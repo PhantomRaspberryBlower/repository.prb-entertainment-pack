@@ -38,7 +38,7 @@
   </extension>    
   <extension point="xbmc.addon.metadata">
     <summary>Entertainment Pack</summary>
-    <description>Defines media sources and download settings.[CR][CR]Downloads and installs add-ons from Phantom Raspberry Blower Repo[CR][CR]Addons installed by this addon are:[CR]Absolute Radio, BBC Radio, Blaze TV, Cartoongo, Classic British Comedy, DeathStar, Dreamcatcher, Exodus, Fido Video, Exodus, ITV, Neptune Rising, MP3 Music, Placenta, PRB Clean, Quest TV, RSS Editor, RSS Viewer, Snag Films, Squad Control, TED Talks, UK Turks, UKTV Play, Websters Wildshots, World News Live, Yoda, YouTube[CR]</description>
+    <description>Defines media sources and download settings.[CR][CR]Downloads and installs add-ons from Phantom Raspberry Blower Repo[CR][CR]Addons installed by this addon are:[CR]Absolute Radio, BBC Radio, Classic British Comedy, Dreamcatcher, Exodus, Fido Video, Exodus, ITV, MP3 Music, PRB Clean, RSS Editor, RSS Viewer, TED Talks, UKTV Play, Venom, Websters Wildshots, World News Live, Yoda, YouTube[CR]</description>
     <disclaimer>[COLOR red][B]Phantom Raspberry Blower[/B][/COLOR] accepts no responsibility for included addons.</disclaimer>
     <platform>all</platform>
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
