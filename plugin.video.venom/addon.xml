@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.venom" version="4.0" name="[COLOR red]Venom[/COLOR]" provider-name="Venom">
+<addon id="plugin.video.venom" version="4.0.4" name="[COLOR red]Venom[/COLOR]" provider-name="Venom">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="script.module.requests" version="2.19.1" />
@@ -34,13 +34,11 @@
 			<screenshot>resources/screenshots/screenshot003.jpg</screenshot>
 		</assets>
 		<news>
-[B][COLOR red]Update - v3.7.4 - June 27, 2020[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Added new ability to show "Help" file text for settings options
-    deemed confusing.  I will add more upon request[/I]
-[COLOR yellow]--[/COLOR][I] Fixed issue with one item in Trakt progress not showing
-    show title.[/I]
-[COLOR yellow]--[/COLOR][I] Added option for multi episode lists to show or not show
-     unwatched count.  See new Help for more info[/I]
+[B][COLOR red]Update - v4.0.4 - Aug. 02, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Sorry folks completely forgot about .strm library file
+    playback with the new pack file work, they were badly
+    broken.  This is now fixed including resolving of pack
+    files from library as well.[/I]
 		</news>
 	</extension>
 </addon>
