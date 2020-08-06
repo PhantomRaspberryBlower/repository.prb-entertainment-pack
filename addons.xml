@@ -3192,7 +3192,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- Venom -->
-<addon id="plugin.video.venom" version="4.0.4" name="[COLOR red]Venom[/COLOR]" provider-name="Venom">
+<addon id="plugin.video.venom" version="4.0.6" name="[COLOR red]Venom[/COLOR]" provider-name="Venom">
   <requires>
     <import addon="xbmc.python" version="2.19.0" />
     <import addon="script.module.requests" version="2.19.1" />
@@ -3200,7 +3200,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
     <import addon="script.module.metahandler" version="2.9.0" />
     <import addon="plugin.video.youtube" version="6.2.0" />
     <import addon="script.module.resolveurl" version="5.0.27" />
-    <import addon="script.module.openscrapers" />
+    <import addon="script.module.openscrapers" version="0.0.2.008"/>
     <import addon="script.module.addon.signals" version="0.0.3" />
     <import addon="context.venom" version="1.0.0"/>
   </requires>
@@ -3225,13 +3225,22 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
       <screenshot>resources/screenshots/screenshot001.jpg</screenshot>
       <screenshot>resources/screenshots/screenshot002.jpg</screenshot>
       <screenshot>resources/screenshots/screenshot003.jpg</screenshot>
-    </assets>
+     </assets>
     <news>
-[B][COLOR red]Update - v4.0.4 - Aug. 02, 2020[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Sorry folks completely forgot about .strm library file
-    playback with the new pack file work, they were badly
-    broken.  This is now fixed including resolving of pack
-    files from library as well.[/I]
+[B][COLOR red]Update - v4.0.6 - Aug. 05, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Fixed issue with "Watched Count" setting dropping
+    show-seasons that do not contain a valid imdb_id.[/I]
+[COLOR yellow]--[/COLOR][I] Fixed db issue for shows mentioned above.  This also
+    caused issues in rare cases that the very next
+    episode scraped also did not contain a valid 
+    imdb_id the returned sources would include
+    previous scrape.  This is now fixed and invalid
+    imdb_id entries are wiped from the db.[/I]
+[COLOR yellow]--[/COLOR][I] Changed Pack scraping option to ON by default
+    and changed OpenScrapers dependency to required
+    version to comply. Previous installs will not change.[/I]
+[COLOR yellow]--[/COLOR][I] Added "sample" to filter string for packs files to ignore
+    in resolving.[/I]
     </news>
   </extension>
 </addon>
