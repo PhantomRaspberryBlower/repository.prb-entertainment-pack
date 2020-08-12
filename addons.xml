@@ -403,7 +403,7 @@
 </addon>
 
 <!-- Classic British Comedy Addon -->
-<addon id="plugin.video.yt-comedy" name="Classic British Comedy" version="1.0.0" provider-name="coldkeys">
+<addon id="plugin.video.yt-comedy-Diamondize" name="[COLOR aqua][B]Best British Comedy[/B][/COLOR] (v1.1)" version="1.1" provider-name="diamondwizard">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.addon.common" version="2.0.0"/>
@@ -413,8 +413,9 @@
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en">Classic British Comedy</summary>
-    <description lang="en">Classic British Comedy, comedians, stand-up, series and films.</description>
+    <summary lang="en">Best British Comedy</summary>
+    <description lang="en">Best British Comedy, Is a fork of classic british Comedy, comedians, stand-up, series and films.</description>
+    <disclaimer>The owners and submitters to this repository do not host or distribute any of the content displayed by these addons nor do they have any affiliation with the content providers.</disclaimer>	
     <platform>all</platform>
     <forum>n/a</forum>
     <website>n/a</website>
@@ -810,56 +811,41 @@
 </addon>
 
 <!-- Diamond Wizard Repo -->
-<addon id="repository.Diamond-Wizard-Repo" name=".[COLORwhite]***[/COLOR][COLOR crimson]D[/COLOR][COLOR silver]iamond Build Repo (Primary Server, Main Repo)[/COLOR][COLORwhite]***[/COLOR]" version="4.1a" provider-name="Diamond Build">
+<addon id="repository.Diamond-Wizard-Repo" name=" (v6.8) Diamond Build Repo (Primary Server, Main Repo)" version="6.8a" provider-name="Diamond Build">
   <requires>
     <import addon="xbmc.addon" version="12.0.0"/>
   </requires>
   <extension point="xbmc.addon.repository" name="Diamond Wizard Repo - Primary Server">
   <!-- Diamond Repository -->
     <info compressed="false">https://raw.githubusercontent.com/bobbybark/diamond-build-repo/master/addons.xml</info>
-    <checksum>https://raw.githubusercontent.com/bobbybark/diamond-build-repo/master/addons.xml.md5</checksum>
-    <datadir zip="true">https://raw.githubusercontent.com/bobbybark/diamond-build-repo/master/</datadir>
-    <hashes>false</hashes>
-    <dir>
-      <info compressed="false">https://raw.githubusercontent.com/bobbybark/diamond-7of9-addon-repo/master/addons.xml</info>
-      <checksum>https://raw.githubusercontent.com/bobbybark/diamond-7of9-addon-repo/master/addons.xml.md5</checksum>
-      <datadir zip="true">https://raw.githubusercontent.com/bobbybark/diamond-7of9-addon-repo/master/</datadir>
-    </dir>
-    <dir>
-      <info compressed="false">https://raw.githubusercontent.com/bobbybark/diamond-7of9-dependency-repo/master/addons.xml</info>
-      <checksum>https://raw.githubusercontent.com/bobbybark/diamond-7of9-dependency-repo/master/addons.xml.md5</checksum>
-      <datadir zip="true">https://raw.githubusercontent.com/bobbybark/diamond-7of9-dependency-repo/master/</datadir>
-    </dir>
-    <dir>
-      <info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml</info>
-      <checksum>https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml.md5</checksum>
-      <datadir zip="true">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/</datadir>
-    </dir>
-    <dir>
-      <info compressed="false">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml</info>
-      <checksum>https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml.md5</checksum>
-      <datadir zip="true">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/</datadir>
-    </dir>
-    <dir>
-      <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
-      <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
-      <datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
-    </dir>
-    <dir>
-      <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
-      <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
-      <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
-    </dir>
-    <dir>
-      <info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
-      <checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
-      <datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
-    </dir>
-    <dir>
-      <info compressed="false">https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/addons.xml</info>
-      <checksum>https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/addons.xml.md5</checksum>
-      <datadir zip="true">https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/</datadir>
-    </dir>
+      <checksum>https://raw.githubusercontent.com/bobbybark/diamond-build-repo/master/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/bobbybark/diamond-build-repo/master/</datadir>
+      <hashes>false</hashes>	
+      <dir>
+        <info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
+      </dir>	
+      <dir>
+        <info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/</datadir>
+      </dir>	
+      <dir>
+        <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
+      </dir>
+      <dir>
+        <info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
+      </dir>
+      <dir>
+        <info compressed="false">https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/</datadir>
+      </dir>		
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Diamond Addons / Primary Server, Main Repo</summary>
@@ -1416,7 +1402,7 @@ Added support for BBC Scotland.
 </addon>
 
 <!-- js2py Module -->
-<addon id="script.module.js2py" name="js2py" version="0.6.6" provider-name="Addons4Kodi">
+<addon id="script.module.js2py" name="js2py" version="0.6.6a" provider-name="Addons4Kodi">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.six" version="1.11.0"/>
@@ -2194,7 +2180,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- Pyjsparser Module -->
-<addon id="script.module.pyjsparser" name="pyjsparser" version="2.7.2" provider-name="Addons4Kodi">
+<addon id="script.module.pyjsparser" name="pyjsparser" version="2.7.2a" provider-name="Addons4Kodi">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
   </requires>
@@ -2864,7 +2850,7 @@ v4.3.1
 </addon>
 
 <!-- The Magic Dragon Addon -->
-<addon id="plugin.video.themagicdragon" name="The Magic Dragon" version="1.33" provider-name="Magic Dragon">
+<addon id="plugin.video.themagicdragon" name="The Magic Dragon" version="1.38" provider-name="Magic Dragon">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.t0mm0.common" version="2.0.0"/>
@@ -2875,8 +2861,7 @@ v4.3.1
     <import addon="script.module.httplib2" />
     <import addon="script.module.youtube.dl" optional="true"/>
     <import addon="plugin.video.youtube" version="3.0.0"/>
-    <import addon="script.module.urlresolver" />
-    <import addon="script.module.simplejson" />
+    <import addon="script.module.simplejson" /> 
     <import addon="script.common.plugin.cache" version="2.5.2"/>
     <import addon="script.module.metahandler" version="2.5.1"/>
     <import addon="script.module.resolveurl" version="5.0.00"/>
