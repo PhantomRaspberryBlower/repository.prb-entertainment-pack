@@ -28,7 +28,6 @@
     <import addon="plugin.video.yt-comedy"/>
     <import addon="script.image.websterswildshots"/>
     <import addon="script.module.liveresolver"/>
-    <import addon="script.module.sportsreplay"/>
     <import addon="script.module.universalscrapers"/>
     <import addon="script.rss.editor"/>
     <import addon="script.rss-reader"/>
@@ -365,45 +364,6 @@
   </extension>
 </addon>
 
-<!-- CartoonGo Addon -->
-<addon id="plugin.video.cartoongo" version="1.0.5" name="cartoongo" provider-name="Dknight, Modded by Phantom Raspberry Blower">
-  <requires>
-    <import addon="xbmc.python" version="2.25.0" />
-    <import addon="script.module.simplejson" />
-    <import addon="script.module.urlresolver" />
-    <import addon="script.module.t0mm0.common" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>cartoongo</summary>
-    <description>Watch anime on cartoongo</description>
-    <disclaimer>
-      [COLOR red][B]Phantom Raspberry Blower[/B][/COLOR] does not host or distribute any of the content provided by this addon. Does not have any affiliation with the content provider and accepts no responsibility for the included addon.
-    </disclaimer>
-    <platform>all</platform>
-    <language></language>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-    <forum></forum>
-    <website></website>
-    <assets>
-      <icon>resources/icon.png</icon>
-      <fanart>resources/fanart.jpg</fanart>
-      <screenshot>resources/media/screenshot000.jpg</screenshot>
-      <screenshot>resources/media/screenshot001.jpg</screenshot>
-      <screenshot>resources/media/screenshot002.jpg</screenshot>
-      <screenshot>resources/media/screenshot003.jpg</screenshot>
-      <screenshot>resources/media/screenshot004.jpg</screenshot>
-      <screenshot>resources/media/screenshot005.jpg</screenshot>
-      <screenshot>resources/media/screenshot006.jpg</screenshot>
-    </assets>
-    <news>Updated icon images</news>
-    <email></email>
-    <source>https://github.com/PhantomRaspberryBlower/repository.prb-entertainment-pack/tree/master/plugin.video.cartoongo</source>
-  </extension>
-</addon>
-
 <!-- Certifi Module -->
 <addon id="script.module.certifi" name="certifi" version="2019.9.11" provider-name="Kenneth Reitz">
   <requires>
@@ -665,40 +625,6 @@
       <screenshot>resources/screenshot-09.jpg</screenshot>
     </assets>
     <news>Added support for new episode spoilers feature.</news>
-  </extension>
-</addon>
-
-<!-- Crackle -->
-<addon id="plugin.video.crackle" name="Crackle" version="2019.10.2" provider-name="eracknaphobia">
-  <requires>
-    <import addon="xbmc.python" version="2.25.0"/>
-    <import addon="script.module.requests" version="2.9.1"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="main.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-    <summary lang="en_GB">Crackle delivers popular, award-winning TV, movies and originals. With no limit to how much you can watch across all your devices, you can binge all you want, wherever you want.</summary>
-    <description lang="en_GB">Crackle is a video streaming distributor of original web shows, Hollywood movies, and TV shows. Founded in the early 2000s as Grouper, and rebranded in 2007, Crackle is owned by Sony Pictures Entertainment.</description>
-      <news>
-        Thanks to Sreekanth for the following updates
-        - set mediatype for movies, tvshows and episodes appropriately
-        - use addon_url variable
-        - little bit of cleanup
-        - set the correct content type for directory listing
-        - set fanart and poster for list items in directory. Now, it can displaâ€¦
-        - display tvshow title for episodes
-      </news>
-    <language>en</language>
-    <platform>all</platform>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-    <forum></forum>
-    <source>https://github.com/eracknaphobia/plugin.video.crackle</source>
-    <assets>
-      <icon>icon.png</icon>
-      <fanart>fanart.jpg</fanart>
-    </assets>
   </extension>
 </addon>
 
@@ -2418,7 +2344,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- Resolver URL -->
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.4" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.5" provider-name="gujal">
   <requires>
     <!-- <import addon="xbmc.python" version="3.0.0" /> -->
     <import addon="script.module.six" version="0.0.1"/>
@@ -2439,13 +2365,13 @@ This is a Non-profit resource, organized solely for educational purposes which i
     <description lang="hr_HR">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju, pojednostavnjuje razvoj priključaka za video dodatke koji zahtjevaju višestruke video izvore.</description>
     <assets>
       <icon>icon.png</icon>
-     <fanart>fanart.jpg</fanart>
+      <fanart>fanart.jpg</fanart>
     </assets>
   </extension>
 </addon>
 
 <!-- Rising Tides -->
-<addon id="plugin.video.Rising.Tides" name="[COLOR red][B]R[/B][/COLOR][COLOR white][B]ising[/B][/COLOR] [COLOR pink][B]T[/B][/COLOR][COLOR white][B]ides[/B][/COLOR]" version="1.4.22.2" provider-name="[COLOR turquoise][B]mullafabz[/B][/COLOR]">
+<addon id="plugin.video.Rising.Tides" name="Rising Tides" version="1.4.22.3" provider-name="mullafabz">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.simple.downloader" optional="false"/>
