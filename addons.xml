@@ -2701,12 +2701,12 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- Streamlink Base module -->
-<addon id="script.module.streamlink.base" name="Streamlink Library" version="2020.03.05" provider-name="Streamlink Devs, Twilight0">
+<addon id="script.module.streamlink.base" name="Streamlink Library" version="2020.08.09" provider-name="Streamlink Devs, Twilight0">
   <requires>
-    <import addon="xbmc.python" version="2.24.0"/>
+    <import addon="xbmc.python" version="2.26.0"/>
     <import addon="script.module.requests" version="2.12.4"/>
-    <import addon="script.module.futures" version="2.2.0"/>
-    <import addon="script.module.cryptolib" version="1.1.0"/>
+    <import addon="script.module.futures" version="2.2.0" optional="true"/>
+    <import addon="script.module.pycryptodome" />
   </requires>
   <extension point="xbmc.python.module" library="resources/lib/"/>
   <extension point="xbmc.addon.metadata">
@@ -2719,7 +2719,15 @@ This is a Non-profit resource, organized solely for educational purposes which i
     <assets>
       <icon>icon.png</icon>
     </assets>
-    <news>+2020.03.05
+    <news>+2020.08.09
+- Update to latest upstream commit
+- Futures module is not set to optional (on Kodi 19 it is not imported)
+
++2020.06.21
+- Updated to latest commit
+- Dropped cryptolib in favour of pycryptodome
+
++2020.03.05
 - Updated to latest commit
 
 +2020.01.28
@@ -3058,7 +3066,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- URL Resolver -->
-<addon id="script.module.urlresolver" name="URLResolver" version="5.1.4a" provider-name="tvaddons">
+<addon id="script.module.urlresolver" name="URLResolver" version="5.1.5a" provider-name="tvaddons">
   <requires>
     <!-- <import addon="xbmc.python" version="3.0.0" /> -->
     <import addon="script.module.six" version="0.0.1"/>
@@ -3081,7 +3089,6 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
     <website>https://www.tvaddons.co</website>
   </extension>
 </addon>
-
 
 <!-- Urllib3 Module -->
 <addon id="script.module.urllib3" name="urllib3" version="1.25.6" provider-name="Andrey Petrov">
