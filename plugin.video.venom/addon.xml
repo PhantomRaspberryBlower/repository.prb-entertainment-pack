@@ -1,28 +1,27 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.venom" version="4.0.7" name="[COLOR red]Venom[/COLOR]" provider-name="Venom">
+<addon id="plugin.video.venom" name="[COLOR red]Venom[/COLOR]" provider-name="Venom" version="4.0.8">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="script.module.requests" version="2.19.1" />
-		<import addon="script.module.beautifulsoup4" version="4.5.3"/>
+		<import addon="script.module.beautifulsoup4" version="4.5.3" />
 		<import addon="script.module.metahandler" version="2.9.0" />
 		<import addon="plugin.video.youtube" version="6.2.0" />
 		<import addon="script.module.resolveurl" version="5.0.27" />
-		<import addon="script.module.openscrapers" version="0.0.2.008"/>
+		<import addon="script.module.openscrapers" version="0.0.2.008" />
 		<import addon="script.module.addon.signals" version="0.0.3" />
-		<import addon="context.venom" version="1.0.0"/>
+		<import addon="context.venom" version="1.0.0" />
 	</requires>
-	<extension point="xbmc.python.pluginsource" library="venom.py">
+	<extension library="venom.py" point="xbmc.python.pluginsource">
 		<provides>video</provides>
 	</extension>
-	<extension point="xbmc.service" library="service.py" start="startup" />
-	<extension point="xbmc.python.module" library="resources/lib/" />
+	<extension library="service.py" point="xbmc.service" start="startup" />
+	<extension library="resources/lib/" point="xbmc.python.module" />
 	<extension point="xbmc.addon.metadata">
-		<reuselanguageinvoker>false</reuselanguageinvoker> <!-- You can enable this if you want, expect some instability but much faster menu speeds -->
+		<reuselanguageinvoker>false</reuselanguageinvoker> 
 		<summary lang="en">[B][COLOR red]Venom[/COLOR][/B] - We do not host any of the contents streamed</summary>
 		<description lang="en">[B][COLOR red]Venom[/COLOR][/B][CR] This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.[CR]The author does not host any of the content in this addon and takes no responsibility for content found</description>
 		<platform>all</platform>
 		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-		<forum></forum>
+		<forum />
 		<website>https://github.com/123Venom/plugin.video.venom</website>
 		<source>https://github.com/123Venom/plugin.video.venom</source>
 		<disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
@@ -34,23 +33,25 @@
 			<screenshot>resources/screenshots/screenshot003.jpg</screenshot>
 		</assets>
 		<news>
-[B][COLOR red]Update - v4.0.7 - Aug. 15, 2020[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Fixed issue with free hosters not showing in source
-    select.[/I]
-[COLOR yellow]--[/COLOR][I] Added new "Premium Services" menu.  At this time
-    only Premiumize.me is fully functional.  I had no
-    intention of releasing this till PM, RD, and AD was
-    complete but the item list above bit me in the ass.
-    You can view, play, and manage your cloud account
-    from here.[/I]
-[COLOR yellow]--[/COLOR][I] Added Context Menu option "Cache to cloud" for
-    selected uncached torrent provided seeder count
-    is not 0 for the selected item.  If you have uncached
-    torrents removed this option is not available at this
-    time.  I'm considering adding a yes-no dialog to load
-    uncached torrents if no sources found and user has
-    removed uncached torrents.  This would give you an
-    opportunity to cache an item to your cloud.[/I]
+[B][COLOR red]Update - v4.0.8 - Aug. 23, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Changed episode unaired condition when meta
+    provider does not return a premiered date.  The
+    item is now considered unaired.[/I]
+[COLOR yellow]--[/COLOR][I] Added Real-Debrid to the new "Premium Services"
+    menu.  You can view, play, download, and manage
+    your RD account from here.[/I]
+[COLOR yellow]--[/COLOR][I] Added a new setting that allows user to flip and test
+    kodi 18's new setting called "reuselanguageinvoker" that
+    greatly improves the performance of the addon.
+    Option is found under the "Debugging-Developer Mode".
+    You must enable Developer mode for option to be visible.
+    Note that this is an experimental feature you can test.
+    It has been reported that this can cause kodi to crash
+    and seems to effect widgets.  The issue has been posted
+    to Team Kodi's github so it's on them to fix it. I'm not
+    discussing this experimental inclusion beyond this.[/I]
+[COLOR yellow]--[/COLOR][I] Many code changes for the above have taken place
+    to comply with its requirements.[/I]
 		</news>
 	</extension>
 </addon>

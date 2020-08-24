@@ -54,6 +54,7 @@ Optional Addons:
   - Sandman Media (Repository)
   - TheBackup (Repository)
   - Universal Scrapers (Repository)
+  - Venom (Repository)
   - XBMC Hub (Repository)
   - Watchdog (scans changes to library)
 
