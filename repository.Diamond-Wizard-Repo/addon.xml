@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.Diamond-Wizard-Repo" name=" (v6.8) Diamond Build Repo (Primary Server, Main Repo)" version="6.8a" provider-name="Diamond Build">
+<addon id="repository.Diamond-Wizard-Repo" name=" (v6.9a) [COLORwhite]***[/COLOR][COLOR crimson]D[/COLOR][COLOR silver]iamond Build Repo (Primary Server, Main Repo)[/COLOR][COLORwhite]***[/COLOR]" version="6.9a" provider-name="Diamond Build">
 	<requires>
 		<import addon="xbmc.addon" version="12.0.0"/>
 	</requires>
@@ -33,7 +33,12 @@
 			<info compressed="false">https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/addons.xml</info>
 			<checksum>https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/addons.xml.md5</checksum>
 			<datadir zip="true">https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/</datadir>
-		</dir>		
+		</dir>	
+		<dir>
+			<info compressed="false">https://repo.rubyjewelwizard.com/repo/diamond/back2thepass/zips/addons.xml</info>
+			<checksum>https://repo.rubyjewelwizard.com/repo/diamond/back2thepass/zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://repo.rubyjewelwizard.com/repo/diamond/back2thepass/zips/</datadir>
+		</dir>			
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">Diamond Addons / Primary Server, Main Repo</summary>
