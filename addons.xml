@@ -1887,7 +1887,7 @@ Added support for BBC Scotland.
 </addon>
 
 <!-- Open Scrapers Addon -->
-<addon id="script.module.openscrapers" name="OpenScrapers Module" version="0.0.2.010" provider-name="Addons4Kodi">
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="0.0.2.011" provider-name="Addons4Kodi">
   <requires>
     <import addon="xbmc.python" version="2.25.0" />
     <import addon="script.module.beautifulsoup4" />
@@ -1899,6 +1899,7 @@ Added support for BBC Scotland.
   <extension point="xbmc.service" library="lib/service.py" start="startup" />
   <extension point="xbmc.python.module" library="lib" />
   <extension point="xbmc.addon.metadata">
+    <reuselanguageinvoker>false</reuselanguageinvoker> 
     <platform>all</platform>
     <summary lang="en">OpenScrapers Module</summary>
     <description>Scrape common video host for URL's to be playable in Kodi, simplifying addon development of video plugins requiring multi video hosts.</description>
@@ -1914,9 +1915,8 @@ Added support for BBC Scotland.
       <screenshot></screenshot>
     </assets>
     <news>
-- Fixed some hosters broken by previous pack file support inclusion.
-- Few pack file filter tweaks.
-- Removed a few new cloudflare v2 challenge scrapers
+0.0.2.011
+- Torrent scraper fixes.
     </news>
   </extension>
 </addon>
@@ -2330,7 +2330,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- Resolver URL -->
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.6" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.7" provider-name="gujal">
   <requires>
     <!-- <import addon="xbmc.python" version="3.0.0" /> -->
     <import addon="script.module.six" version="0.0.1"/>
@@ -2348,7 +2348,10 @@ This is a Non-profit resource, organized solely for educational purposes which i
     <summary lang="hr_HR">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju.</summary>
     <summary lang="el_GR">Επίλυση συνδέσμων κοινών εξυπηρετητών σε μορφή βίντεο ικανό για αναπαραγωγή στο XBMC/Kodi.</summary>
     <description lang="en_GB">Resolve common video host URL's to be playable in XBMC/Kodi, simplify addon development of video plugins requiring multi video hosts.</description>
+    <description lang="el_GR">Επίλυση συνδέσμων κοινών εξυπηρετητών σε μορφή βίντεο ικανό για αναπαραγωγή στο XBMC/Kodi, απλοποίηση της ανάπτυξης των προσθέτων που χρησιμοποιούν πολλαπλούς εξυπηρετητές για υλικό βίντεο</description>
     <description lang="hr_HR">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju, pojednostavnjuje razvoj priključaka za video dodatke koji zahtjevaju višestruke video izvore.</description>
+    <disclaimer lang="en_GB">This script only resolves video content from legitimate file lockers without prejudice. If this script is being used by 3rd parties to resolve content that you feel infringes upon your Intellectual Property then please take your complaints to the actual website or developer linking to such content and not here. This script in no way searches for any content whatsoever.</disclaimer>
+    <disclaimer lang="el_GR">Το ανωτέρο σενάριο το μόνο που κάνει είναι να επιλύει οπτικοακουστικό περιεχόμενο από νόμιμες πηγές χωρίς προκατάληψη. Εάν το ανωτέρο σενάριο χρησιμοποιηθεί από τρίτους ώστε να επιλύσει περιεχόμενο το οποίο σας προκαλεί αντίδραση ότι παραβιάζει την πνευματική σας ιδιοκτησία παρακαλώ μεταφέρετε τα παραπονά σας στον ιστότοπο τον οποίο βρίσκεται το εν λόγω περιεχόμενο η τον δημιουργό ο οποίος πραγματοποιεί την σύνδεση και όχι εδω. Το σενάριο αυτό ουδεμία περίπτωση πραγματοποιεί αναζήτηση περιεχομένου.</disclaimer>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -3110,7 +3113,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- Venom -->
-<addon id="plugin.video.venom" name="[COLOR red]Venom[/COLOR]" provider-name="Venom" version="4.0.8">
+<addon id="plugin.video.venom" name="[COLOR red]Venom[/COLOR]" provider-name="Venom" version="4.1.1">
   <requires>
     <import addon="xbmc.python" version="2.19.0" />
     <import addon="script.module.requests" version="2.19.1" />
@@ -3128,7 +3131,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
   <extension library="service.py" point="xbmc.service" start="startup" />
   <extension library="resources/lib/" point="xbmc.python.module" />
   <extension point="xbmc.addon.metadata">
-    <reuselanguageinvoker>false</reuselanguageinvoker> 
+    <reuselanguageinvoker>true</reuselanguageinvoker> 
     <summary lang="en">[B][COLOR red]Venom[/COLOR][/B] - We do not host any of the contents streamed</summary>
     <description lang="en">[B][COLOR red]Venom[/COLOR][/B][CR] This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.[CR]The author does not host any of the content in this addon and takes no responsibility for content found</description>
     <platform>all</platform>
@@ -3145,31 +3148,14 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
       <screenshot>resources/screenshots/screenshot003.jpg</screenshot>
     </assets>
     <news>
-[B][COLOR red]Update - v4.0.8 - Aug. 23, 2020[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Changed episode unaired condition when meta
-    provider does not return a premiered date.  The
-    item is now considered unaired.[/I]
-[COLOR yellow]--[/COLOR][I] Added Real-Debrid to the new "Premium Services"
-    menu.  You can view, play, download, and manage
-    your RD account from here.[/I]
-[COLOR yellow]--[/COLOR][I] Added a new setting that allows user to flip and test
-    kodi 18's new setting called "reuselanguageinvoker" that
-    greatly improves the performance of the addon.
-    Option is found under the "Debugging-Developer Mode".
-    You must enable Developer mode for option to be visible.
-    Note that this is an experimental feature you can test.
-    It has been reported that this can cause kodi to crash
-    and seems to effect widgets.  The issue has been posted
-    to Team Kodi's github so it's on them to fix it. I'm not
-    discussing this experimental inclusion beyond this.[/I]
-[COLOR yellow]--[/COLOR][I] Many code changes for the above have taken place
-    to comply with its requirements.[/I]
+[B][COLOR red]Update - v4.1.1 – Sept. 04, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Fixed issue with fresh install failing with log error notice.[/I]
     </news>
   </extension>
 </addon>
 
 <!-- Venom Context -->
-<addon id="context.venom" version="1.0.5" name="Venom - Global Context Menu Items" provider-name="Venom">
+<addon id="context.venom" version="1.0.7" name="Venom - Global Context Menu Items" provider-name="Venom">
   <requires>
     <import addon="xbmc.python" version="2.23.0" />
   </requires>
@@ -3182,11 +3168,11 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
           String.StartsWith(ListItem.path,plugin://plugin.video.venom/) +
           String.IsEqual(ListItem.Property(isVenom_widget),true)
         </visible>
-      </item>
+			</item>
       <item library="traktManager.py">
         <label>[B][COLOR red]Venom[/COLOR][/B] - Trakt Manager</label>
         <visible>
-          !String.IsEmpty(Window(home).Property(context.venom.traktManager)) +
+          !String.IsEmpty(Window(home).Property(context.venom.traktManager))
           String.StartsWith(ListItem.path,plugin://plugin.video.venom/) +
           String.IsEqual(ListItem.Property(isVenom_widget),true) +
           [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,movie)]
@@ -3207,7 +3193,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
           !String.IsEmpty(Window(home).Property(context.venom.clearBookmark)) +
           String.StartsWith(ListItem.FolderPath,plugin://plugin.video.venom/?action=play) +
           String.IsEqual(ListItem.Property(isVenom_widget),true) +
-          <!-- !String.IsEqual(ListItem.Property(resumetime),0) + -->
+          <!-- String.IsEqual(ListItem.Property(resumetime),0) + -->
           !String.IsEqual(ListItem.Property(venom_resumetime),0) +
           [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
         </visible>
@@ -3219,6 +3205,10 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
           String.StartsWith(ListItem.FolderPath,plugin://plugin.video.venom/?action=play) +
           String.IsEqual(ListItem.Property(isVenom_widget),true) +
           [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
+          <!-- Future for Library CM to Rescrape -->
+          <!-- !String.IsEmpty(Window(home).Property(context.venom.rescrape)) +
+            [String.Contains(ListItem.Path,plugin.video.venom) + String.IsEqual(ListItem.FileExtension,strm) | String.StartsWith(ListItem.FolderPath,plugin://plugin.video.venom/?action=play)] +
+            [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)] -->
         </visible>
       </item>
       <item library="playFromHere.py">
@@ -3257,7 +3247,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
           String.StartsWith(ListItem.path,plugin://plugin.video.venom/) +
           String.IsEqual(ListItem.Property(isVenom_widget),true) +
           [String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie)]
-        </visible>
+         </visible>
       </item>
       <item library="browseSeries.py">
         <label>[B][COLOR red]Venom[/COLOR][/B] - Browse Series</label>
@@ -3296,10 +3286,8 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
       <fanart>fanart.png</fanart>
     </assets>
     <news>
-[B][COLOR red]Update - v1.0.5 - May 29, 2020[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Added service for settings changes.  This now helps items
-    to change and be more responsive than before.[/I]
-[COLOR yellow]--[/COLOR][I] Fixed issue where wrong year wascausing bookmark issues.[/I]
+[B][COLOR red]Update - v1.0.7 - Sept 04, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Fix typo in version bump and updated changelog[/I]
     </news>
   </extension>
 </addon>

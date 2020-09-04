@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="context.venom" version="1.0.5" name="Venom - Global Context Menu Items" provider-name="Venom">
+<addon id="context.venom" version="1.0.7" name="Venom - Global Context Menu Items" provider-name="Venom">
 	<requires>
 		<import addon="xbmc.python" version="2.23.0" />
 	</requires>
@@ -49,6 +49,11 @@
 					String.StartsWith(ListItem.FolderPath,plugin://plugin.video.venom/?action=play) +
 					String.IsEqual(ListItem.Property(isVenom_widget),true) +
 					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
+
+<!-- Future for Library CM to Rescrape -->
+<!-- 					!String.IsEmpty(Window(home).Property(context.venom.rescrape)) +
+					[String.Contains(ListItem.Path,plugin.video.venom) + String.IsEqual(ListItem.FileExtension,strm) | String.StartsWith(ListItem.FolderPath,plugin://plugin.video.venom/?action=play)] +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)] -->
 				</visible>
 			</item>
 			<item library="playFromHere.py">
@@ -126,10 +131,8 @@
 			<fanart>fanart.png</fanart>
 		</assets>
 		<news>
-[B][COLOR red]Update - v1.0.5 - May 29, 2020[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Added service for settings changes.  This now helps items
-    to change and be more responsive than before.[/I]
-[COLOR yellow]--[/COLOR][I] Fixed issue where wrong year wascausing bookmark issues.[/I]
+[B][COLOR red]Update - v1.0.7 - Sept 04, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Fix typo in version bump and updated changelog[/I]
 		</news>
 	</extension>
 </addon>
