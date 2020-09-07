@@ -1887,7 +1887,7 @@ Added support for BBC Scotland.
 </addon>
 
 <!-- Open Scrapers Addon -->
-<addon id="script.module.openscrapers" name="OpenScrapers Module" version="0.0.2.011" provider-name="Addons4Kodi">
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="0.0.2.012" provider-name="Addons4Kodi">
   <requires>
     <import addon="xbmc.python" version="2.25.0" />
     <import addon="script.module.beautifulsoup4" />
@@ -2330,7 +2330,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- Resolver URL -->
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.7" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.8" provider-name="gujal">
   <requires>
     <!-- <import addon="xbmc.python" version="3.0.0" /> -->
     <import addon="script.module.six" version="0.0.1"/>
@@ -3113,7 +3113,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- Venom -->
-<addon id="plugin.video.venom" name="[COLOR red]Venom[/COLOR]" provider-name="Venom" version="4.1.1">
+<addon id="plugin.video.venom" name="[COLOR red]Venom[/COLOR]" provider-name="Venom" version="4.1.2">
   <requires>
     <import addon="xbmc.python" version="2.19.0" />
     <import addon="script.module.requests" version="2.19.1" />
@@ -3148,8 +3148,9 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
       <screenshot>resources/screenshots/screenshot003.jpg</screenshot>
     </assets>
     <news>
-[B][COLOR red]Update - v4.1.1 – Sept. 04, 2020[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Fixed issue with fresh install failing with log error notice.[/I]
+[B][COLOR red]Update - v4.1.2 – Sept. 05, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Fixed hosters not displayed from previous update.  Hoster
+    support may be removed is the near future.[/I]
     </news>
   </extension>
 </addon>

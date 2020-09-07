@@ -1,4 +1,4 @@
-<addon id="plugin.video.venom" name="[COLOR red]Venom[/COLOR]" provider-name="Venom" version="4.1.1">
+<addon id="plugin.video.venom" name="[COLOR red]Venom[/COLOR]" provider-name="Venom" version="4.1.2">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="script.module.requests" version="2.19.1" />
@@ -33,8 +33,9 @@
 			<screenshot>resources/screenshots/screenshot003.jpg</screenshot>
 		</assets>
 		<news>
-[B][COLOR red]Update - v4.1.1 – Sept. 04, 2020[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Fixed issue with fresh install failing with log error notice.[/I]
+[B][COLOR red]Update - v4.1.2 – Sept. 05, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Fixed hosters not displayed from previous update.  Hoster
+    support may be removed is the near future.[/I]
 		</news>
 	</extension>
 </addon>
