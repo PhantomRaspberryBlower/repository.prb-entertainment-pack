@@ -913,7 +913,7 @@
 </addon>
 
 <!-- Exodus Addon -->
-<addon id="plugin.video.exodus" version="8.6.5a" name="Exodus" provider-name="Exodus">
+<addon id="plugin.video.exodus" version="8.6.6a" name="Exodus" provider-name="Exodus">
   <requires>
     <import addon="xbmc.python" version="2.19.0" />
     <import addon="script.module.exodus" />
@@ -974,7 +974,7 @@
 </addon>
 
 <!-- Exodus Module -->
-<addon id="script.module.exodus" name="Exodus Module" version="3.2.3" provider-name="Exodus">
+<addon id="script.module.exodus" name="Exodus Module" version="3.2.4" provider-name="Exodus">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
     <import addon="script.module.beautifulsoup4"/>
@@ -987,7 +987,7 @@
 </addon>
 
 <!-- Exodus Scrapers Module -->
-<addon id="script.module.exoscrapers" name="ExoScrapers Module" version="2.3.9" provider-name="Exodus">
+<addon id="script.module.exoscrapers" name="ExoScrapers Module" version="2.4.0" provider-name="Exodus">
   <requires>
     <import addon="xbmc.python" version="2.25.0" />
     <import addon="script.module.beautifulsoup4" />
@@ -1009,8 +1009,8 @@
       <fanart></fanart>
     </assets>
     <news>
-2.3.9
-- Torrent scraper fixes.
+2.4.0
+- Scraper updates
     </news>
   </extension>
 </addon>
