@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="repository.venom" name="[COLOR red]Venom[/COLOR] Repository" version="1.9" provider-name="Venom">
+<addon id="repository.venom" name="[COLOR red]Venom[/COLOR] Repository" version="1.12" provider-name="Venom">
 	<extension point="xbmc.addon.repository" name="Venom Repo">
 
 		<dir>
 			<info compressed="false">https://raw.githubusercontent.com/123Venom/zips/master/addons.xml</info>
 			<checksum>https://raw.githubusercontent.com/123Venom/zips/master/addons.xml.md5</checksum>
 			<datadir zip="true">https://raw.githubusercontent.com/123Venom/zips/master/</datadir>
+		</dir>
+
+		<dir>
+			<info compressed="false">https://raw.githubusercontent.com/mr-kodi/repository.myaccounts/master/zips/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/mr-kodi/repository.myaccounts/master/zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/mr-kodi/repository.myaccounts/master/zips/</datadir>
+		</dir>
+
+		<dir>
+			<info compressed="false">https://raw.githubusercontent.com/mr-kodi/repository.fenomscrapers/master/zips/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/mr-kodi/repository.fenomscrapers/master/zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/mr-kodi/repository.fenomscrapers/master/zips/</datadir>
 		</dir>
 
 		<dir>
@@ -18,12 +30,6 @@
 			<info compressed="false">https://raw.githubusercontent.com/skyfsza/repository.auramod/master/addons.xml</info>
 			<checksum>https://raw.githubusercontent.com/skyfsza/repository.auramod/master/addons.xml.md5</checksum>
 			<datadir zip="true">https://raw.githubusercontent.com/skyfsza/repository.auramod/master/</datadir>
-		</dir>
-
-		<dir>
-			<info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/</datadir>
 		</dir>
 
 		<dir>
@@ -42,12 +48,6 @@
 			<info compressed="false">https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/addons.xml</info>
 			<checksum>https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/addons.xml.md5</checksum>
 			<datadir zip="true">https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/</datadir>
-		</dir>
-
-		<dir>
-			<info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
 		</dir>
 
 		<dir>
@@ -75,9 +75,8 @@
 			<fanart>fanart.jpg</fanart>
 		</assets>
 		<news>
-[B][COLOR red]Update - v1.9 - Aug 15, 2020[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Added AutoWidgets.[/I]
-[COLOR yellow]--[/COLOR][I] Added a4kSubtitles.[/I]
+[B][COLOR red]Update - v1.12 – Sept. 26, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] fix incorrect version bump.[/I]
 		</news>
 	</extension>
 </addon>
