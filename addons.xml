@@ -1850,6 +1850,39 @@ Added support for BBC Scotland.
   </extension>
 </addon>
 
+<!-- Myaccounts Module -->
+<addon id="script.module.myaccounts" version="1.0.2" name="My Accounts" provider-name="Venom, Fen">
+  <requires>
+    <import addon="xbmc.python" version="2.14.0" />
+    <import addon="script.module.requests" version="2.19.1" />
+  </requires>
+  <extension point="xbmc.python.script" library="lib/default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.service" library="lib/service.py" start="startup" />
+  <extension point="xbmc.python.module" library="lib" /> <!-- Must be placed after xbmc.python.pluginsource, otherwise the addon does not show in the repository. -->
+  <extension point="xbmc.addon.metadata">
+    <reuselanguageinvoker>false</reuselanguageinvoker> 
+    <summary lang="en">My Accounts Module</summary>
+    <description>Single placeholder for all your accounts.</description>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+    <forum></forum>
+    <website>https://github.com/a4k-openproject/repository.myaccounts</website>
+    <source>https://github.com/a4k-openproject/repository.myaccounts</source>
+    <disclaimer lang="en">The author is not responsible for the use of this addon. [CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+      <screenshot></screenshot>
+    </assets>
+    <news>
+[B][COLOR red]Initial Release - v1.0.1 – Sept. 21, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Kick off release.[/I]
+    </news>
+  </extension>
+</addon>
+
 <!-- Myconnpy Module -->
 <addon id="script.module.myconnpy" name="MySQL Connector/Python" version="1.1.7" provider-name="MySQL">
   <requires>
