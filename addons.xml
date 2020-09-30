@@ -816,12 +816,12 @@
 </addon>
 
 <!-- Diamond Wizard Repo -->
-<addon id="repository.Diamond-Wizard-Repo" name=" (v6.9a) [COLORwhite]***[/COLOR][COLOR crimson]D[/COLOR][COLOR silver]iamond Build Repo (Primary Server, Main Repo)[/COLOR][COLORwhite]***[/COLOR]" version="6.9a" provider-name="Diamond Build">
+<addon id="repository.Diamond-Wizard-Repo" name=" (v7.1) [COLORwhite]***[/COLOR][COLOR crimson]D[/COLOR][COLOR silver]iamond Build Repo (Primary Server, Main Repo)[/COLOR][COLORwhite]***[/COLOR]" version="7.1" provider-name="Diamond Build">
   <requires>
     <import addon="xbmc.addon" version="12.0.0"/>
   </requires>
   <extension point="xbmc.addon.repository" name="Diamond Wizard Repo - Primary Server">
-  <!-- Diamond Repository -->
+    <!-- Diamond Repository -->
     <info compressed="false">https://raw.githubusercontent.com/bobbybark/diamond-build-repo/master/addons.xml</info>
     <checksum>https://raw.githubusercontent.com/bobbybark/diamond-build-repo/master/addons.xml.md5</checksum>
     <datadir zip="true">https://raw.githubusercontent.com/bobbybark/diamond-build-repo/master/</datadir>
@@ -1080,6 +1080,47 @@
     <license>MIT</license>
     <platform>all</platform>
     <source>https://github.com/kurtmckee/feedparser</source>
+  </extension>
+</addon>
+
+<!-- Fenom Scrapers -->
+<addon id="script.module.fenomscrapers" name="FenomScrapers Module" version="1.0.3" provider-name="Mr-Kodi">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0" />
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.myaccounts" version="1.0.0" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="lib/default.py">
+    <provides>executable</provides>
+  </extension> 
+  <extension point="xbmc.service" library="lib/service.py" start="startup" />
+  <extension point="xbmc.python.module" library="lib" /> <!-- Must be placed after xbmc.python.pluginsource, otherwise the addon does not show in the repository. -->
+  <extension point="xbmc.addon.metadata">
+    <reuselanguageinvoker>false</reuselanguageinvoker> 
+    <summary lang="en">FenomScrapers Module</summary>
+    <description>Scrape common video host for URL's to be playable in Kodi, simplifying addon development of video plugins requiring multi video hosts.</description>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+    <forum></forum>
+    <website>https://github.com/Mr-Kodi/repository.fenomscrapers</website>
+    <source>https://github.com/Mr-Kodi/repository.fenomscrapers</source>
+    <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart></fanart>
+      <screenshot></screenshot>
+    </assets>
+    <news>
+[B][COLOR red]Update - v1.0.3 – Sept. 29, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Fixed Library scraper error halting results.[/I]
+[COLOR yellow]--[/COLOR][I] Fixed filepursuit api key failing to import from
+    "My Accounts".[/I]
+[COLOR yellow]--[/COLOR][I] Fixed toggle for Pack Capable scrapers to first disable
+    all torrents and then enable pack capable only scrapers.[/I]
+[COLOR yellow]--[/COLOR][I] Few filter tweaks for show packs returning out of range
+    results when season separator was a tilde mark.[/I]
+    </news>
   </extension>
 </addon>
 
@@ -3113,23 +3154,23 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- Venom -->
-<addon id="plugin.video.venom" name="[COLOR red]Venom[/COLOR]" provider-name="Venom" version="4.1.5">
+<addon id="plugin.video.venom" name="[COLOR red]Venom[/COLOR]" provider-name="Venom" version="4.2.2">
   <requires>
     <import addon="xbmc.python" version="2.19.0" />
+    <import addon="script.module.myaccounts" version="1.0.0" />
     <import addon="script.module.requests" version="2.19.1" />
     <import addon="script.module.beautifulsoup4" version="4.5.3" />
     <import addon="script.module.metahandler" version="2.9.0" />
     <import addon="plugin.video.youtube" version="6.2.0" />
-    <import addon="script.module.resolveurl" version="5.0.27" />
-    <import addon="script.module.openscrapers" version="0.0.2.008" />
+    <import addon="script.module.fenomscrapers" version="0.0.001a" />
     <import addon="script.module.addon.signals" version="0.0.3" />
     <import addon="context.venom" version="1.0.0" />
   </requires>
-  <extension library="venom.py" point="xbmc.python.pluginsource">
+  <extension point="xbmc.python.pluginsource" library="venom.py">
     <provides>video</provides>
   </extension>
-  <extension library="service.py" point="xbmc.service" start="startup" />
-  <extension library="resources/lib/" point="xbmc.python.module" />
+  <extension point="xbmc.service" library="service.py" start="startup" />
+  <extension point="xbmc.python.module" library="resources/lib/" /> <!-- Must be placed after xbmc.python.pluginsource, otherwise the addon does not show in the repository. -->
   <extension point="xbmc.addon.metadata">
     <reuselanguageinvoker>true</reuselanguageinvoker> 
     <summary lang="en">[B][COLOR red]Venom[/COLOR][/B] - We do not host any of the contents streamed</summary>
@@ -3148,20 +3189,19 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
       <screenshot>resources/screenshots/screenshot003.jpg</screenshot>
     </assets>
     <news>
-[B][COLOR red]Update - v4.1.3 – Sept. 09, 2020[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Fix for missing context menu option "Download" when
-    selection is free or premium hoster source.[/I]
-[COLOR yellow]--[/COLOR][I] Context menu option to cache uncached torrents was also
-    showing for free hosters...this is fixed.[/I]
-[COLOR yellow]--[/COLOR][I] Fixed incorrect path in control module.[/I]
-[COLOR yellow]--[/COLOR][I] I'm updating the News-Info file so please have a read of that.
-    The Next official release of Venom free hoster support is being removed.[/I]
+[B][COLOR red]Update - v4.2.2 – Sept. 29, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Fixed seven instances of missing ID's in settings.xml.  This
+    just caused a constant cleaning of these 7 items that were
+    never called or referenced.  This now avoids that notice.[/I]
+[COLOR yellow]--[/COLOR][I] Fixed scraper progress dialog displaying to many scraper
+    names for skins with small progress dialogs.  Names will not
+    display until the remaining count reaches 6.[/I]
     </news>
   </extension>
 </addon>
 
 <!-- Venom Context -->
-<addon id="context.venom" version="1.0.7" name="Venom - Global Context Menu Items" provider-name="Venom">
+<addon id="context.venom" version="1.0.8" name="Venom - Global Context Menu Items" provider-name="Venom">
   <requires>
     <import addon="xbmc.python" version="2.23.0" />
   </requires>
@@ -3174,11 +3214,11 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
           String.StartsWith(ListItem.path,plugin://plugin.video.venom/) +
           String.IsEqual(ListItem.Property(isVenom_widget),true)
         </visible>
-			</item>
+      </item>
       <item library="traktManager.py">
         <label>[B][COLOR red]Venom[/COLOR][/B] - Trakt Manager</label>
         <visible>
-          !String.IsEmpty(Window(home).Property(context.venom.traktManager))
+          !String.IsEmpty(Window(home).Property(context.venom.traktManager)) +
           String.StartsWith(ListItem.path,plugin://plugin.video.venom/) +
           String.IsEqual(ListItem.Property(isVenom_widget),true) +
           [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,movie)]
@@ -3199,7 +3239,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
           !String.IsEmpty(Window(home).Property(context.venom.clearBookmark)) +
           String.StartsWith(ListItem.FolderPath,plugin://plugin.video.venom/?action=play) +
           String.IsEqual(ListItem.Property(isVenom_widget),true) +
-          <!-- String.IsEqual(ListItem.Property(resumetime),0) + -->
+          <!-- !String.IsEqual(ListItem.Property(resumetime),0) + -->
           !String.IsEqual(ListItem.Property(venom_resumetime),0) +
           [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
         </visible>
@@ -3213,8 +3253,8 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
           [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
           <!-- Future for Library CM to Rescrape -->
           <!-- !String.IsEmpty(Window(home).Property(context.venom.rescrape)) +
-            [String.Contains(ListItem.Path,plugin.video.venom) + String.IsEqual(ListItem.FileExtension,strm) | String.StartsWith(ListItem.FolderPath,plugin://plugin.video.venom/?action=play)] +
-            [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)] -->
+          [String.Contains(ListItem.Path,plugin.video.venom) + String.IsEqual(ListItem.FileExtension,strm) | String.StartsWith(ListItem.FolderPath,plugin://plugin.video.venom/?action=play)] +
+          [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)] -->
         </visible>
       </item>
       <item library="playFromHere.py">
@@ -3253,7 +3293,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
           String.StartsWith(ListItem.path,plugin://plugin.video.venom/) +
           String.IsEqual(ListItem.Property(isVenom_widget),true) +
           [String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie)]
-         </visible>
+        </visible>
       </item>
       <item library="browseSeries.py">
         <label>[B][COLOR red]Venom[/COLOR][/B] - Browse Series</label>
@@ -3292,8 +3332,9 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
       <fanart>fanart.png</fanart>
     </assets>
     <news>
-[B][COLOR red]Update - v1.0.7 - Sept 04, 2020[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Fix typo in version bump and updated changelog[/I]
+[B][COLOR red]Update - v1.0.8 - Sept 29, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Fix issue with accent characters causing stop errors.[/I]
+[COLOR yellow]--[/COLOR][I] added service logging notice for kodi.log.[/I]
     </news>
   </extension>
 </addon>

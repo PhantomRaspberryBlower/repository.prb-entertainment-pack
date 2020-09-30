@@ -1,20 +1,20 @@
-<addon id="plugin.video.venom" name="[COLOR red]Venom[/COLOR]" provider-name="Venom" version="4.1.5">
+<addon id="plugin.video.venom" name="[COLOR red]Venom[/COLOR]" provider-name="Venom" version="4.2.2">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
+		<import addon="script.module.myaccounts" version="1.0.0" />
 		<import addon="script.module.requests" version="2.19.1" />
 		<import addon="script.module.beautifulsoup4" version="4.5.3" />
 		<import addon="script.module.metahandler" version="2.9.0" />
 		<import addon="plugin.video.youtube" version="6.2.0" />
-		<import addon="script.module.resolveurl" version="5.0.27" />
-		<import addon="script.module.openscrapers" version="0.0.2.008" />
+		<import addon="script.module.fenomscrapers" version="0.0.001a" />
 		<import addon="script.module.addon.signals" version="0.0.3" />
 		<import addon="context.venom" version="1.0.0" />
 	</requires>
-	<extension library="venom.py" point="xbmc.python.pluginsource">
+	<extension point="xbmc.python.pluginsource" library="venom.py">
 		<provides>video</provides>
 	</extension>
-	<extension library="service.py" point="xbmc.service" start="startup" />
-	<extension library="resources/lib/" point="xbmc.python.module" />
+	<extension point="xbmc.service" library="service.py" start="startup" />
+	<extension point="xbmc.python.module" library="resources/lib/" /> <!-- Must be placed after xbmc.python.pluginsource, otherwise the addon does not show in the repository. -->
 	<extension point="xbmc.addon.metadata">
 		<reuselanguageinvoker>true</reuselanguageinvoker> 
 		<summary lang="en">[B][COLOR red]Venom[/COLOR][/B] - We do not host any of the contents streamed</summary>
@@ -33,14 +33,13 @@
 			<screenshot>resources/screenshots/screenshot003.jpg</screenshot>
 		</assets>
 		<news>
-[B][COLOR red]Update - v4.1.3 – Sept. 09, 2020[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Fix for missing context menu option "Download" when
-    selection is free or premium hoster source.[/I]
-[COLOR yellow]--[/COLOR][I] Context menu option to cache uncached torrents was also
-    showing for free hosters...this is fixed.[/I]
-[COLOR yellow]--[/COLOR][I] Fixed incorrect path in control module.[/I]
-[COLOR yellow]--[/COLOR][I] I'm updating the News-Info file so please have a read of that.
-    The Next official release of Venom free hoster support is being removed.[/I]
+[B][COLOR red]Update - v4.2.2 – Sept. 29, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Fixed seven instances of missing ID's in settings.xml.  This
+    just caused a constant cleaning of these 7 items that were
+    never called or referenced.  This now avoids that notice.[/I]
+[COLOR yellow]--[/COLOR][I] Fixed scraper progress dialog displaying to many scraper
+    names for skins with small progress dialogs.  Names will not
+    display until the remaining count reaches 6.[/I]
 		</news>
 	</extension>
 </addon>
