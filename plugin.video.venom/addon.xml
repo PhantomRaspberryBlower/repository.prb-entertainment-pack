@@ -1,4 +1,4 @@
-<addon id="plugin.video.venom" name="[COLOR red]Venom[/COLOR]" provider-name="Venom" version="4.2.2">
+<addon id="plugin.video.venom" name="[COLOR red]Venom[/COLOR]" provider-name="Venom" version="4.2.3">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="script.module.myaccounts" version="1.0.0" />
@@ -33,13 +33,13 @@
 			<screenshot>resources/screenshots/screenshot003.jpg</screenshot>
 		</assets>
 		<news>
-[B][COLOR red]Update - v4.2.2 – Sept. 29, 2020[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Fixed seven instances of missing ID's in settings.xml.  This
-    just caused a constant cleaning of these 7 items that were
-    never called or referenced.  This now avoids that notice.[/I]
-[COLOR yellow]--[/COLOR][I] Fixed scraper progress dialog displaying to many scraper
-    names for skins with small progress dialogs.  Names will not
-    display until the remaining count reaches 6.[/I]
+[B][COLOR red]Update - v4.2.3 – Oct. 01, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Removed "Premium Services" Auth methods as this now
+    uses "My Accounts" and was missed in previous updates.[/I]
+[COLOR yellow]--[/COLOR][I] Reformat of scrape progress dialog to make better use
+    of available space.[/I]
+[COLOR yellow]--[/COLOR][I] Code cleanup and removal of logging from previous
+    version.[/I]
 		</news>
 	</extension>
 </addon>
