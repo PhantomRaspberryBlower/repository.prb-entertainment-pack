@@ -1,19 +1,18 @@
-<addon id="plugin.video.venom" name="[COLOR red]Venom[/COLOR]" provider-name="Venom" version="4.2.3">
+<addon id="plugin.video.venom" name="[COLOR red]Venom[/COLOR]" provider-name="Venom" version="4.2.4a">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
+		<import addon="context.venom" version="1.0.0" />
 		<import addon="script.module.myaccounts" version="1.0.0" />
+		<import addon="script.module.fenomscrapers" version="1.0.0" />
 		<import addon="script.module.requests" version="2.19.1" />
 		<import addon="script.module.beautifulsoup4" version="4.5.3" />
 		<import addon="script.module.metahandler" version="2.9.0" />
 		<import addon="plugin.video.youtube" version="6.2.0" />
-		<import addon="script.module.fenomscrapers" version="0.0.001a" />
 		<import addon="script.module.addon.signals" version="0.0.3" />
-		<import addon="context.venom" version="1.0.0" />
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="venom.py">
 		<provides>video</provides>
 	</extension>
-	<extension point="xbmc.service" library="service.py" start="startup" />
 	<extension point="xbmc.python.module" library="resources/lib/" /> <!-- Must be placed after xbmc.python.pluginsource, otherwise the addon does not show in the repository. -->
 	<extension point="xbmc.addon.metadata">
 		<reuselanguageinvoker>true</reuselanguageinvoker> 
@@ -33,13 +32,11 @@
 			<screenshot>resources/screenshots/screenshot003.jpg</screenshot>
 		</assets>
 		<news>
-[B][COLOR red]Update - v4.2.3 – Oct. 01, 2020[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Removed "Premium Services" Auth methods as this now
-    uses "My Accounts" and was missed in previous updates.[/I]
-[COLOR yellow]--[/COLOR][I] Reformat of scrape progress dialog to make better use
-    of available space.[/I]
-[COLOR yellow]--[/COLOR][I] Code cleanup and removal of logging from previous
-    version.[/I]
+[B][COLOR red]Update - v4.2.4 – Oct. 03, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Removed old exo code for configurable "New Movies"
+    and "New Episodes".  All items were currently availalbe.[/I]
+[COLOR yellow]--[/COLOR][I] Renamed a few menu items.[/I]
+[COLOR yellow]--[/COLOR][I] Code changes for "My Accounts" changes.[/I]
 		</news>
 	</extension>
 </addon>

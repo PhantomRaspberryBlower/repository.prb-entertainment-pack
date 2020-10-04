@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.module.fenomscrapers" name="FenomScrapers Module" version="1.0.4" provider-name="Mr-Kodi">
+<addon id="script.module.fenomscrapers" name="FenomScrapers Module" version="1.0.5" provider-name="Mr-Kodi">
 	<requires>
 		<import addon="xbmc.python" version="2.25.0" />
 		<import addon="script.module.beautifulsoup4" />
@@ -27,14 +27,9 @@
 			<screenshot></screenshot>
 		</assets>
 		<news>
-[B][COLOR red]Update - v1.0.3 – Sept. 29, 2020[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Fixed Library scraper error halting results.[/I]
-[COLOR yellow]--[/COLOR][I] Fixed filepursuit api key failing to import from
-    "My Accounts".[/I]
-[COLOR yellow]--[/COLOR][I] Fixed toggle for Pack Capable scrapers to first disable
-    all torrents and then enable pack capable only scrapers.[/I]
-[COLOR yellow]--[/COLOR][I] Few filter tweaks for show packs returning out of range
-    results when season separator was a tilde mark.[/I]
+[B][COLOR red]Update - v1.0.5 – Oct. 3, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Added Danish translation. Huge thanks to TINUZ97!![/I]
+[COLOR yellow]--[/COLOR][I] Code changes for My Accounts compatibility.[/I]
 		</news>
 	</extension>
 </addon>

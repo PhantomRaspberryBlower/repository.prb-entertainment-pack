@@ -1086,7 +1086,7 @@
 </addon>
 
 <!-- Fenom Scrapers -->
-<addon id="script.module.fenomscrapers" name="FenomScrapers Module" version="1.0.4" provider-name="Mr-Kodi">
+<addon id="script.module.fenomscrapers" name="FenomScrapers Module" version="1.0.5" provider-name="Mr-Kodi">
   <requires>
     <import addon="xbmc.python" version="2.25.0" />
     <import addon="script.module.beautifulsoup4" />
@@ -1114,14 +1114,9 @@
       <screenshot></screenshot>
     </assets>
     <news>
-[B][COLOR red]Update - v1.0.3 – Sept. 29, 2020[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Fixed Library scraper error halting results.[/I]
-[COLOR yellow]--[/COLOR][I] Fixed filepursuit api key failing to import from
-    "My Accounts".[/I]
-[COLOR yellow]--[/COLOR][I] Fixed toggle for Pack Capable scrapers to first disable
-    all torrents and then enable pack capable only scrapers.[/I]
-[COLOR yellow]--[/COLOR][I] Few filter tweaks for show packs returning out of range
-    results when season separator was a tilde mark.[/I]
+[B][COLOR red]Update - v1.0.5 – Oct. 3, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Added Danish translation. Huge thanks to TINUZ97!![/I]
+[COLOR yellow]--[/COLOR][I] Code changes for My Accounts compatibility.[/I]
     </news>
   </extension>
 </addon>
@@ -1291,7 +1286,7 @@
 </addon>
 
 <!-- Input Stream Helper Module -->
-<addon id="script.module.inputstreamhelper" name="InputStream Helper" version="0.5.0" provider-name="emilsvennesson, dagwieers, mediaminister, horstle">
+<addon id="script.module.inputstreamhelper" name="InputStream Helper" version="0.5.1" provider-name="emilsvennesson, dagwieers, mediaminister, horstle">
   <requires>
     <!--py3 compliant-->
     <import addon="xbmc.python" version="2.25.0"/>
@@ -1315,12 +1310,17 @@
     <description lang="fr_FR">Un simple module Kodi qui simplifie la vie des développeurs de modules complémentaires en s’appuyant sur des modules complémentaires basés sur InputStream et sur la lecture de DRM.</description>
     <description lang="es_ES">Un módulo Kodi simple que hace la vida más fácil para los desarrolladores de complementos que dependen de complementos basados en InputStream y reproducción de DRM.</description>
     <news>
-     v0.5.0 (2020-06-25)
-        - Extract Widevine CDM directly from Chrome OS, minimizing disk space usage and eliminating the need for root access
-        - Improve progress dialog while extracting Widevine CDM on ARM devices
-        - Support resuming interrupted downloads on unreliable internet connections
-        - Reshape InputStream Helper information dialog
-        - Updated Dutch, English, French, German, Greek, Hungarian, Romanian, Russian, Spanish and Swedish translations
+v0.5.1 (2020-10-02)
+- Fix incorrect ARM HWIDs: PHASER and PHASER360
+- Added Hebrew translations
+- Updated Dutch, Japanese and Korean translations
+
+v0.5.0 (2020-06-25)
+- Extract Widevine CDM directly from Chrome OS, minimizing disk space usage and eliminating the need for root access
+- Improve progress dialog while extracting Widevine CDM on ARM devices
+- Support resuming interrupted downloads on unreliable internet connections
+- Reshape InputStream Helper information dialog
+- Updated Dutch, English, French, German, Greek, Hungarian, Romanian, Russian, Spanish and Swedish translations
     </news>
     <platform>all</platform>
     <license>MIT</license>
@@ -1853,7 +1853,7 @@ Added support for BBC Scotland.
 </addon>
 
 <!-- Myaccounts Module -->
-<addon id="script.module.myaccounts" version="1.0.2" name="My Accounts" provider-name="Venom, Fen">
+<addon id="script.module.myaccounts" version="1.0.3" name="My Accounts" provider-name="Venom, Fen">
   <requires>
     <import addon="xbmc.python" version="2.14.0" />
     <import addon="script.module.requests" version="2.19.1" />
@@ -1879,8 +1879,8 @@ Added support for BBC Scotland.
       <screenshot></screenshot>
     </assets>
     <news>
-[B][COLOR red]Initial Release - v1.0.1 – Sept. 21, 2020[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Kick off release.[/I]
+[B][COLOR red]v1.0.3 – Oct. 3, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Fix for settings not saving correctly.[/I]
     </news>
   </extension>
 </addon>
@@ -3189,22 +3189,21 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- Venom -->
-<addon id="plugin.video.venom" name="[COLOR red]Venom[/COLOR]" provider-name="Venom" version="4.2.3">
+<addon id="plugin.video.venom" name="[COLOR red]Venom[/COLOR]" provider-name="Venom" version="4.2.4a">
   <requires>
     <import addon="xbmc.python" version="2.19.0" />
+    <import addon="context.venom" version="1.0.0" />
     <import addon="script.module.myaccounts" version="1.0.0" />
+    <import addon="script.module.fenomscrapers" version="1.0.0" />
     <import addon="script.module.requests" version="2.19.1" />
     <import addon="script.module.beautifulsoup4" version="4.5.3" />
     <import addon="script.module.metahandler" version="2.9.0" />
     <import addon="plugin.video.youtube" version="6.2.0" />
-    <import addon="script.module.fenomscrapers" version="0.0.001a" />
     <import addon="script.module.addon.signals" version="0.0.3" />
-    <import addon="context.venom" version="1.0.0" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="venom.py">
     <provides>video</provides>
   </extension>
-  <extension point="xbmc.service" library="service.py" start="startup" />
   <extension point="xbmc.python.module" library="resources/lib/" /> <!-- Must be placed after xbmc.python.pluginsource, otherwise the addon does not show in the repository. -->
   <extension point="xbmc.addon.metadata">
     <reuselanguageinvoker>true</reuselanguageinvoker> 
@@ -3224,13 +3223,11 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
       <screenshot>resources/screenshots/screenshot003.jpg</screenshot>
     </assets>
     <news>
-[B][COLOR red]Update - v4.2.3 – Oct. 01, 2020[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Removed "Premium Services" Auth methods as this now
-    uses "My Accounts" and was missed in previous updates.[/I]
-[COLOR yellow]--[/COLOR][I] Reformat of scrape progress dialog to make better use
-    of available space.[/I]
-[COLOR yellow]--[/COLOR][I] Code cleanup and removal of logging from previous
-    version.[/I]
+[B][COLOR red]Update - v4.2.4 – Oct. 03, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Removed old exo code for configurable "New Movies"
+    and "New Episodes".  All items were currently availalbe.[/I]
+[COLOR yellow]--[/COLOR][I] Renamed a few menu items.[/I]
+[COLOR yellow]--[/COLOR][I] Code changes for "My Accounts" changes.[/I]
     </news>
   </extension>
 </addon>
