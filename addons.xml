@@ -1086,7 +1086,7 @@
 </addon>
 
 <!-- Fenom Scrapers -->
-<addon id="script.module.fenomscrapers" name="FenomScrapers Module" version="1.0.5" provider-name="Mr-Kodi">
+<addon id="script.module.fenomscrapers" name="FenomScrapers Module" version="1.0.6" provider-name="Mr-Kodi">
   <requires>
     <import addon="xbmc.python" version="2.25.0" />
     <import addon="script.module.beautifulsoup4" />
@@ -1114,9 +1114,13 @@
       <screenshot></screenshot>
     </assets>
     <news>
-[B][COLOR red]Update - v1.0.5 – Oct. 3, 2020[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Added Danish translation. Huge thanks to TINUZ97!![/I]
-[COLOR yellow]--[/COLOR][I] Code changes for My Accounts compatibility.[/I]
+[B][COLOR red]Update - v1.0.6 – Oct. 5, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] fixed skytorrents scraper for url change.[/I]
+COLOR yellow]--[/COLOR][I] btdb scraper resurrected.  Site has reverted back to
+    non-cloudflare v2 challenge.  Scraper is also now
+    pack capable[/I]
+COLOR yellow]--[/COLOR][I] torrentz2 scraper resurrected.  Site has reverted back to
+    non-cloudflare v2 challenge.[/I]
     </news>
   </extension>
 </addon>
@@ -2934,7 +2938,7 @@ v4.3.1
 </addon>
 
 <!-- The Magic Dragon Addon -->
-<addon id="plugin.video.themagicdragon" name="The Magic Dragon" version="1.38" provider-name="Magic Dragon">
+<addon id="plugin.video.themagicdragon" name="The Magic Dragon" version="1.39" provider-name="Magic Dragon">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.t0mm0.common" version="2.0.0"/>
@@ -3142,7 +3146,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- URL Resolver -->
-<addon id="script.module.urlresolver" name="URLResolver" version="5.1.9a" provider-name="tvaddons">
+<addon id="script.module.urlresolver" name="URLResolver" version="5.1.10a" provider-name="tvaddons">
   <requires>
     <!-- <import addon="xbmc.python" version="3.0.0" /> -->
     <import addon="script.module.six" version="0.0.1"/>
@@ -3233,9 +3237,10 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- Venom Context -->
-<addon id="context.venom" version="1.0.8" name="Venom - Global Context Menu Items" provider-name="Venom">
+<addon id="context.venom" version="1.0.9" name="Venom - Global Context Menu Items" provider-name="Venom">
   <requires>
     <import addon="xbmc.python" version="2.23.0" />
+    <import addon="script.module.requests" version="2.19.1" />
   </requires>
   <extension point="kodi.context.item">
     <menu id="kodi.core.main">
@@ -3283,10 +3288,6 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
           String.StartsWith(ListItem.FolderPath,plugin://plugin.video.venom/?action=play) +
           String.IsEqual(ListItem.Property(isVenom_widget),true) +
           [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
-          <!-- Future for Library CM to Rescrape -->
-          <!-- !String.IsEmpty(Window(home).Property(context.venom.rescrape)) +
-          [String.Contains(ListItem.Path,plugin.video.venom) + String.IsEqual(ListItem.FileExtension,strm) | String.StartsWith(ListItem.FolderPath,plugin://plugin.video.venom/?action=play)] +
-          [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)] -->
         </visible>
       </item>
       <item library="playFromHere.py">
@@ -3343,7 +3344,6 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
           String.StartsWith(ListItem.path,plugin://plugin.video.venom/) +
           String.IsEqual(ListItem.Property(isVenom_widget),true) +
           String.IsEqual(ListItem.dbtype,episode)
-          <!-- [String.IsEqual(ListItem.dbtype,episode) | !String.IsEmpty(ListItem.Property(multi_episodes))] -->
         </visible>
       </item>
     </menu>
@@ -3351,23 +3351,23 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
   <extension point="xbmc.service" library="service.py" />
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Venom - This Addon is currently in beta. Please be aware there may be bugs present</summary>
-    <description lang="en">Adds Global Contextual Menu Items for Venom menu items throughout Kodi
-    </description>
-    <platform>all</platform>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-    <forum></forum>
-    <website></website>
-    <source></source>
-    <disclaimer lang="en"></disclaimer>
-    <assets>
-      <icon>icon.png</icon>
-      <fanart>fanart.png</fanart>
-    </assets>
-    <news>
-[B][COLOR red]Update - v1.0.8 - Sept 29, 2020[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Fix issue with accent characters causing stop errors.[/I]
-[COLOR yellow]--[/COLOR][I] added service logging notice for kodi.log.[/I]
-    </news>
+      <description lang="en">Adds Global Contextual Menu Items for Venom menu items throughout Kodi/description>
+      <platform>all</platform>
+      <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+      <forum></forum>
+      <website></website>
+      <source></source>
+      <disclaimer lang="en"></disclaimer>
+      <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.png</fanart>
+      </assets>
+      <news>
+[B][COLOR red]Update - v1.0.9 - Oct. 05, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Fixed Trakt Manager not opening.[/I]
+[COLOR yellow]--[/COLOR][I] Fixed Context Settings not opening.[/I]
+[COLOR yellow]--[/COLOR][I] Fixed service update check.[/I]
+      </news>
   </extension>
 </addon>
 
