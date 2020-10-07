@@ -3288,6 +3288,10 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
           String.StartsWith(ListItem.FolderPath,plugin://plugin.video.venom/?action=play) +
           String.IsEqual(ListItem.Property(isVenom_widget),true) +
           [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
+<!-- Future for Library CM to Rescrape -->
+<!-- 					!String.IsEmpty(Window(home).Property(context.venom.rescrape)) +
+					[String.Contains(ListItem.Path,plugin.video.venom) + String.IsEqual(ListItem.FileExtension,strm) | String.StartsWith(ListItem.FolderPath,plugin://plugin.video.venom/?action=play)] +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)] -->
         </visible>
       </item>
       <item library="playFromHere.py">
@@ -3344,6 +3348,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
           String.StartsWith(ListItem.path,plugin://plugin.video.venom/) +
           String.IsEqual(ListItem.Property(isVenom_widget),true) +
           String.IsEqual(ListItem.dbtype,episode)
+<!-- [String.IsEqual(ListItem.dbtype,episode) | !String.IsEmpty(ListItem.Property(multi_episodes))] -->
         </visible>
       </item>
     </menu>
@@ -3351,23 +3356,24 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
   <extension point="xbmc.service" library="service.py" />
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Venom - This Addon is currently in beta. Please be aware there may be bugs present</summary>
-      <description lang="en">Adds Global Contextual Menu Items for Venom menu items throughout Kodi/description>
-      <platform>all</platform>
-      <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-      <forum></forum>
-      <website></website>
-      <source></source>
-      <disclaimer lang="en"></disclaimer>
-      <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.png</fanart>
-      </assets>
-      <news>
+    <description lang="en">Adds Global Contextual Menu Items for Venom menu items throughout Kodi
+    </description>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+    <forum></forum>
+    <website></website>
+    <source></source>
+    <disclaimer lang="en"></disclaimer>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.png</fanart>
+    </assets>
+    <news>
 [B][COLOR red]Update - v1.0.9 - Oct. 05, 2020[/COLOR][/B]
 [COLOR yellow]--[/COLOR][I] Fixed Trakt Manager not opening.[/I]
 [COLOR yellow]--[/COLOR][I] Fixed Context Settings not opening.[/I]
 [COLOR yellow]--[/COLOR][I] Fixed service update check.[/I]
-      </news>
+    </news>
   </extension>
 </addon>
 
