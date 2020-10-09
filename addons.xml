@@ -647,7 +647,7 @@
 </addon>
 
 <!-- CU LRC Lyrics -->
-<addon id="script.cu.lrclyrics" name="CU LRC Lyrics" version="5.8.1" provider-name="Taxigps, ronie">
+<addon id="script.cu.lrclyrics" name="CU LRC Lyrics" version="5.8.3" provider-name="Taxigps, ronie">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.chardet" version="2.2.1"/>
@@ -657,7 +657,7 @@
   <extension point="xbmc.python.lyrics" library="default.py"/>
   <extension point="xbmc.service" library="default.py"/>
   <extension point="xbmc.addon.metadata">
-    <summary lang="be_BY">CU LRC Lyrics</summary>
+    summary lang="be_BY">CU LRC Lyrics</summary>
     <summary lang="bg_BG">CU LRC Лирики</summary>
     <summary lang="ca_ES">CU LRC Lyrics</summary>
     <summary lang="da_DK">CU LRC Lyrics</summary>
@@ -726,8 +726,9 @@
     <assets>
       <icon>resources/icon.png</icon>
     </assets>
-    <news>- fix genius scraper
-- remove broken scrapers</news>
+    <news>- add syair scraper
+- fix dark lyrics scraper
+- remove broken lyricwiki scraper</news>
   </extension>
 </addon>
 
@@ -816,12 +817,12 @@
 </addon>
 
 <!-- Diamond Wizard Repo -->
-<addon id="repository.Diamond-Wizard-Repo" name=" (v7.1) [COLORwhite]***[/COLOR][COLOR crimson]D[/COLOR][COLOR silver]iamond Build Repo (Primary Server, Main Repo)[/COLOR][COLORwhite]***[/COLOR]" version="7.1" provider-name="Diamond Build">
+<addon id="repository.Diamond-Wizard-Repo" name="(DB REPO 1 IS NO MORE) PLEASE INSTALL V7.5 - RESTART KODI" version="7.4" provider-name="Diamond Build">
   <requires>
     <import addon="xbmc.addon" version="12.0.0"/>
   </requires>
   <extension point="xbmc.addon.repository" name="Diamond Wizard Repo - Primary Server">
-    <!-- Diamond Repository -->
+  <!-- Diamond Repository -->
     <info compressed="false">https://raw.githubusercontent.com/bobbybark/diamond-build-repo/master/addons.xml</info>
     <checksum>https://raw.githubusercontent.com/bobbybark/diamond-build-repo/master/addons.xml.md5</checksum>
     <datadir zip="true">https://raw.githubusercontent.com/bobbybark/diamond-build-repo/master/</datadir>
@@ -3804,7 +3805,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- YouTube Addon -->
-<addon id="plugin.video.youtube" name="YouTube" version="6.8.4a" provider-name="anxdpanic, bromix">
+<addon id="plugin.video.youtube" name="YouTube" version="6.8.5a" provider-name="anxdpanic, bromix">
   <requires>
     <import addon="xbmc.python" version="2.20.0"/>
     <import addon="script.module.six" version="1.11.0"/>
@@ -3818,11 +3819,12 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
   <extension point="xbmc.python.module" library="resources/lib/"/>
   <extension point="xbmc.addon.metadata">
     <news>
-[fix] next page now ignores sorting, remains at the end of the directory
-[fix] searching, no longer require remote safe search
-[fix] notifications for some languages
-[chg] only log http server ping failures
-[lang] zh_cn strings |contrib: yureng, xiaojun|
+[fix] playback of purchased movies |contrib: MisterD81|
+[fix] notifications for some languages on Kodi 19
+[fix] searching for some languages
+[fix] loading on some versions of python 3
+[fix] some videos failing to play with an Invalid URL exception
+[upd] use xbmcvfs.translatePath if available, clean up for Kodi 19
     </news>
     <assets>
       <icon>icon.png</icon>
