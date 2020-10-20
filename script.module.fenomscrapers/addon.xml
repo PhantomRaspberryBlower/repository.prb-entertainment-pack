@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.module.fenomscrapers" name="FenomScrapers Module" version="1.0.6" provider-name="Mr-Kodi">
+<addon id="script.module.fenomscrapers" name="FenomScrapers Module" version="1.0.9" provider-name="Mr-Kodi">
 	<requires>
 		<import addon="xbmc.python" version="2.25.0" />
 		<import addon="script.module.beautifulsoup4" />
@@ -27,13 +27,12 @@
 			<screenshot></screenshot>
 		</assets>
 		<news>
-[B][COLOR red]Update - v1.0.6 – Oct. 5, 2020[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] fixed skytorrents scraper for url change.[/I]
-COLOR yellow]--[/COLOR][I] btdb scraper resurrected.  Site has reverted back to
-    non-cloudflare v2 challenge.  Scraper is also now
-    pack capable[/I]
-COLOR yellow]--[/COLOR][I] torrentz2 scraper resurrected.  Site has reverted back to
-    non-cloudflare v2 challenge.[/I]
+[B][COLOR red]Update - v1.0.9 – Oct. 13, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Fixed typo in previous eztv query change.[/I]
+[COLOR yellow]--[/COLOR][I] Removed release_year from trakt aliases.  This
+    caused the title check for some random shows
+    to fails.  This should fix the random issues for
+    you "Big Brother" show fans.  [/I]
 		</news>
 	</extension>
 </addon>

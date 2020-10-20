@@ -1,4 +1,4 @@
-<addon id="plugin.video.venom" name="[COLOR red]Venom[/COLOR]" provider-name="Venom" version="4.2.4a">
+<addon id="plugin.video.venom" name="[COLOR red]Venom[/COLOR]" provider-name="Venom" version="4.2.6a">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="context.venom" version="1.0.0" />
@@ -32,11 +32,16 @@
 			<screenshot>resources/screenshots/screenshot003.jpg</screenshot>
 		</assets>
 		<news>
-[B][COLOR red]Update - v4.2.4 – Oct. 03, 2020[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Removed old exo code for configurable "New Movies"
-    and "New Episodes".  All items were currently availalbe.[/I]
-[COLOR yellow]--[/COLOR][I] Renamed a few menu items.[/I]
-[COLOR yellow]--[/COLOR][I] Code changes for "My Accounts" changes.[/I]
+[B][COLOR red]Update - v4.2.6 – Oct. 13, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Fixed settings for remove uncached torrents. Under
+    some conditions an item my be unavailable for AD, PM,
+    or RDd torrents.[/I]
+[COLOR yellow]--[/COLOR][I] Fixed AD cache check when a single item from a
+    list request contained an error the cache check process
+    halted.[/I]
+[COLOR yellow]--[/COLOR][I] Reduced the number of visible named scrapers
+    for the progressDialog.  AuraMod skin had a slight overlap
+    with the progress bar.[/I]
 		</news>
 	</extension>
 </addon>
