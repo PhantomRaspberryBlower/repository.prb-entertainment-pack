@@ -858,7 +858,7 @@
 </addon>
 
 <!-- Exodus Addon -->
-<addon id="plugin.video.exodus" version="8.6.8a" name="Exodus" provider-name="Exodus">
+<addon id="plugin.video.exodus" version="9.0.0a" name="Exodus" provider-name="Exodus">
   <requires>
     <import addon="xbmc.python" version="2.19.0" />
     <import addon="script.module.exodus" />
@@ -2354,7 +2354,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- Resolver URL -->
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.11" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.12" provider-name="gujal">
   <requires>
     <!-- <import addon="xbmc.python" version="3.0.0" /> -->
     <import addon="script.module.six" version="0.0.1"/>
@@ -3750,7 +3750,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- YouTube Addon -->
-<addon id="plugin.video.youtube" name="YouTube" version="6.8.5a" provider-name="anxdpanic, bromix">
+<addon id="plugin.video.youtube" name="YouTube" version="6.8.6a" provider-name="anxdpanic, bromix">
   <requires>
     <import addon="xbmc.python" version="2.20.0"/>
     <import addon="script.module.six" version="1.11.0"/>
@@ -3764,12 +3764,9 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
   <extension point="xbmc.python.module" library="resources/lib/"/>
   <extension point="xbmc.addon.metadata">
     <news>
-[fix] playback of purchased movies |contrib: MisterD81|
-[fix] notifications for some languages on Kodi 19
-[fix] searching for some languages
-[fix] loading on some versions of python 3
 [fix] some videos failing to play with an Invalid URL exception
-[upd] use xbmcvfs.translatePath if available, clean up for Kodi 19
+[fix] searching in some instances with encoding issues |contrib: tsaklidis|
+[fix] support python 3.9 html.unescape |contrib: asavah|
     </news>
     <assets>
       <icon>icon.png</icon>
@@ -3818,7 +3815,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
     <disclaimer lang="tr_TR">Bu eklenti Google tarafından üretilmemiştir</disclaimer>
     <platform>all</platform>
     <license>GPL-2.0-only</license>
-    <forum>https://ytaddon.page.link/forum</forum>
+    <forum>https://ytaddon.panicked.xyz/forum</forum>
     <website>https://www.youtube.com</website>
     <source>https://github.com/anxdpanic/plugin.video.youtube</source>
     <reuselanguageinvoker>true</reuselanguageinvoker>
