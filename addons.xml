@@ -1028,7 +1028,7 @@
 </addon>
 
 <!-- Fenom Scrapers -->
-<addon id="script.module.fenomscrapers" name="FenomScrapers Module" version="1.0.9" provider-name="Mr-Kodi">
+<addon id="script.module.fenomscrapers" name="FenomScrapers Module" version="1.1.0" provider-name="Mr-Kodi">
   <requires>
     <import addon="xbmc.python" version="2.25.0" />
     <import addon="script.module.beautifulsoup4" />
@@ -1056,12 +1056,12 @@
       <screenshot></screenshot>
     </assets>
     <news>
-[B][COLOR red]Update - v1.0.9 – Oct. 13, 2020[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Fixed typo in previous eztv query change.[/I]
-[COLOR yellow]--[/COLOR][I] Removed release_year from trakt aliases.  This
-    caused the title check for some random shows
-    to fails.  This should fix the random issues for
-    you "Big Brother" show fans.  [/I]
+[B][COLOR red]Update - v1.1.0 – Oct. 29, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Added Google Drive scraper. See url setup
+    in "My Accounts" addon.[/I]
+[COLOR yellow]--[/COLOR][I] Removed extratorrent scraper.  Main site
+    is gone and proxy mirror's query returns
+    useless results.[/I]
     </news>
   </extension>
 </addon>
@@ -1798,7 +1798,7 @@ Added support for BBC Scotland.
 </addon>
 
 <!-- Myaccounts Module -->
-<addon id="script.module.myaccounts" version="1.0.3" name="My Accounts" provider-name="Venom, Fen">
+<addon id="script.module.myaccounts" version="1.0.4" name="My Accounts" provider-name="Venom, Fen">
   <requires>
     <import addon="xbmc.python" version="2.14.0" />
     <import addon="script.module.requests" version="2.19.1" />
@@ -1824,8 +1824,8 @@ Added support for BBC Scotland.
       <screenshot></screenshot>
     </assets>
     <news>
-[B][COLOR red]v1.0.3 – Oct. 3, 2020[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Fix for settings not saving correctly.[/I]
+[B][COLOR red]v1.0.4 – Oct. 29, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Added Google Drive scraper url setup.[/I]
     </news>
   </extension>
 </addon>
@@ -3750,7 +3750,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- YouTube Addon -->
-<addon id="plugin.video.youtube" name="YouTube" version="6.8.6a" provider-name="anxdpanic, bromix">
+<addon id="plugin.video.youtube" name="YouTube" version="6.8.7a" provider-name="anxdpanic, bromix">
   <requires>
     <import addon="xbmc.python" version="2.20.0"/>
     <import addon="script.module.six" version="1.11.0"/>
@@ -3764,9 +3764,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
   <extension point="xbmc.python.module" library="resources/lib/"/>
   <extension point="xbmc.addon.metadata">
     <news>
-[fix] some videos failing to play with an Invalid URL exception
-[fix] searching in some instances with encoding issues |contrib: tsaklidis|
-[fix] support python 3.9 html.unescape |contrib: asavah|
+[fixup] encoding of titles and authors during playback
     </news>
     <assets>
       <icon>icon.png</icon>
