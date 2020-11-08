@@ -1,0 +1,1 @@
+Direct Progress scraping allows an item in your Trakt Progress list to instantly scrape and play vs. loading an episode list from that current NextUp/Progress position.

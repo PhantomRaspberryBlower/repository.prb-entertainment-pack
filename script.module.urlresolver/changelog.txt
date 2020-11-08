@@ -1,3 +1,18 @@
+Version 5.1.12 (November 2, 2020)
+- Code Base Changes:
+    - captcha lib
+- Resolvers Added:
+    - elupload
+- Resolvers Fixed/Updated:
+    - mp4upload
+    - vidia
+    - gdrive
+    - vidoza
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
 Version 5.1.11 (October 21, 2020)
 - Code Base Changes:
     - xbmc.translatePath deprecated in Matrix

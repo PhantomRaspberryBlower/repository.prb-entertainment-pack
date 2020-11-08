@@ -1,0 +1,1 @@
+If enabled Episodes are hard coded to Auto Play.  Also note that due to changes in UpNext any version newer than v1.0.1  is now broken for 3rd party addons and you must use v1.0.1.  AddonSignals must also not be greater than v0.0.3.  You must use the kodi option "Play from Here" for continual playback and UpNext notification.

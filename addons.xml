@@ -858,44 +858,49 @@
 </addon>
 
 <!-- Exodus Addon -->
-<addon id="plugin.video.exodus" version="9.0.0a" name="Exodus" provider-name="Exodus">
+<addon id="plugin.video.exodus" name="[COLOR orange]Exodus[/COLOR]" provider-name="Exodus" version="10.0.0a">
   <requires>
-    <import addon="xbmc.python" version="2.19.0" />
-    <import addon="script.module.exodus" />
+    <!--<import addon="xbmc.python" version="2.20.0" />-->
     <import addon="script.exodus.artwork" />
     <import addon="script.exodus.metadata" />
     <import addon="script.module.urlresolver" />
     <import addon="script.module.requests" />
-    <import addon="script.module.exoscrapers" />
-    <import addon="script.module.metahandler" version="1.0.0" />
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.playscrapers" />
+    <import addon="script.module.six" />
+    <import addon="script.module.simplejson" />
+    <import addon="script.module.metahandler" optional="true" />
+    <import addon="script.module.exoscrapers" optional="true" />
+    <import addon="script.module.orion" optional="true" />
+    <import addon="plugin.video.youtube" optional="true" />
   </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
+  <extension library="exodus.py" point="xbmc.python.pluginsource">
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en">Exodus</summary>
-    <description lang="en">Please visit [COLOR blue]www.exodusvpn.com[/COLOR] for Exodus support and assistance! Kindly note that Exodus is not an official part of the media player you are running, and therefore not to be mentioned within official support channels, this addon has nothing to do with the media player itself, nor it’s intended use, it is simply a third party plugin which has been added to your system.</description>
-    <disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.</disclaimer>
-    <description lang="de">Bitte besuche [COLOR blue]www.exodusvpn.com[/COLOR] für Unterstützung und Fragen zu Exodus! Beachte dabei, dass Exodus nicht offizieller Teil des Media Players ist den du gerade verwendest und daher nicht von dem offiziellen Support-Kanäle abgedeckt wird, dieses Addon hat nichts zu tun mit dem Media-Player selbst, noch ist es dafür beabsichtigt, es handelt sich hierbei lediglich um ein Drittanbieter-Anwendung die dem System hinzugefügt wurde.</description>
-    <disclaimer lang="de">Die von diesem Addon dargestellten Inhalte werden von den Erstellern des Addons weder gehostet oder verbreitet, noch stehen die Ersteller in irgendeiner Beziehung zu den Content-Anbietern.</disclaimer>
-    <description lang="fr">SVP visitez [COLOR blue]www.exodusvpn.com[/COLOR] pour avoir de l'aide sur Exodus. Prenez note qu'Exodus n'est pas une partie intégrante de votre outil de visionnement multimedia et SVP ne le mentionnez pas dans les media sociaux officiels, cet addiciel n'a rien a voir avec votre lecteur multimedia lui même, c'est simplement un addiciel qui a été ajouté à votre système.</description>
-    <disclaimer lang="fr">L'auteur n'héberge pas ou ne distribue pas le contenu qui vous est affiché avec cet addiciel. L'auteur n'a pas d'alliance avec les distributeurs de contenu.</disclaimer>
+    <reuselanguageinvoker>false</reuselanguageinvoker>
+    <summary lang="en_GB">Exodus</summary>
+    <description lang="en_GB">Get Better Streaming and Support Exodus with a VPN from [COLOR pink]EXODUSVPN.COM[/COLOR]</description>
     <platform>all</platform>
     <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-    <website>https://www.exodusvpn.com/</website>
+    <forum />
+    <website>https://www.exodusvpn.com</website>
+    <source />
+    <disclaimer lang="en_GB">The author of this add-on does not host any of the content which is found and has no affiliation with any of the content providers. This add-on simply searches websites for content. Use at your own risk!</disclaimer>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
-      <screenshot></screenshot>
     </assets>
-    <news></news>
+    <news>
+- See Changelog on Tools menu
+    </news>
   </extension>
 </addon>
 
 <!-- Exodus Artwork Addon -->
-<addon id="script.exodus.artwork" version="3.0.1" name="Exodus Artwork" provider-name="Exodus">
+<addon id="script.exodus.artwork" version="10.0.0" name="Exodus Artwork" provider-name="Exodus">
   <requires>
-    <import addon="xbmc.python" version="2.19.0"/>
+    <!--<import addon="xbmc.python" version="2.19.0"/>-->
   </requires>
   <extension point="xbmc.python.module" library="lib" />
   <extension point="xbmc.addon.metadata">
@@ -906,9 +911,9 @@
 </addon>
 
 <!-- Exodus Metadata Addon -->
-<addon id="script.exodus.metadata" version="3.0.1" name="Exodus Metadata" provider-name="Exodus">
+<addon id="script.exodus.metadata" version="10.0.0" name="Exodus Metadata" provider-name="Exodus">
   <requires>
-    <import addon="xbmc.python" version="2.19.0"/>
+    <!--<import addon="xbmc.python" version="2.19.0"/>-->
   </requires>
   <extension point="xbmc.python.module" library="lib" />
   <extension point="xbmc.addon.metadata">
@@ -1028,7 +1033,7 @@
 </addon>
 
 <!-- Fenom Scrapers -->
-<addon id="script.module.fenomscrapers" name="FenomScrapers Module" version="1.1.0" provider-name="Mr-Kodi">
+<addon id="script.module.fenomscrapers" name="FenomScrapers Module" version="1.1.1" provider-name="Mr-Kodi">
   <requires>
     <import addon="xbmc.python" version="2.25.0" />
     <import addon="script.module.beautifulsoup4" />
@@ -1052,16 +1057,13 @@
     <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
     <assets>
       <icon>icon.png</icon>
-      <fanart></fanart>
+      <fanart>fanart.png</fanart>
       <screenshot></screenshot>
     </assets>
     <news>
-[B][COLOR red]Update - v1.1.0 – Oct. 29, 2020[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Added Google Drive scraper. See url setup
-    in "My Accounts" addon.[/I]
-[COLOR yellow]--[/COLOR][I] Removed extratorrent scraper.  Main site
-    is gone and proxy mirror's query returns
-    useless results.[/I]
+[B][COLOR red]Update - v1.1.1 - Oct. 30, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Fixed duplicate entry in settings.xml for Easynews.[/I]
+[COLOR yellow]--[/COLOR][I] Added fanart.png for addon.[/I]
     </news>
   </extension>
 </addon>
@@ -1798,7 +1800,7 @@ Added support for BBC Scotland.
 </addon>
 
 <!-- Myaccounts Module -->
-<addon id="script.module.myaccounts" version="1.0.4" name="My Accounts" provider-name="Venom, Fen">
+<addon id="script.module.myaccounts" version="1.0.5" name="My Accounts" provider-name="Venom, Fen">
   <requires>
     <import addon="xbmc.python" version="2.14.0" />
     <import addon="script.module.requests" version="2.19.1" />
@@ -1815,17 +1817,17 @@ Added support for BBC Scotland.
     <platform>all</platform>
     <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
     <forum></forum>
-    <website>https://github.com/a4k-openproject/repository.myaccounts</website>
-    <source>https://github.com/a4k-openproject/repository.myaccounts</source>
+    <website>https://github.com/Mr-Kodi/repository.myaccounts</website>
+    <source>https://github.com/Mr-Kodi/repository.myaccounts</source>
     <disclaimer lang="en">The author is not responsible for the use of this addon. [CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
     <assets>
       <icon>icon.png</icon>
-      <fanart>fanart.jpg</fanart>
+      <fanart>fanart.png</fanart>
       <screenshot></screenshot>
     </assets>
     <news>
-[B][COLOR red]v1.0.4 – Oct. 29, 2020[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Added Google Drive scraper url setup.[/I]
+[B][COLOR red]Update - v1.0.5 - Oct. 30, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Dutch translation changes.[/I]
     </news>
   </extension>
 </addon>
@@ -2354,14 +2356,15 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- Resolver URL -->
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.12" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.13" provider-name="gujal">
   <requires>
     <!-- <import addon="xbmc.python" version="3.0.0" /> -->
-    <import addon="script.module.six" version="0.0.1"/>
+    <import addon="script.module.six" />
+    <import addon="script.module.kodi-six" />
     <import addon="plugin.video.youtube" optional="true" />
     <import addon="script.module.python.twitch" optional="true" />
     <import addon="script.module.cryptopy" version="1.2.6" optional="true" />
-    <import addon="plugin.video.gdrive" optional="true" />
+    <import addon="plugin.googledrive" optional="true" />
   </requires>
   <extension point="xbmc.python.module" library="lib" />
   <extension point="xbmc.python.pluginsource" library="lib/default.py" />
@@ -2879,7 +2882,7 @@ v4.3.1
 </addon>
 
 <!-- The Magic Dragon Addon -->
-<addon id="plugin.video.themagicdragon" name="The Magic Dragon" version="1.39" provider-name="Magic Dragon">
+<addon id="plugin.video.themagicdragon" name="The Magic Dragon" version="1.40" provider-name="Magic Dragon">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.t0mm0.common" version="2.0.0"/>
@@ -2894,6 +2897,7 @@ v4.3.1
     <import addon="script.common.plugin.cache" version="2.5.2"/>
     <import addon="script.module.metahandler" version="2.5.1"/>
     <import addon="script.module.resolveurl" version="5.0.00"/>
+    <import addon="script.module.addon.common" version="2.0.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>video</provides>
@@ -3087,7 +3091,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- URL Resolver -->
-<addon id="script.module.urlresolver" name="URLResolver" version="5.1.11a" provider-name="tvaddons">
+<addon id="script.module.urlresolver" name="URLResolver" version="5.1.12a" provider-name="tvaddons">
   <requires>
     <!-- <import addon="xbmc.python" version="3.0.0" /> -->
     <import addon="script.module.six" version="0.0.1"/>
@@ -3134,7 +3138,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- Venom -->
-<addon id="plugin.video.venom" name="[COLOR red]Venom[/COLOR]" provider-name="Venom" version="4.2.6a">
+<addon id="plugin.video.venom" name="[COLOR red]Venom[/COLOR]" provider-name="Venom" version="4.2.7a">
   <requires>
     <import addon="xbmc.python" version="2.19.0" />
     <import addon="context.venom" version="1.0.0" />
@@ -3146,12 +3150,12 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
     <import addon="plugin.video.youtube" version="6.2.0" />
     <import addon="script.module.addon.signals" version="0.0.3" />
   </requires>
-  <extension point="xbmc.python.pluginsource" library="venom.py">
+  <extension library="venom.py" point="xbmc.python.pluginsource">
     <provides>video</provides>
   </extension>
-  <extension point="xbmc.python.module" library="resources/lib/" /> <!-- Must be placed after xbmc.python.pluginsource, otherwise the addon does not show in the repository. -->
+  <extension library="resources/lib/" point="xbmc.python.module" /> 
   <extension point="xbmc.addon.metadata">
-    <reuselanguageinvoker>true</reuselanguageinvoker> 
+    <reuselanguageinvoker>true</reuselanguageinvoker>
     <summary lang="en">[B][COLOR red]Venom[/COLOR][/B] - We do not host any of the contents streamed</summary>
     <description lang="en">[B][COLOR red]Venom[/COLOR][/B][CR] This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.[CR]The author does not host any of the content in this addon and takes no responsibility for content found</description>
     <platform>all</platform>
@@ -3168,16 +3172,41 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
       <screenshot>resources/screenshots/screenshot003.jpg</screenshot>
     </assets>
     <news>
-[B][COLOR red]Update - v4.2.6 – Oct. 13, 2020[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Fixed settings for remove uncached torrents. Under
-    some conditions an item my be unavailable for AD, PM,
-    or RDd torrents.[/I]
-[COLOR yellow]--[/COLOR][I] Fixed AD cache check when a single item from a
-    list request contained an error the cache check process
-    halted.[/I]
-[COLOR yellow]--[/COLOR][I] Reduced the number of visible named scrapers
-    for the progressDialog.  AuraMod skin had a slight overlap
-    with the progress bar.[/I]
+[B][COLOR red]Update - v4.2.7 - Nov. 06, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Fixed TVShows Season level watched indicators.
+    Previously the Season level did not refresh the cached
+    watch status upon detection of a playcount change, this
+    is now fixed.[/I]
+[COLOR yellow]--[/COLOR][I] Added new startup service to detect a mismatch
+    in the current reuselanguageinvoker setting vs. an update
+    change.  Upon change detection user will be presented
+    with the option to revert or accept the new setting.  Any
+    change made and the users profile will be reloaded.
+    There is no longer a need to restart Kodi as this is now
+    done via reloading users profile.[/I]
+[COLOR yellow]--[/COLOR][I] Added check for Google Drive account.  If present,
+    and no debrid account exists, user will not longer be
+    presented with a notification that a debrid account is
+    required since these are direct playable links.[/I]
+[COLOR yellow]--[/COLOR][I] New "traktSync.db" has been added. When user
+    enables the "Trakt" category setting "Enable scrobbling",
+    and also sets "Resume Point source" to "Trakt scrobbles",
+    an initial sync will retrieve your complete Trakt Progress for
+    all Movies and Shows.  At any time playback is stopped,
+    before the normal 85% for "mark as watched", the
+    scrobble pause will be saved to local db as well as sent
+    to Trakt to maintain synchronization.  A service check is
+    performed at 15 minute intervals to compare the latest
+    "paused_at" db entry with that from the Trakt api.  This
+    assures that another device in your home will get
+    updated for changes.  This maintains sync across
+    multiple devices.[/I]
+[COLOR yellow]--[/COLOR][I] For the item above a new option has been added
+    to the "Trakt Manager" called "Scrobble Reset".  This
+    removes the given item from the local db and sends
+    "progress=0" to Trakt "scrobble/start".  A 
+    "container.refresh()" is then issued so 
+    the changes are seen instantly.[/I]
     </news>
   </extension>
 </addon>

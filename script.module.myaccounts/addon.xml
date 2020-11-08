@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.module.myaccounts" version="1.0.4" name="My Accounts" provider-name="Venom, Fen">
+<addon id="script.module.myaccounts" version="1.0.5" name="My Accounts" provider-name="Venom, Fen">
 	<requires>
 		<import addon="xbmc.python" version="2.14.0" />
 		<import addon="script.module.requests" version="2.19.1" />
@@ -16,17 +16,17 @@
 		<platform>all</platform>
 		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
 		<forum></forum>
-		<website>https://github.com/a4k-openproject/repository.myaccounts</website>
-		<source>https://github.com/a4k-openproject/repository.myaccounts</source>
+		<website>https://github.com/Mr-Kodi/repository.myaccounts</website>
+		<source>https://github.com/Mr-Kodi/repository.myaccounts</source>
 		<disclaimer lang="en">The author is not responsible for the use of this addon. [CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
 		<assets>
 			<icon>icon.png</icon>
-			<fanart>fanart.jpg</fanart>
+			<fanart>fanart.png</fanart>
 			<screenshot></screenshot>
 		</assets>
 		<news>
-[B][COLOR red]v1.0.4 – Oct. 29, 2020[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Added Google Drive scraper url setup.[/I]
+[B][COLOR red]Update - v1.0.5 - Oct. 30, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Dutch translation changes.[/I]
 		</news>
 	</extension>
 </addon>
