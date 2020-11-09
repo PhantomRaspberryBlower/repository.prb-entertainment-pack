@@ -1,3 +1,4 @@
+context.venom<>Context Venom
 plugin.program.indigo<>Indigo
 plugin.video.Aspis<>Aspis
 plugin.video.AtTheFlix<>At The Flix
@@ -36,7 +37,10 @@ plugin.video.tsunami<>Tsunami OG
 plugin.video.tvonline.cc<>TV Online
 plugin.video.ukturk<>UK Turks
 plugin.video.uktvplay<>UKTV Play
+plugin.video.venom<>Venom
 plugin.video.ZemTV-shani<>Zem TV
+repository.kodibae<>KodiBae Repository
+repository.venom<>Venom Repository
 script.covenant.artwork<>Covenant Artwork
 script.covenant.metadata<>Covenant Metadata
 script.elysium.artwork<>Elysium Artwork
@@ -50,8 +54,10 @@ script.module.ATFmobdro<>ATF Mobdro
 script.module.ATFTV<>ATF TV
 script.module.covenant<>Covenant Module
 script.module.dslive<>DSLIVE
+script.module.fenomscrapers<>Fenom Scrapers
 script.module.jokerHD<>Joker Module
 script.module.MaverickLive<>Maverick Live
+script.module.myaccounts<>My Accounts
 script.module.nanscrapers<>NaN Scrapers
 script.module.supremacy<>Supremacy Scrapers
 script.module.Supremacy.sportsHD<>Supremacy Sports HD

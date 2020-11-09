@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.force-install-all-ep" name="PRB Install Everything EP" version="1.14.3" provider-name="Phantom Raspberry Blower">
+<addon id="script.force-install-all-ep" name="PRB Install Everything EP" version="1.15.0" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="plugin.audio.absolute-radio"/>
@@ -18,7 +18,6 @@
     <import addon="plugin.video.sports-replay"/>
     <import addon="plugin.video.ted.talks"/>
     <import addon="plugin.video.themagicdragon"/>
-    <import addon="plugin.video.venom"/>
     <import addon="plugin.video.world.news.live"/>
     <import addon="plugin.video.yoda"/>
     <import addon="plugin.video.youtube"/>
@@ -38,7 +37,7 @@
   </extension>    
   <extension point="xbmc.addon.metadata">
     <summary>Entertainment Pack</summary>
-    <description>Defines media sources and download settings.[CR][CR]Downloads and installs add-ons from Phantom Raspberry Blower Repo[CR][CR]Addons installed by this addon are:[CR]Absolute Radio, BBC Radio, Classic British Comedy, Dreamcatcher, Exodus, Fido Video, Exodus, ITV, MP3 Music, PRB Clean, RSS Editor, RSS Viewer, TED Talks, UKTV Play, Venom, Websters Wildshots, World News Live, Yoda, YouTube[CR]</description>
+    <description>Defines media sources and download settings.[CR][CR]Downloads and installs add-ons from Phantom Raspberry Blower Repo[CR][CR]Addons installed by this addon are:[CR]Absolute Radio, BBC Radio, Classic British Comedy, Dreamcatcher, Exodus, Fido Video, Exodus, ITV, MP3 Music, PRB Clean, Rising Tides, RSS Editor, RSS Viewer, TED Talks, UKTV Play, Websters Wildshots, World News Live, Yoda, YouTube[CR]</description>
     <disclaimer>[COLOR red][B]Phantom Raspberry Blower[/B][/COLOR] accepts no responsibility for included addons.</disclaimer>
     <platform>all</platform>
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
