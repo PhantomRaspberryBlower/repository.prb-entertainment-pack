@@ -866,7 +866,6 @@
     <import addon="script.module.urlresolver" />
     <import addon="script.module.requests" />
     <import addon="script.module.beautifulsoup4" />
-    <import addon="script.module.playscrapers" />
     <import addon="script.module.six" />
     <import addon="script.module.simplejson" />
     <import addon="script.module.metahandler" optional="true" />
