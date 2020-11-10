@@ -1,19 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<settings>
-    <!--General-->
-    <category label="30001">
-        <setting id="hide_fav_songs" type="bool" label="30008" value="true" default="true" />
-        <setting type="lsep" label="30102" />
-        <setting id="hide_artist_info" type="bool" label="30005" value="false" />
-        <setting id="hide_artist_artwork" type="bool" label="30003" value="false" />
-        <setting id="prevent_screensaver" type="bool" label="30007" value="true" enable="eq(-1,false)" default="true" />
-        <setting type="lsep" label="30002" />
-        <setting id="compression_format" type="select" label="30004" values="AAC|MP3|Ogg Vorbis|Ogg FLAC - Lossless|Opus" default="MP3" />
-        <setting id="bitrate.aac" type="select" label="30006" values="24kbps|64kbps|128kbps" default="24kbps" visible="eq(-1,AAC)" />
-        <setting id="bitrate.mp3" type="select" label="30006" values="32kbps|128kbps" default="32kbps" visible="eq(-2,MP3)" />
-        <setting id="bitrate.ogg" type="select" label="30006" values="32kbps|160kbps" default="32kbps" visible="eq(-3,Ogg Vorbis)" />
-        <setting id="bitrate.ogg-flac" type="select" label="30006" values="1024kbps" default="1024kbps" visible="eq(-4,Ogg FLAC - Lossless)" />
-        <setting id="bitrate.opus" type="select" label="30006" values="24kbps|64kbps|96kbps" default="24kbps" visible="eq(-5,Opus)" />
-        <setting id="previous_url" value = "" />
-    </category>
+<settings version="2">
+    <setting id="bitrate.aac" default="true">24kbps</setting>
+    <setting id="bitrate.mp3" default="true">32kbps</setting>
+    <setting id="bitrate.ogg" default="true">32kbps</setting>
+    <setting id="bitrate.ogg-flac" default="true">1024kbps</setting>
+    <setting id="bitrate.opus" default="true">24kbps</setting>
+    <setting id="compression_format" default="true">MP3</setting>
+    <setting id="hide_artist_artwork" default="true">false</setting>
+    <setting id="hide_artist_info" default="true">false</setting>
+    <setting id="hide_fav_songs">false</setting>
+    <setting id="prevent_screensaver">true</setting>
+    <setting id="previous_url">7874f3694d10842f9f93bf43553e5419</setting>
 </settings>
