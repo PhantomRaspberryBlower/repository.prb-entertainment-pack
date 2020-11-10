@@ -859,7 +859,7 @@
 </addon>
 
 <!-- Exodus Addon -->
-<addon id="plugin.video.exodus" name="[COLOR orange]Exodus[/COLOR]" provider-name="Exodus" version="10.0.1a">
+<addon id="plugin.video.exodus" name="[COLOR orange]Exodus[/COLOR]" provider-name="Exodus" version="10.0.1b">
   <requires>
     <!--<import addon="xbmc.python" version="2.20.0" />-->
     <import addon="script.exodus.artwork" />
@@ -867,6 +867,8 @@
     <import addon="script.module.urlresolver" />
     <import addon="script.module.requests" />
     <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.playscrapers" />
+    <import addon="plugin.video.pressplay" />
     <import addon="script.module.six" />
     <import addon="script.module.simplejson" />
     <import addon="script.module.metahandler" optional="true" />
@@ -877,6 +879,7 @@
   <extension library="exodus.py" point="xbmc.python.pluginsource">
     <provides>video</provides>
   </extension>
+  <extension library="service.py" point="xbmc.service" start="startup" />
   <extension point="xbmc.addon.metadata">
     <reuselanguageinvoker>false</reuselanguageinvoker>
     <summary lang="en_GB">Exodus</summary>
