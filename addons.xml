@@ -859,7 +859,7 @@
 </addon>
 
 <!-- Exodus Addon -->
-<addon id="plugin.video.exodus" name="[COLOR orange]Exodus[/COLOR]" provider-name="Exodus" version="10.0.1b">
+<addon id="plugin.video.exodus" name="[COLOR orange]ExodusVPN.com[/COLOR]" provider-name="Exodus.com" version="10.0.2a">
   <requires>
     <!--<import addon="xbmc.python" version="2.20.0" />-->
     <import addon="script.exodus.artwork" />
@@ -879,11 +879,10 @@
   <extension library="exodus.py" point="xbmc.python.pluginsource">
     <provides>video</provides>
   </extension>
-  <extension library="service.py" point="xbmc.service" start="startup" />
   <extension point="xbmc.addon.metadata">
     <reuselanguageinvoker>false</reuselanguageinvoker>
     <summary lang="en_GB">Exodus</summary>
-    <description lang="en_GB">Get Better Streaming and Support Exodus with a VPN from [COLOR pink]EXODUSVPN.COM[/COLOR]</description>
+    <description lang="en_GB">Get Better Streaming and Support Exodus with a VPN from [COLOR pink]ExodusVPN.com[/COLOR]</description>
     <platform>all</platform>
     <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
     <forum />
