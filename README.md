@@ -16,6 +16,7 @@ Addons installed by this addon:
   - Dreamcatcher (Download Current Stream)
   - Exodus (Movies & TV Shows)
   - Fido Video (Movies & TV Shows)
+  - Free Live TV (Live TV)
   - ITV (Live & Catch-Up TV)
   - iPlayer (Live and Catch-Up TV)
   - Learn a Language (Tutorial)
