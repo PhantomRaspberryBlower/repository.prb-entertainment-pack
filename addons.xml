@@ -2096,7 +2096,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- PRB Clean Service -->
-<addon id="service.prb-clean" name="PRB Clean" version="0.3.9" provider-name="Phantom Raspberry Blower">
+<addon id="service.prb-clean" name="PRB Clean" version="0.3.10" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -2418,7 +2418,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- Resolver URL -->
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.13" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.14" provider-name="gujal">
   <requires>
     <!-- <import addon="xbmc.python" version="3.0.0" /> -->
     <import addon="script.module.six" />
@@ -3354,7 +3354,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- Web PDB Addon -->
-<addon id="script.module.web-pdb" name="Web-PDB" version="1.5.4" provider-name="Roman V.M.">
+<addon id="script.module.web-pdb" name="Web-PDB" version="1.5.5" provider-name="Roman V.M.">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.bottle" version="0.12.0"/>
@@ -3374,8 +3374,9 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
       <icon>icon.png</icon>
       <screenshot>resources/screenshot.jpg</screenshot>
     </assets>
-    <news>- 1.5.4: Fix info dialog in Kodi &quot;Matrix&quot;.
-- 1.5.3: Fix a rare issue when a debugger session cannot be started.</news>
+    <news>- 1.5.5: Fixed deprecated Kodi logging levels.
+- 1.5.4: Fixed info dialog in Kodi &quot;Matrix&quot;.
+- 1.5.3: Fixed a rare issue when a debugger session cannot be started.</news>
   </extension>
 </addon>
 
