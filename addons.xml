@@ -760,49 +760,19 @@
 </addon>
 
 <!-- Diamond Wizard Repo -->
-<addon id="repository.Diamond-Wizard-Repo" name="(DB REPO 1 IS NO MORE) PLEASE INSTALL V7.5 - RESTART KODI" version="7.4" provider-name="Diamond Build">
+<addon id="repository.diamond-wizard-repo2" name="DB Backup Repo - Do Not Use Without Primary Repo)" version="8.0" provider-name="Diamond Build">
   <requires>
     <import addon="xbmc.addon" version="12.0.0"/>
   </requires>
-  <extension point="xbmc.addon.repository" name="Diamond Wizard Repo - Primary Server">
+  <extension point="xbmc.addon.repository" name="Diamond Wizard Repo - Secondary Server">
   <!-- Diamond Repository -->
-    <info compressed="false">https://raw.githubusercontent.com/bobbybark/diamond-build-repo/master/addons.xml</info>
-    <checksum>https://raw.githubusercontent.com/bobbybark/diamond-build-repo/master/addons.xml.md5</checksum>
-    <datadir zip="true">https://raw.githubusercontent.com/bobbybark/diamond-build-repo/master/</datadir>
-    <hashes>false</hashes>	
-    <dir>
-      <info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
-      <checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
-      <datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
-    </dir>	
-    <dir>
-      <info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml</info>
-      <checksum>https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml.md5</checksum>
-      <datadir zip="true">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/</datadir>
-    </dir>	
-    <dir>
-      <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
-      <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
-      <datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
-    </dir>
-    <dir>
-      <info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
-      <checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
-      <datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
-    </dir>
-    <dir>
-      <info compressed="false">https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/addons.xml</info>
-      <checksum>https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/addons.xml.md5</checksum>
-      <datadir zip="true">https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/</datadir>
-    </dir>	
-    <dir>
-      <info compressed="false">https://repo.rubyjewelwizard.com/repo/diamond/back2thepass/zips/addons.xml</info>
-      <checksum>https://repo.rubyjewelwizard.com/repo/diamond/back2thepass/zips/addons.xml.md5</checksum>
-      <datadir zip="true">https://repo.rubyjewelwizard.com/repo/diamond/back2thepass/zips/</datadir>
-    </dir>			
+    <info compressed="false">https://diamondbuild.xyz/repository/diamond/diamond_build_repo/zips/addons.xml</info>
+    <checksum>https://diamondbuild.xyz/repository/diamond/diamond_build_repo/zips/addons.xml.md5</checksum>
+    <datadir zip="true">https://diamondbuild.xyz/repository/diamond/diamond_build_repo/zips/</datadir>
+    <hashes>false</hashes>			
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en">Diamond Addons / Primary Server, Main Repo</summary>
+    <summary lang="en">Diamond Addons / Secondary Server, Backup Repo</summary>
     <description lang="en">Repo For Diamond Build, Bought to you by Diamond Build</description>
     <disclaimer>The owners and submitters to this repository do not host or distribute any of the content displayed by these addons nor do they have any affiliation with the content providers.</disclaimer>
     <platform>all</platform>
@@ -1003,7 +973,7 @@
 </addon>
 
 <!-- F4mProxy Addon -->
-<addon id="script.video.F4mProxy" name="F4mProxy" version="2.8.8" provider-name="Shani">
+<addon id="script.video.F4mProxy" name="F4mProxy" version="3.0.1.1" provider-name="Shani">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
     <import addon="script.module.requests" />
@@ -1036,13 +1006,28 @@
 </addon>
 
 <!-- Fido Repo -->
-<addon id="repository.Fido" name="Fido Add-on Repository" version="1.1" provider-name="Fido Team">
-  <extension point="xbmc.addon.repository" name="Fido Add-on Repository">
+<addon id="repository.Fido" name="Fido Repository" provider-name="Fido Team" version="1.2">
+  <extension point="xbmc.addon.repository" name="Fido Repo">
     <dir>
       <info compressed="false">http://fantazyrepo.uk/Repo/addons.xml</info>
       <checksum>http://fantazyrepo.uk/Repo/addons.xml.md5</checksum>
-      <datadir zip="true">http://fantazyrepo.uk/Repo</datadir>
-    </dir>		
+      <datadir zip="true">http://fantazyrepo.uk/Repo/Plugins/</datadir>
+    </dir>
+    <dir>
+      <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
+    </dir>
+    <dir>
+      <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
+    </dir>
+    <dir>
+      <info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
+    </dir>
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Install Add-ons from Fido</summary>
@@ -2172,7 +2157,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- PressPlay Addon -->
-<addon id="plugin.video.pressplay" name="[COLOR pink]PressPlay[/COLOR]" provider-name="PressPlay" version="1.0.2a">
+<addon id="plugin.video.pressplay" name="[COLOR pink]PressPlay[/COLOR]" provider-name="PressPlay" version="1.0.4a">
   <requires>
     <!--<import addon="xbmc.python" version="2.20.0" />-->
     <import addon="script.pressplay.artwork" />
@@ -2239,7 +2224,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- PressPlay Scapers -->
-<addon id="script.module.playscrapers" name="PlayScrapers Module" version="1.0.1" provider-name="PressPlay">
+<addon id="script.module.playscrapers" name="PlayScrapers Module" version="1.0.4" provider-name="PressPlay">
   <requires>
     <!--<import addon="xbmc.python" version="2.20.0" />-->
     <import addon="script.module.beautifulsoup4" />
@@ -2265,7 +2250,6 @@ This is a Non-profit resource, organized solely for educational purposes which i
     <news></news>
   </extension>
 </addon>
-
 
 <!-- Pyjsparser Module -->
 <addon id="script.module.pyjsparser" name="pyjsparser" version="2.7.3" provider-name="Addons4Kodi">
@@ -2418,7 +2402,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- Resolver URL -->
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.14" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.17" provider-name="gujal">
   <requires>
     <!-- <import addon="xbmc.python" version="3.0.0" /> -->
     <import addon="script.module.six" />
@@ -3152,7 +3136,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- URL Resolver -->
-<addon id="script.module.urlresolver" name="URLResolver" version="5.1.13a" provider-name="tvaddons">
+<addon id="script.module.urlresolver" name="URLResolver" version="5.1.15a" provider-name="tvaddons">
   <requires>
     <!-- <import addon="xbmc.python" version="3.0.0" /> -->
     <import addon="script.module.six" />
