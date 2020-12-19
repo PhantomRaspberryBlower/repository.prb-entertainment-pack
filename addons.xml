@@ -1202,7 +1202,7 @@
 </addon>
 
 <!-- Input Stream Helper Module -->
-<addon id="script.module.inputstreamhelper" name="InputStream Helper" version="0.5.1" provider-name="emilsvennesson, dagwieers, mediaminister, horstle">
+<addon id="script.module.inputstreamhelper" name="InputStream Helper" version="0.5.2" provider-name="emilsvennesson, dagwieers, mediaminister, horstle">
   <requires>
     <!--py3 compliant-->
     <import addon="xbmc.python" version="2.25.0"/>
@@ -1226,6 +1226,9 @@
     <description lang="fr_FR">Un simple module Kodi qui simplifie la vie des développeurs de modules complémentaires en s’appuyant sur des modules complémentaires basés sur InputStream et sur la lecture de DRM.</description>
     <description lang="es_ES">Un módulo Kodi simple que hace la vida más fácil para los desarrolladores de complementos que dependen de complementos basados en InputStream y reproducción de DRM.</description>
     <news>
+v0.5.2 (2020-12-13)
+- Update Chrome OS ARM hardware id's
+
 v0.5.1 (2020-10-02)
 - Fix incorrect ARM HWIDs: PHASER and PHASER360
 - Added Hebrew translations
@@ -3136,7 +3139,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- URL Resolver -->
-<addon id="script.module.urlresolver" name="URLResolver" version="5.1.15a" provider-name="tvaddons">
+<addon id="script.module.urlresolver" name="URLResolver" version="5.1.17a" provider-name="tvaddons">
   <requires>
     <!-- <import addon="xbmc.python" version="3.0.0" /> -->
     <import addon="script.module.six" />
