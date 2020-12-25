@@ -2229,7 +2229,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- PressPlay Scapers -->
-<addon id="script.module.playscrapers" name="PlayScrapers Module" version="1.0.4" provider-name="PressPlay">
+<addon id="script.module.playscrapers" name="PlayScrapers Module" version="1.0.6" provider-name="PressPlay">
   <requires>
     <!--<import addon="xbmc.python" version="2.20.0" />-->
     <import addon="script.module.beautifulsoup4" />
@@ -3141,7 +3141,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- URL Resolver -->
-<addon id="script.module.urlresolver" name="URLResolver" version="5.1.17a" provider-name="tvaddons">
+<addon id="script.module.urlresolver" name="URLResolver" version="5.1.18a" provider-name="tvaddons">
   <requires>
     <!-- <import addon="xbmc.python" version="3.0.0" /> -->
     <import addon="script.module.six" />
