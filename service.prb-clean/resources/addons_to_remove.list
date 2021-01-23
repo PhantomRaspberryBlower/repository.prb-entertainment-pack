@@ -2,6 +2,7 @@ context.venom<>Context Venom
 plugin.program.indigo<>Indigo
 plugin.video.Aspis<>Aspis
 plugin.video.AtTheFlix<>At The Flix
+plugin.video.yt-comedy<>Best British Comedy
 plugin.video.bob<>Bob
 plugin.video.bob.unleashed<>Bob Unleashed
 plugin.video.blaze-tv<>Blaze TV
@@ -27,6 +28,7 @@ plugin.video.nba-replay<>NBA Replay
 plugin.video.nfl-replay<>NFL Replay
 plugin.video.one242415<>One242415
 plugin.video.phstreams<>Phoenix
+plugin.video.quest<>Quest
 plugin.video.ufc-finest<>Planet MMA
 plugin.video.ufc-replay<>NBA Replay
 plugin.video.sanity<>Sanity

@@ -1,16 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.Fido" name="Fido Repository" provider-name="Fido Team" version="1.4">
+<addon id="repository.Fido" name="Fido Repository" provider-name="Fido Team" version="1.5">
 	<extension point="xbmc.addon.repository" name="Fido Repo">
 		<dir>
 			<info compressed="false">http://fantazyrepo.uk/Repo/addons.xml</info>
 			<checksum>http://fantazyrepo.uk/Repo/addons.xml.md5</checksum>
 			<datadir zip="true">http://fantazyrepo.uk/Repo/</datadir>
 		</dir>
-		<dir>
-			<info compressed="false">http://fantazyrepo.uk/Repo/addons.xml</info>
-			<checksum>http://fantazyrepo.uk/Repo/addons.xml.md5</checksum>
-			<datadir zip="true">http://fantazyrepo.uk/Repo</datadir>
-		</dir>		
 		
 		<dir>
 			<info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
@@ -42,8 +37,6 @@
 		<checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
 		<datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
 	</dir>
-		
-		
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">Install Add-ons from Fido</summary>

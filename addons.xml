@@ -2,7 +2,7 @@
 <addons>
 
 <!-- PRB Install Everything Addon -->
-<addon id="script.force-install-all-ep" name="PRB Install Everything EP" version="1.15.2" provider-name="Phantom Raspberry Blower">
+<addon id="script.force-install-all-ep" name="PRB Install Everything EP" version="1.15.3" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="plugin.audio.absolute-radio"/>
@@ -26,7 +26,6 @@
     <import addon="plugin.video.world.news.live"/>
     <import addon="plugin.video.yoda"/>
     <import addon="plugin.video.youtube"/>
-    <import addon="plugin.video.yt-comedy"/>
     <import addon="script.image.websterswildshots"/>
     <import addon="script.module.liveresolver"/>
     <import addon="script.module.sportsreplay"/>
@@ -42,7 +41,7 @@
   </extension>    
   <extension point="xbmc.addon.metadata">
     <summary>Entertainment Pack</summary>
-    <description>Defines media sources and download settings.[CR][CR]Downloads and installs add-ons from Phantom Raspberry Blower Repo[CR][CR]Addons installed by this addon are:[CR]Absolute Radio, BBC Radio, Classic British Comedy, Dreamcatcher, Exodus, Fido Video, Exodus, ITV, MP3 Music, PRB Clean, Rising Tides, RSS Editor, RSS Viewer, TED Talks, UKTV Play, Websters Wildshots, World News Live, Yoda, YouTube[CR]</description>
+    <description>Defines media sources and download settings.[CR][CR]Downloads and installs add-ons from Phantom Raspberry Blower Repo[CR][CR]Addons installed by this addon are:[CR]Absolute Radio, BBC Radio, Dreamcatcher, Exodus, Fido Video, Exodus, ITV, MP3 Music, PressPlay, PRB Clean, Rising Tides, RSS Editor, RSS Viewer, TED Talks, UKTV Play, Websters Wildshots, World News Live, Yoda, YouTube[CR]</description>
     <disclaimer>[COLOR red][B]Phantom Raspberry Blower[/B][/COLOR] accepts no responsibility for included addons.</disclaimer>
     <platform>all</platform>
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
@@ -1006,17 +1005,17 @@
 </addon>
 
 <!-- Fido Repo -->
-<addon id="repository.Fido" name="Fido Repository" provider-name="Fido Team" version="1.2">
+<addon id="repository.Fido" name="Fido Repository" provider-name="Fido Team" version="1.5">
   <extension point="xbmc.addon.repository" name="Fido Repo">
     <dir>
       <info compressed="false">http://fantazyrepo.uk/Repo/addons.xml</info>
       <checksum>http://fantazyrepo.uk/Repo/addons.xml.md5</checksum>
-      <datadir zip="true">http://fantazyrepo.uk/Repo/Plugins/</datadir>
+      <datadir zip="true">http://fantazyrepo.uk/Repo/</datadir>
     </dir>
     <dir>
-      <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
-      <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
-      <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
+      <info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
     </dir>
     <dir>
       <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
@@ -1024,16 +1023,31 @@
       <datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
     </dir>
     <dir>
+      <info compressed="false">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/</datadir>
+    </dir>
+    <dir>
       <info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
       <checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
       <datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
+    </dir>
+    <dir>
+      <info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/</datadir>
+    </dir>
+    <dir>
+      <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
     </dir>
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Install Add-ons from Fido</summary>
     <description lang="en">Download and install add-ons from Fido</description>
     <platform>all</platform>
-  </extension>
+  </extension>	
 </addon>
 
 <!-- Fido Video --><addon id="plugin.video.Fido" name="Fido" version="2.0a" provider-name="Fido">
@@ -2088,7 +2102,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- PRB Clean Service -->
-<addon id="service.prb-clean" name="PRB Clean" version="0.3.10" provider-name="Phantom Raspberry Blower">
+<addon id="service.prb-clean" name="PRB Clean" version="0.3.11" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
