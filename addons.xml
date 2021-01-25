@@ -2178,7 +2178,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- PressPlay Addon -->
-<addon id="plugin.video.pressplay" name="[COLOR pink]PressPlay[/COLOR]" provider-name="PressPlay" version="1.0.5a">
+<addon id="plugin.video.pressplay" name="[COLOR pink]PressPlay[/COLOR]" provider-name="PressPlay" version="1.0.6a">
   <requires>
     <!--<import addon="xbmc.python" version="2.20.0" />-->
     <import addon="script.pressplay.artwork" />
@@ -2246,7 +2246,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- PressPlay Scapers -->
-<addon id="script.module.playscrapers" name="PlayScrapers Module" version="1.0.7" provider-name="PressPlay">
+<addon id="script.module.playscrapers" name="PlayScrapers Module" version="1.0.9" provider-name="PressPlay">
   <requires>
     <!--<import addon="xbmc.python" version="2.20.0" />-->
     <import addon="script.module.beautifulsoup4" />
