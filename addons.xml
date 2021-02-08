@@ -352,6 +352,28 @@
   </extension>
 </addon>
 
+<!-- Butter Fingers Repo -->
+<addon id="repository.butter" name="Butter Fingers Repo" version="1.8.8" provider-name="J1">
+  <requires>
+    <import addon="xbmc.addon" version="12.0.0"/>
+  </requires>
+  <extension point="xbmc.addon.repository" name="Butter Fingers Repo">
+    <info compressed="false">http://j1wizard.net/butter-addons/_repo/addons.xml</info>
+    <checksum>http://j1wizard.net/butter-addons/_repo/addons.xml.md5</checksum>
+    <datadir zip="true">http://j1wizard.net/butter-addons/_repo/</datadir>
+    <hashes>false</hashes>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Butter Fingers Repo</summary>
+    <description>Butter Fingers Legit Addons. The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works....</description>
+    <platform>all</platform>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>			
+    </assets>
+  </extension>
+</addon>
+
 <!-- Catchup 4 Kodi -->
 <addon id="repository.catchup4kodi" name="LittleWiz Repo" version="1.4" provider-name="LittleWiz">
   <extension point="xbmc.addon.repository" name="LittleWiz Repo">
@@ -759,19 +781,57 @@
 </addon>
 
 <!-- Diamond Wizard Repo -->
-<addon id="repository.diamond-wizard-repo2" name="DB Backup Repo - Do Not Use Without Primary Repo)" version="8.0" provider-name="Diamond Build">
+<addon id="repository.diamond-wizard-repo2" name=" *Diamond Build Repo (Server 2 Netherlands)*" version="10.25" provider-name="Diamond Build">
   <requires>
     <import addon="xbmc.addon" version="12.0.0"/>
   </requires>
-  <extension point="xbmc.addon.repository" name="Diamond Wizard Repo - Secondary Server">
-  <!-- Diamond Repository -->
-    <info compressed="false">https://diamondbuild.xyz/repository/diamond/diamond_build_repo/zips/addons.xml</info>
-    <checksum>https://diamondbuild.xyz/repository/diamond/diamond_build_repo/zips/addons.xml.md5</checksum>
-    <datadir zip="true">https://diamondbuild.xyz/repository/diamond/diamond_build_repo/zips/</datadir>
-    <hashes>false</hashes>			
+  <extension point="xbmc.addon.repository" name="Diamond Wizard Repo - Server 2 Netherlands">
+    <info compressed="false">https://nl.diamondbuild.xyz/repository/diamond/diamond_build_repo/zips/addons.xml</info>
+    <checksum>https://nl.diamondbuild.xyz/repository/diamond/diamond_build_repo/zips/addons.xml.md5</checksum>
+    <datadir zip="true">https://nl.diamondbuild.xyz/repository/diamond/diamond_build_repo/zips/</datadir>
+    <dir>
+      <info compressed="false">https://nl.diamondbuild.xyz/repository/diamond/diamond_build_back2thepass/zips/addons.xml</info>
+      <checksum>https://nl.diamondbuild.xyz/repository/diamond/diamond_build_back2thepass/zips/addons.xml.md5</checksum>
+      <datadir zip="true">https://nl.diamondbuild.xyz/repository/diamond/diamond_build_back2thepass/zips/</datadir>
+    </dir>
+    <dir>
+      <info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
+    </dir>
+    <dir>
+      <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
+    </dir>
+    <dir>
+      <info>https://raw.githubusercontent.com/newt-sc/a4kSubtitles/master/packages/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/newt-sc/a4kSubtitles/master/packages/addons.xml.crc</checksum>
+      <datadir>https://github.com/newt-sc/a4kSubtitles/archive</datadir>
+    </dir>
+    <dir>
+      <info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/</datadir>
+    </dir>
+    <dir>
+      <info compressed="true">https://raw.githubusercontent.com/back-to/repo/master/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/back-to/repo/master/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/back-to/repo/master/</datadir>
+    </dir>
+    <dir>
+      <info compressed="false">https://repo.orionoid.com/addons.xml?v=4.0.0</info>
+      <checksum>https://repo.orionoid.com/addons.xml.md5?v=4.0.0</checksum>
+      <datadir zip="true">https://repo.orionoid.com</datadir>
+    </dir>
+    <dir>
+      <info compressed="false">https://raw.githubusercontent.com/mr-kodi/repository.myaccounts/master/zips/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/mr-kodi/repository.myaccounts/master/zips/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/mr-kodi/repository.myaccounts/master/zips/</datadir>
+    </dir>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en">Diamond Addons / Secondary Server, Backup Repo</summary>
+    <summary lang="en">Diamond Wizard Repo - Server 2 Netherlands</summary>
     <description lang="en">Repo For Diamond Build, Bought to you by Diamond Build</description>
     <disclaimer>The owners and submitters to this repository do not host or distribute any of the content displayed by these addons nor do they have any affiliation with the content providers.</disclaimer>
     <platform>all</platform>
@@ -1050,7 +1110,8 @@
   </extension>	
 </addon>
 
-<!-- Fido Video --><addon id="plugin.video.Fido" name="Fido" version="2.0a" provider-name="Fido">
+<!-- Fido Video -->
+<addon id="plugin.video.Fido" name="Fido" version="2.0b" provider-name="Fido">
   <requires>
     <import addon="xbmc.python" version="2.19.0" />
     <import addon="script.module.universalscrapers" version="1.0.0" />
@@ -1062,6 +1123,7 @@
     <import addon="script.module.dateutil" />
     <import addon="script.module.feedparser" version="5.1.3"/>
     <import addon="script.module.resolveurl" />
+    <import addon="script.module.youtube.dl" optional="true"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>audio video</provides>
@@ -1069,7 +1131,7 @@
   <extension point="xbmc.service" library="service.py" start="[login|startup]" />
   <extension point="xbmc.addon.metadata">
     <summary lang="en">All In One</summary>
-    <description lang="en">Dedicated to Fido</description>
+    <description lang="en">Dedicated to Fido, Thanks to Chains for all the help where i got stuck and @ElliejB on Telegram for the awesome new icon</description>
     <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
     <platform>all</platform>
     <website>http://fantazyrepo.uk/repo/</website>
@@ -2294,9 +2356,8 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- Python Koding AIO Module -->
-<addon id="script.module.python.koding.aio" name="Python Koding AIO" version="2.1" provider-name="Total Revolution, Bugatsinho">
+<addon id="script.module.python.koding.aio" name="Python Koding AIO" version="92.1" provider-name="Total Revolution, Bugatsinho">
   <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.resolveurl" version="5.0.45"/>
     <import addon="script.module.requests" version="2.3.0"/>
     <import addon="script.module.beautifulsoup" version="2.1.31"/>
@@ -2449,7 +2510,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- Resolver URL -->
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.22" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.23" provider-name="gujal">
   <requires>
     <!-- <import addon="xbmc.python" version="3.0.0" /> -->
     <import addon="script.module.six" />
