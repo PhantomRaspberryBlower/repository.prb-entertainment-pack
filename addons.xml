@@ -2356,7 +2356,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- Python Koding AIO Module -->
-<addon id="script.module.python.koding.aio" name="Python Koding AIO" version="92.1" provider-name="Total Revolution, Bugatsinho">
+<addon id="script.module.python.koding.aio" name="Python Koding AIO" version="2.1" provider-name="Total Revolution, Bugatsinho">
   <requires>
     <import addon="script.module.resolveurl" version="5.0.45"/>
     <import addon="script.module.requests" version="2.3.0"/>

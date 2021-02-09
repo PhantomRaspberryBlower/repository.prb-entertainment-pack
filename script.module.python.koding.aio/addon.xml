@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="script.module.python.koding.aio"
    name="Python Koding AIO"
-   version="92.1"
+   version="2.1"
    provider-name="Total Revolution, Bugatsinho">
   <requires>
     <import addon="script.module.resolveurl" version="5.0.45"/>
