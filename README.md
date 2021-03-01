@@ -10,7 +10,6 @@ Downloads and installs addons.
 Addons installed by this addon:
   - Absolute Radio (Stream Music)
   - BBC Radio (Stream Live Radio)
-  - Classic British Comedy (Movies & TV Shows)
   - Confluence OSMC (Confluence Skin for OSMC)
   - DemonFM (Internet Radio)
   - Dreamcatcher (Download Current Stream)
@@ -40,6 +39,7 @@ Addons installed by this addon:
   - YouTube
 
 Optional Addons:
+  - Butter (Repository)
   - Catchup4Kodi (Repository)
   - Confluence (Confluence Skin for Kodi)
   - Dbmc (Dropbox)
