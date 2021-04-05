@@ -1713,12 +1713,12 @@ Known issues:
 </addon>
 
 <!-- Metahandler Module -->
-<addon id="script.module.metahandler" name="metahandler" version="3.99.02" provider-name="Eldorado">
+<addon id="script.module.metahandler" name="metahandler" version="5.0.1" provider-name="Eldorado">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
-    <import addon="script.module.simplejson" version="3.3.0"/>
-    <import addon="script.module.addon.common" version="2.0.0"/>
-    <import addon="script.module.myconnpy" version="1.1.6"/>
+    <import addon="script.module.simplejson" />
+    <import addon="script.module.addon.common" />
+    <import addon="script.module.myconnpy" />
   </requires>
   <extension point="xbmc.python.module" library="lib" />
   <extension point="xbmc.python.pluginsource" library="lib/default.py" />
@@ -3812,7 +3812,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- YouTube Downloader Module -->
-<addon id="script.module.youtube.dl" name="youtube-dl Control" version="21.302.0" provider-name="ytdl-org,ruuk,sy6sy2">
+<addon id="script.module.youtube.dl" name="youtube-dl Control" version="21.303.0a" provider-name="ytdl-org,ruuk,sy6sy2">
   <requires>
     <import addon="xbmc.python" version="2.26.0"/>
     <import addon="script.module.addon.signals" version="0.0.5"/>
