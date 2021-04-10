@@ -353,7 +353,7 @@
 </addon>
 
 <!-- Butter Fingers Repo -->
-<addon id="repository.butter" name="Butter Fingers Repo" version="1.8.8" provider-name="J1">
+<addon id="repository.butter" name="Butter Fingers Repo" version="1.9.4" provider-name="J1">
   <requires>
     <import addon="xbmc.addon" version="12.0.0"/>
   </requires>
@@ -892,7 +892,7 @@
 </addon>
 
 <!-- Exodus Addon -->
-<addon id="plugin.video.exodus" name="[COLOR orange]ExodusVPN.com[/COLOR]" provider-name="Exodus.com" version="10.0.2a">
+<addon id="plugin.video.exodus" name="Exodus" provider-name="ExodusVPN.com" version="11.0.0a">
   <requires>
     <!--<import addon="xbmc.python" version="2.20.0" />-->
     <import addon="script.exodus.artwork" />
@@ -901,7 +901,6 @@
     <import addon="script.module.requests" />
     <import addon="script.module.beautifulsoup4" />
     <import addon="script.module.playscrapers" />
-    <import addon="plugin.video.pressplay" />
     <import addon="script.module.six" />
     <import addon="script.module.simplejson" />
     <import addon="script.module.metahandler" optional="true" />
@@ -912,6 +911,7 @@
   <extension library="exodus.py" point="xbmc.python.pluginsource">
     <provides>video</provides>
   </extension>
+  <extension library="service.py" point="xbmc.service" start="startup" />
   <extension point="xbmc.addon.metadata">
     <reuselanguageinvoker>false</reuselanguageinvoker>
     <summary lang="en_GB">Exodus</summary>
@@ -2254,43 +2254,45 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- PressPlay Addon -->
-<addon id="plugin.video.pressplay" name="Press Play" provider-name="PressPlay" version="2.0.0a">
-    <requires>
-        <!--<import addon="xbmc.python" version="2.20.0" />-->
-        <import addon="script.pressplay.artwork" />
-        <import addon="script.pressplay.metadata" />
-        <import addon="script.module.urlresolver" />
-        <import addon="script.module.requests" />
-        <import addon="script.module.beautifulsoup4" />
-        <import addon="script.module.playscrapers" />
-        <import addon="script.module.six" />
-        <import addon="script.module.kodi-six" />
-        <import addon="script.module.simplejson" />
-        <import addon="script.module.orion" optional="true" />
-        <import addon="plugin.video.youtube" optional="true" />
-    </requires>
-    <extension library="pressplay.py" point="xbmc.python.pluginsource">
-        <provides>video</provides>
-    </extension>
-    <extension library="service.py" point="xbmc.service" start="startup" />
-    <extension point="xbmc.addon.metadata">
-        <reuselanguageinvoker>false</reuselanguageinvoker>
-        <summary lang="en_GB">PressPlay</summary>
-        <description lang="en_GB">Multi-source and multi-scraper package add-on. A basic scraper pack is provided but also supports Playscrapers, and native Orion integration.[CR][CR]The author does not host any of the content in this add-on and takes no responsibility for content found.</description>
-        <platform>all</platform>
-        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-        <forum />
-        <website />
-        <source />
-        <disclaimer lang="en_GB">The author of this add-on does not host any of the content which is found and has no affiliation with any of the content providers. This add-on simply searches websites for content. Use at your own risk!</disclaimer>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-        </assets>
-        <news>
+<addon id="plugin.video.pressplay" name="Press Play" provider-name="PressPlay" version="3.0.0a">
+  <requires>
+    <!--<import addon="xbmc.python" version="2.20.0" />-->
+    <import addon="script.pressplay.artwork" />
+    <import addon="script.pressplay.metadata" />
+    <import addon="script.module.urlresolver" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.playscrapers" />
+    <import addon="script.module.six" />
+    <import addon="script.module.kodi-six" />
+    <import addon="script.module.simplejson" />
+    <import addon="script.module.metahandler" optional="true" />
+    <import addon="script.module.exoscrapers" optional="true" />
+    <import addon="script.module.orion" optional="true" />
+    <import addon="plugin.video.youtube" optional="true" />
+  </requires>
+  <extension library="pressplay.py" point="xbmc.python.pluginsource">
+    <provides>video</provides>
+  </extension>
+  <extension library="service.py" point="xbmc.service" start="startup" />
+  <extension point="xbmc.addon.metadata">
+    <reuselanguageinvoker>false</reuselanguageinvoker>
+    <summary lang="en_GB">PressPlay</summary>
+    <description lang="en_GB">Multi-source and multi-scraper package add-on. A basic scraper pack is provided but also supports Playscrapers, and native Orion integration.[CR][CR]The author does not host any of the content in this add-on and takes no responsibility for content found.</description>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+    <forum />
+    <website />
+    <source />
+    <disclaimer lang="en_GB">The author of this add-on does not host any of the content which is found and has no affiliation with any of the content providers. This add-on simply searches websites for content. Use at your own risk!</disclaimer>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+    <news>
 - See Changelog on Tools menu
-        </news>
-    </extension>
+    </news>
+  </extension>
 </addon>
 
 <!-- PressPlay Artwork -->
@@ -2320,7 +2322,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- PressPlay Scapers -->
-<addon id="script.module.playscrapers" name="PlayScrapers Module" version="2.0.0" provider-name="PressPlay">
+<addon id="script.module.playscrapers" name="PlayScrapers Module" version="3.0.0" provider-name="PressPlay">
   <requires>
     <!--<import addon="xbmc.python" version="2.20.0" />-->
     <import addon="script.module.beautifulsoup4" />
@@ -2347,7 +2349,6 @@ This is a Non-profit resource, organized solely for educational purposes which i
     <news></news>
   </extension>
 </addon>
-
 
 <!-- Pyjsparser Module -->
 <addon id="script.module.pyjsparser" name="pyjsparser" version="2.7.3" provider-name="Addons4Kodi">
@@ -3267,14 +3268,13 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- URL Resolver -->
-<addon id="script.module.urlresolver" name="URLResolver" version="5.1.22a" provider-name="tvaddons">
+<addon id="script.module.urlresolver" name="URLResolver" version="6.0.01a" provider-name="tvaddons">
   <requires>
     <!-- <import addon="xbmc.python" version="3.0.0" /> -->
     <import addon="script.module.six" />
     <import addon="script.module.kodi-six" />
     <import addon="plugin.video.youtube" optional="true" />
     <import addon="script.module.python.twitch" optional="true" />
-    <import addon="script.module.cryptopy" version="1.2.6" optional="true" />
     <import addon="plugin.googledrive" optional="true" />
   </requires>
   <extension point="xbmc.python.module" library="lib" />
