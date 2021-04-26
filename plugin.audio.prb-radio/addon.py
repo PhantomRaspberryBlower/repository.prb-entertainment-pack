@@ -57,7 +57,7 @@ _previous_url = __addon__.getSetting('previous_url')
 
 # Define local variables
 playable_url = ''
-base_url = u'http://dir.xiph.org/search?search=PRB+Leicester'
+base_url = u'http://dir.xiph.org/search?q=PRB+Radio'
 
 __resources__ = xbmc.translatePath(os.path.join('special://home/addons/'
                                             'plugin.audio.prb-radio',
