@@ -115,30 +115,31 @@ def get_stream_link():
     Return list of live links.
     """
     if _previous_url is not None or _previous_url != "":
-        response = os.system("ping -c 1 " + _previous_url.replace('http://', '').replace('/rapi.mp3', ''))
+        domain_name = _previous_url.replace('http://', '').replace(':8000', '').replace('/rapi.mp3', '')
+        if platform.system().lower() == 'windows':
+            response = os.system('ping %s -n 1' % domain_name)
+        else:
+            # Below works on Linux
+            response = os.system('ping -c 1 ' + domain_name)
         if response  == 0:
             return _previous_url
     link = ''
     title = ''
     content = commontasks.get_url(base_url)
     content = content.replace('\n', '').replace('\t', '')
-    streams = re.compile('<tr class="(.+?)">(.+?)</tr>').findall(content)
+    name = re.compile('class="card-title">(.+?)</h5> ').findall(content)[0]
     try:
-        for row_id, stream in streams:
-            match = re.compile('<p class="stream-name"><span class="name">' \
-                               '<a href="(.+?)"(.+?)>(.+?)</a(.+?)>M3U</a>' \
-                               '(.+?)<a href="(.+?).xspf"').findall(stream)
-            for search, junk, name, junk2, junk3, xspf in match:
-                if name == 'PRB Radio':
-                    link = 'http://dir.xiph.org' + xspf + '.xspf'
-        content = commontasks.get_url(link)
-        title = commontasks.regex_from_to(content, '<title>', '</title>')
+        if name == 'PRB Radio':
+            stream = re.compile('class="card-title">(.+?)</h5>(.+?)class' \
+                                 '="d-inline-block float-right">(.+?)<a href' \
+                                 '="(.+?)" class="btn btn-sm btn-primary">Play</a>').findall(content)[0]
+            title = str(name)
+            link = str(stream[3])
     except:
         pass
     if title == 'PRB Radio':
-        location = commontasks.regex_from_to(content, '<location>', '</location>')
-        __addon__.setSetting('previous_url', location)
-        return location
+        __addon__.setSetting('previous_url', link)
+        return link
     return 0
 
 

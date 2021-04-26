@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.audio.prb-radio" name="PRB Radio" version="0.0.9" provider-name="Phantom Raspberry Blower">
+<addon id="plugin.audio.prb-radio" name="PRB Radio" version="0.1.0" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
   </requires>
@@ -30,7 +30,7 @@
       <screenshot>resources/media/screenshot005.jpg</screenshot>
       <screenshot>resources/media/screenshot006.jpg</screenshot>
     </assets>
-    <news>Added option to save a list of your favourite songs</news>
+    <news>Website HTML modified.</news>
     <email></email>
     <source>https://github.com/PhantomRaspberryBlower/repository.prb-entertainment-pack/tree/master/plugin.video.prb-radio</source>
   </extension>
