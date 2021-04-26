@@ -115,12 +115,7 @@ def get_stream_link():
     Return list of live links.
     """
     if _previous_url is not None or _previous_url != "":
-        domain_name = _previous_url.replace('http://', '').replace(':8000', '').replace('/rapi.mp3', '')
-        if platform.system().lower() == 'windows':
-            response = os.system('ping %s -n 1' % domain_name)
-        else:
-            # Below works on Linux
-            response = os.system('ping -c 1 ' + domain_name)
+        response = os.system("ping -c 1 " + _previous_url.replace('http://', '').replace('/rapi.mp3', ''))
         if response  == 0:
             return _previous_url
     link = ''
