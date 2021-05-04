@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <addon id="repository.butter" name="Butter Fingers Repo" version="1.9.4" provider-name="J1">
+    <addon id="repository.butter" name="Butter Fingers Repo" version="1.9.7" provider-name="J1">
         <requires>
             <import addon="xbmc.addon" version="12.0.0"/>
         </requires>
