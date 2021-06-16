@@ -2198,7 +2198,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- PRB AVSS -->
-<addon id="plugin.audio.prb-avss" name="AVSS" version="0.0.1" provider-name="Phantom Raspberry Blower">
+<addon id="plugin.video.prb-avss" name="AVSS" version="0.0.1" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
   </requires>
