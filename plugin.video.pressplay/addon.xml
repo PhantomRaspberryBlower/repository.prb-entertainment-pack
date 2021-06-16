@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.pressplay" name="Press Play" provider-name="PressPlay" version="3.0.0a">
+<addon id="plugin.video.pressplay" name="PressPlay" provider-name="PressPlay" version="4.0.0a">
     <requires>
         <!--<import addon="xbmc.python" version="2.20.0" />-->
         <import addon="script.pressplay.artwork" />
@@ -12,8 +12,6 @@
         <import addon="script.module.kodi-six" />
         <import addon="script.module.simplejson" />
         <import addon="script.module.metahandler" optional="true" />
-        <import addon="script.module.exoscrapers" optional="true" />
-        <import addon="script.module.orion" optional="true" />
         <import addon="plugin.video.youtube" optional="true" />
     </requires>
     <extension library="pressplay.py" point="xbmc.python.pluginsource">
