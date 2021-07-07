@@ -2,7 +2,7 @@
 <addons>
 
 <!-- PRB Install Everything Addon -->
-<addon id="script.force-install-all-ep" name="PRB Install Everything EP" version="1.15.3" provider-name="Phantom Raspberry Blower">
+<addon id="script.force-install-all-ep" name="PRB Install Everything EP" version="1.15.4" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="plugin.audio.absolute-radio"/>
@@ -23,6 +23,7 @@
     <import addon="plugin.video.sports-replay"/>
     <import addon="plugin.video.ted.talks"/>
     <import addon="plugin.video.themagicdragon"/>
+    <import addon="plugin.video.theoath"/>
     <import addon="plugin.video.world.news.live"/>
     <import addon="plugin.video.yoda"/>
     <import addon="plugin.video.youtube"/>
@@ -41,7 +42,7 @@
   </extension>    
   <extension point="xbmc.addon.metadata">
     <summary>Entertainment Pack</summary>
-    <description>Defines media sources and download settings.[CR][CR]Downloads and installs add-ons from Phantom Raspberry Blower Repo[CR][CR]Addons installed by this addon are:[CR]Absolute Radio, BBC Radio, Dreamcatcher, Exodus, Fido Video, Exodus, ITV, MP3 Music, PressPlay, PRB Clean, Rising Tides, RSS Editor, RSS Viewer, TED Talks, UKTV Play, Websters Wildshots, World News Live, Yoda, YouTube[CR]</description>
+    <description>Defines media sources and download settings.[CR][CR]Downloads and installs add-ons from Phantom Raspberry Blower Repo[CR][CR]Addons installed by this addon are:[CR]Absolute Radio, BBC Radio, Dreamcatcher, Exodus, Fido Video, Exodus, ITV, MP3 Music, PressPlay, PRB Clean, Rising Tides, RSS Editor, RSS Viewer, TED Talks, The Oath, UKTV Play, Websters Wildshots, World News Live, Yoda, YouTube[CR]</description>
     <disclaimer>[COLOR red][B]Phantom Raspberry Blower[/B][/COLOR] accepts no responsibility for included addons.</disclaimer>
     <platform>all</platform>
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
@@ -1287,7 +1288,7 @@
 </addon>
 
 <!-- Input Stream Helper Module -->
-<addon id="script.module.inputstreamhelper" name="InputStream Helper" version="0.5.5" provider-name="emilsvennesson, dagwieers, mediaminister, horstle">
+<addon id="script.module.inputstreamhelper" name="InputStream Helper" version="0.5.7" provider-name="emilsvennesson, dagwieers, mediaminister, horstle">
   <requires>
     <!--py3 compliant-->
     <import addon="xbmc.python" version="2.25.0"/>
@@ -1311,6 +1312,13 @@
     <description lang="fr_FR">Un simple module Kodi qui simplifie la vie des développeurs de modules complémentaires en s’appuyant sur des modules complémentaires basés sur InputStream et sur la lecture de DRM.</description>
     <description lang="es_ES">Un módulo Kodi simple que hace la vida más fácil para los desarrolladores de complementos que dependen de complementos basados en InputStream y reproducción de DRM.</description>
     <news>
+v0.5.7 (2021-07-02)
+- Further improve Widevine CDM installation on ARM hardware
+
+v0.5.6 (2021-06-24)
+- Improve Widevine CDM installation on ARM hardware
+- Postpone Widevine CDM updates when user rejects
+
 v0.5.5 (2021-06-02)
 - Improve Widevine CDM installation on ARM hardware
 
@@ -1980,6 +1988,87 @@ Known issues:
   </extension>
 </addon>
 
+<!-- Oath Video Addon-->
+<addon id="plugin.video.theoath" name="TheOath" provider-name="host505" version="4.00.28">
+  <requires>
+    <!--<import addon="xbmc.python" version="2.20.0" />-->
+    <!--<import addon="script.theoath.metadata" />-->
+    <import addon="script.theoath.artwork" />
+    <import addon="script.module.resolveurl" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.oathscrapers" />
+    <import addon="script.module.six" />
+    <import addon="script.module.kodi-six" />
+    <import addon="script.module.simplejson" />
+    <import addon="script.module.orion" optional="true" />
+    <import addon="plugin.video.youtube" optional="true" />
+  </requires>
+  <extension library="theoath.py" point="xbmc.python.pluginsource">
+    <provides>video</provides>
+  </extension>
+  <extension library="service.py" point="xbmc.service" start="startup" />
+  <extension point="xbmc.addon.metadata">
+    <reuselanguageinvoker>false</reuselanguageinvoker>
+    <summary lang="en_GB">TheOath</summary>
+    <description lang="en_GB">Multi-source add-on with native Orion integration.[CR][CR]The author does not host any of the content in this add-on and takes no responsibility for content found.</description>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+    <forum />
+    <website />
+    <source />
+    <disclaimer lang="en_GB">The author of this add-on does not host any of the content which is found and has no affiliation with any of the content providers. This add-on simply searches websites for content. Use at your own risk![CR]This project uses the TMDb, Trakt, Fanart.tv APIs, but is not affiliated nor endorsed by any of their respective ogranisations.[CR]Please support these ogranisations however you can.</disclaimer>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+    <news>
+- See Changelog on Tools menu
+    </news>
+  </extension>
+</addon>
+
+<!-- Oath Artwork -->
+<addon id="script.theoath.artwork" version="1.0.8" name="TheOath Artwork" provider-name="host505">
+  <requires>
+    <!--<import addon="xbmc.python" version="2.19.0"/>-->
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary>Themes for the TheOath Addon</summary>
+    <description></description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<!-- Oath Scarpers -->
+<addon id="script.module.oathscrapers" name="OathScrapers Module" version="0.9.999" provider-name="TheOath">
+  <requires>
+    <!--<import addon="xbmc.python" version="2.20.0" />-->
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.six" />
+    <import addon="script.module.kodi-six" />
+    <import addon="script.module.simplejson" />
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.python.pluginsource" library="lib/default.py">
+    <provides>executable</provides>
+  </extension>
+    <extension point="xbmc.addon.metadata">
+      <platform>all</platform>
+      <summary lang="en">OathScrapers Module</summary>
+      <description>Scrape common video host for URL's to be playable in Kodi, simplifying addon development of video plugins requiring multi video hosts.</description>
+      <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
+      <platform>all</platform>
+      <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+      <assets>
+        <icon>icon.png</icon>
+        <fanart></fanart>
+      </assets>
+    <news></news>
+  </extension>
+</addon>
+
 <!-- Open Scrapers Addon -->
 <addon id="script.module.openscrapers" name="OpenScrapers Module" version="0.0.2.012" provider-name="Addons4Kodi">
   <requires>
@@ -2572,7 +2661,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- Resolver URL -->
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.34" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.35" provider-name="gujal">
   <requires>
     <!-- <import addon="xbmc.python" version="3.0.0" /> -->
     <import addon="script.module.six" />
@@ -3338,7 +3427,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 </addon>
 
 <!-- URL Resolver -->
-<addon id="script.module.urlresolver" name="URLResolver" version="6.1.02a" provider-name="tvaddons">
+<addon id="script.module.urlresolver" name="URLResolver" version="6.1.03a" provider-name="tvaddons">
   <requires>
     <!-- <import addon="xbmc.python" version="3.0.0" /> -->
     <import addon="script.module.six" />
