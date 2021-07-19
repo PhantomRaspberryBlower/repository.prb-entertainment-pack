@@ -27,6 +27,7 @@ Addons installed by this addon:
   - Rising Tides (Sport Live)
   - RSS Editor (Add RSS Subcriptions)
   - RSS Reader (Displays RSS Feeds)
+  - Samsung TV (live TV)
   - Sports Replay (Sports Replay)
   - System Info (Displays System Information)
   - TED Talks (lectures)

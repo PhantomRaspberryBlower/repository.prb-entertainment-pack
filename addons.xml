@@ -2,7 +2,7 @@
 <addons>
 
 <!-- PRB Install Everything Addon -->
-<addon id="script.force-install-all-ep" name="PRB Install Everything EP" version="1.15.4" provider-name="Phantom Raspberry Blower">
+<addon id="script.force-install-all-ep" name="PRB Install Everything EP" version="1.15.5" provider-name="Phantom Raspberry Blower">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="plugin.audio.absolute-radio"/>
@@ -21,6 +21,7 @@
     <import addon="plugin.video.pressplay" />
     <import addon="plugin.video.Rising.Tides"/>
     <import addon="plugin.video.sports-replay"/>
+    <import addon="slyguy.samsung.tv.plus"/>
     <import addon="plugin.video.ted.talks"/>
     <import addon="plugin.video.themagicdragon"/>
     <import addon="plugin.video.theoath"/>
@@ -1989,7 +1990,7 @@ Known issues:
 </addon>
 
 <!-- Oath Video Addon-->
-<addon id="plugin.video.theoath" name="TheOath" provider-name="host505" version="4.00.28">
+<addon id="plugin.video.theoath" name="TheOath" provider-name="host505" version="4.00.30">
   <requires>
     <!--<import addon="xbmc.python" version="2.20.0" />-->
     <!--<import addon="script.theoath.metadata" />-->
@@ -2041,7 +2042,7 @@ Known issues:
 </addon>
 
 <!-- Oath Scarpers -->
-<addon id="script.module.oathscrapers" name="OathScrapers Module" version="0.9.999" provider-name="TheOath">
+<addon id="script.module.oathscrapers" name="OathScrapers Module" version="1.00.00" provider-name="TheOath">
   <requires>
     <!--<import addon="xbmc.python" version="2.20.0" />-->
     <import addon="script.module.beautifulsoup4" />
@@ -2054,17 +2055,17 @@ Known issues:
   <extension point="xbmc.python.pluginsource" library="lib/default.py">
     <provides>executable</provides>
   </extension>
-    <extension point="xbmc.addon.metadata">
-      <platform>all</platform>
-      <summary lang="en">OathScrapers Module</summary>
-      <description>Scrape common video host for URL's to be playable in Kodi, simplifying addon development of video plugins requiring multi video hosts.</description>
-      <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
-      <platform>all</platform>
-      <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-      <assets>
-        <icon>icon.png</icon>
-        <fanart></fanart>
-      </assets>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">OathScrapers Module</summary>
+    <description>Scrape common video host for URL's to be playable in Kodi, simplifying addon development of video plugins requiring multi video hosts.</description>
+    <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart></fanart>
+    </assets>
     <news></news>
   </extension>
 </addon>
@@ -2661,7 +2662,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- Resolver URL -->
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.35" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.36" provider-name="gujal">
   <requires>
     <!-- <import addon="xbmc.python" version="3.0.0" /> -->
     <import addon="script.module.six" />
@@ -2820,6 +2821,28 @@ This is a Non-profit resource, organized solely for educational purposes which i
     <news>Fixed Bullet Points</news>
     <email></email>
     <source>https://github.com/PhantomRaspberryBlower/repository.prb-entertainment-pack/tree/master/script.rss-reader</source>
+  </extension>
+</addon>
+
+<!--Samsung TV-->
+<addon id="slyguy.samsung.tv.plus" name="Samsung TV Plus" provider-name="SlyGuy" version="0.1.1">
+  <requires>
+    <import addon="script.module.slyguy"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Just free TV. Whether you're a news buff, sports fan, gamer, an aspiring chef, or need something for the kids, Samsung TV Plus offers TV that everyone can enjoy.</description>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <license></license>
+    <language></language>
+    <website></website>
+    <news>Add search</news>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
   </extension>
 </addon>
 
