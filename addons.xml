@@ -2846,6 +2846,25 @@ This is a Non-profit resource, organized solely for educational purposes which i
   </extension>
 </addon>
 
+<!--Samsung TV Modile-->
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.36.0">
+  <extension point="xbmc.service" library="service.py" start="login" />
+  <extension point="xbmc.python.pluginsource" library="default.py" />
+  <extension point="xbmc.python.module" library="resources/modules" />
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Common code required by all Slyguy add-ons</description>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <license></license>
+    <language></language>
+    <website></website>
+    <news></news>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
 <!-- Sandman Repository -->
 <addon 	id="repository.sm" name="[B][COLOR orange]SANDMAN [/COLOR][COLOR maroon]MEDIA [/COLOR][COLOR orange]REPO[/COLOR][/B]" version="2.1" provider-name="SANDMAN MEDIA">
   <extension point="xbmc.addon.repository" name="stealth: Repository">

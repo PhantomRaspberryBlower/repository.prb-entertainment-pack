@@ -32,6 +32,7 @@ Addons installed by this addon:
   - System Info (Displays System Information)
   - TED Talks (lectures)
   - The Magic Dragon (Movies & TV Shows)
+  - The Oath (Movies & TV Shows)
   - Virtual DJ (Internet Music)
   - Websters Wildshots (Nature Picture Addon)
   - World News Live (News from Around the World)
