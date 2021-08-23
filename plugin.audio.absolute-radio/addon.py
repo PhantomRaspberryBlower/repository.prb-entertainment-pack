@@ -203,9 +203,6 @@ def main_menu():
     Download categories from absolute radio
     and display a list of the stations
     """
-#    if len(__addon__.getSetting('username')) > 1:
-#        login_absolute_radio(__addon__.getSetting('username'),
-#                             __addon__.getSetting('password'))
     for key in sorted(link_infos.keys()):
         if (key != _artist_info) and (key != _settings):
             addDir(key,
@@ -217,13 +214,13 @@ def main_menu():
 
     if _hide_artist_info != 'true':
         addDir(_artist_info,
-               'XBMC.RunPlugin({0}?url=artistinfo&mode=2)',
+               'RunPlugin({0}?url=artistinfo&mode=2)',
                2,
                link_infos[_artist_info]['thumbs'],
                link_infos[_artist_info]['fanart'],
                link_infos[_artist_info]['desc'])
     addDir(_settings,
-           'XBMC.RunPlugin({0}?url=settings&mode=3)',
+           'RunPlugin({0}?url=settings&mode=3)',
            3,
            link_infos[_settings]['thumbs'],
            link_infos[_settings]['fanart'],

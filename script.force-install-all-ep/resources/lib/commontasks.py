@@ -1,5 +1,3 @@
-#!/bin/python
-
 import os
 import xbmc
 import xbmcgui

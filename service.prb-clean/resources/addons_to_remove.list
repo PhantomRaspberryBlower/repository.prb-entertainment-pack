@@ -44,6 +44,7 @@ plugin.video.ukturk<>UK Turks
 plugin.video.uktvplay<>UKTV Play
 plugin.video.venom<>Venom
 plugin.video.ZemTV-shani<>Zem TV
+repository.slyguy<>SlyGuy Repo
 script.covenant.artwork<>Covenant Artwork
 script.covenant.metadata<>Covenant Metadata
 script.elysium.artwork<>Elysium Artwork
@@ -62,6 +63,7 @@ script.module.jokerHD<>Joker Module
 script.module.MaverickLive<>Maverick Live
 script.module.myaccounts<>My Accounts
 script.module.nanscrapers<>NaN Scrapers
+script.module.slyguy<>SlyGuy Common
 script.module.supremacy<>Supremacy Scrapers
 script.module.Supremacy.sportsHD<>Supremacy Sports HD
 script.module.Supremacy.Tv<>Supremacy TV
@@ -71,3 +73,4 @@ script.movietheaterbutter.metadata<>Movie Theater Butter Metadata
 script.module.TheYid.common<>The Yid
 script.mrknow.urlresolver<>Mr Know resolver
 script.navi-x<>Navi X
+slyguy.samsung.tv.plus<>Samsung TV

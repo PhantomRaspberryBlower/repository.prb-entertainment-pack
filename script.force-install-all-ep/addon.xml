@@ -1,37 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.force-install-all-ep" name="PRB Install Everything EP" version="1.15.5" provider-name="Phantom Raspberry Blower">
+<addon id="script.force-install-all-ep" name="PRB Install Everything EP" version="1.16.1" provider-name="Phantom Raspberry Blower">
   <requires>
-    <import addon="xbmc.python" version="2.25.0"/>
+    <!--<import addon="xbmc.python" version="2.25.0"/>-->
     <import addon="plugin.audio.absolute-radio"/>
     <import addon="plugin.audio.bbc-radio"/>
-    <import addon="plugin.audio.demon-fm"/>
-    <import addon="plugin.audio.leicester-community-radio"/>
-    <import addon="plugin.audio.mp3music"/>
-    <import addon="plugin.audio.prb-radio"/>
-    <import addon="plugin.program.dreamcatcher"/>
-    <import addon="plugin.video.exodus"/>
-    <import addon="plugin.video.Fido"/>
-    <import addon="plugin.video.freelivetv.tva"/>
-    <import addon="plugin.video.iplayerwww"/>
-    <import addon="plugin.video.itv"/>
-    <import addon="plugin.video.learnlanguageallstars"/>
-    <import addon="plugin.video.pressplay" />
-    <import addon="plugin.video.Rising.Tides"/>
-    <import addon="plugin.video.sports-replay"/>
-    <import addon="slyguy.samsung.tv.plus"/>
     <import addon="plugin.video.ted.talks"/>
-    <import addon="plugin.video.themagicdragon"/>
     <import addon="plugin.video.theoath"/>
-    <import addon="plugin.video.world.news.live"/>
-    <import addon="plugin.video.yoda"/>
-    <import addon="plugin.video.youtube"/>
-    <import addon="script.image.websterswildshots"/>
-    <import addon="script.module.liveresolver"/>
-    <import addon="script.module.sportsreplay"/>
-    <import addon="script.module.universalscrapers"/>
-    <import addon="script.rss.editor"/>
-    <import addon="script.rss-reader"/>
-    <import addon="script.system-info"/>
     <import addon="service.subtitles.opensubtitles_by_opensubtitles"/>
     <import addon="service.prb-clean"/>
   </requires>

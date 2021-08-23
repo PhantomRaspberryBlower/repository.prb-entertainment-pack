@@ -21,7 +21,7 @@
 			<onleft>9000</onleft>
 			<onright>9000</onright>
 			<onup>9000</onup>
-			<ondown>2</ondown>
+			<ondown>3</ondown>
 		</control>
 		<control type="image">
 			<left>0</left>
@@ -69,22 +69,6 @@
 					<ondown>2</ondown>
 					<visible>system.getbool(input.enablemouse)</visible>
 				</control>
-			</control>
-			<control type="button" id="2">
-				<description>Exit button</description>
-				<width>340</width>
-				<height>40</height>
-				<textcolor>grey2</textcolor>
-				<focusedcolor>white</focusedcolor>
-				<align>center</align>
-				<textwidth>290</textwidth>
-				<texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
-				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
-				<onclick>Quit()</onclick>
-				<pulseonselect>no</pulseonselect>
-				<font>font13</font>
-				<label>13012</label>
-				<visible>System.ShowExitButton</visible>
 			</control>
 			<control type="button" id="3">
 				<description>Shutdown button</description>
