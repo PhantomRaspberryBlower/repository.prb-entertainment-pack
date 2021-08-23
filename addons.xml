@@ -2292,9 +2292,9 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <!-- PRB Clean Service -->
-<addon id="service.prb-clean" name="PRB Clean" version="0.3.12" provider-name="Phantom Raspberry Blower">
+<addon id="service.prb-clean" name="PRB Clean" version="0.3.13" provider-name="Phantom Raspberry Blower">
   <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
+    <--<import addon="xbmc.python" version="2.1.0"/>-->
   </requires>
   <extension point="xbmc.service" library="service.py" start="startup"/>
   <extension point="xbmc.addon.metadata">
