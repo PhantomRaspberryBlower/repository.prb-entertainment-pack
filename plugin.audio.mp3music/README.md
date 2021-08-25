@@ -1,4 +1,4 @@
-![MP3 Music logo](https://github.com/PhantomRaspberryBlower/plugin.audio.mp3music/blob/master/resources/icon.png)
+![MP3 Music logo](https://github.com/PhantomRaspberryBlower/repository.prb-entertainment-pack/plugin.audio.mp3music/blob/master/resources/icon.png)
 
 plugin.audio.mp3music
 ======================
