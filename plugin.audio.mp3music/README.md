@@ -9,4 +9,4 @@ Browse the latest album releases including compilations by genre. Search or down
 
 Screenshots:
 ============
-![MP3 Music (screenshot1)](https://github.com/PhantomRaspberryBlower/repository.prb-entertainment-pack/blob/master/plugin.audio.mp3music/resources/media/screenshot000.png)
+![MP3 Music (screenshot1)](https://github.com/PhantomRaspberryBlower/repository.prb-entertainment-pack/blob/master/plugin.audio.mp3music/resources/media/screenshot000.jpg)
