@@ -122,3 +122,15 @@ msgstr ""
 msgctxt "#30118"
 msgid "[COLOR lime]Add Current Song To List[/COLOR]"
 msgstr ""
+
+msgctxt "#30119"
+msgid "Mixes"
+msgstr ""
+
+msgctxt "#30120"
+msgid "Plays PRB Mixes ... Gospel, Blues, Jazz, Soul, Funk, Reggae, House and Hip-Hop"
+msgstr ""
+
+msgctxt "#30121"
+msgid "Hide Mixes"
+msgstr ""
